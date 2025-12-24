@@ -5325,4 +5325,30 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
     ],
   },
+  13: {
+    moduleId: 13,
+    vocabulary: [
+      {
+        persian: "ورزش",
+        transliteration: "badan",
+        english: "body",
+        example: "من ورزش دوست دارم",
+        exampleTranslation: "I like sports",
+      },
+      {
+        persian: "ورزش",
+        transliteration: "sar",
+        english: "head",
+        example: "من ورزش دوست دارم",
+        exampleTranslation: "I like sports",
+      },
+      {
+        persian: "ورزش",
+        transliteration: "sar",
+        english: "head",
+        example: "من ورزش دوست دارم",
+        exampleTranslation: "I like sports",
+      },
+    ],
+  },
 }
