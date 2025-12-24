@@ -5144,7 +5144,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Winter is cold",
       },
     ],
-    12: {
+  12: {
     moduleId: 12,
     vocabulary: [
       {
