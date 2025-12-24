@@ -5320,7 +5320,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         transliteration: "piyāde-ravi",
         english: "walking",
         example: "پیاده‌روی می‌کنم",
-        exampleTranslation: "I walk,
+        exampleTranslation: "I walk",
       },
     ],
   },
