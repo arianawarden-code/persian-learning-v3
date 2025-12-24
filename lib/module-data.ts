@@ -5322,5 +5322,6 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         example: "پیاده‌روی می‌کنم",
         exampleTranslation: "I walk,
       },
+    ],
   },
 }
