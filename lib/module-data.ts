@@ -742,330 +742,7 @@ export const modules: Module[] = [
 ]
 
 export const moduleContent: Record<string | number, ModuleContent> = {
-  1: {
-    moduleId: 1,
-    vocabulary: [
-      {
-        persian: "سلام",
-        transliteration: "salām",
-        english: "hello",
-        example: "سلام! حال شما چطور است؟",
-        exampleTranslation: "Hello! How are you?",
-      },
-      {
-        persian: "خداحافظ",
-        transliteration: "khodāhāfez",
-        english: "goodbye",
-        example: "خداحافظ، فردا می‌بینمت",
-        exampleTranslation: "Goodbye, see you tomorrow",
-      },
-      {
-        persian: "صبح بخیر",
-        transliteration: "sobh bekheyr",
-        english: "good morning",
-        example: "صبح بخیر! روز خوبی داشته باشید",
-        exampleTranslation: "Good morning! Have a nice day",
-      },
-      {
-        persian: "شب بخیر",
-        transliteration: "shab bekheyr",
-        english: "good night",
-        example: "شب بخیر، خواب خوبی داشته باشید",
-        exampleTranslation: "Good night, sleep well",
-      },
-      {
-        persian: "ممنون",
-        transliteration: "mamnoon",
-        english: "thank you",
-        example: "ممنون از کمکت",
-        exampleTranslation: "Thank you for your help",
-      },
-      {
-        persian: "خواهش می‌کنم",
-        transliteration: "khāhesh mikonam",
-        english: "you're welcome",
-        example: "خواهش می‌کنم، کاری نکردم",
-        exampleTranslation: "You're welcome, I didn't do anything",
-      },
-      {
-        persian: "بله",
-        transliteration: "bale",
-        english: "yes",
-        example: "بله، من اینجا هستم",
-        exampleTranslation: "Yes, I am here",
-      },
-      {
-        persian: "نه",
-        transliteration: "na",
-        english: "no",
-        example: "نه، من نمی‌توانم بیایم",
-        exampleTranslation: "No, I cannot come",
-      },
-      {
-        persian: "لطفا",
-        transliteration: "lotfan",
-        english: "please",
-        example: "لطفا کمکم کنید",
-        exampleTranslation: "Please help me",
-      },
-      {
-        persian: "ببخشید",
-        transliteration: "bebakhshid",
-        english: "excuse me / sorry",
-        example: "ببخشید، دیر کردم",
-        exampleTranslation: "Sorry, I'm late",
-      },
-      {
-        persian: "اسم",
-        transliteration: "esm",
-        english: "name",
-        example: "اسم شما چیست؟",
-        exampleTranslation: "What is your name?",
-      },
-      {
-        persian: "من",
-        transliteration: "man",
-        english: "I / me",
-        example: "من علی هستم",
-        exampleTranslation: "I am Ali",
-      },
-      {
-        persian: "تو",
-        transliteration: "to",
-        english: "you (informal)",
-        example: "تو کجا هستی؟",
-        exampleTranslation: "Where are you?",
-      },
-      {
-        persian: "شما",
-        transliteration: "shomā",
-        english: "you (formal)",
-        example: "شما از کجا هستید؟",
-        exampleTranslation: "Where are you from?",
-      },
-      {
-        persian: "او",
-        transliteration: "oo",
-        english: "he / she",
-        example: "او دوست من است",
-        exampleTranslation: "He/She is my friend",
-      },
-      {
-        persian: "چطور",
-        transliteration: "chetor",
-        english: "how",
-        example: "حالت چطوره؟",
-        exampleTranslation: "How are you?",
-      },
-      {
-        persian: "خوب",
-        transliteration: "khoob",
-        english: "good / well",
-        example: "من خوب هستم",
-        exampleTranslation: "I am well",
-      },
-      {
-        persian: "بد",
-        transliteration: "bad",
-        english: "bad",
-        example: "حالم بد نیست",
-        exampleTranslation: "I'm not bad",
-      },
-      {
-        persian: "هستم",
-        transliteration: "hastam",
-        english: "I am",
-        example: "من دانشجو هستم",
-        exampleTranslation: "I am a student",
-      },
-      {
-        persian: "هست",
-        transliteration: "hast",
-        english: "is",
-        example: "او اینجا هست",
-        exampleTranslation: "He/She is here",
-      },
-      {
-        persian: "چه",
-        transliteration: "che",
-        english: "what",
-        example: "این چه چیزی است؟",
-        exampleTranslation: "What is this?",
-      },
-      {
-        persian: "کجا",
-        transliteration: "kojā",
-        english: "where",
-        example: "شما کجا زندگی می‌کنید؟",
-        exampleTranslation: "Where do you live?",
-      },
-      {
-        persian: "دوست",
-        transliteration: "doost",
-        english: "friend",
-        example: "او دوست خوبی است",
-        exampleTranslation: "He/She is a good friend",
-      },
-      {
-        persian: "خانه",
-        transliteration: "khāne",
-        english: "house / home",
-        example: "من به خانه می‌روم",
-        exampleTranslation: "I am going home",
-      },
-      {
-        persian: "امروز",
-        transliteration: "emrooz",
-        english: "today",
-        example: "امروز هوا خوب است",
-        exampleTranslation: "The weather is good today",
-      },
-    ],
-    reading: [
-      {
-        id: 1,
-        title: "First Meeting",
-        text: "سلام! من علی هستم. اسم شما چیست؟ من خوشحالم که شما را می‌بینم. شما از کجا هستید؟ من از ایران هستم. امروز روز خوبی است.",
-        textTransliteration:
-          "Salām! Man Ali hastam. Esm-e shomā chist? Man khoshhālam ke shomā rā mibinam. Shomā az kojā hastid? Man az Irān hastam. Emrooz rooz-e khoobi ast.",
-        textTranslation:
-          "Hello! I am Ali. What is your name? I am happy to see you. Where are you from? I am from Iran. Today is a good day.",
-        questions: [
-          {
-            question: "What is the person's name?",
-            options: ["Ali", "Reza", "Sara", "Maryam"],
-            correctAnswer: 0,
-          },
-          {
-            question: "Where is Ali from?",
-            options: ["Turkey", "Iran", "Iraq", "Afghanistan"],
-            correctAnswer: 1,
-          },
-        ],
-      },
-      {
-        id: 2,
-        title: "Greetings",
-        text: "صبح بخیر! حال شما چطور است؟ من خوب هستم، ممنون. شما چطور هستید؟ امیدوارم روز خوبی داشته باشید. هوا امروز خیلی خوب است.",
-        textTransliteration:
-          "Sobh bekheyr! Hāl-e shomā chetor ast? Man khoob hastam, mamnoon. Shomā chetor hastid? Omidvāram rooz-e khoobi dāshte bāshid. Havā emrooz kheyli khoob ast.",
-        textTranslation:
-          "Good morning! How are you? I am well, thank you. How are you? I hope you have a good day. The weather is very nice today.",
-        questions: [
-          {
-            question: "What time of day is it?",
-            options: ["Morning", "Afternoon", "Evening", "Night"],
-            correctAnswer: 0,
-          },
-          {
-            question: "How is the speaker feeling?",
-            options: ["Bad", "Good", "Tired", "Sad"],
-            correctAnswer: 1,
-          },
-        ],
-      },
-      {
-        id: 3,
-        title: "At Home",
-        text: "من امروز خانه هستم. دوست من هم اینجا هست. او اسمش رضا است. ما امروز با هم درس می‌خوانیم. او دوست خوبی است.",
-        textTransliteration:
-          "Man emrooz khāne hastam. Doost-e man ham injā hast. Oo esmesh Rezā ast. Mā emrooz bā ham dars mikhānim. Oo doost-e khoobi ast.",
-        textTranslation:
-          "I am at home today. My friend is also here. His name is Reza. We are studying together today. He is a good friend.",
-        questions: [
-          {
-            question: "Where is the speaker?",
-            options: ["At school", "At home", "At work", "Outside"],
-            correctAnswer: 1,
-          },
-          {
-            question: "Who is with the speaker?",
-            options: ["Brother", "Sister", "Friend", "Teacher"],
-            correctAnswer: 2,
-          },
-        ],
-      },
-      {
-        id: 4,
-        title: "Saying Goodbye",
-        text: "خداحافظ! فردا می‌بینمت. شب بخیر و خواب خوبی داشته باش! ممنون از وقتی که گذاشتی. امشب استراحت کن.",
-        textTransliteration:
-          "Khodāhāfez! Fardā mibinamet. Shab bekheyr va khāb-e khoobi dāshte bāsh! Mamnoon az vaghti ke gozāshti. Emshab esterāhat kon.",
-        textTranslation:
-          "Goodbye! See you tomorrow. Good night and sleep well! Thank you for the time you spent. Rest tonight.",
-        questions: [
-          {
-            question: "When will they meet again?",
-            options: ["Today", "Tomorrow", "Next week", "Never"],
-            correctAnswer: 1,
-          },
-          {
-            question: "What is the speaker wishing?",
-            options: ["Good morning", "Good afternoon", "Good night", "Good luck"],
-            correctAnswer: 2,
-          },
-        ],
-      },
-      {
-        id: 5,
-        title: "Polite Conversation",
-        text: "ببخشید، لطفا کمکم کنید. ممنون از شما. خواهش می‌کنم! شما خیلی مهربان هستید. من خوشحالم که شما را می‌شناسم.",
-        textTransliteration:
-          "Bebakhshid, lotfan komakam konid. Mamnoon az shomā. Khāhesh mikonam! Shomā kheyli mehrabān hastid. Man khoshhālam ke shomā rā mishenāsam.",
-        textTranslation:
-          "Excuse me, please help me. Thank you. You're welcome! You are very kind. I am happy to know you.",
-        questions: [
-          {
-            question: "What does the speaker ask for?",
-            options: ["Food", "Help", "Money", "Time"],
-            correctAnswer: 1,
-          },
-          {
-            question: "What is the tone of the conversation?",
-            options: ["Angry", "Sad", "Polite", "Rude"],
-            correctAnswer: 2,
-          },
-        ],
-      },
-    ],
-    writing: [
-      {
-        id: 1,
-        type: "build-word",
-        instruction: "Build the word 'سلام' (hello) using the letters below",
-        targetWord: "سلام",
-        targetWordTransliteration: "salām",
-        availableLetters: ["س", "ل", "ا", "م", "ر", "ت"],
-      },
-      {
-        id: 2,
-        type: "build-word",
-        instruction: "Build the word 'ممنون' (thank you)",
-        targetWord: "ممنون",
-        targetWordTransliteration: "mamnoon",
-        availableLetters: ["م", "ن", "و", "ا", "س", "خ"],
-      },
-      {
-        id: 3,
-        type: "build-word",
-        instruction: "Build the word 'خوب' (good)",
-        targetWord: "خوب",
-        targetWordTransliteration: "khoob",
-        availableLetters: ["خ", "و", "ب", "د", "ر", "ک"],
-      },
-      {
-        id: 4,
-        type: "sentence",
-        instruction: "Write a greeting in Persian using the words: سلام، من، هستم",
-        prompt: "Introduce yourself using 'hello', 'I', and 'am'",
-      },
-      {
-        id: 5,
-        type: "sentence",
-        instruction: "Write a goodbye message using: خداحافظ، فردا",
-        prompt: "Say goodbye and mention tomorrow",
-      },
-    ],
+  
     grammar: [
       // Letter 1: Alef (ا) - Non-connecting letter
       {
@@ -2426,6 +2103,330 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
     ],
   },
+  1: {
+    moduleId: 1,
+    vocabulary: [
+      {
+        persian: "سلام",
+        transliteration: "salām",
+        english: "hello",
+        example: "سلام! حال شما چطور است؟",
+        exampleTranslation: "Hello! How are you?",
+      },
+      {
+        persian: "خداحافظ",
+        transliteration: "khodāhāfez",
+        english: "goodbye",
+        example: "خداحافظ، فردا می‌بینمت",
+        exampleTranslation: "Goodbye, see you tomorrow",
+      },
+      {
+        persian: "صبح بخیر",
+        transliteration: "sobh bekheyr",
+        english: "good morning",
+        example: "صبح بخیر! روز خوبی داشته باشید",
+        exampleTranslation: "Good morning! Have a nice day",
+      },
+      {
+        persian: "شب بخیر",
+        transliteration: "shab bekheyr",
+        english: "good night",
+        example: "شب بخیر، خواب خوبی داشته باشید",
+        exampleTranslation: "Good night, sleep well",
+      },
+      {
+        persian: "ممنون",
+        transliteration: "mamnoon",
+        english: "thank you",
+        example: "ممنون از کمکت",
+        exampleTranslation: "Thank you for your help",
+      },
+      {
+        persian: "خواهش می‌کنم",
+        transliteration: "khāhesh mikonam",
+        english: "you're welcome",
+        example: "خواهش می‌کنم، کاری نکردم",
+        exampleTranslation: "You're welcome, I didn't do anything",
+      },
+      {
+        persian: "بله",
+        transliteration: "bale",
+        english: "yes",
+        example: "بله، من اینجا هستم",
+        exampleTranslation: "Yes, I am here",
+      },
+      {
+        persian: "نه",
+        transliteration: "na",
+        english: "no",
+        example: "نه، من نمی‌توانم بیایم",
+        exampleTranslation: "No, I cannot come",
+      },
+      {
+        persian: "لطفا",
+        transliteration: "lotfan",
+        english: "please",
+        example: "لطفا کمکم کنید",
+        exampleTranslation: "Please help me",
+      },
+      {
+        persian: "ببخشید",
+        transliteration: "bebakhshid",
+        english: "excuse me / sorry",
+        example: "ببخشید، دیر کردم",
+        exampleTranslation: "Sorry, I'm late",
+      },
+      {
+        persian: "اسم",
+        transliteration: "esm",
+        english: "name",
+        example: "اسم شما چیست؟",
+        exampleTranslation: "What is your name?",
+      },
+      {
+        persian: "من",
+        transliteration: "man",
+        english: "I / me",
+        example: "من علی هستم",
+        exampleTranslation: "I am Ali",
+      },
+      {
+        persian: "تو",
+        transliteration: "to",
+        english: "you (informal)",
+        example: "تو کجا هستی؟",
+        exampleTranslation: "Where are you?",
+      },
+      {
+        persian: "شما",
+        transliteration: "shomā",
+        english: "you (formal)",
+        example: "شما از کجا هستید؟",
+        exampleTranslation: "Where are you from?",
+      },
+      {
+        persian: "او",
+        transliteration: "oo",
+        english: "he / she",
+        example: "او دوست من است",
+        exampleTranslation: "He/She is my friend",
+      },
+      {
+        persian: "چطور",
+        transliteration: "chetor",
+        english: "how",
+        example: "حالت چطوره؟",
+        exampleTranslation: "How are you?",
+      },
+      {
+        persian: "خوب",
+        transliteration: "khoob",
+        english: "good / well",
+        example: "من خوب هستم",
+        exampleTranslation: "I am well",
+      },
+      {
+        persian: "بد",
+        transliteration: "bad",
+        english: "bad",
+        example: "حالم بد نیست",
+        exampleTranslation: "I'm not bad",
+      },
+      {
+        persian: "هستم",
+        transliteration: "hastam",
+        english: "I am",
+        example: "من دانشجو هستم",
+        exampleTranslation: "I am a student",
+      },
+      {
+        persian: "هست",
+        transliteration: "hast",
+        english: "is",
+        example: "او اینجا هست",
+        exampleTranslation: "He/She is here",
+      },
+      {
+        persian: "چه",
+        transliteration: "che",
+        english: "what",
+        example: "این چه چیزی است؟",
+        exampleTranslation: "What is this?",
+      },
+      {
+        persian: "کجا",
+        transliteration: "kojā",
+        english: "where",
+        example: "شما کجا زندگی می‌کنید؟",
+        exampleTranslation: "Where do you live?",
+      },
+      {
+        persian: "دوست",
+        transliteration: "doost",
+        english: "friend",
+        example: "او دوست خوبی است",
+        exampleTranslation: "He/She is a good friend",
+      },
+      {
+        persian: "خانه",
+        transliteration: "khāne",
+        english: "house / home",
+        example: "من به خانه می‌روم",
+        exampleTranslation: "I am going home",
+      },
+      {
+        persian: "امروز",
+        transliteration: "emrooz",
+        english: "today",
+        example: "امروز هوا خوب است",
+        exampleTranslation: "The weather is good today",
+      },
+    ],
+    reading: [
+      {
+        id: 1,
+        title: "First Meeting",
+        text: "سلام! من علی هستم. اسم شما چیست؟ من خوشحالم که شما را می‌بینم. شما از کجا هستید؟ من از ایران هستم. امروز روز خوبی است.",
+        textTransliteration:
+          "Salām! Man Ali hastam. Esm-e shomā chist? Man khoshhālam ke shomā rā mibinam. Shomā az kojā hastid? Man az Irān hastam. Emrooz rooz-e khoobi ast.",
+        textTranslation:
+          "Hello! I am Ali. What is your name? I am happy to see you. Where are you from? I am from Iran. Today is a good day.",
+        questions: [
+          {
+            question: "What is the person's name?",
+            options: ["Ali", "Reza", "Sara", "Maryam"],
+            correctAnswer: 0,
+          },
+          {
+            question: "Where is Ali from?",
+            options: ["Turkey", "Iran", "Iraq", "Afghanistan"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      {
+        id: 2,
+        title: "Greetings",
+        text: "صبح بخیر! حال شما چطور است؟ من خوب هستم، ممنون. شما چطور هستید؟ امیدوارم روز خوبی داشته باشید. هوا امروز خیلی خوب است.",
+        textTransliteration:
+          "Sobh bekheyr! Hāl-e shomā chetor ast? Man khoob hastam, mamnoon. Shomā chetor hastid? Omidvāram rooz-e khoobi dāshte bāshid. Havā emrooz kheyli khoob ast.",
+        textTranslation:
+          "Good morning! How are you? I am well, thank you. How are you? I hope you have a good day. The weather is very nice today.",
+        questions: [
+          {
+            question: "What time of day is it?",
+            options: ["Morning", "Afternoon", "Evening", "Night"],
+            correctAnswer: 0,
+          },
+          {
+            question: "How is the speaker feeling?",
+            options: ["Bad", "Good", "Tired", "Sad"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      {
+        id: 3,
+        title: "At Home",
+        text: "من امروز خانه هستم. دوست من هم اینجا هست. او اسمش رضا است. ما امروز با هم درس می‌خوانیم. او دوست خوبی است.",
+        textTransliteration:
+          "Man emrooz khāne hastam. Doost-e man ham injā hast. Oo esmesh Rezā ast. Mā emrooz bā ham dars mikhānim. Oo doost-e khoobi ast.",
+        textTranslation:
+          "I am at home today. My friend is also here. His name is Reza. We are studying together today. He is a good friend.",
+        questions: [
+          {
+            question: "Where is the speaker?",
+            options: ["At school", "At home", "At work", "Outside"],
+            correctAnswer: 1,
+          },
+          {
+            question: "Who is with the speaker?",
+            options: ["Brother", "Sister", "Friend", "Teacher"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      {
+        id: 4,
+        title: "Saying Goodbye",
+        text: "خداحافظ! فردا می‌بینمت. شب بخیر و خواب خوبی داشته باش! ممنون از وقتی که گذاشتی. امشب استراحت کن.",
+        textTransliteration:
+          "Khodāhāfez! Fardā mibinamet. Shab bekheyr va khāb-e khoobi dāshte bāsh! Mamnoon az vaghti ke gozāshti. Emshab esterāhat kon.",
+        textTranslation:
+          "Goodbye! See you tomorrow. Good night and sleep well! Thank you for the time you spent. Rest tonight.",
+        questions: [
+          {
+            question: "When will they meet again?",
+            options: ["Today", "Tomorrow", "Next week", "Never"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What is the speaker wishing?",
+            options: ["Good morning", "Good afternoon", "Good night", "Good luck"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      {
+        id: 5,
+        title: "Polite Conversation",
+        text: "ببخشید، لطفا کمکم کنید. ممنون از شما. خواهش می‌کنم! شما خیلی مهربان هستید. من خوشحالم که شما را می‌شناسم.",
+        textTransliteration:
+          "Bebakhshid, lotfan komakam konid. Mamnoon az shomā. Khāhesh mikonam! Shomā kheyli mehrabān hastid. Man khoshhālam ke shomā rā mishenāsam.",
+        textTranslation:
+          "Excuse me, please help me. Thank you. You're welcome! You are very kind. I am happy to know you.",
+        questions: [
+          {
+            question: "What does the speaker ask for?",
+            options: ["Food", "Help", "Money", "Time"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What is the tone of the conversation?",
+            options: ["Angry", "Sad", "Polite", "Rude"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+    ],
+    writing: [
+      {
+        id: 1,
+        type: "build-word",
+        instruction: "Build the word 'سلام' (hello) using the letters below",
+        targetWord: "سلام",
+        targetWordTransliteration: "salām",
+        availableLetters: ["س", "ل", "ا", "م", "ر", "ت"],
+      },
+      {
+        id: 2,
+        type: "build-word",
+        instruction: "Build the word 'ممنون' (thank you)",
+        targetWord: "ممنون",
+        targetWordTransliteration: "mamnoon",
+        availableLetters: ["م", "ن", "و", "ا", "س", "خ"],
+      },
+      {
+        id: 3,
+        type: "build-word",
+        instruction: "Build the word 'خوب' (good)",
+        targetWord: "خوب",
+        targetWordTransliteration: "khoob",
+        availableLetters: ["خ", "و", "ب", "د", "ر", "ک"],
+      },
+      {
+        id: 4,
+        type: "sentence",
+        instruction: "Write a greeting in Persian using the words: سلام، من، هستم",
+        prompt: "Introduce yourself using 'hello', 'I', and 'am'",
+      },
+      {
+        id: 5,
+        type: "sentence",
+        instruction: "Write a goodbye message using: خداحافظ، فردا",
+        prompt: "Say goodbye and mention tomorrow",
+      },
+    ],
   2: {
     moduleId: 2,
     vocabulary: [
