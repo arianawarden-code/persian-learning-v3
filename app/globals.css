@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Warmed up the entire color palette with richer, deeper warm tones */
+  --background: 96% 0.02 55; /* Warmer cream with golden undertone #F5EFE7 */
+  --foreground: 20% 0.01 40; /* Warm dark brown instead of gray #3D2E26 */
+  --card: 98% 0.015 50; /* Warm white with peachy glow #FBF7F2 */
+  --card-foreground: 20% 0.01 40;
+  --popover: 98% 0.015 50;
+  --popover-foreground: 20% 0.01 40;
+  --primary: 56% 0.16 35; /* Deeper terracotta/burnt orange #D16234 */
+  --primary-foreground: 100% 0 0;
+  --secondary: 88% 0.045 45; /* Richer peachy-apricot #EBCCB4 */
+  --secondary-foreground: 56% 0.16 35;
+  --muted: 92% 0.025 50;
+  --muted-foreground: 42% 0.015 35;
+  --accent: 65% 0.13 55; /* Warmer amber-gold #C17E3A */
+  --accent-foreground: 20% 0.01 40;
+  --destructive: 57.7% 0.245 27.325;
+  --destructive-foreground: 100% 0 0;
+  --border: 90% 0.03 50; /* Warm sandy border #E8D8C8 */
+  --input: 90% 0.03 50;
+  --ring: 56% 0.16 35;
+  --chart-1: 56% 0.16 35;
+  --chart-2: 65% 0.13 55;
+  --chart-3: 88% 0.045 45;
+  --chart-4: 82.8% 0.189 84.429;
+  --chart-5: 76.9% 0.188 70.08;
+  --radius: 1rem;
+
+  /* Updated Persian color tokens with warmer values */
+  --terracotta: 56% 0.16 35;
+  --coral: 56% 0.16 35;
+  --gold: 65% 0.13 55;
+  --cream: 96% 0.02 55;
+  --peach-50: 94% 0.02 50;
+  --peach-100: 88% 0.045 45;
+  --peach-200: 85% 0.055 45;
+  --sand: 88% 0.045 45;
+  --charcoal: 20% 0.01 40;
+  --sidebar: oklch(0.96 0.02 55);
+  --sidebar-foreground: oklch(0.2 0.01 40);
+  --sidebar-primary: oklch(0.56 0.16 35);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.88 0.045 45);
+  --sidebar-accent-foreground: oklch(0.56 0.16 35);
+  --sidebar-border: oklch(0.9 0.03 50);
+  --sidebar-ring: oklch(0.56 0.16 35);
+}
+
+.dark {
+  --background: 14.5% 0 0;
+  --foreground: 98.5% 0 0;
+  --card: 14.5% 0 0;
+  --card-foreground: 98.5% 0 0;
+  --popover: 14.5% 0 0;
+  --popover-foreground: 98.5% 0 0;
+  --primary: 98.5% 0 0;
+  --primary-foreground: 20.5% 0 0;
+  --secondary: 26.9% 0 0;
+  --secondary-foreground: 98.5% 0 0;
+  --muted: 26.9% 0 0;
+  --muted-foreground: 70.8% 0 0;
+  --accent: 26.9% 0 0;
+  --accent-foreground: 98.5% 0 0;
+  --destructive: 39.6% 0.141 25.723;
+  --destructive-foreground: 63.7% 0.237 25.331;
+  --border: 26.9% 0 0;
+  --input: 26.9% 0 0;
+  --ring: 43.9% 0 0;
+  --chart-1: 48.8% 0.243 264.376;
+  --chart-2: 69.6% 0.17 162.48;
+  --chart-3: 76.9% 0.188 70.08;
+  --chart-4: 62.7% 0.265 303.9;
+  --chart-5: 64.5% 0.246 16.439;
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-serif: "Georgia", "Times New Roman", serif;
+  --color-background: oklch(var(--background));
+  --color-foreground: oklch(var(--foreground));
+  --color-card: oklch(var(--card));
+  --color-card-foreground: oklch(var(--card-foreground));
+  --color-popover: oklch(var(--popover));
+  --color-popover-foreground: oklch(var(--popover-foreground));
+  --color-primary: oklch(var(--primary));
+  --color-primary-foreground: oklch(var(--primary-foreground));
+  --color-secondary: oklch(var(--secondary));
+  --color-secondary-foreground: oklch(var(--secondary-foreground));
+  --color-muted: oklch(var(--muted));
+  --color-muted-foreground: oklch(var(--muted-foreground));
+  --color-accent: oklch(var(--accent));
+  --color-accent-foreground: oklch(var(--accent-foreground));
+  --color-destructive: oklch(var(--destructive));
+  --color-destructive-foreground: oklch(var(--destructive-foreground));
+  --color-border: oklch(var(--border));
+  --color-input: oklch(var(--input));
+  --color-ring: oklch(var(--ring));
+  --color-chart-1: oklch(var(--chart-1));
+  --color-chart-2: oklch(var(--chart-2));
+  --color-chart-3: oklch(var(--chart-3));
+  --color-chart-4: oklch(var(--chart-4));
+  --color-chart-5: oklch(var(--chart-5));
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Added new Persian-inspired color utilities */
+  --color-terracotta: oklch(var(--terracotta));
+  --color-coral: oklch(var(--coral));
+  --color-gold: oklch(var(--gold));
+  --color-cream: oklch(var(--cream));
+  --color-peach-50: oklch(var(--peach-50));
+  --color-peach-100: oklch(var(--peach-100));
+  --color-peach-200: oklch(var(--peach-200));
+  --color-sand: oklch(var(--sand));
+  --color-charcoal: oklch(var(--charcoal));
+  --color-sidebar: oklch(var(--sidebar));
+  --color-sidebar-foreground: oklch(var(--sidebar-foreground));
+  --color-sidebar-primary: oklch(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: oklch(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: oklch(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: oklch(var(--sidebar-accent-foreground));
+  --color-sidebar-border: oklch(var(--sidebar-border));
+  --color-sidebar-ring: oklch(var(--sidebar-ring));
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
