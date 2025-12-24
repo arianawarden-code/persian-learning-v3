@@ -5049,4 +5049,23 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       { targetWord: "فرش", availableLetters: ["ف", "ر", "ش", "م", "ن"], description: "Build the word for 'carpet'" },
     ],
   },
+  11: {
+    moduleId: 11,
+    vocabulary: [
+      {
+        persian: "خانه",
+        transliteration: "khāne",
+        english: "house/home",
+        example: "خانه من بزرگ است",
+        exampleTranslation: "My house is big",
+      },
+      {
+        persian: "اتاق",
+        transliteration: "otāgh",
+        english: "room",
+        example: "اتاق تمیز است",
+        exampleTranslation: "The room is clean",
+      }.
+    ],
+  }.
 }
