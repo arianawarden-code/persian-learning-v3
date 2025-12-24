@@ -743,267 +743,8 @@ export const modules: Module[] = [
 
 export const moduleContent: Record<string | number, ModuleContent> = {
   
-    grammar: [
-      // Letter 1: Alef (ا) - Non-connecting letter
-      {
-        id: 1,
-        type: "letter-position",
-        instruction: "Learn about the letter Alef (ا)",
-        teachingContent: {
-          title: "Alef (ا) - A Special Letter",
-          explanation:
-            "Alef is a special letter in Persian because it DOES NOT connect to the letter that comes after it. It only has two forms: Isolated and Final.",
-          examples: [
-            { label: "Isolated", persian: "ا", description: "Letter standing alone" },
-            { label: "Final", persian: "ـا", description: "At the end, connects from right only" },
-            { label: "In word", persian: "آب", description: "âb (water) - Alef at beginning" },
-            { label: "In word", persian: "پا", description: "pâ (foot) - Alef at end" },
-          ],
-        },
-        question: "Does Alef (ا) connect to the letter that follows it?",
-        options: ["Yes, it always connects", "No, it never connects forward", "Only sometimes", "Only in the middle"],
-        correctAnswer: 1,
-        explanation: "Alef is a non-connecting letter - it never connects to the letter after it.",
-      },
-      {
-        id: 2,
-        type: "word-analysis",
-        instruction: "Identify Alef in words",
-        teachingContent: {
-          title: "Finding Alef in Words",
-          explanation:
-            "Look for the tall vertical stroke (ا). Because it doesn't connect forward, you'll often see a gap after it.",
-          examples: [
-            { label: "Beginning", persian: "اب", description: "ab (father)" },
-            { label: "Beginning", persian: "آب", description: "âb (water) - with madda" },
-            { label: "End", persian: "جا", description: "jâ (place)" },
-          ],
-        },
-        question: "In the word 'باب' (bâb - chapter), how many times does Alef appear?",
-        options: ["Once", "Twice", "Three times", "Not at all"],
-        correctAnswer: 1,
-        explanation: "Alef (ا) appears twice in 'باب' - in the middle and at the end.",
-      },
-
-      // Letter 2: Be (ب)
-      {
-        id: 3,
-        type: "letter-position",
-        instruction: "Learn about the letter Be (ب)",
-        teachingContent: {
-          title: "Be (ب) - Letter B",
-          explanation:
-            "Be is a connecting letter with 4 different forms. The key feature is ONE dot BELOW the letter shape.",
-          examples: [
-            { label: "Isolated", persian: "ب", description: "Standing alone" },
-            { label: "Initial", persian: "بـ", description: "At beginning" },
-            { label: "Medial", persian: "ـبـ", description: "In middle" },
-            { label: "Final", persian: "ـب", description: "At end" },
-          ],
-        },
-        question: "How many dots does the letter Be (ب) have?",
-        options: ["No dots", "One dot below", "Two dots above", "Three dots above"],
-        correctAnswer: 1,
-        explanation: "Be has ONE dot positioned BELOW the letter shape.",
-      },
-      {
-        id: 4,
-        type: "letter-position",
-        instruction: "Identify Be forms in words",
-        teachingContent: {
-          title: "Be in Different Positions",
-          explanation: "Practice recognizing Be in various positions within words.",
-          examples: [
-            { label: "Initial", persian: "باب", description: "bâb - Be at start" },
-            { label: "Final", persian: "آب", description: "âb - Be at end" },
-            { label: "Final", persian: "تاب", description: "tâb - Be at end" },
-          ],
-        },
-        question: "What form of Be (ب) appears at the END of 'آب' (âb - water)?",
-        options: ["ب (isolated)", "بـ (initial)", "ـبـ (medial)", "ـب (final)"],
-        correctAnswer: 3,
-        explanation: "At the end of a word, Be uses its final form: ـب",
-      },
-
-      // Letter 3: Pe (پ)
-      {
-        id: 5,
-        type: "letter-position",
-        instruction: "Learn about the letter Pe (پ)",
-        teachingContent: {
-          title: "Pe (پ) - Letter P",
-          explanation:
-            "Pe looks exactly like Be, but with THREE dots BELOW instead of one. This letter is unique to Persian and doesn't exist in Arabic.",
-          examples: [
-            { label: "Isolated", persian: "پ", description: "Standing alone" },
-            { label: "Initial", persian: "پـ", description: "At beginning" },
-            { label: "Medial", persian: "ـپـ", description: "In middle" },
-            { label: "Final", persian: "ـپ", description: "At end" },
-          ],
-        },
-        question: "What is the difference between Be (ب) and Pe (پ)?",
-        options: ["Position in word", "Number of dots", "Direction of writing", "No difference"],
-        correctAnswer: 1,
-        explanation: "Pe has THREE dots below, while Be has only ONE dot below.",
-      },
-      {
-        id: 6,
-        type: "word-analysis",
-        instruction: "Find Pe in words",
-        teachingContent: {
-          title: "Pe in Words",
-          explanation: "Look for the three dots below to distinguish Pe from Be.",
-          examples: [
-            { label: "Initial", persian: "پا", description: "pâ (foot)" },
-            { label: "Final", persian: "تُپ", description: "top (ball)" },
-          ],
-        },
-        question: "In the word 'پا' (pâ - foot), what form of Pe is used?",
-        options: ["Isolated", "Initial", "Medial", "Final"],
-        correctAnswer: 1,
-        explanation: "Pe appears at the beginning, so it uses its initial form: پـ",
-      },
-
-      // Letter 4: Te (ت)
-      {
-        id: 7,
-        type: "letter-position",
-        instruction: "Learn about the letter Te (ت)",
-        teachingContent: {
-          title: "Te (ت) - Letter T",
-          explanation: "Te has the same base shape as Be and Pe, but with TWO dots ABOVE the letter.",
-          examples: [
-            { label: "Isolated", persian: "ت", description: "Standing alone" },
-            { label: "Initial", persian: "تـ", description: "At beginning" },
-            { label: "Medial", persian: "ـتـ", description: "In middle" },
-            { label: "Final", persian: "ـت", description: "At end" },
-          ],
-        },
-        question: "Where are the dots positioned on the letter Te (ت)?",
-        options: ["Below the letter", "Above the letter", "No dots", "Inside the letter"],
-        correctAnswer: 1,
-        explanation: "Te has TWO dots positioned ABOVE the letter shape.",
-      },
-      {
-        id: 8,
-        type: "letter-position",
-        instruction: "Recognize Te in words",
-        teachingContent: {
-          title: "Te in Different Positions",
-          explanation: "Practice identifying Te by looking for two dots above.",
-          examples: [
-            { label: "Initial", persian: "تاب", description: "tâb (swing)" },
-            { label: "Initial", persian: "تُپ", description: "top (ball)" },
-            { label: "Final", persian: "بَت", description: "bat (idol)" },
-          ],
-        },
-        question: "In 'تاب' (tâb - swing), what position is Te in?",
-        options: ["Isolated", "Initial (beginning)", "Medial (middle)", "Final (end)"],
-        correctAnswer: 1,
-        explanation: "Te appears at the beginning of the word, using its initial form.",
-      },
-
-      // Letter 5: Se (ث)
-      {
-        id: 9,
-        type: "letter-position",
-        instruction: "Learn about the letter Se (ث)",
-        teachingContent: {
-          title: "Se (ث) - Letter S (Arabic)",
-          explanation:
-            "Se has the same shape as Be, Pe, and Te, but with THREE dots ABOVE. This letter comes from Arabic and is less common in modern Persian.",
-          examples: [
-            { label: "Isolated", persian: "ث", description: "Standing alone" },
-            { label: "Initial", persian: "ثـ", description: "At beginning" },
-            { label: "Medial", persian: "ـثـ", description: "In middle" },
-            { label: "Final", persian: "ـث", description: "At end" },
-          ],
-        },
-        question: "How can you distinguish Se (ث) from Pe (پ)?",
-        options: ["Se has dots above, Pe has dots below", "They are identical", "Se is shorter", "Pe doesn't connect"],
-        correctAnswer: 0,
-        explanation: "Se has THREE dots ABOVE, while Pe has THREE dots BELOW.",
-      },
-      {
-        id: 10,
-        type: "word-analysis",
-        instruction: "Find Se in words",
-        teachingContent: {
-          title: "Se in Words",
-          explanation: "Look for three dots above the base shape.",
-          examples: [{ label: "Initial", persian: "ثابت", description: "sâbet (stable)" }],
-        },
-        question: "In 'ثابت' (sâbet), what form of Se is used?",
-        options: ["Isolated", "Initial", "Medial", "Final"],
-        correctAnswer: 1,
-        explanation: "Se appears at the beginning of 'ثابت', using its initial form.",
-      },
-
-      // Letter 6: Jim (ج)
-      {
-        id: 11,
-        type: "letter-position",
-        instruction: "Learn about the letter Jim (ج)",
-        teachingContent: {
-          title: "Jim (ج) - Letter J",
-          explanation:
-            "Jim has a completely different shape from the previous letters. It looks like a small hook with ONE dot in the middle.",
-          examples: [
-            { label: "Isolated", persian: "ج", description: "Standing alone - hook shape" },
-            { label: "Initial", persian: "جـ", description: "At beginning" },
-            { label: "Medial", persian: "ـجـ", description: "In middle" },
-            { label: "Final", persian: "ـج", description: "At end" },
-          ],
-        },
-        question: "What shape does Jim (ج) have?",
-        options: ["Straight line", "Hook or curve", "Circle", "Triangle"],
-        correctAnswer: 1,
-        explanation: "Jim has a distinctive hook or curved shape with one dot.",
-      },
-      {
-        id: 12,
-        type: "letter-position",
-        instruction: "Recognize Jim in words",
-        teachingContent: {
-          title: "Jim in Different Positions",
-          explanation: "Practice identifying the hook shape of Jim in words.",
-          examples: [
-            { label: "Initial", persian: "جا", description: "jâ (place)" },
-            { label: "Final", persian: "باج", description: "bâj (tax/tribute)" },
-          ],
-        },
-        question: "In 'جا' (jâ - place), what form of Jim is used?",
-        options: ["Isolated", "Initial", "Medial", "Final"],
-        correctAnswer: 1,
-        explanation: "Jim appears at the beginning, using its initial form that connects to Alef.",
-      },
-
-      // Summary exercise
-      {
-        id: 13,
-        type: "word-analysis",
-        instruction: "Review all letters learned",
-        teachingContent: {
-          title: "Letter Review",
-          explanation:
-            "You've learned 6 letters: ا (Alef), ب (Be), پ (Pe), ت (Te), ث (Se), ج (Jim). Remember their distinctive features!",
-          examples: [
-            { label: "Alef", persian: "ا", description: "Non-connecting, tall vertical" },
-            { label: "Be", persian: "ب", description: "1 dot below" },
-            { label: "Pe", persian: "پ", description: "3 dots below" },
-            { label: "Te", persian: "ت", description: "2 dots above" },
-            { label: "Se", persian: "ث", description: "3 dots above" },
-            { label: "Jim", persian: "ج", description: "Hook shape, 1 dot" },
-          ],
-        },
-        question: "Which letters have dots BELOW them?",
-        options: ["Alef and Jim", "Be and Pe", "Te and Se", "All of them"],
-        correctAnswer: 1,
-        explanation: "Be (ب) has 1 dot below and Pe (پ) has 3 dots below.",
-      },
-    ],
-  },
-
+    
+  
   "A-1": {
     moduleId: "A-1",
     vocabulary: [
@@ -2103,6 +1844,8 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
     ],
   },
+
+  //module 1 
   1: {
     moduleId: 1,
     vocabulary: [
@@ -2427,6 +2170,269 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         prompt: "Say goodbye and mention tomorrow",
       },
     ],
+
+    grammar: [
+      // Letter 1: Alef (ا) - Non-connecting letter
+      {
+        id: 1,
+        type: "letter-position",
+        instruction: "Learn about the letter Alef (ا)",
+        teachingContent: {
+          title: "Alef (ا) - A Special Letter",
+          explanation:
+            "Alef is a special letter in Persian because it DOES NOT connect to the letter that comes after it. It only has two forms: Isolated and Final.",
+          examples: [
+            { label: "Isolated", persian: "ا", description: "Letter standing alone" },
+            { label: "Final", persian: "ـا", description: "At the end, connects from right only" },
+            { label: "In word", persian: "آب", description: "âb (water) - Alef at beginning" },
+            { label: "In word", persian: "پا", description: "pâ (foot) - Alef at end" },
+          ],
+        },
+        question: "Does Alef (ا) connect to the letter that follows it?",
+        options: ["Yes, it always connects", "No, it never connects forward", "Only sometimes", "Only in the middle"],
+        correctAnswer: 1,
+        explanation: "Alef is a non-connecting letter - it never connects to the letter after it.",
+      },
+      {
+        id: 2,
+        type: "word-analysis",
+        instruction: "Identify Alef in words",
+        teachingContent: {
+          title: "Finding Alef in Words",
+          explanation:
+            "Look for the tall vertical stroke (ا). Because it doesn't connect forward, you'll often see a gap after it.",
+          examples: [
+            { label: "Beginning", persian: "اب", description: "ab (father)" },
+            { label: "Beginning", persian: "آب", description: "âb (water) - with madda" },
+            { label: "End", persian: "جا", description: "jâ (place)" },
+          ],
+        },
+        question: "In the word 'باب' (bâb - chapter), how many times does Alef appear?",
+        options: ["Once", "Twice", "Three times", "Not at all"],
+        correctAnswer: 1,
+        explanation: "Alef (ا) appears twice in 'باب' - in the middle and at the end.",
+      },
+
+      // Letter 2: Be (ب)
+      {
+        id: 3,
+        type: "letter-position",
+        instruction: "Learn about the letter Be (ب)",
+        teachingContent: {
+          title: "Be (ب) - Letter B",
+          explanation:
+            "Be is a connecting letter with 4 different forms. The key feature is ONE dot BELOW the letter shape.",
+          examples: [
+            { label: "Isolated", persian: "ب", description: "Standing alone" },
+            { label: "Initial", persian: "بـ", description: "At beginning" },
+            { label: "Medial", persian: "ـبـ", description: "In middle" },
+            { label: "Final", persian: "ـب", description: "At end" },
+          ],
+        },
+        question: "How many dots does the letter Be (ب) have?",
+        options: ["No dots", "One dot below", "Two dots above", "Three dots above"],
+        correctAnswer: 1,
+        explanation: "Be has ONE dot positioned BELOW the letter shape.",
+      },
+      {
+        id: 4,
+        type: "letter-position",
+        instruction: "Identify Be forms in words",
+        teachingContent: {
+          title: "Be in Different Positions",
+          explanation: "Practice recognizing Be in various positions within words.",
+          examples: [
+            { label: "Initial", persian: "باب", description: "bâb - Be at start" },
+            { label: "Final", persian: "آب", description: "âb - Be at end" },
+            { label: "Final", persian: "تاب", description: "tâb - Be at end" },
+          ],
+        },
+        question: "What form of Be (ب) appears at the END of 'آب' (âb - water)?",
+        options: ["ب (isolated)", "بـ (initial)", "ـبـ (medial)", "ـب (final)"],
+        correctAnswer: 3,
+        explanation: "At the end of a word, Be uses its final form: ـب",
+      },
+
+      // Letter 3: Pe (پ)
+      {
+        id: 5,
+        type: "letter-position",
+        instruction: "Learn about the letter Pe (پ)",
+        teachingContent: {
+          title: "Pe (پ) - Letter P",
+          explanation:
+            "Pe looks exactly like Be, but with THREE dots BELOW instead of one. This letter is unique to Persian and doesn't exist in Arabic.",
+          examples: [
+            { label: "Isolated", persian: "پ", description: "Standing alone" },
+            { label: "Initial", persian: "پـ", description: "At beginning" },
+            { label: "Medial", persian: "ـپـ", description: "In middle" },
+            { label: "Final", persian: "ـپ", description: "At end" },
+          ],
+        },
+        question: "What is the difference between Be (ب) and Pe (پ)?",
+        options: ["Position in word", "Number of dots", "Direction of writing", "No difference"],
+        correctAnswer: 1,
+        explanation: "Pe has THREE dots below, while Be has only ONE dot below.",
+      },
+      {
+        id: 6,
+        type: "word-analysis",
+        instruction: "Find Pe in words",
+        teachingContent: {
+          title: "Pe in Words",
+          explanation: "Look for the three dots below to distinguish Pe from Be.",
+          examples: [
+            { label: "Initial", persian: "پا", description: "pâ (foot)" },
+            { label: "Final", persian: "تُپ", description: "top (ball)" },
+          ],
+        },
+        question: "In the word 'پا' (pâ - foot), what form of Pe is used?",
+        options: ["Isolated", "Initial", "Medial", "Final"],
+        correctAnswer: 1,
+        explanation: "Pe appears at the beginning, so it uses its initial form: پـ",
+      },
+
+      // Letter 4: Te (ت)
+      {
+        id: 7,
+        type: "letter-position",
+        instruction: "Learn about the letter Te (ت)",
+        teachingContent: {
+          title: "Te (ت) - Letter T",
+          explanation: "Te has the same base shape as Be and Pe, but with TWO dots ABOVE the letter.",
+          examples: [
+            { label: "Isolated", persian: "ت", description: "Standing alone" },
+            { label: "Initial", persian: "تـ", description: "At beginning" },
+            { label: "Medial", persian: "ـتـ", description: "In middle" },
+            { label: "Final", persian: "ـت", description: "At end" },
+          ],
+        },
+        question: "Where are the dots positioned on the letter Te (ت)?",
+        options: ["Below the letter", "Above the letter", "No dots", "Inside the letter"],
+        correctAnswer: 1,
+        explanation: "Te has TWO dots positioned ABOVE the letter shape.",
+      },
+      {
+        id: 8,
+        type: "letter-position",
+        instruction: "Recognize Te in words",
+        teachingContent: {
+          title: "Te in Different Positions",
+          explanation: "Practice identifying Te by looking for two dots above.",
+          examples: [
+            { label: "Initial", persian: "تاب", description: "tâb (swing)" },
+            { label: "Initial", persian: "تُپ", description: "top (ball)" },
+            { label: "Final", persian: "بَت", description: "bat (idol)" },
+          ],
+        },
+        question: "In 'تاب' (tâb - swing), what position is Te in?",
+        options: ["Isolated", "Initial (beginning)", "Medial (middle)", "Final (end)"],
+        correctAnswer: 1,
+        explanation: "Te appears at the beginning of the word, using its initial form.",
+      },
+
+      // Letter 5: Se (ث)
+      {
+        id: 9,
+        type: "letter-position",
+        instruction: "Learn about the letter Se (ث)",
+        teachingContent: {
+          title: "Se (ث) - Letter S (Arabic)",
+          explanation:
+            "Se has the same shape as Be, Pe, and Te, but with THREE dots ABOVE. This letter comes from Arabic and is less common in modern Persian.",
+          examples: [
+            { label: "Isolated", persian: "ث", description: "Standing alone" },
+            { label: "Initial", persian: "ثـ", description: "At beginning" },
+            { label: "Medial", persian: "ـثـ", description: "In middle" },
+            { label: "Final", persian: "ـث", description: "At end" },
+          ],
+        },
+        question: "How can you distinguish Se (ث) from Pe (پ)?",
+        options: ["Se has dots above, Pe has dots below", "They are identical", "Se is shorter", "Pe doesn't connect"],
+        correctAnswer: 0,
+        explanation: "Se has THREE dots ABOVE, while Pe has THREE dots BELOW.",
+      },
+      {
+        id: 10,
+        type: "word-analysis",
+        instruction: "Find Se in words",
+        teachingContent: {
+          title: "Se in Words",
+          explanation: "Look for three dots above the base shape.",
+          examples: [{ label: "Initial", persian: "ثابت", description: "sâbet (stable)" }],
+        },
+        question: "In 'ثابت' (sâbet), what form of Se is used?",
+        options: ["Isolated", "Initial", "Medial", "Final"],
+        correctAnswer: 1,
+        explanation: "Se appears at the beginning of 'ثابت', using its initial form.",
+      },
+
+      // Letter 6: Jim (ج)
+      {
+        id: 11,
+        type: "letter-position",
+        instruction: "Learn about the letter Jim (ج)",
+        teachingContent: {
+          title: "Jim (ج) - Letter J",
+          explanation:
+            "Jim has a completely different shape from the previous letters. It looks like a small hook with ONE dot in the middle.",
+          examples: [
+            { label: "Isolated", persian: "ج", description: "Standing alone - hook shape" },
+            { label: "Initial", persian: "جـ", description: "At beginning" },
+            { label: "Medial", persian: "ـجـ", description: "In middle" },
+            { label: "Final", persian: "ـج", description: "At end" },
+          ],
+        },
+        question: "What shape does Jim (ج) have?",
+        options: ["Straight line", "Hook or curve", "Circle", "Triangle"],
+        correctAnswer: 1,
+        explanation: "Jim has a distinctive hook or curved shape with one dot.",
+      },
+      {
+        id: 12,
+        type: "letter-position",
+        instruction: "Recognize Jim in words",
+        teachingContent: {
+          title: "Jim in Different Positions",
+          explanation: "Practice identifying the hook shape of Jim in words.",
+          examples: [
+            { label: "Initial", persian: "جا", description: "jâ (place)" },
+            { label: "Final", persian: "باج", description: "bâj (tax/tribute)" },
+          ],
+        },
+        question: "In 'جا' (jâ - place), what form of Jim is used?",
+        options: ["Isolated", "Initial", "Medial", "Final"],
+        correctAnswer: 1,
+        explanation: "Jim appears at the beginning, using its initial form that connects to Alef.",
+      },
+
+      // Summary exercise
+      {
+        id: 13,
+        type: "word-analysis",
+        instruction: "Review all letters learned",
+        teachingContent: {
+          title: "Letter Review",
+          explanation:
+            "You've learned 6 letters: ا (Alef), ب (Be), پ (Pe), ت (Te), ث (Se), ج (Jim). Remember their distinctive features!",
+          examples: [
+            { label: "Alef", persian: "ا", description: "Non-connecting, tall vertical" },
+            { label: "Be", persian: "ب", description: "1 dot below" },
+            { label: "Pe", persian: "پ", description: "3 dots below" },
+            { label: "Te", persian: "ت", description: "2 dots above" },
+            { label: "Se", persian: "ث", description: "3 dots above" },
+            { label: "Jim", persian: "ج", description: "Hook shape, 1 dot" },
+          ],
+        },
+        question: "Which letters have dots BELOW them?",
+        options: ["Alef and Jim", "Be and Pe", "Te and Se", "All of them"],
+        correctAnswer: 1,
+        explanation: "Be (ب) has 1 dot below and Pe (پ) has 3 dots below.",
+      },
+    ],
+  },
+  
+  //module 2
   2: {
     moduleId: 2,
     vocabulary: [
