@@ -5067,5 +5067,5 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "The room is clean",
       }.
     ],
-  }.
+  }
 }
