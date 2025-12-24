@@ -11,7 +11,7 @@
   --card-foreground: 20% 0.01 40;
   --popover: 98% 0.015 50;
   --popover-foreground: 20% 0.01 40;
-  --primary: 56% 0.16 35; /* Deeper terracotta/burnt orange #D16234 */
+  --primary: 72% 0.16 30; /* Deeper terracotta/burnt orange #D16234 */
   --primary-foreground: 100% 0 0;
   --secondary: 88% 0.045 45; /* Richer peachy-apricot #EBCCB4 */
   --secondary-foreground: 56% 0.16 35;
@@ -33,7 +33,7 @@
 
   /* Updated Persian color tokens with warmer values */
   --terracotta: 68% 0.18 45;
-  --coral: 56% 0.16 35;
+  --coral: 72% 0.16 30;
   --gold: 65% 0.13 55;
   --cream: 96% 0.02 55;
   --peach-50: 94% 0.02 50;
