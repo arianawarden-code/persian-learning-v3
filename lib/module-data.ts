@@ -5359,7 +5359,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         transliteration: "pul",
         english: "money",
         example: "ول ندارم",
-        exampleTranslation: "I don't have money,
+        exampleTranslation: "I don't have money",
       },
       {
         persian: "قیمت",
