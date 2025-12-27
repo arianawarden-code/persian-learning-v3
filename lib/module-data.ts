@@ -114,7 +114,7 @@ export const modules: Module[] = [
   },
   {
     id: 2,
-    title: "Numbers & Time",
+    title: "Self Introduction",
     description: "Master numbers, telling time, days of the week, and months in Persian",
     level: "beginner",
     topics: ["Numbers 1-100", "Telling time", "Days & months"],
