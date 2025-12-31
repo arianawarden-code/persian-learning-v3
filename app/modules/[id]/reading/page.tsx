@@ -87,7 +87,7 @@ async function ReadingContent({ params }: { params: Promise<{ id: string }> }) {
                       </div>
                     </div>
                     <p className="mb-3 text-lg font-medium text-charcoal/80">{exercise.title}</p>
-                    <p className="text-sm text-charcoal/60 line-clamp-2">{exercise.textTranslation}</p>
+                    {/*<p className="text-sm text-charcoal/60 line-clamp-2">{exercise.textTranslation}</p>*/}
                     <div className="mt-4 flex items-center gap-2 text-sm text-terracotta">
                       <span>Read Story</span>
                       <span className="transition-transform group-hover:translate-x-1">→</span>
