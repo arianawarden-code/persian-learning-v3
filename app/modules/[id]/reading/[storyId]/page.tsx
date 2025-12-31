@@ -10,15 +10,17 @@ export function generateStaticParams() {
   const params: { id: string; storyId: string }[] = []
 
   Object.keys(moduleContent).forEach((moduleId) => {
-    const content = moduleContent[moduleId]
-    if (content?.reading) {
-      content.reading.forEach((story) => {
-        params.push({
-          id: moduleId,
-          storyId: story.id.toString(),
-        })
+    const content = moduleContent[moduleId as keyof typeof moduleContent]
+    if (!content?.reading) return
+
+    content.reading.forEach((story) => {
+      if (!story?.id) return // ✅ skip undefined stories or missing ids
+
+      params.push({
+        id: moduleId,
+        storyId: String(story.id), // ✅ safe string conversion
       })
-    }
+    })
   })
 
   return params
@@ -53,7 +55,8 @@ async function StoryContent({
   const { id, storyId } = await params
   const module = modules.find((m) => String(m.id) === id)
   const content = moduleContent[id]
-  const story = content?.reading?.find((s) => s.id === Number.parseInt(storyId))
+  const storyNum = Number(storyId)
+  const story = content?.reading?.find((s) => s?.id === storyNum)
 
   if (!module || !story) {
     notFound()
