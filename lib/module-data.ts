@@ -2781,7 +2781,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     moduleId: 3,
     vocabulary: [
       {
-        persian: "خانوادِه",
+        persian: "خانِوادِه",
         transliteration: "khānevāde",
         english: "family",
         example: "خانوادِهٔ مَن بُزرگ اَست",
@@ -2960,7 +2960,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "My Family",
-        text: "خانوادِهٔ مَن کوچَک اَست. مَن یِک بَرادَر و یِک خواهَر دارَم. پِدَرِ مَن مُعَلِّم اَست. مادَرِ مَن دُکتُر اَست. مَن خانوادِهٔ خود را دوست دارَم.",
+        text: "خانوادِه مَن کوچَک اَست. مَن یِک بَرادَر و یِک خواهَر دارَم. پِدَرِ مَن مُعَلِِّم اَست. مادَرِ مَن دُکتُر اَست. مَن خانوادِهٔ خود را دوست دارَم.",
         textTransliteration:
           "Khānevāde-ye man koochak ast. Man yek barādar va yek khāhar dāram. Pedar-e man mo'allem ast. Mādar-e man doktor ast. Man khānevāde-ye khod rā doost dāram.",
         textTranslation:
