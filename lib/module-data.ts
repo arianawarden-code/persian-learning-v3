@@ -2775,7 +2775,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     ],
   },
 
-  //module 3 - 
+  //module 3 - family and relaitonships
 
   3: {
     moduleId: 3,
@@ -2960,11 +2960,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "My Family",
-        text: "خانواده من کوچک است. من یک برادر و یک خواهر دارم. پدر من معلم است. مادر من خانه است. من خانواده خود را دوست دارم.",
+        text: "خانوادِهٔ مَن کوچَک اَست. مَن یِک بَرادَر و یِک خواهَر دارَم. پِدَرِ مَن مُعَلِّم اَست. مادَرِ مَن دُکتُر اَست. مَن خانوادِهٔ خود را دوست دارَم.",
         textTransliteration:
-          "Khānevāde-ye man koochak ast. Man yek barādar va yek khāhar dāram. Pedar-e man mo'allem ast. Mādar-e man khāne ast. Man khānevāde-ye khod rā doost dāram.",
+          "Khānevāde-ye man koochak ast. Man yek barādar va yek khāhar dāram. Pedar-e man mo'allem ast. Mādar-e man doktor ast. Man khānevāde-ye khod rā doost dāram.",
         textTranslation:
-          "My family is small. I have one brother and one sister. My father is a teacher. My mother is at home. I love my family.",
+          "My family is small. I have one brother and one sister. My father is a teacher. My mother is a doctor. I love my family.",
         questions: [
           {
             question: "How many siblings does the speaker have?",
@@ -2981,7 +2981,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 2,
         title: "Grandparents",
-        text: "پدربزرگ و مادربزرگ من امروز می‌آیند. آن‌ها پیر هستند. من آن‌ها را دوست دارم. پدربزرگ من مهربان است. مادربزرگ من هم مهربان است.",
+        text: "پِدَربُزرگ و مادَربُزرگِ مَن اِمروز می‌آیَند. آن‌ها پیر هَستَند. مَن آن‌ها را دوست دارَم. پِدَربُزرگِ مَن مِهربان اَست. مادَربُزرگِ مَن هَم مِهربان اَست.",
         textTransliteration:
           "Pedarbozorg va mādarbozorg-e man emrooz mi-āyand. Ānhā pir hastand. Man ānhā rā doost dāram. Pedarbozorg-e man mehrabān ast. Mādarbozorg-e man ham mehrabān ast.",
         textTranslation:
@@ -3002,9 +3002,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 3,
         title: "My Siblings",
-        text: "برادر من بزرگ است. او بیست ساله است. خواهر من کوچک است. او ده ساله است. من هم پانزده ساله هستم. ما با هم بازی می‌کنیم.",
+        text: "بَرادَرِ مَن بُزرگ اَست. او بیست سالِه اَست. خواهَرِ مَن کوچَک اَست. او دَه سالِه اَست. مَن هَم پانزْدَه سالِه هَستَم. ما با هَم بازی می‌کُنیم.",
         textTransliteration:
-          "Barādar-e man bozorg ast. Oo bist sāle ast. Khāhar-e man koochak ast. Oo dah sāle ast. Man ham pānzdah sāle hastam. Mā bā ham bāzi mikonim.",
+          "Barādar-e man bozorg ast. Ū bist sāle ast. Khāhar-e man koochak ast. Ū dah sāle ast. Man ham pānzdah sāle hastam. Mā bā ham bāzi mikonim.",
         textTranslation:
           "My brother is big. He is twenty years old. My sister is little. She is ten years old. I am also fifteen years old. We play together.",
         questions: [
@@ -3023,9 +3023,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         title: "Uncle and Aunt",
-        text: "عمو من فردا می‌آید. نام او رضا است. خاله من هم می‌آید. او دو تا بچه دارد. یک پسر و یک دختر. من خوشحالم!",
+        text: "عَمو‌یِ مَن فَردا می‌آیَد. نامِ او رِضا اَست. خالِهٔ مَن هَم می‌آیَد. او دو تا بَچِّه دارَد. یِک پِسَر و یِک دُختَر. مَن خُوشحالَم!",
         textTransliteration:
-          "Amoo-ye man fardā mi-āyad. Nām-e oo Rezā ast. Khāle-ye man ham mi-āyad. Oo do tā bache dārad. Yek pesar va yek dokhtar. Man khoshhālam!",
+          "Amoo-ye man fardā mi-āyad. Nām-e ū Rezā ast. Khāle-ye man ham mi-āyad. Ū do tā bache dārad. Yek pesar va yek dokhtar. Man khoshhālam!",
         textTranslation:
           "My uncle is coming tomorrow. His name is Reza. My aunt is also coming. She has two children. One boy and one girl. I am happy!",
         questions: [
@@ -3044,9 +3044,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 5,
         title: "A Big Family",
-        text: "خانواده من بزرگ است. من سه برادر و دو خواهر دارم. پدر و مادر من خانه هستند. ما یک خانواده خوب هستیم. زندگی خوب است!",
+        text: "خانوادِهٔ مَن بُزرگ اَست. مَن سِه بَرادَر و دو خواهَر دارَم. پِدَر و مادَرِ مَن دَر خانِه هَستَند. ما یِک خانوادِهٔ خوب هَستیم. زِندگی خوب اَست!",
         textTransliteration:
-          "Khānevāde-ye man bozorg ast. Man se barādar va do khāhar dāram. Pedar va mādar-e man khāne hastand. Mā yek khānevāde-ye khoob hastim. Zendegi khoob ast!",
+          "Khānevāde-ye man bozorg ast. Man se barādar va do khāhar dāram. Pedar va mādar-e man dar khāne hastand. Mā yek khānevāde-ye khoob hastim. Zendegi khoob ast!",
         textTranslation:
           "My family is big. I have three brothers and two sisters. My father and mother are at home. We are a good family. Life is good!",
         questions: [
