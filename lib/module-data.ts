@@ -3023,9 +3023,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         title: "Uncle and Aunt",
-        text: "عَمو‌یِ مَن فَردا می‌آیَد. نامِ او رِضا اَست. خالِهٔ مَن هَم می‌آیَد. او دو تا بَچِّه دارَد. یِک پِسَر و یِک دُختَر. مَن خُوشحالَم!",
+        text: "عَمو‌یِ مَن فَردا می‌آیَد. اِسمِ او رِضا اَست. خالِه مَن هَم می‌آیَد. او دو تا بَچِّه دارَد. یِک پِسَر و یِک دُختَر. مَن خُوشحالَم!",
         textTransliteration:
-          "Amoo-ye man fardā mi-āyad. Nām-e ū Rezā ast. Khāle-ye man ham mi-āyad. Ū do tā bache dārad. Yek pesar va yek dokhtar. Man khoshhālam!",
+          "Amoo-ye man fardā mi-āyad. Esm-e ū Rezā ast. Khāle-ye man ham mi-āyad. Ū do tā bache dārad. Yek pesar va yek dokhtar. Man khoshhālam!",
         textTranslation:
           "My uncle is coming tomorrow. His name is Reza. My aunt is also coming. She has two children. One boy and one girl. I am happy!",
         questions: [
@@ -3044,9 +3044,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 5,
         title: "A Big Family",
-        text: "خانوادِهٔ مَن بُزرگ اَست. مَن سِه بَرادَر و دو خواهَر دارَم. پِدَر و مادَرِ مَن دَر خانِه هَستَند. ما یِک خانوادِهٔ خوب هَستیم. زِندگی خوب اَست!",
+        text: "خانوادِه مَن بُزرگ اَست. مَن سِه بَرادَر و دو خواهَر دارَم. پِدَر و مادَرِ مَن دَر خانِه زِندگی میکُنند. ما یِک خانوادِه خوب هَستیم. زِندگی خوب اَست!",
         textTransliteration:
-          "Khānevāde-ye man bozorg ast. Man se barādar va do khāhar dāram. Pedar va mādar-e man dar khāne hastand. Mā yek khānevāde-ye khoob hastim. Zendegi khoob ast!",
+          "Khānevāde-ye man bozorg ast. Man se barādar va do khāhar dāram. Pedar va mādar-e man dar khāne zendegi mikonand. Mā yek khānevāde-ye khoob hastim. Zendegi khoob ast!",
         textTranslation:
           "My family is big. I have three brothers and two sisters. My father and mother are at home. We are a good family. Life is good!",
         questions: [
@@ -3086,7 +3086,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         instruction: "Build the word 'برادر' (brother)",
         targetWord: "برادر",
         targetWordTransliteration: "barādar",
-        availableLetters: ["ب", "ر", "ا", "د", "خ", "و", "ه"],
+        availableLetters: ["ب", "ر", "ا", "د", "خ", "ر","و", "ه"],
       },
       {
         id: 4,
@@ -3102,7 +3102,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         instruction: "Build the word 'خانواده' (family)",
         targetWord: "خانواده",
         targetWordTransliteration: "khānevāde",
-        availableLetters: ["خ", "ا", "ن", "و", "د", "ه", "ر", "م", "ت"],
+        availableLetters: ["خ", "و", "ا", "ن", "د", "ا", "ه", "ر", "م", "ت"],
       },
     ],
   },
@@ -3114,7 +3114,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         persian: "صِفَر",
         transliteration: "sefr",
         english: "zero",
-        example: "عَدَدِ صِفَر کُوچَک اَسْت",
+        example: "عَدَدِ صِفَر کُوچَک اَست",
         exampleTranslation: "The number zero is small",
       },
       {
@@ -3156,14 +3156,14 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         persian: "شِش",
         transliteration: "shesh",
         english: "six",
-        example: "شِش ماه اینجا هَسْتَم",
+        example: "شِش ماه اینجا هَستَم",
         exampleTranslation: "I have been here for six months",
       },
       {
         persian: "هَفت",
         transliteration: "haft",
         english: "seven",
-        example: "هَفت روز دَر هَفته اَسْت",
+        example: "هَفت روز دَر هَفته اَست",
         exampleTranslation: "There are seven days in a week",
       },
       {
@@ -3195,17 +3195,17 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I come at eleven o’clock",
       },
       {
-        persian: "دَوازَدَه",
+        persian: "دَوازدَه",
         transliteration: "davāzdah",
         english: "twelve",
-        example: "ساعَتِ دَوازَدَه ناهار می‌خورَم",
+        example: "ساعَتِ دَوازدَه ناهار می‌خورَم",
         exampleTranslation: "I eat lunch at twelve",
       },
       {
-        persian: "سیزَدَه",
+        persian: "سیزدَه",
         transliteration: "sizdah",
         english: "thirteen",
-        example: "سیزَدَه سال دارَم",
+        example: "سیزدَه سال دارَم",
         exampleTranslation: "I am thirteen years old",
       },
       {
@@ -3216,24 +3216,24 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Fourteen days remain",
       },
       {
-        persian: "پانزَدَه",
+        persian: "پانزدَه",
         transliteration: "pānzdah",
         english: "fifteen",
-        example: "پانزَدَه دَقیقِه دیر شُد",
-        exampleTranslation: "It became fifteen minutes late",
+        example: "پانزدَه دَقیقه دیر کَرد",
+        exampleTranslation: "He/she was fifteen minutes late",
       },
       {
-        persian: "شانزَدَه",
+        persian: "شانزدَه",
         transliteration: "shānzdah",
         english: "sixteen",
-        example: "شانزَدَه سال دارَم",
+        example: "شانزدَه سال دارَم",
         exampleTranslation: "I am sixteen years old",
       },
       {
         persian: "هِفدَه",
         transliteration: "hefdah",
         english: "seventeen",
-        example: "هِفدَه دانِشجو اینجا هَسْتَنْد",
+        example: "هِفدَه دانِشجو اینجا هَستَند",
         exampleTranslation: "Seventeen students are here",
       },
       {
@@ -3244,24 +3244,24 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I am eighteen years old",
       },
       {
-        persian: "نوزَدَه",
+        persian: "نوزدَه",
         transliteration: "noozdah",
         english: "nineteen",
-        example: "نوزَدَه کِتاب خواندَم",
+        example: "نوزدَه کِتاب خواندَم",
         exampleTranslation: "I read nineteen books",
       },
       {
-        persian: "بیسَت",
+        persian: "بیست",
         transliteration: "bist",
         english: "twenty",
-        example: "بیسَت سال دارَم",
+        example: "بیست سال دارَم",
         exampleTranslation: "I am twenty years old",
       },
       {
         persian: "سی",
         transliteration: "si",
         english: "thirty",
-        example: "سی روز دَر ماه اَسْت",
+        example: "سی روز دَر ماه اَست",
         exampleTranslation: "There are thirty days in a month",
       },
       {
@@ -3275,14 +3275,14 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         persian: "پَنجاه",
         transliteration: "panjāh",
         english: "fifty",
-        example: "پَنجاه تومان قیمَت دارَد",
+        example: "پَنجاه تومان قِیمَت دارَد",
         exampleTranslation: "It costs fifty tomans",
       },
       {
-        persian: "شَصَت",
+        persian: "شَصت",
         transliteration: "shast",
         english: "sixty",
-        example: "شَصَت دَقیقِه صَبر کُن",
+        example: "شَصت دَقیقِه صَبر کُن",
         exampleTranslation: "Wait sixty minutes",
       },
       {
@@ -3296,21 +3296,21 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         persian: "هَشتاد",
         transliteration: "hashtād",
         english: "eighty",
-        example: "هَشتاد کیلومِتَر راه اَسْت",
+        example: "هَشتاد کیلومِتَر راه اَست",
         exampleTranslation: "It is eighty kilometers away",
       },
       {
         persian: "نَوَد",
         transliteration: "navad",
         english: "ninety",
-        example: "نَوَد دَرصَد دُرُسْت اَسْت",
+        example: "نَوَد دَرصَد دُرُست اَست",
         exampleTranslation: "It is ninety percent correct",
       },
       {
         persian: "صَد",
         transliteration: "sad",
         english: "one hundred",
-        example: "صَد دانِشجو اینجا هَسْتَنْد",
+        example: "صَد دانِشجو اینجا هَستَند",
         exampleTranslation: "One hundred students are here",
       },
       {
@@ -3321,7 +3321,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I have two hundred tomans",
       },
       {
-        persian: "هَزار",
+        persian: "هِزار",
         transliteration: "hezār",
         english: "one thousand",
         example: "هَزار کِتاب دارَد",
@@ -3330,99 +3330,102 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     ],
     reading: [
       {
-        title: "My Morning Routine",
-        text: "من هر روز صبح ساعت هفت بیدار می‌شوم. بعد دوش می‌گیرم. لباس می‌پوشم. صبحانه می‌خورم. ساعت هشت از خانه می‌روم.",
+        title: "Counting Friends",
+        text: "مَن دو دوست دارَم. یِک دوست دَر خانِه اَست. دوستِ دیگَر دَر کار اَست. ما سِه بار دَر هَفته هَم‌دیگَر را می‌بینیم. مَن دوستام را دوست دارَم.",
         transliteration:
-          "man har rooz sobh sā'at haft bidār mishovam. ba'd doosh migiram. lebās mipoosham. sobhāne mikhoram. sā'at hasht az khāne miram.",
+          "man do doost dāram. yek doost dar khāne ast. doost-e digar dar kār ast. mā se bār dar hafte ham-digar rā mibinim. man doostām rā doost dāram.",
         translation:
-          "I wake up at seven every morning. Then I shower. I get dressed. I eat breakfast. I leave home at eight.",
+          "I have two friends. One friend is at home. The other friend is at work. We see each other three times a week. I love my friends.",
         questions: [
           {
-            question: "When does the person wake up?",
-            options: ["At six", "At seven", "At eight", "At nine"],
+            question: "How many friends does the person have?",
+            options: ["One", "Two", "Three", "Four"],
             correctAnswer: 1,
           },
           {
-            question: "What does the person do after waking up?",
-            options: ["Eat breakfast", "Leave home", "Shower", "Get dressed"],
-            correctAnswer: 2,
-          },
-        ],
-      },
-      {
-        title: "Daily Work",
-        text: "من ساعت نه کار می‌کنم. ساعت یک ناهار می‌خورم. بعد از ناهار استراحت می‌کنم. ساعت پنج به خانه می‌روم.",
-        transliteration:
-          "man sā'at noh kār mikonam. sā'at yek nāhār mikhoram. ba'd az nāhār esterāhat mikonam. sā'at panj be khāne miram.",
-        translation: "I work at nine. I eat lunch at one. I rest after lunch. I go home at five.",
-        questions: [
-          {
-            question: "When does the person start work?",
-            options: ["At eight", "At nine", "At ten", "At eleven"],
-            correctAnswer: 1,
-          },
-          {
-            question: "What does the person do after lunch?",
-            options: ["Work", "Go home", "Rest", "Exercise"],
-            correctAnswer: 2,
-          },
-        ],
-      },
-      {
-        title: "Evening Time",
-        text: "عصر من به خانه می‌آیم. چای می‌خورم. کمی استراحت می‌کنم. شب درس می‌خوانم. ساعت یازده می‌خوابم.",
-        transliteration:
-          "asr man be khāne miāyam. chāy mikhoram. kami esterāhat mikonam. shab dars mikhānam. sā'at yāzdah mikhābam.",
-        translation: "I come home in the afternoon. I drink tea. I rest a little. I study at night. I sleep at eleven.",
-        questions: [
-          {
-            question: "When does the person study?",
-            options: ["Morning", "Afternoon", "Night", "Noon"],
-            correctAnswer: 2,
-          },
-          {
-            question: "When does the person go to sleep?",
-            options: ["At ten", "At eleven", "At twelve", "At nine"],
+            question: "How many times a week do they see each other?",
+            options: ["Two", "Three", "Five", "Seven"],
             correctAnswer: 1,
           },
         ],
       },
       {
-        title: "Exercise Routine",
-        text: "من معمولا صبح ورزش می‌کنم. گاهی شب ورزش می‌کنم. بعد از ورزش دوش می‌گیرم. همیشه بعد از ورزش خوشحال هستم.",
+        title: "A Busy Week",
+        text: "مَن هَفت روز دَر هَفته کار می‌کُنَم. چَهار روز زود بیدار می‌شَوَم. سِه روز دیر بیدار می‌شَوَم. مَن هَر روز هَشت ساعَت می‌خوابَم. زندگی خوب اَست.",
         transliteration:
-          "man ma'moolan sobh varzesh mikonam. gāhi shab varzesh mikonam. ba'd az varzesh doosh migiram. hamishe ba'd az varzesh khoshhāl hastam.",
+          "man haft rooz dar hafte kār mikonam. chahār rooz zood bidār mishavam. se rooz dir bidār mishavam. man har rooz hasht sā'at mikhābam. zendegi khoob ast.",
         translation:
-          "I usually exercise in the morning. Sometimes I exercise at night. I shower after exercise. I'm always happy after exercise.",
+          "I work seven days a week. Four days I wake up early. Three days I wake up late. I sleep eight hours every day. Life is good.",
         questions: [
           {
-            question: "When does the person usually exercise?",
-            options: ["Morning", "Afternoon", "Night", "Noon"],
-            correctAnswer: 0,
+            question: "How many days does the person work?",
+            options: ["Three", "Four", "Seven", "Eight"],
+            correctAnswer: 2,
           },
           {
-            question: "What does the person do after exercise?",
-            options: ["Sleep", "Eat", "Shower", "Work"],
+            question: "How many hours does the person sleep?",
+            options: ["Six", "Seven", "Eight", "Nine"],
             correctAnswer: 2,
           },
         ],
       },
       {
-        title: "Weekend Activities",
-        text: "من شنبه و جمعه استراحت می‌کنم. زود بیدار نمی‌شوم. دیر صبحانه می‌خورم. خانه را تمیز می‌کنم.",
+        title: "Shopping with Tomans",
+        text: "مَن پَنجاه تومان دارَم. یِک سیب دَه تومان قِیمَت دارَد. مَن سِه سیب می‌خَرَم. بَعد بیست تومان بَرایِ مَن می‌مانَد. مَن خوشحالَم.",
         transliteration:
-          "man shanbe va jom'e esterāhat mikonam. zood bidār nemishovam. dir sobhāne mikhoram. khāne rā tamiz mikonam.",
-        translation: "I rest on Saturday and Friday. I don't wake up early. I eat breakfast late. I clean the house.",
+          "man panjāh tomān dāram. yek sib dah tomān gheymat dārad. man se sib mikharam. ba'ad bist tomān barāye man mimānad. man khoshhālam.",
+        translation:
+          "I have fifty tomans. One apple costs ten tomans. I buy three apples. Then twenty tomans remain for me. I am happy.",
         questions: [
           {
-            question: "When does the person rest?",
-            options: ["Monday", "Tuesday", "Saturday and Friday", "Wednesday"],
+            question: "How much money does the person have?",
+            options: ["Ten tomans", "Twenty tomans", "Fifty tomans", "One hundred tomans"],
             correctAnswer: 2,
           },
           {
-            question: "What does the person do on weekends?",
-            options: ["Work", "Clean the house", "Go shopping", "Study"],
+            question: "How many apples does the person buy?",
+            options: ["One", "Two", "Three", "Four"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      {
+        title: "In the Classroom",
+        text: "دَر کِلاسِ ما بیست دانِشجو هَستَند. دَه دانِشجو دُختَر هَستَند و دَه دانِشجو پِسَر هَستَند. مُعَلِّمِ ما می‌گوید: «نَوَد دَرصَد دُرُست اَست». مَن می‌خَندَم.",
+        transliteration:
+          "dar kelās-e mā bist dāneshju hastand. dah dāneshju dokhtar hastand va dah dāneshju pesar hastand. mo'allem-e mā migooyad: «navad darsad dorost ast». man mikhandam.",
+        translation:
+          "In our class there are twenty students. Ten students are girls and ten students are boys. Our teacher says: “Ninety percent is correct.” I laugh.",
+        questions: [
+          {
+            question: "How many students are in the class?",
+            options: ["Ten", "Twenty", "Thirty", "Forty"],
             correctAnswer: 1,
+          },
+          {
+            question: "How many girls are in the class?",
+            options: ["Nine", "Ten", "Nineteen", "Twenty"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      {
+        title: "A Big Library",
+        text: "پِدَربُزرگِ مَن هِزار کِتاب دارَد. مَن صَد کِتاب دَر خانِه دارَم. خواهرِ مَن سی کِتاب دارَد. بَرادَرِ مَن دو کِتاب دارَد. ما کِتاب‌ها را دوست داریم.",
+        transliteration:
+          "pedarbozorg-e man hezār ketāb dārad. man sad ketāb dar khāne dāram. khāhar-e man si ketāb dārad. barādar-e man do ketāb dārad. mā ketāb-hā rā doost dārim.",
+        translation:
+          "My grandfather has one thousand books. I have one hundred books at home. My sister has thirty books. My brother has two books. We love books.",
+        questions: [
+          {
+            question: "How many books does the grandfather have?",
+            options: ["One hundred", "Two hundred", "One thousand", "Thirty"],
+            correctAnswer: 2,
+          },
+          {
+            question: "How many books does the speaker have?",
+            options: ["Two", "Thirty", "One hundred", "One thousand"],
+            correctAnswer: 2,
           },
         ],
       },
