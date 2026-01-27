@@ -3761,24 +3761,24 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Azar has a lot of rain",
       },
       {
-        persian: "دی",
+        persian: "دِی",
         transliteration: "dey",
         english: "Dey",
         example: "دی ماهِ زمستان است",
         exampleTranslation: "Dey is a winter month",
       },
       {
-        persian: "بَهْمَن",
+        persian: "بَهمَن",
         transliteration: "bahman",
         english: "Bahman",
-        example: "بهمن هوا سرد است",
+        example: "بهمَن هَوا سَرد اَست",
         exampleTranslation: "The weather is cold in Bahman",
       },
       {
         persian: "اِسفَند",
         transliteration: "esfand",
         english: "Esfand",
-        example: "اسفند آخرین ماهِ سال است",
+        example: "اسفَند آخَرین ماهِ سال است",
         exampleTranslation: "Esfand is the last month of the year",
       },
       {
@@ -3941,10 +3941,10 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "One second",
       },
       {
-        persian: "اَلآن",
+        persian: "اَلان",
         transliteration: "alân",
         english: "now",
-        example: "اَلآن می‌آیَم",
+        example: "اَلان می‌آیَم",
         exampleTranslation: "I’m coming now",
       },
       {
@@ -3969,10 +3969,10 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "It rained yesterday",
       },
       {
-        persian: "هَفتِه",
+        persian: "هَفته",
         transliteration: "hafte",
         english: "week",
-        example: "هَفتِهٔ آیَندِه",
+        example: "هَفتهٔ آیَندِه",
         exampleTranslation: "Next week",
       },
       {
@@ -4007,7 +4007,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         persian: "عَصر",
         transliteration: "asr",
         english: "afternoon",
-        example: "عَصر می‌بینَمَت",
+        example: "عَصر می‌بینَمِت",
         exampleTranslation: "I’ll see you in the afternoon",
       },
       {
@@ -4028,7 +4028,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         persian: "زود",
         transliteration: "zud",
         english: "early / soon",
-        example: "زود بِیدار شُدَم",
+        example: "زود بیدار شُدَم",
         exampleTranslation: "I woke up early",
       },
       {
@@ -4081,91 +4081,115 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "From eight o’clock",
       },
       {
-        persian: "وَقتِی",
+        persian: "وَقتی",
         transliteration: "vaghti",
         english: "when / whenever",
-        example: "وَقتِی رِسیدی زَنگ بِزَن",
+        example: "وَقتی رِسیدی زَنگ بِزَن",
         exampleTranslation: "Call when you arrive",
       },
     ],
     reading: [
-      {
-        title: "Finding the Park",
-        text: "من پارک را می‌خواهم. مستقیم می‌روم. بعد به راست می‌پیچم. پارک نزدیک است. پارک آنجا است.",
-        transliteration:
-          "man pārk rā mikhāham. mostaghim miram. ba'd be rāst mipicham. pārk nazdik ast. pārk ānjā ast.",
-        translation: "I want the park. I go straight. Then I turn right. The park is close. The park is there.",
-        questions: [
-          {
-            question: "Where does the person want to go?",
-            options: ["Bank", "Park", "School", "Hospital"],
-            correctAnswer: 1,
-          },
-          {
-            question: "Which direction does the person turn?",
-            options: ["Left", "Right", "Straight", "Back"],
-            correctAnswer: 1,
-          },
-        ],
-      },
-      {
-        title: "Near My House",
-        text: "خانه من اینجا است. مدرسه نزدیک است. بانک کنار مدرسه است. مغازه جلوی خانه است. همه چیز نزدیک است.",
-        transliteration:
-          "khāne man injā ast. madrese nazdik ast. bānk kenār madrese ast. maghāze jolo-ye khāne ast. hame chiz nazdik ast.",
-        translation:
-          "My house is here. The school is close. The bank is next to the school. The store is in front of the house. Everything is close.",
-        questions: [
-          { question: "Is the school near or far?", options: ["Far", "Near", "Inside", "Behind"], correctAnswer: 1 },
-          {
-            question: "Where is the store?",
-            options: ["Behind the house", "In front of the house", "Far away", "Inside the house"],
-            correctAnswer: 1,
-          },
-        ],
-      },
-      {
-        title: "Going to the Bank",
-        text: "من به بانک می‌روم. مستقیم می‌روم. به چپ می‌پیچم. بعد به راست می‌پیچم. بانک آنجا است. بانک بزرگ است.",
-        transliteration:
-          "man be bānk miram. mostaghim miram. be chap mipicham. ba'd be rāst mipicham. bānk ānjā ast. bānk bozorg ast.",
-        translation:
-          "I'm going to the bank. I go straight. I turn left. Then I turn right. The bank is there. The bank is big.",
-        questions: [
-          { question: "Where is the person going?", options: ["Park", "School", "Bank", "Hospital"], correctAnswer: 2 },
-          {
-            question: "First, which way does the person turn?",
-            options: ["Right", "Left", "Back", "Straight only"],
-            correctAnswer: 1,
-          },
-        ],
-      },
-      {
-        title: "The Bus Stop",
-        text: "ایستگاه اتوبوس کجاست؟ ایستگاه نزدیک است. مستقیم بروید. ایستگاه کنار پارک است. آنجا است.",
-        transliteration: "istgāh otobus kojāst? istgāh nazdik ast. mostaghim beravid. istgāh kenār pārk ast. ānjā ast.",
-        translation: "Where is the bus stop? The stop is close. Go straight. The stop is next to the park. It's there.",
-        questions: [
-          { question: "Is the bus stop near or far?", options: ["Far", "Near", "Inside", "Behind"], correctAnswer: 1 },
-          {
-            question: "Where is the bus stop?",
-            options: ["Behind the park", "Next to the park", "In the park", "Far from the park"],
-            correctAnswer: 1,
-          },
-        ],
-      },
-      {
-        title: "In the City",
-        text: "شهر بزرگ است. خیابان‌ها بزرگ است. مسجد بزرگ است. بیمارستان دور است. همه چیز بزرگ است.",
-        transliteration:
-          "shahr bozorg ast. khiābān-hā bozorg ast. masjed bozorg ast. bimārestān door ast. hame chiz bozorg ast.",
-        translation: "The city is big. The streets are big. The mosque is big. The hospital is far. Everything is big.",
-        questions: [
-          { question: "Is the city big or small?", options: ["Small", "Big", "Near", "Clean"], correctAnswer: 1 },
-          { question: "Is the hospital near or far?", options: ["Near", "Far", "Big", "Small"], correctAnswer: 1 },
-        ],
-      },
-    ],
+    {
+      title: "Counting Friends",
+      text: "مَن دو دوست دارَم. یِک دوست دَر خانِه اَست. دوستِ دیگَر دَر کار اَست. ما سِه بار دَر هَفته هَم‌دیگَر را می‌بینیم. مَن دوستام را دوست دارَم.",
+      transliteration:
+        "man do doost dāram. yek doost dar khāne ast. doost-e digar dar kār ast. mā se bār dar hafte ham-digar rā mibinim. man doostām rā doost dāram.",
+      translation:
+        "I have two friends. One friend is at home. The other friend is at work. We see each other three times a week. I love my friends.",
+      questions: [
+        {
+          question: "How many friends does the person have?",
+          options: ["One", "Two", "Three", "Four"],
+          correctAnswer: 1,
+        },
+        {
+          question: "How many times a week do they see each other?",
+          options: ["Two", "Three", "Five", "Seven"],
+          correctAnswer: 1,
+        },
+      ],
+    },
+    {
+      title: "A Busy Week",
+      text: "مَن هَفت روز دَر هَفته کار می‌کُنَم. چَهار روز زود بیدار می‌شَوَم. سِه روز دیر بیدار می‌شَوَم. مَن هَر روز هَشت ساعَت می‌خوابَم. زِندگی خوب اَست.",
+      transliteration:
+        "man haft rooz dar hafte kār mikonam. chahār rooz zood bidār mishavam. se rooz dir bidār mishavam. man har rooz hasht sā'at mikhābam. zendegi khoob ast.",
+      translation:
+        "I work seven days a week. Four days I wake up early. Three days I wake up late. I sleep eight hours every day. Life is good.",
+      questions: [
+        {
+          question: "How many days does the person work?",
+          options: ["Three", "Four", "Seven", "Eight"],
+          correctAnswer: 2,
+        },
+        {
+          question: "How many hours does the person sleep?",
+          options: ["Six", "Seven", "Eight", "Nine"],
+          correctAnswer: 2,
+        },
+      ],
+    },
+    {
+      title: "Shopping with Tomans",
+      text: "مَن پَنجاه تومان دارَم. یِک سیب دَه تومان قِیمَت دارَد. مَن سِه سیب می‌خَرَم. بَعد بیست تومان بَرایِ مَن می‌مانَد. مَن خوشحالَم.",
+      transliteration:
+        "man panjāh tomān dāram. yek sib dah tomān gheymat dārad. man se sib mikharam. ba'ad bist tomān barāye man mimānad. man khoshhālam.",
+      translation:
+        "I have fifty tomans. One apple costs ten tomans. I buy three apples. Then twenty tomans remain for me. I am happy.",
+      questions: [
+        {
+          question: "How much money does the person have?",
+          options: ["Ten tomans", "Twenty tomans", "Fifty tomans", "One hundred tomans"],
+          correctAnswer: 2,
+        },
+        {
+          question: "How many apples does the person buy?",
+          options: ["One", "Two", "Three", "Four"],
+          correctAnswer: 2,
+        },
+      ],
+    },
+    {
+      title: "In the Classroom",
+      text: "دَر کِلاسِ ما بیست دانِشجو هَستَند. دَه دانِشجو دُختَر هَستَند و دَه دانِشجو پِسَر هَستَند. مُعَلِّمِ ما می‌گوید: «نَوَد دَرصَد دُرُست اَست». مَن می‌خَندَم.",
+      transliteration:
+        "dar kelās-e mā bist dāneshju hastand. dah dāneshju dokhtar hastand va dah dāneshju pesar hastand. mo'allem-e mā migooyad: «navad darsad dorost ast». man mikhandam.",
+      translation:
+        "In our class there are twenty students. Ten students are girls and ten students are boys. Our teacher says: “Ninety percent is correct.” I laugh.",
+      questions: [
+        {
+          question: "How many students are in the class?",
+          options: ["Ten", "Twenty", "Thirty", "Forty"],
+          correctAnswer: 1,
+        },
+        {
+          question: "How many girls are in the class?",
+          options: ["Nine", "Ten", "Nineteen", "Twenty"],
+          correctAnswer: 1,
+        },
+      ],
+    },
+    {
+      title: "A Big Library",
+      text: "پِدَربُزرگِ مَن هِزار کِتاب دارَد. مَن صَد کِتاب دَر خانِه دارَم. خواهرِ مَن سی کِتاب دارَد. بَرادَرِ مَن دو کِتاب دارَد. ما کِتاب‌ها را دوست داریم.",
+      transliteration:
+        "pedarbozorg-e man hezār ketāb dārad. man sad ketāb dar khāne dāram. khāhar-e man si ketāb dārad. barādar-e man do ketāb dārad. mā ketāb-hā rā doost dārim.",
+      translation:
+        "My grandfather has one thousand books. I have one hundred books at home. My sister has thirty books. My brother has two books. We love books.",
+      questions: [
+        {
+          question: "How many books does the grandfather have?",
+          options: ["One hundred", "Two hundred", "One thousand", "Thirty"],
+          correctAnswer: 2,
+        },
+        {
+          question: "How many books does the speaker have?",
+          options: ["Two", "Thirty", "One hundred", "One thousand"],
+          correctAnswer: 2,
+        },
+      ],
+    },
+  ],
     writing: [
       {
         targetWord: "راست",
