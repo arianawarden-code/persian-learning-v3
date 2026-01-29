@@ -117,7 +117,7 @@ export function ReadingStory({ story, moduleId }: ReadingStoryProps) {
           <div className="space-y-4">
             {linePairs.map((pair, index) => (
               <div
-                key={`${story.id}-line-${index}-${pair.text}`}
+                key={`${story.id}-line-${index}`}   // ✅ changed
                 className="grid grid-cols-1 lg:grid-cols-2 gap-4"
               >
                 <div>
@@ -164,7 +164,7 @@ export function ReadingStory({ story, moduleId }: ReadingStoryProps) {
 
             return (
               <div
-                key={`${story.id}-question-${qIndex}`}  // ✅ changed (removed question text from key)
+                key={`${story.id}-question-${qIndex}`}  // ✅ keep (just remove the comment if you want)
                 className="rounded-lg p-6 bg-cream/50"
               >
                 <p className="mb-4 font-semibold text-charcoal">
@@ -178,7 +178,7 @@ export function ReadingStory({ story, moduleId }: ReadingStoryProps) {
 
                     return (
                       <label
-                        key={`${story.id}-q-${qIndex}-opt-${oIndex}`} // ✅ changed (removed option text from key)
+                        key={`${story.id}-q-${qIndex}-opt-${oIndex}`} // ✅ keep (just remove the comment if you want)
                         className={`flex cursor-pointer items-center gap-3 rounded-md p-3 transition-colors ${
                           showResults && isCorrectAnswer
                             ? "bg-green-100 border-2 border-green-300"
