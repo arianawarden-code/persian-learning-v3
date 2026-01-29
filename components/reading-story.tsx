@@ -116,7 +116,10 @@ export function ReadingStory({ story, moduleId }: ReadingStoryProps) {
 
           <div className="space-y-4">
             {linePairs.map((pair, index) => (
-              <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div
+                key={`${story.id}-line-${index}-${pair.text}`}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-4"
+              >
                 <div>
                   <div className="rounded-lg bg-sand-50 p-4">
                     <p className="font-serif text-2xl leading-loose text-charcoal" dir="rtl">
@@ -160,7 +163,10 @@ export function ReadingStory({ story, moduleId }: ReadingStoryProps) {
             const isAnswered = selectedAnswers[qIndex] !== undefined
 
             return (
-              <div key={qIndex} className="rounded-lg p-6 bg-cream/50">
+              <div
+                key={`${story.id}-question-${qIndex}-${question.question}`}
+                className="rounded-lg p-6 bg-cream/50"
+              >
                 <p className="mb-4 font-semibold text-charcoal">
                   {qIndex + 1}. {question.question}
                 </p>
@@ -172,7 +178,7 @@ export function ReadingStory({ story, moduleId }: ReadingStoryProps) {
 
                     return (
                       <label
-                        key={oIndex}
+                        key={`${story.id}-q-${qIndex}-opt-${oIndex}-${option}`}
                         className={`flex cursor-pointer items-center gap-3 rounded-md p-3 transition-colors ${
                           showResults && isCorrectAnswer
                             ? "bg-green-100 border-2 border-green-300"
