@@ -5983,6 +5983,112 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I eat takeout food",
       },
     ],
+    reading: [
+      {
+        title: "Breakfast at Home",
+        text: "مَن صُبحانِه می‌خورَم. نان و پَنیر می‌خورَم. چای داغ می‌نوشَم. صُبحانِه اَوَّلین وَعدِه‌ی روز اَست.",
+        transliteration:
+          "man sobhāne mi-khoram. nân va panir mi-khoram. chāy-e dâgh mi-noosham. sobhāne avvalin va‘de-ye rooz ast.",
+        translation:
+          "I eat breakfast. I eat bread and cheese. I drink hot tea. Breakfast is the first meal of the day.",
+        questions: [
+          {
+            question: "What meal does the person eat?",
+            options: ["Lunch", "Dinner", "Breakfast", "Snack"],
+            correctAnswer: 2,
+          },
+          {
+            question: "What does the person drink?",
+            options: ["Water", "Juice", "Milk", "Tea"],
+            correctAnswer: 3,
+          },
+        ],
+      },
+      
+      {
+        title: "Lunch at Work",
+        text: "مَن دَر کار ناهار می‌خورَم. بَرِنج و مُرغ می‌خورَم. آب می‌نوشَم. ناهار وَقتِ اِستِراحت اَست.",
+        transliteration:
+          "man dar kâr nāhâr mi-khoram. berenj va morgh mi-khoram. āb mi-noosham. nāhâr vaght-e esterāhat ast.",
+        translation:
+          "I eat lunch at work. I eat rice and chicken. I drink water. Lunch is a time to rest.",
+        questions: [
+          {
+            question: "Where does the person eat lunch?",
+            options: ["At home", "At work", "At school", "At a restaurant"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What food does the person eat?",
+            options: ["Bread and cheese", "Soup", "Rice and chicken", "Pizza"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      
+      {
+        title: "Dinner with Family",
+        text: "ما با هَمسَر و خانوادِه شام می‌خوریم. قورمِه‌سَبزی می‌خوریم. با شام دوغ می‌نوشیم. شام با هَم لَذَّت‌بَخش اَست.",
+        transliteration:
+          "mā bā hamsar va khānevāde shām mi-khorim. ghorme-sabzi mi-khorim. bā shām doogh mi-nooshim. shām bā ham lazzat-bakhsh ast.",
+        translation:
+          "We eat dinner with our spouse and family. We eat ghormeh sabzi. We drink doogh with dinner. Dinner together is enjoyable.",
+        questions: [
+          {
+            question: "Who eats dinner together?",
+            options: ["Friends", "Coworkers", "Family", "Neighbors"],
+            correctAnswer: 2,
+          },
+          {
+            question: "What do they drink with dinner?",
+            options: ["Tea", "Water", "Doogh", "Juice"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      
+      {
+        title: "Eating at a Restaurant",
+        text: "مَن دَر رِستوران غَذا می‌خورَم. کِباب می‌خورَم. نان و سَبزی هَم می‌خورَم. غَذای رِستوران خوش‌مَزِه اَست.",
+        transliteration:
+          "man dar resturân ghazâ mi-khoram. kebâb mi-khoram. nân va sabzi ham mi-khoram. ghazâ-ye resturân khosh-maze ast.",
+        translation:
+          "I eat food at a restaurant. I eat kebab. I also eat bread and herbs. Restaurant food is tasty.",
+        questions: [
+          {
+            question: "Where does the person eat?",
+            options: ["At home", "At work", "At a restaurant", "At school"],
+            correctAnswer: 2,
+          },
+          {
+            question: "What main food does the person eat?",
+            options: ["Pizza", "Soup", "Kebab", "Fish"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      
+      {
+        title: "Snacking During the Day",
+        text: "مَن بَینِ وَعدِه‌ها مِیانوَعدِه می‌خورَم. سیب یا موز می‌خورَم. گاهی چای می‌نوشَم. مِیانوَعدِه سَبُک اَست.",
+        transliteration:
+          "man beyn-e va‘de-hā miyân-va‘de mi-khoram. sib yā moz mi-khoram. gāhi chāy mi-noosham. miyân-va‘de sabok ast.",
+        translation:
+          "I eat snacks between meals. I eat an apple or a banana. Sometimes I drink tea. Snacks are light.",
+        questions: [
+          {
+            question: "When does the person eat snacks?",
+            options: ["At night", "Between meals", "Only in the morning", "With dinner"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What fruit does the person eat?",
+            options: ["Orange", "Apple or banana", "Grapes", "Strawberries"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+    ], 
   },
   15: {
     moduleId: 15,
