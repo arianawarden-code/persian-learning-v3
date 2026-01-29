@@ -164,7 +164,7 @@ export function ReadingStory({ story, moduleId }: ReadingStoryProps) {
 
             return (
               <div
-                key={`${story.id}-question-${qIndex}-${question.question}`}
+                key={`${story.id}-question-${qIndex}`}  // ✅ changed (removed question text from key)
                 className="rounded-lg p-6 bg-cream/50"
               >
                 <p className="mb-4 font-semibold text-charcoal">
@@ -178,7 +178,7 @@ export function ReadingStory({ story, moduleId }: ReadingStoryProps) {
 
                     return (
                       <label
-                        key={`${story.id}-q-${qIndex}-opt-${oIndex}-${option}`}
+                        key={`${story.id}-q-${qIndex}-opt-${oIndex}`} // ✅ changed (removed option text from key)
                         className={`flex cursor-pointer items-center gap-3 rounded-md p-3 transition-colors ${
                           showResults && isCorrectAnswer
                             ? "bg-green-100 border-2 border-green-300"
