@@ -2161,7 +2161,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         instruction: "Write a greeting in Persian using the words:سلام، علی، من، هستم",
         targetWord: "سلام من علی هستم",
         availableLetters: ["علی", "سلام", "من", "هستم"],
-        prompt: "Say: hi my name is Ali,
+        prompt: "Say: hi my name is Ali",
       },
       {
         id: 5,
