@@ -32,12 +32,18 @@ export function WordBuilder({
     availableLetters.map((letter, idx) => ({ letter, id: idx })),
   )
   const [answerSlots, setAnswerSlots] = useState<{ letter: string; id: number }[]>([])
-  const [draggedItem, setDraggedItem] = useState<{ letter: string; id: number } | null>(null)
+  const [draggedItem, setDraggedItem] = useState<{
+    letter: string
+    id: number
+    sourceIndex?: number // position in answerSlots when dragging from answer area (undefined when from available pool)
+    targetIndex?: number // position being dragged over in answerSlots for insertion
+  } | null>(null)
   const [feedback, setFeedback] = useState<string>("")
   const [isCompleted, setIsCompleted] = useState(false)
 
-  const handleDragStart = (item: { letter: string; id: number }) => {
-    setDraggedItem(item)
+  // Capture the dragged item and its source position (if from answer slots)
+  const handleDragStart = (item: { letter: string; id: number }, sourceIndex?: number) => {
+    setDraggedItem({ ...item, sourceIndex })
   }
 
   const handleDragOver = (e: React.DragEvent) => {
@@ -47,8 +53,28 @@ export function WordBuilder({
   const handleDropToAnswer = (e: React.DragEvent) => {
     e.preventDefault()
     if (draggedItem) {
-      setAnswerSlots([...answerSlots, draggedItem])
-      setAvailablePool(availablePool.filter((item) => item.id !== draggedItem.id))
+      const isAlreadyInAnswer = answerSlots.some((item) => item.id === draggedItem.id)
+      
+      if (isAlreadyInAnswer) {
+        // Reordering within answer slots: remove from old position and insert at target position
+        const filtered = answerSlots.filter((item) => item.id !== draggedItem.id)
+        const insertIndex = draggedItem.targetIndex !== undefined ? draggedItem.targetIndex : filtered.length
+        setAnswerSlots([
+          ...filtered.slice(0, insertIndex),
+          { letter: draggedItem.letter, id: draggedItem.id },
+          ...filtered.slice(insertIndex)
+        ])
+      } else {
+        // Moving from available pool: insert at target position in answer slots
+        const insertIndex = draggedItem.targetIndex !== undefined ? draggedItem.targetIndex : answerSlots.length
+        setAnswerSlots([
+          ...answerSlots.slice(0, insertIndex),
+          { letter: draggedItem.letter, id: draggedItem.id },
+          ...answerSlots.slice(insertIndex)
+        ])
+        // Remove from available pool
+        setAvailablePool(availablePool.filter((item) => item.id !== draggedItem.id))
+      }
       setDraggedItem(null)
       setFeedback("")
     }
@@ -163,14 +189,27 @@ export function WordBuilder({
             <p className="text-center font-serif text-3xl text-charcoal/30">Drop letters here</p>
           ) : (
             <div className="flex flex-wrap gap-2" dir="rtl">
-              {answerSlots.map((item) => (
+              {answerSlots.map((item, index) => (
                 <button
                   key={item.id}
                   draggable
-                  onDragStart={() => handleDragStart(item)}
+                  // Capture source position when drag starts
+                  onDragStart={() => handleDragStart(item, index)}
+                  // Update target position as item is dragged over different positions
+                  onDragOver={(e) => {
+                    e.preventDefault()
+                    setDraggedItem(prev => prev ? { ...prev, targetIndex: index } : null)
+                  }}
+                  // Clear target position when leaving without dropping
+                  onDragLeave={() => setDraggedItem(prev => prev ? { ...prev, targetIndex: undefined } : null)}
                   onClick={() => handleRemoveLetter(item)}
-                  className="flex h-14 w-14 cursor-grab items-center justify-center rounded-lg border-2 border-terracotta bg-terracotta/10 font-serif text-2xl font-bold text-terracotta transition-all hover:bg-terracotta/20 active:cursor-grabbing"
-                  title="Click to remove or drag back"
+                  // Highlight the target position with visual feedback
+                  className={`flex h-14 w-14 cursor-grab items-center justify-center rounded-lg border-2 transition-all active:cursor-grabbing font-serif text-2xl font-bold ${
+                    draggedItem?.targetIndex === index
+                      ? 'border-terracotta bg-terracotta/30'
+                      : 'border-terracotta bg-terracotta/10'
+                  } text-terracotta hover:bg-terracotta/20`}
+                  title="Click to remove or drag to reorder"
                 >
                   {item.letter}
                 </button>
