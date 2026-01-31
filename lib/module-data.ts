@@ -3106,7 +3106,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
     ],
   },
-
+//module 4: numbers 0-100
   4: {
     moduleId: 4,
     vocabulary: [
@@ -3330,7 +3330,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     ],
     reading: [
       {
-        id: 4,
+        id: 1,
         title: "Counting Friends",
         text: "مَن دو دوست دارَم. یِک دوست دَر خانِه اَست. دوستِ دیگَر دَر کار اَست. ما سِه بار دَر هَفته هَم‌دیگَر را می‌بینیم. مَن دوستام را دوست دارَم.",
         transliteration:
@@ -3351,7 +3351,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 4,
+        id: 2,
         title: "A Busy Week",
         text: "مَن هَفت روز دَر هَفته کار می‌کُنَم. چَهار روز زود بیدار می‌شَوَم. سِه روز دیر بیدار می‌شَوَم. مَن هَر روز هَشت ساعَت می‌خوابَم. زندگی خوب اَست.",
         transliteration:
@@ -3372,7 +3372,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 4,
+        id: 3,
         title: "Shopping with Tomans",
         text: "مَن پَنجاه تومان دارَم. یِک سیب دَه تومان قِیمَت دارَد. مَن سِه سیب می‌خَرَم. بَعد بیست تومان بَرایِ مَن می‌مانَد. مَن خوشحالَم.",
         transliteration:
@@ -3414,6 +3414,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
+        id: 5,
         title: "A Big Library",
         text: "پِدَربُزرگِ مَن هِزار کِتاب دارَد. مَن صَد کِتاب دَر خانِه دارَم. خواهرِ مَن سی کِتاب دارَد. بَرادَرِ مَن دو کِتاب دارَد. ما کِتاب‌ها را دوست داریم.",
         transliteration:
@@ -3446,7 +3447,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       { targetWord: "روز", availableLetters: ["ر", "و", "ز", "ش", "ب"], description: "Build the word for 'day'" },
     ],
   },
-
+//module 5: days of the week
   5: {
     moduleId: 5,
     vocabulary: [
@@ -3593,7 +3594,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     ],
     reading: [
       {
-        id: 5,
+        id: 1,
         title: "At the Restaurant",
         text: "من به رستوران می‌روم. منو را می‌بینم. برنج و مرغ سفارش می‌دهم. غذا خوشمزه است. چای می‌نوشم.",
         transliteration:
@@ -3614,7 +3615,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 5,
+        id: 2,
         title: "Breakfast Time",
         text: "صبح من صبحانه می‌خورم. نان و پنیر می‌خورم. چای می‌نوشم. چای گرم است. صبحانه خوشمزه است.",
         transliteration:
@@ -3631,7 +3632,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 5,
+        id: 3,
         title: "Favorite Foods",
         text: "من برنج دوست دارم. میوه هم دوست دارم. سیب و پرتقال خوشمزه است. من سبزی هم می‌خورم. سبزی سالم است.",
         transliteration:
@@ -3652,7 +3653,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 5,
+        id: 4,
         title: "Shopping for Food",
         text: "من به بازار می‌روم. میوه تازه می‌خرم. سیب قرمز خوب است. نان تازه هم می‌خرم. همه چیز خوب است.",
         transliteration:
@@ -3842,7 +3843,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     ],
     reading: [
       {
-        id: 6,
+        id: 1,
         title: "My New House",
         text: "خانه من نو است. خانه بزرگ است. اتاق‌ها روشن است. دیوارها سفید است. در آبی است. خانه خیلی قشنگ است.",
         transliteration:
@@ -3855,7 +3856,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 6,
+        id: 2,
         title: "Colors in Nature",
         text: "آسمان آبی است. خورشید زرد است. چمن سبز است. گل قرمز است. همه چیز قشنگ است. من طبیعت دوست دارم.",
         transliteration:
@@ -3868,7 +3869,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 6,
+        id: 3,
         title: "My Room",
         text: "اتاق من کوچک است. اما خیلی تمیز است. میز قهوه‌ای است. صندلی سفید است. تخت بزرگ است. همه چیز خوب است.",
         transliteration:
@@ -3881,7 +3882,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 6,
+        id: 4,
         title: "Shopping for Clothes",
         text: "من به مغازه می‌روم. لباس نو می‌خرم. یک پیراهن آبی می‌خرم. خیلی قشنگ است. یک شلوار سیاه هم می‌خرم. همه چیز خوب است.",
         transliteration:
@@ -3894,7 +3895,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 6,
+        id: 5,
         title: "My Car",
         text: "ماشین من کوچک است. رنگش قرمز است. خیلی تمیز است. نو نیست اما خوب است. من ماشینم را دوست دارم.",
         transliteration:
@@ -4104,7 +4105,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     ],
     reading: [
     {
-      id: 7,
+      id: 1,
       title: "Counting Friends",
       text: "مَن دو دوست دارَم. یِک دوست دَر خانِه اَست. دوستِ دیگَر دَر کار اَست. ما سِه بار دَر هَفته هَم‌دیگَر را می‌بینیم. مَن دوستام را دوست دارَم.",
       transliteration:
@@ -4125,7 +4126,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       ],
     },
     {
-      id: 7,
+      id: 2,
       title: "A Busy Week",
       text: "مَن هَفت روز دَر هَفته کار می‌کُنَم. چَهار روز زود بیدار می‌شَوَم. سِه روز دیر بیدار می‌شَوَم. مَن هَر روز هَشت ساعَت می‌خوابَم. زِندگی خوب اَست.",
       transliteration:
@@ -4146,7 +4147,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       ],
     },
     {
-      id: 7,
+      id: 3,
       title: "Shopping with Tomans",
       text: "مَن پَنجاه تومان دارَم. یِک سیب دَه تومان قِیمَت دارَد. مَن سِه سیب می‌خَرَم. بَعد بیست تومان بَرایِ مَن می‌مانَد. مَن خوشحالَم.",
       transliteration:
@@ -4167,7 +4168,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       ],
     },
     {
-      id: 7,
+      id: 4,
       title: "In the Classroom",
       text: "دَر کِلاسِ ما بیست دانِشجو هَستَند. دَه دانِشجو دُختَر هَستَند و دَه دانِشجو پِسَر هَستَند. مُعَلِّمِ ما می‌گوید: «نَوَد دَرصَد دُرُست اَست». مَن می‌خَندَم.",
       transliteration:
@@ -4188,7 +4189,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       ],
     },
     {
-      id: 7,
+      id: 5,
       title: "A Big Library",
       text: "پِدَربُزرگِ مَن هِزار کِتاب دارَد. مَن صَد کِتاب دَر خانِه دارَم. خواهرِ مَن سی کِتاب دارَد. بَرادَرِ مَن دو کِتاب دارَد. ما کِتاب‌ها را دوست داریم.",
       transliteration:
@@ -4331,6 +4332,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     ],
     reading: [
       {
+        id: 1,
         title: "At the Bazaar",
         text: "من به بازار می‌روم. یک کیف می‌خواهم. این کیف قشنگ است. قیمت چقدر است? صد هزار تومان. خیلی گران است!",
         transliteration:
@@ -4347,7 +4349,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 8,
+        id: 2,
         title: "Bargaining",
         text: "این کیف خیلی گران است. تخفیف دارد؟ بله، کمی تخفیف دارد. هشتاد هزار تومان. خوب است. من می‌خرم.",
         transliteration:
@@ -4368,7 +4370,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 8,
+        id: 3,
         title: "Buying Clothes",
         text: "من لباس می‌خرم. این پیراهن قشنگ است. اندازه من چهل است. رنگ دیگر دارید؟ بله، آبی هم داریم. خوب است.",
         transliteration:
@@ -4385,7 +4387,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 8,
+        id: 4,
         title: "Payment",
         text: "حساب چقدر است؟ سیصد هزار تومان. نقد می‌دهم. کارت ندارم. خوب است. رسید لطفا. بفرمایید.",
         transliteration:
@@ -4407,7 +4409,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 8,
+        id: 5,
         title: "Shopping Day",
         text: "من خرید می‌کنم. به فروشگاه می‌روم. همه چیز ارزان است. امروز فروش ویژه است. من خیلی خوشحال هستم.",
         transliteration:
@@ -4544,7 +4546,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     ],
     reading: [
       {
-        id: 9,
+        id: 1,
         title: "Going to Work",
         text: "من هر روز با اتوبوس به کار می‌روم. اتوبوس ساعت هشت می‌آید. من سوار می‌شوم. راه کوتاه است. من راضی هستم.",
         transliteration:
@@ -4557,7 +4559,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 9,
+        id: 2,
         title: "Taking a Taxi",
         text: "من دیر کردم. تاکسی می‌خواهم. تاکسی می‌آید. من سوار می‌شوم. تاکسی سریع است. خیلی خوب است.",
         transliteration:
@@ -4573,7 +4575,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 9,
+        id: 3,
         title: "Metro Journey",
         text: "مترو خیلی خوب است. مترو سریع است. بلیط ارزان است. من هر روز با مترو می‌روم. ترافیک نیست.",
         transliteration:
@@ -4590,7 +4592,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 9,
+        id: 4,
         title: "Train Trip",
         text: "من با قطار سفر می‌کنم. قطار بزرگ است. بلیط دارم. من مسافر هستم. راه طولانی است. اما قطار راحت است.",
         transliteration:
@@ -4603,7 +4605,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 9,
+        id: 5,
         title: "At the Airport",
         text: "من به فرودگاه می‌روم. هواپیما بزرگ است. بلیط گران است. اما سفر سریع است. من خوشحال هستم.",
         transliteration:
@@ -4826,7 +4828,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     ],
     reading: [
       {
-        id: 10,
+        id: 1,
         title: "My House",
         text: "خانه من بزرگ است. سه اتاق خواب دارد. حمام تمیز است. آشپزخانه کوچک است. اما همه چیز خوب است.",
         transliteration:
@@ -4843,7 +4845,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 10,
+        id: 2,
         title: "Living Room",
         text: "پذیرایی من بزرگ است. یک مبل راحت دارد. تلویزیون بزرگ است. فرش قشنگ است. من پذیرایی را دوست دارم.",
         transliteration:
@@ -4856,7 +4858,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 10,
+        id: 3,
         title: "Bedroom",
         text: "اتاق خواب من کوچک است. تخت نرم است. کمد بزرگ است. پنجره بزرگ است. اتاق روشن است. خیلی راحت است.",
         transliteration:
@@ -4869,7 +4871,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 10,
+        id: 4,
         title: "Kitchen",
         text: "آشپزخانه تمیز است. یخچال بزرگ است. میز کوچک است. صندلی‌ها سفید است. همه ظرف‌ها تمیز است.",
         transliteration:
@@ -4882,7 +4884,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 10,
+        id: 5,
         title: "Cleaning Day",
         text: "امروز خانه را تمیز می‌کنم. کف را تمیز می‌کنم. پنجره‌ها را تمیز می‌کنم. همه اتاق‌ها تمیز است. من خوشحال هستم.",
         transliteration:
@@ -5360,7 +5362,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     ],
     reading: [
       {
-        id: 12,
+        id: 1,
         title: "Morning Drinks",
         text: "مَن صُبح آب و چای می‌نوشَم. چایِ داغ دوست دارَم. بَعد قَهوه می‌خورَم. قَهوه اِنِرژی می‌دَهَد.",
         transliteration:
@@ -5381,7 +5383,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 12,
+        id: 2,
         title: "Cold Drinks",
         text: "هَوا داغ اَست. مَن نوشیدَنیِ سَرد دوست دارَم. آبِ گازدار و دوغ می‌خورَم. این نوشیدَنی‌ها خُنَک هَستَند.",
         transliteration:
@@ -5402,7 +5404,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 12,
+        id: 3,
         title: "At the Café",
         text: "مَن دَر کافه چای و شِیک می‌خورَم. یِک فِنجان چایِ سیاه می‌گیرَم. شِیکِ موز هَم خوشمَزِه اَست.",
         transliteration:
@@ -5423,7 +5425,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 12,
+        id: 4,
         title: "Drinks with Food",
         text: "مَن با غذا دوغ می‌خورَم. دوغ تُرش اَست. بَعضی وَقت‌ها آب می‌نوشَم. نوشیدَنی با غذا مهم اَست.",
         transliteration:
@@ -5444,7 +5446,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         ],
       },
       {
-        id: 12,
+        id: 5,
         title: "Sweet Drinks",
         text: "مَن نوشیدَنیِ شیرین دوست دارَم. آب‌میوه و شِیک می‌خورَم. شِیکِ شُکلات خیلی شیرین اَست. اَمّا نوشابِه کَم می‌خورَم.",
         transliteration:
@@ -6023,7 +6025,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     ],
     reading: [
       {
-        id: 14,
+        id: 1,
         title: "Breakfast at Home",
         text: "مَن صُبحانِه می‌خورَم. نان و پَنیر می‌خورَم. چای داغ می‌نوشَم. صُبحانِه اَوَّلین وَعدِه‌ی روز اَست.",
         transliteration:
@@ -6045,7 +6047,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
       
       {
-        id: 14,
+        id: 2,
         title: "Lunch at Work",
         text: "مَن دَر کار ناهار می‌خورَم. بَرِنج و مُرغ می‌خورَم. آب می‌نوشَم. ناهار وَقتِ اِستِراحت اَست.",
         transliteration:
@@ -6067,7 +6069,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
       
       {
-        id: 14,
+        id: 3,
         title: "Dinner with Family",
         text: "ما با هَمسَر و خانوادِه شام می‌خوریم. قورمِه‌سَبزی می‌خوریم. با شام دوغ می‌نوشیم. شام با هَم لَذَّت‌بَخش اَست.",
         transliteration:
@@ -6089,7 +6091,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
       
       {
-        id: 14,
+        id: 4,
         title: "Eating at a Restaurant",
         text: "مَن دَر رِستوران غَذا می‌خورَم. کِباب می‌خورَم. نان و سَبزی هَم می‌خورَم. غَذای رِستوران خوش‌مَزِه اَست.",
         transliteration:
@@ -6111,7 +6113,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
       
       {
-        id: 14,
+        id: 5,
         title: "Snacking During the Day",
         text: "مَن بَینِ وَعدِه‌ها مِیانوَعدِه می‌خورَم. سیب یا موز می‌خورَم. گاهی چای می‌نوشَم. مِیانوَعدِه سَبُک اَست.",
         transliteration:
