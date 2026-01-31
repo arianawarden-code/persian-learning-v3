@@ -5,23 +5,34 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Eye, EyeOff } from "lucide-react"
 import type { ReadingExercise } from "@/lib/module-data"
-import { setStoryComplete, isStoryComplete } from "@/lib/progress-storage"
+import {
+  markStoryAttempted,
+  markStoryMastered,
+  getStoryStatus,
+  setLastActivity,
+} from "@/lib/progress-storage"
 import { useRouter } from "next/navigation"
 
 interface ReadingStoryProps {
   story: ReadingExercise
   moduleId: string | number
+  nextStoryId?: string | null
 }
 
-export function ReadingStory({ story, moduleId }: ReadingStoryProps) {
+export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingStoryProps) {
   const router = useRouter()
   const [showTranslation, setShowTranslation] = useState(false)
   const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: number }>({})
   const [showResults, setShowResults] = useState(false)
   const [isCompleted, setIsCompleted] = useState(false)
 
+  const [status, setStatus] = useState<"attempted" | "mastered" | null>(null)
+
   useEffect(() => {
-    setIsCompleted(isStoryComplete(moduleId, story.id))
+    setStatus(getStoryStatus(moduleId, story.id))
+
+    // Update Resume target when user opens this story
+    setLastActivity({ type: "reading", moduleId: String(moduleId), id: story.id })
   }, [moduleId, story.id])
 
   const getLinePairs = () => {
@@ -65,9 +76,20 @@ export function ReadingStory({ story, moduleId }: ReadingStoryProps) {
 
   const handleSubmit = () => {
     setShowResults(true)
+
+    // Always award credit for finishing (attempted)
+    markStoryAttempted(moduleId, story.id)
+    setStatus("attempted")
+
+    // Upgrade to mastery if perfect score
     if (correctCount === story.questions.length) {
-      setStoryComplete(moduleId, story.id)
-      setIsCompleted(true)
+      markStoryMastered(moduleId, story.id)
+      setStatus("mastered")
+    }
+
+    // Optional: set resume to next story if you have it
+    if (nextStoryId) {
+      setLastActivity({ type: "reading", moduleId: String(moduleId), id: nextStoryId })
     }
   }
 
@@ -84,16 +106,39 @@ export function ReadingStory({ story, moduleId }: ReadingStoryProps) {
 
   return (
     <div className="space-y-6">
-      {isCompleted && (
-        <div className="rounded-lg bg-green-50 border-2 border-green-200 p-4 flex items-center gap-3">
-          <div className="h-8 w-8 rounded-full bg-green-100 flex items-center justify-center">
-            <svg className="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
+            {showResults && (
+        <Card className={status === "mastered" ? "border-green-200 bg-green-50 p-6" : "border-sand-200 bg-white p-6"}>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <div className="text-lg font-semibold text-charcoal">
+                {status === "mastered" ? "Nice work — mastered ✅" : "Good effort — credit earned 👍"}
+              </div>
+              <div className="mt-1 text-sm text-charcoal/70">
+                Score: {correctCount}/{story.questions.length}
+                {status !== "mastered" && " • Get a perfect score to master this story."}
+              </div>
+            </div>
+
+            <div className="flex gap-2">
+              <Button variant="outline" onClick={handleReset}>
+                Try Again
+              </Button>
+
+              <Button
+                className={status === "mastered" ? "bg-green-600 hover:bg-green-700 text-white" : "bg-terracotta hover:bg-terracotta/90"}
+                onClick={() => {
+                  // IMPORTANT: update this route if your app uses a different reading URL pattern
+                  if (nextStoryId) router.push(`/modules/${moduleId}/reading/${nextStoryId}`)
+                  else router.push(`/modules/${moduleId}`)
+                }}
+              >
+                {nextStoryId ? "Continue" : "Back to Module"}
+              </Button>
+            </div>
           </div>
-          <span className="font-medium text-green-700">Story completed! Great work!</span>
-        </div>
+        </Card>
       )}
+
 
       <Card className="border-sand-200 bg-white p-8">
         <div className="mb-6">
