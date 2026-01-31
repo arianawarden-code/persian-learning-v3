@@ -4549,9 +4549,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "Going to Work",
         text: "من هر روز با اتوبوس به کار می‌روم. اتوبوس ساعت هشت می‌آید. من سوار می‌شوم. راه کوتاه است. من راضی هستم.",
-        transliteration:
+        textTransliteration:
           "man har rooz bā otobus be kār miram. otobus sā'at hasht miāyad. man savār mishovam. rāh kootāh ast. man rāzi hastam.",
-        translation:
+        textTranslation:
           "I go to work by bus every day. The bus comes at eight. I get on. The way is short. I'm satisfied.",
         questions: [
           { question: "How does the person go to work?", options: ["Car", "Bus", "Metro", "Taxi"], correctAnswer: 1 },
