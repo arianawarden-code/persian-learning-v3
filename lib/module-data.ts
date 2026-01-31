@@ -3333,9 +3333,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "Counting Friends",
         text: "مَن دو دوست دارَم. یِک دوست دَر خانِه اَست. دوستِ دیگَر دَر کار اَست. ما سِه بار دَر هَفته هَم‌دیگَر را می‌بینیم. مَن دوستام را دوست دارَم.",
-        transliteration:
+        textTransliteration:
           "man do doost dāram. yek doost dar khāne ast. doost-e digar dar kār ast. mā se bār dar hafte ham-digar rā mibinim. man doostām rā doost dāram.",
-        translation:
+        textTranslation:
           "I have two friends. One friend is at home. The other friend is at work. We see each other three times a week. I love my friends.",
         questions: [
           {
@@ -3354,9 +3354,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "A Busy Week",
         text: "مَن هَفت روز دَر هَفته کار می‌کُنَم. چَهار روز زود بیدار می‌شَوَم. سِه روز دیر بیدار می‌شَوَم. مَن هَر روز هَشت ساعَت می‌خوابَم. زندگی خوب اَست.",
-        transliteration:
+        textTransliteration:
           "man haft rooz dar hafte kār mikonam. chahār rooz zood bidār mishavam. se rooz dir bidār mishavam. man har rooz hasht sā'at mikhābam. zendegi khoob ast.",
-        translation:
+        textTranslation:
           "I work seven days a week. Four days I wake up early. Three days I wake up late. I sleep eight hours every day. Life is good.",
         questions: [
           {
@@ -3375,9 +3375,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "Shopping with Tomans",
         text: "مَن پَنجاه تومان دارَم. یِک سیب دَه تومان قِیمَت دارَد. مَن سِه سیب می‌خَرَم. بَعد بیست تومان بَرایِ مَن می‌مانَد. مَن خوشحالَم.",
-        transliteration:
+        textTransliteration:
           "man panjāh tomān dāram. yek sib dah tomān gheymat dārad. man se sib mikharam. ba'ad bist tomān barāye man mimānad. man khoshhālam.",
-        translation:
+        textTranslation:
           "I have fifty tomans. One apple costs ten tomans. I buy three apples. Then twenty tomans remain for me. I am happy.",
         questions: [
           {
@@ -3396,9 +3396,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 4,
         title: "In the Classroom",
         text: "دَر کِلاسِ ما بیست دانِشجو هَستَند. دَه دانِشجو دُختَر هَستَند و دَه دانِشجو پِسَر هَستَند. مُعَلِّمِ ما می‌گوید: «نَوَد دَرصَد دُرُست اَست». مَن می‌خَندَم.",
-        transliteration:
+        textTransliteration:
           "dar kelās-e mā bist dāneshju hastand. dah dāneshju dokhtar hastand va dah dāneshju pesar hastand. mo'allem-e mā migooyad: «navad darsad dorost ast». man mikhandam.",
-        translation:
+        textTranslation:
           "In our class there are twenty students. Ten students are girls and ten students are boys. Our teacher says: “Ninety percent is correct.” I laugh.",
         questions: [
           {
@@ -3417,9 +3417,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 5,
         title: "A Big Library",
         text: "پِدَربُزرگِ مَن هِزار کِتاب دارَد. مَن صَد کِتاب دَر خانِه دارَم. خواهرِ مَن سی کِتاب دارَد. بَرادَرِ مَن دو کِتاب دارَد. ما کِتاب‌ها را دوست داریم.",
-        transliteration:
+        textTransliteration:
           "pedarbozorg-e man hezār ketāb dārad. man sad ketāb dar khāne dāram. khāhar-e man si ketāb dārad. barādar-e man do ketāb dārad. mā ketāb-hā rā doost dārim.",
-        translation:
+        textTranslation:
           "My grandfather has one thousand books. I have one hundred books at home. My sister has thirty books. My brother has two books. We love books.",
         questions: [
           {
@@ -3597,9 +3597,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "At the Restaurant",
         text: "من به رستوران می‌روم. منو را می‌بینم. برنج و مرغ سفارش می‌دهم. غذا خوشمزه است. چای می‌نوشم.",
-        transliteration:
+        textTransliteration:
           "man be resturān miram. menoo rā mibinam. berenj va morgh sefāresh midaham. ghazā khoshmaze ast. chāy minusham.",
-        translation:
+        textTranslation:
           "I go to the restaurant. I see the menu. I order rice and chicken. The food is delicious. I drink tea.",
         questions: [
           {
@@ -3618,9 +3618,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "Breakfast Time",
         text: "صبح من صبحانه می‌خورم. نان و پنیر می‌خورم. چای می‌نوشم. چای گرم است. صبحانه خوشمزه است.",
-        transliteration:
+        textTransliteration:
           "sobh man sobhāne mikhoram. nān va panir mikhoram. chāy minusham. chāy garm ast. sobhāne khoshmaze ast.",
-        translation:
+        textTranslation:
           "In the morning I eat breakfast. I eat bread and cheese. I drink tea. The tea is hot. Breakfast is delicious.",
         questions: [
           {
@@ -3635,9 +3635,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "Favorite Foods",
         text: "من برنج دوست دارم. میوه هم دوست دارم. سیب و پرتقال خوشمزه است. من سبزی هم می‌خورم. سبزی سالم است.",
-        transliteration:
+        textTransliteration:
           "man berenj doost dāram. mive ham doost dāram. sib va porteghāl khoshmaze ast. man sabzi ham mikhoram. sabzi sālem ast.",
-        translation:
+        textTranslation:
           "I like rice. I also like fruit. Apples and oranges are delicious. I also eat vegetables. Vegetables are healthy.",
         questions: [
           {
@@ -3656,9 +3656,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 4,
         title: "Shopping for Food",
         text: "من به بازار می‌روم. میوه تازه می‌خرم. سیب قرمز خوب است. نان تازه هم می‌خرم. همه چیز خوب است.",
-        transliteration:
+        textTransliteration:
           "man be bāzār miram. mive tāze mikharam. sib ghermez khoob ast. nān tāze ham mikharam. hame chiz khoob ast.",
-        translation:
+        textTranslation:
           "I go to the market. I buy fresh fruit. Red apples are good. I also buy fresh bread. Everything is good.",
         questions: [
           {
@@ -3673,9 +3673,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 5,
         title: "Dinner Preparation",
         text: "شب من شام درست می‌کنم. برنج می‌پزم. مرغ با سبزی درست می‌کنم. غذا آماده است. خانواده شام می‌خورد.",
-        transliteration:
+        textTransliteration:
           "shab man shām dorost mikonam. berenj mipazam. morgh bā sabzi dorost mikonam. ghazā āmāde ast. khānevāde shām mikhored.",
-        translation:
+        textTranslation:
           "At night I make dinner. I cook rice. I make chicken with vegetables. The food is ready. The family eats dinner.",
         questions: [
           {
@@ -3846,9 +3846,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "My New House",
         text: "خانه من نو است. خانه بزرگ است. اتاق‌ها روشن است. دیوارها سفید است. در آبی است. خانه خیلی قشنگ است.",
-        transliteration:
+        textTransliteration:
           "khāne man now ast. khāne bozorg ast. otāgh-hā roshan ast. divār-hā sefid ast. dar ābi ast. khāne kheyli ghashang ast.",
-        translation:
+        textTranslation:
           "My house is new. The house is big. The rooms are bright. The walls are white. The door is blue. The house is very beautiful.",
         questions: [
           { question: "Is the house new or old?", options: ["Old", "New", "Small", "Dirty"], correctAnswer: 1 },
@@ -3859,9 +3859,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "Colors in Nature",
         text: "آسمان آبی است. خورشید زرد است. چمن سبز است. گل قرمز است. همه چیز قشنگ است. من طبیعت دوست دارم.",
-        transliteration:
+        textTransliteration:
           "āsemān ābi ast. khorshid zard ast. chaman sabz ast. gol ghermez ast. hame chiz ghashang ast. man tabi'at doost dāram.",
-        translation:
+        textTranslation:
           "The sky is blue. The sun is yellow. The grass is green. The flower is red. Everything is beautiful. I love nature.",
         questions: [
           { question: "What color is the sky?", options: ["Yellow", "Green", "Blue", "Red"], correctAnswer: 2 },
@@ -3872,9 +3872,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "My Room",
         text: "اتاق من کوچک است. اما خیلی تمیز است. میز قهوه‌ای است. صندلی سفید است. تخت بزرگ است. همه چیز خوب است.",
-        transliteration:
+        textTransliteration:
           "otāgh man koochak ast. ammā kheyli tamiz ast. miz ghahve-i ast. sandali sefid ast. takht bozorg ast. hame chiz khoob ast.",
-        translation:
+        textTranslation:
           "My room is small. But it's very clean. The desk is brown. The chair is white. The bed is big. Everything is good.",
         questions: [
           { question: "Is the room big or small?", options: ["Big", "Small", "Dirty", "Dark"], correctAnswer: 1 },
@@ -3885,9 +3885,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 4,
         title: "Shopping for Clothes",
         text: "من به مغازه می‌روم. لباس نو می‌خرم. یک پیراهن آبی می‌خرم. خیلی قشنگ است. یک شلوار سیاه هم می‌خرم. همه چیز خوب است.",
-        transliteration:
+        textTransliteration:
           "man be maghāze miram. lebās now mikharam. yek pirāhan ābi mikharam. kheyli ghashang ast. yek shalvār siāh ham mikharam. hame chiz khoob ast.",
-        translation:
+        textTranslation:
           "I go to the store. I buy new clothes. I buy a blue shirt. It's very beautiful. I also buy black pants. Everything is good.",
         questions: [
           { question: "What color is the shirt?", options: ["Black", "White", "Blue", "Red"], correctAnswer: 2 },
@@ -3898,9 +3898,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 5,
         title: "My Car",
         text: "ماشین من کوچک است. رنگش قرمز است. خیلی تمیز است. نو نیست اما خوب است. من ماشینم را دوست دارم.",
-        transliteration:
+        textTransliteration:
           "māshin man koochak ast. rangash ghermez ast. kheyli tamiz ast. now nist ammā khoob ast. man māshinam rā doost dāram.",
-        translation: "My car is small. Its color is red. It's very clean. It's not new but it's good. I love my car.",
+        textTranslation: "My car is small. Its color is red. It's very clean. It's not new but it's good. I love my car.",
         questions: [
           { question: "What color is the car?", options: ["Blue", "White", "Red", "Black"], correctAnswer: 2 },
           { question: "Is the car new?", options: ["Yes", "No", "Big", "Dirty"], correctAnswer: 1 },
@@ -4108,9 +4108,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       id: 1,
       title: "Counting Friends",
       text: "مَن دو دوست دارَم. یِک دوست دَر خانِه اَست. دوستِ دیگَر دَر کار اَست. ما سِه بار دَر هَفته هَم‌دیگَر را می‌بینیم. مَن دوستام را دوست دارَم.",
-      transliteration:
+      textTransliteration:
         "man do doost dāram. yek doost dar khāne ast. doost-e digar dar kār ast. mā se bār dar hafte ham-digar rā mibinim. man doostām rā doost dāram.",
-      translation:
+      textTranslation:
         "I have two friends. One friend is at home. The other friend is at work. We see each other three times a week. I love my friends.",
       questions: [
         {
@@ -4129,9 +4129,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       id: 2,
       title: "A Busy Week",
       text: "مَن هَفت روز دَر هَفته کار می‌کُنَم. چَهار روز زود بیدار می‌شَوَم. سِه روز دیر بیدار می‌شَوَم. مَن هَر روز هَشت ساعَت می‌خوابَم. زِندگی خوب اَست.",
-      transliteration:
+      textTransliteration:
         "man haft rooz dar hafte kār mikonam. chahār rooz zood bidār mishavam. se rooz dir bidār mishavam. man har rooz hasht sā'at mikhābam. zendegi khoob ast.",
-      translation:
+      textTranslation:
         "I work seven days a week. Four days I wake up early. Three days I wake up late. I sleep eight hours every day. Life is good.",
       questions: [
         {
@@ -4150,9 +4150,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       id: 3,
       title: "Shopping with Tomans",
       text: "مَن پَنجاه تومان دارَم. یِک سیب دَه تومان قِیمَت دارَد. مَن سِه سیب می‌خَرَم. بَعد بیست تومان بَرایِ مَن می‌مانَد. مَن خوشحالَم.",
-      transliteration:
+      textTransliteration:
         "man panjāh tomān dāram. yek sib dah tomān gheymat dārad. man se sib mikharam. ba'ad bist tomān barāye man mimānad. man khoshhālam.",
-      translation:
+      textTranslation:
         "I have fifty tomans. One apple costs ten tomans. I buy three apples. Then twenty tomans remain for me. I am happy.",
       questions: [
         {
@@ -4171,9 +4171,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       id: 4,
       title: "In the Classroom",
       text: "دَر کِلاسِ ما بیست دانِشجو هَستَند. دَه دانِشجو دُختَر هَستَند و دَه دانِشجو پِسَر هَستَند. مُعَلِّمِ ما می‌گوید: «نَوَد دَرصَد دُرُست اَست». مَن می‌خَندَم.",
-      transliteration:
+      textTransliteration:
         "dar kelās-e mā bist dāneshju hastand. dah dāneshju dokhtar hastand va dah dāneshju pesar hastand. mo'allem-e mā migooyad: «navad darsad dorost ast». man mikhandam.",
-      translation:
+      textTranslation:
         "In our class there are twenty students. Ten students are girls and ten students are boys. Our teacher says: “Ninety percent is correct.” I laugh.",
       questions: [
         {
@@ -4192,9 +4192,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       id: 5,
       title: "A Big Library",
       text: "پِدَربُزرگِ مَن هِزار کِتاب دارَد. مَن صَد کِتاب دَر خانِه دارَم. خواهرِ مَن سی کِتاب دارَد. بَرادَرِ مَن دو کِتاب دارَد. ما کِتاب‌ها را دوست داریم.",
-      transliteration:
+      textTransliteration:
         "pedarbozorg-e man hezār ketāb dārad. man sad ketāb dar khāne dāram. khāhar-e man si ketāb dārad. barādar-e man do ketāb dārad. mā ketāb-hā rā doost dārim.",
-      translation:
+      textTranslation:
         "My grandfather has one thousand books. I have one hundred books at home. My sister has thirty books. My brother has two books. We love books.",
       questions: [
         {
@@ -4335,9 +4335,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "At the Bazaar",
         text: "من به بازار می‌روم. یک کیف می‌خواهم. این کیف قشنگ است. قیمت چقدر است? صد هزار تومان. خیلی گران است!",
-        transliteration:
+        textTransliteration:
           "man be bāzār miram. yek kif mikhāham. in kif ghashang ast. gheymat cheghadr ast? sad hezār toomān. kheyli gerān ast!",
-        translation:
+        textTranslation:
           "I go to the bazaar. I want a bag. This bag is beautiful. What is the price? One hundred thousand toman. It's very expensive!",
         questions: [
           { question: "Where does the person go?", options: ["Store", "Bazaar", "Home", "Park"], correctAnswer: 1 },
@@ -4352,9 +4352,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "Bargaining",
         text: "این کیف خیلی گران است. تخفیف دارد؟ بله، کمی تخفیف دارد. هشتاد هزار تومان. خوب است. من می‌خرم.",
-        transliteration:
+        textTransliteration:
           "in kif kheyli gerān ast. takhfif dārad? bale, kami takhfif dārad. hashtād hezār toomān. khoob ast. man mikharam.",
-        translation:
+        textTranslation:
           "This bag is very expensive. Does it have a discount? Yes, it has a little discount. Eighty thousand toman. That's good. I'll buy it.",
         questions: [
           {
@@ -4373,9 +4373,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "Buying Clothes",
         text: "من لباس می‌خرم. این پیراهن قشنگ است. اندازه من چهل است. رنگ دیگر دارید؟ بله، آبی هم داریم. خوب است.",
-        transliteration:
+        textTransliteration:
           "man lebās mikharam. in pirāhan ghashang ast. andāze man chehel ast. rang-e digar dārid? bale, ābi ham dārim. khoob ast.",
-        translation:
+        textTranslation:
           "I'm buying clothes. This shirt is beautiful. My size is forty. Do you have another color? Yes, we also have blue. That's good.",
         questions: [
           { question: "What is the person buying?", options: ["Food", "Bag", "Clothes", "Books"], correctAnswer: 2 },
@@ -4390,9 +4390,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 4,
         title: "Payment",
         text: "حساب چقدر است؟ سیصد هزار تومان. نقد می‌دهم. کارت ندارم. خوب است. رسید لطفا. بفرمایید.",
-        transliteration:
+        textTransliteration:
           "hesāb cheghadr ast? sisad hezār toomān. naghd midaham. kārt nadāram. khoob ast. resid lotfan. befarmāyid.",
-        translation:
+        textTranslation:
           "How much is the bill? Three hundred thousand toman. I'm paying cash. I don't have a card. That's fine. Receipt please. Here you go.",
         questions: [
           {
@@ -4412,9 +4412,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 5,
         title: "Shopping Day",
         text: "من خرید می‌کنم. به فروشگاه می‌روم. همه چیز ارزان است. امروز فروش ویژه است. من خیلی خوشحال هستم.",
-        transliteration:
+        textTransliteration:
           "man kharid mikonam. be forooshgāh miram. hame chiz arzān ast. emrooz foroosh vije ast. man kheyli khoshhāl hastam.",
-        translation: "I'm shopping. I go to the store. Everything is cheap. Today is a special sale. I'm very happy.",
+        textTranslation: "I'm shopping. I go to the store. Everything is cheap. Today is a special sale. I'm very happy.",
         questions: [
           {
             question: "What kind of day is it at the store?",
@@ -4562,9 +4562,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "Taking a Taxi",
         text: "من دیر کردم. تاکسی می‌خواهم. تاکسی می‌آید. من سوار می‌شوم. تاکسی سریع است. خیلی خوب است.",
-        transliteration:
+        textTransliteration:
           "man dir kardam. tāksi mikhāham. tāksi miāyad. man savār mishovam. tāksi sari' ast. kheyli khoob ast.",
-        translation: "I'm late. I want a taxi. The taxi comes. I get in. The taxi is fast. It's very good.",
+        textTranslation: "I'm late. I want a taxi. The taxi comes. I get in. The taxi is fast. It's very good.",
         questions: [
           {
             question: "Why does the person want a taxi?",
@@ -4578,9 +4578,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "Metro Journey",
         text: "مترو خیلی خوب است. مترو سریع است. بلیط ارزان است. من هر روز با مترو می‌روم. ترافیک نیست.",
-        transliteration:
+        textTransliteration:
           "metro kheyli khoob ast. metro sari' ast. belit arzān ast. man har rooz bā metro miram. terāfik nist.",
-        translation:
+        textTranslation:
           "The metro is very good. The metro is fast. The ticket is cheap. I go by metro every day. There's no traffic.",
         questions: [
           { question: "Is the metro fast or slow?", options: ["Slow", "Fast", "Expensive", "Bad"], correctAnswer: 1 },
@@ -4595,9 +4595,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 4,
         title: "Train Trip",
         text: "من با قطار سفر می‌کنم. قطار بزرگ است. بلیط دارم. من مسافر هستم. راه طولانی است. اما قطار راحت است.",
-        transliteration:
+        textTransliteration:
           "man bā ghatār safar mikonam. ghatār bozorg ast. belit dāram. man mosāfer hastam. rāh toolāni ast. ammā ghatār rāhat ast.",
-        translation:
+        textTranslation:
           "I'm traveling by train. The train is big. I have a ticket. I'm a passenger. The way is long. But the train is comfortable.",
         questions: [
           { question: "How is the person traveling?", options: ["Bus", "Car", "Train", "Plane"], correctAnswer: 2 },
@@ -4608,9 +4608,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 5,
         title: "At the Airport",
         text: "من به فرودگاه می‌روم. هواپیما بزرگ است. بلیط گران است. اما سفر سریع است. من خوشحال هستم.",
-        transliteration:
+        textTransliteration:
           "man be foroodgāh miram. havāpeymā bozorg ast. belit gerān ast. ammā safar sari' ast. man khoshhāl hastam.",
-        translation:
+        textTranslation:
           "I'm going to the airport. The airplane is big. The ticket is expensive. But the trip is fast. I'm happy.",
         questions: [
           { question: "Where is the person going?", options: ["Station", "Airport", "Port", "Stop"], correctAnswer: 1 },
@@ -4646,7 +4646,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
     ],
   },
-
+//module 10
   10: {
     moduleId: 10,
     vocabulary: [
@@ -4831,9 +4831,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "My House",
         text: "خانه من بزرگ است. سه اتاق خواب دارد. حمام تمیز است. آشپزخانه کوچک است. اما همه چیز خوب است.",
-        transliteration:
+        textTransliteration:
           "khāne man bozorg ast. se otāgh khāb dārad. hammām tamiz ast. āshpazkhāne koochak ast. ammā hame chiz khoob ast.",
-        translation:
+        textTranslation:
           "My house is big. It has three bedrooms. The bathroom is clean. The kitchen is small. But everything is good.",
         questions: [
           {
@@ -4848,9 +4848,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "Living Room",
         text: "پذیرایی من بزرگ است. یک مبل راحت دارد. تلویزیون بزرگ است. فرش قشنگ است. من پذیرایی را دوست دارم.",
-        transliteration:
+        textTransliteration:
           "pazirāyi man bozorg ast. yek mobl rāhat dārad. televizion bozorg ast. farsh ghashang ast. man pazirāyi rā doost dāram.",
-        translation:
+        textTranslation:
           "My living room is big. It has a comfortable sofa. The TV is big. The carpet is beautiful. I love the living room.",
         questions: [
           { question: "Is the sofa comfortable?", options: ["No", "Yes", "Small", "Old"], correctAnswer: 1 },
@@ -4861,9 +4861,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "Bedroom",
         text: "اتاق خواب من کوچک است. تخت نرم است. کمد بزرگ است. پنجره بزرگ است. اتاق روشن است. خیلی راحت است.",
-        transliteration:
+        textTransliteration:
           "otāgh khāb man koochak ast. takht narm ast. komad bozorg ast. panjere bozorg ast. otāgh roshan ast. kheyli rāhat ast.",
-        translation:
+        textTranslation:
           "My bedroom is small. The bed is soft. The closet is big. The window is big. The room is bright. It's very comfortable.",
         questions: [
           { question: "Is the bedroom big or small?", options: ["Big", "Small", "Dirty", "Dark"], correctAnswer: 1 },
@@ -4874,9 +4874,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 4,
         title: "Kitchen",
         text: "آشپزخانه تمیز است. یخچال بزرگ است. میز کوچک است. صندلی‌ها سفید است. همه ظرف‌ها تمیز است.",
-        transliteration:
+        textTransliteration:
           "āshpazkhāne tamiz ast. yakhchāl bozorg ast. miz koochak ast. sandali-hā sefid ast. hame zarf-hā tamiz ast.",
-        translation:
+        textTranslation:
           "The kitchen is clean. The refrigerator is big. The table is small. The chairs are white. All the dishes are clean.",
         questions: [
           { question: "Is the kitchen clean or dirty?", options: ["Dirty", "Clean", "Big", "Small"], correctAnswer: 1 },
@@ -4887,9 +4887,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 5,
         title: "Cleaning Day",
         text: "امروز خانه را تمیز می‌کنم. کف را تمیز می‌کنم. پنجره‌ها را تمیز می‌کنم. همه اتاق‌ها تمیز است. من خوشحال هستم.",
-        transliteration:
+        textTransliteration:
           "emrooz khāne rā tamiz mikonam. kaf rā tamiz mikonam. panjere-hā rā tamiz mikonam. hame otāgh-hā tamiz ast. man khoshhāl hastam.",
-        translation:
+        textTranslation:
           "Today I'm cleaning the house. I clean the floor. I clean the windows. All the rooms are clean. I'm happy.",
         questions: [
           {
@@ -5365,9 +5365,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "Morning Drinks",
         text: "مَن صُبح آب و چای می‌نوشَم. چایِ داغ دوست دارَم. بَعد قَهوه می‌خورَم. قَهوه اِنِرژی می‌دَهَد.",
-        transliteration:
+        textTransliteration:
           "man sobh āb va chāy mi-noosham. chāy-e dāgh doost dāram. ba‘d qahve mi-khoram. qahve enerzhi mi-dahad.",
-        translation:
+        textTranslation:
           "I drink water and tea in the morning. I like hot tea. Then I drink coffee. Coffee gives energy.",
         questions: [
           {
@@ -5386,9 +5386,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "Cold Drinks",
         text: "هَوا داغ اَست. مَن نوشیدَنیِ سَرد دوست دارَم. آبِ گازدار و دوغ می‌خورَم. این نوشیدَنی‌ها خُنَک هَستَند.",
-        transliteration:
+        textTransliteration:
           "havā dāgh ast. man nooshidani-ye sard doost dāram. āb-e gāzdār va doogh mi-khoram. in nooshidani-hā khonak hastand.",
-        translation:
+        textTranslation:
           "The weather is hot. I like cold drinks. I drink sparkling water and doogh. These drinks are refreshing.",
         questions: [
           {
@@ -5407,9 +5407,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "At the Café",
         text: "مَن دَر کافه چای و شِیک می‌خورَم. یِک فِنجان چایِ سیاه می‌گیرَم. شِیکِ موز هَم خوشمَزِه اَست.",
-        transliteration:
+        textTransliteration:
           "man dar kāfe chāy va sheyk mi-khoram. yek fenjān chāy-e siyāh mi-giram. sheyk-e moz ham khoshmazze ast.",
-        translation:
+        textTranslation:
           "I drink tea and a shake at the café. I get a cup of black tea. The banana shake is also delicious.",
         questions: [
           {
@@ -5428,9 +5428,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 4,
         title: "Drinks with Food",
         text: "مَن با غذا دوغ می‌خورَم. دوغ تُرش اَست. بَعضی وَقت‌ها آب می‌نوشَم. نوشیدَنی با غذا مهم اَست.",
-        transliteration:
+        textTransliteration:
           "man bā ghazā doogh mi-khoram. doogh torsh ast. ba‘zi vaght-hā āb mi-noosham. nooshidani bā ghazā mohem ast.",
-        translation:
+        textTranslation:
           "I drink doogh with food. Doogh is sour. Sometimes I drink water. Drinks are important with food.",
         questions: [
           {
@@ -5449,9 +5449,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 5,
         title: "Sweet Drinks",
         text: "مَن نوشیدَنیِ شیرین دوست دارَم. آب‌میوه و شِیک می‌خورَم. شِیکِ شُکلات خیلی شیرین اَست. اَمّا نوشابِه کَم می‌خورَم.",
-        transliteration:
+        textTransliteration:
           "man nooshidani-ye shirin doost dāram. āb-mive va sheyk mi-khoram. sheyk-e shokolāt kheili shirin ast. ammā nooshābe kam mi-khoram.",
-        translation:
+        textTranslation:
           "I like sweet drinks. I drink juice and shakes. Chocolate shake is very sweet. But I drink soda only a little.",
         questions: [
           {
@@ -6028,9 +6028,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "Breakfast at Home",
         text: "مَن صُبحانِه می‌خورَم. نان و پَنیر می‌خورَم. چای داغ می‌نوشَم. صُبحانِه اَوَّلین وَعدِه‌ی روز اَست.",
-        transliteration:
+        textTransliteration:
           "man sobhāne mi-khoram. nân va panir mi-khoram. chāy-e dâgh mi-noosham. sobhāne avvalin va‘de-ye rooz ast.",
-        translation:
+        textTranslation:
           "I eat breakfast. I eat bread and cheese. I drink hot tea. Breakfast is the first meal of the day.",
         questions: [
           {
@@ -6050,9 +6050,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "Lunch at Work",
         text: "مَن دَر کار ناهار می‌خورَم. بَرِنج و مُرغ می‌خورَم. آب می‌نوشَم. ناهار وَقتِ اِستِراحت اَست.",
-        transliteration:
+        textTransliteration:
           "man dar kâr nāhâr mi-khoram. berenj va morgh mi-khoram. āb mi-noosham. nāhâr vaght-e esterāhat ast.",
-        translation:
+        textTranslation:
           "I eat lunch at work. I eat rice and chicken. I drink water. Lunch is a time to rest.",
         questions: [
           {
@@ -6072,9 +6072,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "Dinner with Family",
         text: "ما با هَمسَر و خانوادِه شام می‌خوریم. قورمِه‌سَبزی می‌خوریم. با شام دوغ می‌نوشیم. شام با هَم لَذَّت‌بَخش اَست.",
-        transliteration:
+        textTransliteration:
           "mā bā hamsar va khānevāde shām mi-khorim. ghorme-sabzi mi-khorim. bā shām doogh mi-nooshim. shām bā ham lazzat-bakhsh ast.",
-        translation:
+        textTranslation:
           "We eat dinner with our spouse and family. We eat ghormeh sabzi. We drink doogh with dinner. Dinner together is enjoyable.",
         questions: [
           {
@@ -6094,9 +6094,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 4,
         title: "Eating at a Restaurant",
         text: "مَن دَر رِستوران غَذا می‌خورَم. کِباب می‌خورَم. نان و سَبزی هَم می‌خورَم. غَذای رِستوران خوش‌مَزِه اَست.",
-        transliteration:
+        textTransliteration:
           "man dar resturân ghazâ mi-khoram. kebâb mi-khoram. nân va sabzi ham mi-khoram. ghazâ-ye resturân khosh-maze ast.",
-        translation:
+        textTranslation:
           "I eat food at a restaurant. I eat kebab. I also eat bread and herbs. Restaurant food is tasty.",
         questions: [
           {
@@ -6116,9 +6116,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 5,
         title: "Snacking During the Day",
         text: "مَن بَینِ وَعدِه‌ها مِیانوَعدِه می‌خورَم. سیب یا موز می‌خورَم. گاهی چای می‌نوشَم. مِیانوَعدِه سَبُک اَست.",
-        transliteration:
+        textTransliteration:
           "man beyn-e va‘de-hā miyân-va‘de mi-khoram. sib yā moz mi-khoram. gāhi chāy mi-noosham. miyân-va‘de sabok ast.",
-        translation:
+        textTranslation:
           "I eat snacks between meals. I eat an apple or a banana. Sometimes I drink tea. Snacks are light.",
         questions: [
           {
