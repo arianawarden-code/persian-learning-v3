@@ -53,14 +53,20 @@ async function StoryContent({
   params: Promise<{ id: string; storyId: string }>
 }) {
   const { id, storyId } = await params
+
   const module = modules.find((m) => String(m.id) === id)
-  const content = moduleContent[id]
+  const content = moduleContent[id as keyof typeof moduleContent]
   const storyNum = Number(storyId)
   const story = content?.reading?.find((s) => s?.id === storyNum)
 
   if (!module || !story) {
     notFound()
   }
+
+  const stories = content?.reading ?? []
+  const idx = stories.findIndex((s) => s?.id === story.id)
+  const nextStoryId =
+    idx >= 0 && idx < stories.length - 1 ? String(stories[idx + 1].id) : null
 
   return (
     <div className="min-h-screen bg-cream">
@@ -86,7 +92,7 @@ async function StoryContent({
           <h1 className="text-3xl font-bold text-charcoal">{story.title}</h1>
         </div>
 
-        <ReadingStory story={story} moduleId={id} />
+        <ReadingStory story={story} moduleId={id} nextStoryId={nextStoryId} />
       </div>
     </div>
   )
@@ -103,3 +109,4 @@ export default function StoryPage({
     </Suspense>
   )
 }
+
