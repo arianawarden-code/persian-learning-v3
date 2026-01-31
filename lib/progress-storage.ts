@@ -193,3 +193,18 @@ export function getLastActivity(): LastActivity | null {
   return stored ? JSON.parse(stored) : null
 }
 
+// Backward-compatible wrapper (old API)
+// Returns % of stories that are at least attempted.
+export function getModuleReadingProgress(moduleId: string | number, totalStories: number): number {
+  const progress = getReadingProgress()
+  const moduleKey = String(moduleId)
+  const moduleProgress = progress[moduleKey] || {}
+
+  const completedCount = Object.values(moduleProgress).filter(
+    (v) => v === "attempted" || v === "mastered" || v === true,
+  ).length
+
+  return totalStories > 0 ? Math.round((completedCount / totalStories) * 100) : 0
+}
+
+
