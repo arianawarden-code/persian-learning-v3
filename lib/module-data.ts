@@ -2027,11 +2027,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "First Meeting",
-        text: "سلام! من علی هستم. اسم شما چیست؟ من خوشحالم که شما را می‌بینم. شما از کجا هستید؟ من از ایران هستم. امروز روز خوبی است.",
+        text: "سَلام! مَن عَلی هَستَم. اِسمِ شُما چیست؟ مَن عَلی هَستَم. شُما از کُجا هَستید؟",
         textTransliteration:
-          "Salām! Man Ali hastam. Esm-e shomā chist? Man khoshhālam ke shomā rā mibinam. Shomā az kojā hastid? Man az Irān hastam. Emrooz rooz-e khoobi ast.",
+          "Salām! Man Ali hastam. Esm-e shomā chist? Man Ali hastam. Shomā az kojā hastid?",
         textTranslation:
-          "Hello! I am Ali. What is your name? I am happy to see you. Where are you from? I am from Iran. Today is a good day.",
+          "Hello! I am Ali. What is your name? I am Ali. Where are you from?",
         questions: [
           {
             question: "What is the person's name?",
@@ -2039,8 +2039,8 @@ export const moduleContent: Record<string | number, ModuleContent> = {
             correctAnswer: 0,
           },
           {
-            question: "Where is Ali from?",
-            options: ["Turkey", "Iran", "Iraq", "Afghanistan"],
+            question: "What question is asked?",
+            options: ["How are you?", "Where are you from?", "What time is it?", "Goodbye"],
             correctAnswer: 1,
           },
         ],
@@ -2048,84 +2048,84 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 2,
         title: "Greetings",
-        text: "صبح بخیر! حال شما چطور است؟ من خوب هستم، ممنون. شما چطور هستید؟ امیدوارم روز خوبی داشته باشید. هوا امروز خیلی خوب است.",
+        text: "صُبح بِخَیر! حالِ شُما چِطور اَست؟ مَن خوب هَستَم. مَمنون.",
         textTransliteration:
-          "Sobh bekheyr! Hāl-e shomā chetor ast? Man khoob hastam, mamnoon. Shomā chetor hastid? Omidvāram rooz-e khoobi dāshte bāshid. Havā emrooz kheyli khoob ast.",
+          "Sobh bekheyr! Hāl-e shomā chetor ast? Man khoob hastam. Mamnoon.",
         textTranslation:
-          "Good morning! How are you? I am well, thank you. How are you? I hope you have a good day. The weather is very nice today.",
+          "Good morning! How are you? I am well. Thank you.",
         questions: [
           {
             question: "What time of day is it?",
-            options: ["Morning", "Afternoon", "Evening", "Night"],
+            options: ["Morning", "Night", "Evening", "Afternoon"],
             correctAnswer: 0,
           },
           {
-            question: "How is the speaker feeling?",
+            question: "How is the speaker?",
             options: ["Bad", "Good", "Tired", "Sad"],
             correctAnswer: 1,
           },
         ],
-      },
+      }, 
       {
         id: 3,
         title: "At Home",
-        text: "من امروز خانه هستم. دوست من هم اینجا هست. او اسمش رضا است. ما امروز با هم درس می‌خوانیم. او دوست خوبی است.",
+        text: "مَن اَمروز خانِه هَستَم. دوستِ مَن اینجا هَست. او دوستِ خوب اَست.",
         textTransliteration:
-          "Man emrooz khāne hastam. Doost-e man ham injā hast. Oo esmesh Rezā ast. Mā emrooz bā ham dars mikhānim. Oo doost-e khoobi ast.",
+          "Man emrooz khāne hastam. Doost-e man injā hast. Oo doost-e khoob ast.",
         textTranslation:
-          "I am at home today. My friend is also here. His name is Reza. We are studying together today. He is a good friend.",
+          "I am at home today. My friend is here. He/she is a good friend.",
         questions: [
           {
             question: "Where is the speaker?",
-            options: ["At school", "At home", "At work", "Outside"],
-            correctAnswer: 1,
+            options: ["At home", "At school", "At work", "Outside"],
+            correctAnswer: 0,
           },
           {
-            question: "Who is with the speaker?",
-            options: ["Brother", "Sister", "Friend", "Teacher"],
-            correctAnswer: 2,
+            question: "Who is here?",
+            options: ["Teacher", "Friend", "Brother", "Mother"],
+            correctAnswer: 1,
           },
         ],
       },
       {
         id: 4,
         title: "Saying Goodbye",
-        text: "خداحافظ! فردا می‌بینمت. شب بخیر و خواب خوبی داشته باش! ممنون از وقتی که گذاشتی. امشب استراحت کن.",
+        text: "خُداحافِظ! شَب بِخَیر. فَردا می‌بینیم.",
         textTransliteration:
-          "Khodāhāfez! Fardā mibinamet. Shab bekheyr va khāb-e khoobi dāshte bāsh! Mamnoon az vaghti ke gozāshti. Emshab esterāhat kon.",
+          "Khodāhāfez! Shab bekheyr. Fardā mibinim.",
         textTranslation:
-          "Goodbye! See you tomorrow. Good night and sleep well! Thank you for the time you spent. Rest tonight.",
+          "Goodbye! Good night. See you tomorrow.",
         questions: [
           {
-            question: "When will they meet again?",
-            options: ["Today", "Tomorrow", "Next week", "Never"],
+            question: "What are they saying?",
+            options: ["Hello", "Goodbye", "Thank you", "Sorry"],
             correctAnswer: 1,
           },
           {
-            question: "What is the speaker wishing?",
-            options: ["Good morning", "Good afternoon", "Good night", "Good luck"],
-            correctAnswer: 2,
+            question: "When will they meet?",
+            options: ["Today", "Tomorrow", "Next week", "Never"],
+            correctAnswer: 1,
           },
         ],
       },
       {
         id: 5,
         title: "Polite Conversation",
-        text: "ببخشید، لطفا کمکم کنید. ممنون از شما. خواهش می‌کنم! شما خیلی مهربان هستید. من خوشحالم که شما را می‌شناسم.",
+        text: "بِبَخشید. لُطفاً کُمَک. مَمنون. خواهِش می‌کُنَم.",
         textTransliteration:
-          "Bebakhshid, lotfan komakam konid. Mamnoon az shomā. Khāhesh mikonam! Shomā kheyli mehrabān hastid. Man khoshhālam ke shomā rā mishenāsam.",
+          "Bebakhshid. Lotfan komak. Mamnoon. Khāhesh mikonam.",
         textTranslation:
-          "Excuse me, please help me. Thank you. You're welcome! You are very kind. I am happy to know you.",
+          "Excuse me. Please help. Thank you. You're welcome.",
         questions: [
           {
-            question: "What does the speaker ask for?",
-            options: ["Food", "Help", "Money", "Time"],
+            question: "What does the speaker say first?",
+            options: ["Thank you", "Excuse me", "Goodbye", "Hello"],
             correctAnswer: 1,
           },
           {
-            question: "What is the tone of the conversation?",
-            options: ["Angry", "Sad", "Polite", "Rude"],
-            correctAnswer: 2,
+            question: "Is the conversation polite?",
+            options: ["Yes", "No"],
+            correctAnswer: 0,
           },
         ],
       },
@@ -2145,7 +2145,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         instruction: "Build the word 'ممنون' (thank you)",
         targetWord: "ممنون",
         targetWordTransliteration: "mamnoon",
-        availableLetters: ["م", "ن", "و", "ا", "س", "خ"],
+        availableLetters: ["م", "ن", "و", "ا", "س", "ن", "خ", "م"],
       },
       {
         id: 3,
@@ -2158,14 +2158,16 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         type: "sentence",
-        instruction: "Write a greeting in Persian using the words: سلام، من، هستم",
+        instruction: "Write a greeting in Persian using the words:سلام، علی، من، هستم",
+        availableLetters: ["علی", "سلام", "من", "هستم"],
         prompt: "Introduce yourself using 'hello', 'I', and 'am'",
       },
       {
         id: 5,
         type: "sentence",
-        instruction: "Write a goodbye message using: خداحافظ، فردا",
-        prompt: "Say goodbye and mention tomorrow",
+        instruction: "Write a goodbye message using: می‌بینیم، خداحافظ، فردا",
+        availableLetters: ["می‌بینیم", "خداحافظ", "من", "فردا"],
+        prompt: "Say goodbye, see you tomorrow",
       },
     ],
 
