@@ -31,11 +31,17 @@ function setReadingStatus(
   // Never downgrade mastered -> attempted
   if (existing === "mastered" || existing === true) {
     localStorage.setItem("reading-progress", JSON.stringify(progress))
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new Event("progress-updated"))
+    }
     return
   }
 
   progress[moduleKey][storyId] = status
   localStorage.setItem("reading-progress", JSON.stringify(progress))
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new Event("progress-updated"))
+  }
 }
 
 /** Give credit for finishing the story (even if not perfect). */
@@ -53,11 +59,10 @@ export function getStoryStatus(moduleId: string | number, storyId: string): Comp
   const moduleKey = String(moduleId)
   const raw = progress[moduleKey]?.[storyId]
 
-  // Backward compatibility if you previously stored boolean:
+  // Backward compatibility + strict validation
   if (raw === true) return "mastered"
-  if (raw === false) return null
-
-  return (raw as CompletionStatus) ?? null
+  if (raw === "mastered" || raw === "attempted") return raw
+  return null
 }
 
 export function isStoryAttempted(moduleId: string | number, storyId: string): boolean {
@@ -86,18 +91,33 @@ export function getReadingSummary(
   const moduleProgress = progress[moduleKey] || {}
 
   const total = storyIds.length
-  const attempted = storyIds.filter((id) => moduleProgress[id] === "attempted" || moduleProgress[id] === "mastered" || moduleProgress[id] === true).length
-  const mastered = storyIds.filter((id) => moduleProgress[id] === "mastered" || moduleProgress[id] === true).length
+
+  const attempted = storyIds.filter(
+    (id) => moduleProgress[id] === "attempted" || moduleProgress[id] === "mastered" || moduleProgress[id] === true,
+  ).length
+
+  const mastered = storyIds.filter(
+    (id) => moduleProgress[id] === "mastered" || moduleProgress[id] === true,
+  ).length
 
   const attemptedPercent = total > 0 ? Math.round((attempted / total) * 100) : 0
   const masteredPercent = total > 0 ? Math.round((mastered / total) * 100) : 0
 
-  const nextStoryId = storyIds.find((id) => !moduleProgress[id]) ?? null
+  const nextStoryId =
+    storyIds.find(
+      (id) =>
+        moduleProgress[id] !== "attempted" &&
+        moduleProgress[id] !== "mastered" &&
+        moduleProgress[id] !== true,
+    ) ?? null
 
   return { attempted, mastered, total, attemptedPercent, masteredPercent, nextStoryId }
 }
 
+// =========================
 // Writing progress tracking functions
+// =========================
+
 export interface WritingProgress {
   [moduleId: string]: {
     [exerciseId: string]: boolean
@@ -119,6 +139,9 @@ export function setWritingExerciseComplete(moduleId: string | number, exerciseId
   }
   progress[moduleKey][exerciseId] = true
   localStorage.setItem("writing-progress", JSON.stringify(progress))
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new Event("progress-updated"))
+  }
 }
 
 export function isWritingExerciseComplete(moduleId: string | number, exerciseId: string): boolean {
@@ -135,7 +158,10 @@ export function getModuleWritingProgress(moduleId: string | number, totalExercis
   return totalExercises > 0 ? Math.round((completedCount / totalExercises) * 100) : 0
 }
 
+// =========================
 // Grammar progress tracking functions
+// =========================
+
 export interface GrammarProgress {
   [moduleId: string]: {
     completedExercises: number[]
@@ -165,6 +191,9 @@ export function markGrammarExerciseComplete(moduleId: string | number, exerciseI
   }
 
   localStorage.setItem("grammar-progress", JSON.stringify(allProgress))
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new Event("progress-updated"))
+  }
 }
 
 export function getModuleGrammarProgress(moduleId: string | number, totalExercises: number): number {
@@ -193,8 +222,11 @@ export function getLastActivity(): LastActivity | null {
   return stored ? JSON.parse(stored) : null
 }
 
+// =========================
 // Backward-compatible wrapper (old API)
 // Returns % of stories that are at least attempted.
+// =========================
+
 export function getModuleReadingProgress(moduleId: string | number, totalStories: number): number {
   const progress = getReadingProgress()
   const moduleKey = String(moduleId)
@@ -206,5 +238,6 @@ export function getModuleReadingProgress(moduleId: string | number, totalStories
 
   return totalStories > 0 ? Math.round((completedCount / totalStories) * 100) : 0
 }
+
 
 
