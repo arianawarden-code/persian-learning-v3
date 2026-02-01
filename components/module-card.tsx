@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Card } from "@/components/ui/card"
 import type { Module } from "@/lib/module-data"
 
-export function ModuleCard({ module }: { module: Module }) {
+export function ModuleCard({ module, progress = 0 }: { module: Module; progress?: number }) {
   const levelColors = {
     beginner: "bg-terracotta/10 text-terracotta",
     intermediate: "bg-amber-100 text-amber-700",
@@ -20,7 +20,7 @@ export function ModuleCard({ module }: { module: Module }) {
           </div>
           <div className="flex items-center gap-2">
             <span className="text-2xl font-bold text-terracotta">•</span>
-            <span className="text-sm font-medium text-charcoal/60">0%</span>
+            <span className="text-sm font-medium text-charcoal/60">{progress}%</span>
           </div>
         </div>
 
