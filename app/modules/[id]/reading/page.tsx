@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card"
 import { ArrowLeft } from "lucide-react"
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
+import { ReadingStoryList } from "@/components/ui/reading-story-list"
+
 
 function ReadingLoading() {
   return (
@@ -66,40 +68,15 @@ async function ReadingContent({ params }: { params: Promise<{ id: string }> }) {
         </div>
 
         {/* Reading Stories */}
-        <section>
-          <h2 className="mb-6 text-2xl font-bold text-charcoal">
-            Reading Stories ({content?.reading?.length || 0} available)
-          </h2>
-
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {content?.reading ? (
-              content.reading.map((exercise, index) => (
-                <Link key={exercise.id} href={`/modules/${id}/reading/${exercise.id}`}>
-                  <Card className="group relative cursor-pointer border-sand-200 bg-white p-6 transition-all hover:shadow-lg hover:border-terracotta/30">
-                    <div className="mb-4 flex items-center justify-between">
-                      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-100">
-                        <span className="text-2xl font-bold text-amber-700">{index + 1}</span>
-                      </div>
-                      <div className="h-8 w-8 rounded-full bg-green-100 flex items-center justify-center opacity-0 group-data-[completed]:opacity-100 transition-opacity">
-                        <svg className="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                    </div>
-                    <p className="mb-3 text-lg font-medium text-charcoal/80">{exercise.title}</p>
-                    {/*<p className="text-sm text-charcoal/60 line-clamp-2">{exercise.textTranslation}</p>*/}
-                    <div className="mt-4 flex items-center gap-2 text-sm text-terracotta">
-                      <span>Read Story</span>
-                      <span className="transition-transform group-hover:translate-x-1">→</span>
-                    </div>
-                  </Card>
-                </Link>
-              ))
-            ) : (
-              <p className="col-span-full text-charcoal/60">No reading exercises available for this module yet.</p>
-            )}
-          </div>
-        </section>
+        {content?.reading?.length ? (
+          <ReadingStoryList
+            moduleId={id}
+            moduleTitle={module.title}
+            stories={content.reading}
+          />
+        ) : (
+          <p className="text-charcoal/60">No reading exercises available for this module yet.</p>
+        )}
       </div>
     </div>
   )
