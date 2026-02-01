@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useState } from "react"
 import { moduleContent } from "@/lib/module-data"
 import { getModuleReadingProgress, getModuleWritingProgress, getModuleGrammarProgress } from "@/lib/progress-storage"
