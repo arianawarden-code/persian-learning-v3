@@ -57,32 +57,28 @@ export function ReadingStoryList({
   return (
     <div className="space-y-6">
       {/* Header + Progress */}
+      {/* Progress only (page already shows the title) */}
       <div className="space-y-2">
         <div className="flex items-baseline justify-between gap-4">
-          <h1 className="text-2xl font-semibold text-charcoal">
-            {moduleTitle} – Reading
-          </h1>
-
           <div className="text-sm text-charcoal/70">
-            {masteredCount}/{stories.length} completed
+            {masteredCount}/{stories.length} mastered
+            {attemptedCount > 0 && (
+              <span className="ml-2">• {attemptedCount} in progress</span>
+            )}
+          </div>
+      
+          <div className="text-sm text-charcoal/70">
+            {percentMastered}%
           </div>
         </div>
-
+      
         <Progress value={percentMastered} className="h-2" />
-
+      
         <div className="text-xs text-charcoal/60">
-          {percentMastered === 100 ? (
-            "Completed ✓"
-          ) : (
-            <>
-              {percentMastered}% mastered
-              {attemptedCount > 0 && (
-                <span className="ml-2">• {attemptedCount} in progress</span>
-              )}
-            </>
-          )}
+          {percentMastered === 100 ? "Completed ✓" : "Keep going — master them all for full completion."}
         </div>
       </div>
+
 
       {/* Cards */}
       <div className="grid gap-6 lg:grid-cols-3">
