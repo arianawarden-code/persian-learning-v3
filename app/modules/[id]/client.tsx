@@ -7,7 +7,11 @@ import { LearningAreaCard } from "@/components/learning-area-card"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import { notFound } from "next/navigation"
-import { getModuleReadingProgress, getModuleWritingProgress, getModuleGrammarProgress } from "@/lib/progress-storage"
+import {
+  getModuleReadingProgress,
+  getModuleWritingProgress,
+  getModuleGrammarProgress,
+} from "@/lib/progress-storage"
 
 function ModuleLoading() {
   return (
@@ -54,45 +58,54 @@ export default function ModuleDetailPage({
 async function ModuleContent({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params
   const { id } = resolvedParams
-
   return <ModuleContentClient id={id} />
 }
 
 function ModuleContentClient({ id }: { id: string }) {
   const module = modules.find((m) => m.id.toString() === id)
-  const content = moduleContent[id]
+  const content = moduleContent[id as keyof typeof moduleContent]
+
   const [readingProgress, setReadingProgress] = useState(0)
   const [writingProgress, setWritingProgress] = useState(0)
   const [grammarProgress, setGrammarProgress] = useState(0)
 
   useEffect(() => {
-    if (module) {
-      const updateProgress = () => {
-        const totalStories = content?.reading?.length || 0
-        const totalWritingExercises = content?.writing?.length || 0
-        const totalGrammarExercises = content?.grammar?.length || 0
+    if (!module) return
 
-        setReadingProgress(getModuleReadingProgress(id, totalStories))
-        setWritingProgress(getModuleWritingProgress(id, totalWritingExercises))
-        setGrammarProgress(getModuleGrammarProgress(id, totalGrammarExercises))
+    const updateProgress = () => {
+      const totalStories = content?.reading?.length || 0
+      const totalWritingExercises = content?.writing?.length || 0
+      const totalGrammarExercises = content?.grammar?.length || 0
+
+      setReadingProgress(getModuleReadingProgress(id, totalStories))
+      setWritingProgress(getModuleWritingProgress(id, totalWritingExercises))
+      setGrammarProgress(getModuleGrammarProgress(id, totalGrammarExercises))
+    }
+
+    updateProgress()
+
+    const handleStorageChange = (e: StorageEvent) => {
+      if (
+        e.key === "writing-progress" ||
+        e.key === "reading-progress" ||
+        e.key === "grammar-progress"
+      ) {
+        updateProgress()
       }
+    }
 
-      updateProgress()
+    // NEW: listen to our custom event fired by progress-storage.ts
+    const handleProgressUpdated = () => updateProgress()
 
-      const handleStorageChange = (e: StorageEvent) => {
-        if (e.key === "writing-progress" || e.key === "reading-progress" || e.key === "grammar-progress") {
-          updateProgress()
-        }
-      }
+    // Also listen for focus events to refresh progress when returning to the page
+    window.addEventListener("focus", updateProgress)
+    window.addEventListener("storage", handleStorageChange)
+    window.addEventListener("progress-updated", handleProgressUpdated)
 
-      // Also listen for focus events to refresh progress when returning to the page
-      window.addEventListener("focus", updateProgress)
-      window.addEventListener("storage", handleStorageChange)
-
-      return () => {
-        window.removeEventListener("focus", updateProgress)
-        window.removeEventListener("storage", handleStorageChange)
-      }
+    return () => {
+      window.removeEventListener("focus", updateProgress)
+      window.removeEventListener("storage", handleStorageChange)
+      window.removeEventListener("progress-updated", handleProgressUpdated)
     }
   }, [module, id, content])
 
@@ -124,7 +137,9 @@ function ModuleContentClient({ id }: { id: string }) {
         <div className="lg:col-span-2">
           <div className="mb-4">
             <span
-              className={`inline-block rounded-full border px-4 py-1 text-sm font-medium capitalize ${levelColors[module.level]}`}
+              className={`inline-block rounded-full border px-4 py-1 text-sm font-medium capitalize ${
+                levelColors[module.level as keyof typeof levelColors]
+              }`}
             >
               {module.level}
             </span>
@@ -132,7 +147,9 @@ function ModuleContentClient({ id }: { id: string }) {
 
           <p className="mb-2 text-sm text-charcoal/60">Module {module.id}</p>
 
-          <h1 className="mb-4 text-balance font-serif text-4xl font-bold text-charcoal">{module.title}</h1>
+          <h1 className="mb-4 text-balance font-serif text-4xl font-bold text-charcoal">
+            {module.title}
+          </h1>
 
           <p className="mb-6 text-lg leading-relaxed text-charcoal/70">{module.description}</p>
 
@@ -255,3 +272,4 @@ function ModuleContentClient({ id }: { id: string }) {
     </div>
   )
 }
+
