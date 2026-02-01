@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card"
 import { ArrowLeft } from "lucide-react"
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
-import { ReadingStoryList } from "@/components/ui/reading-story-list"
+import { ReadingStoryList } from "@/components/reading-story-list"
 
 
 function ReadingLoading() {
