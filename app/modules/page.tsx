@@ -1,10 +1,15 @@
+"use client"
+
 import { modules } from "@/lib/module-data"
 import { ModuleCard } from "@/components/module-card"
 import { Button } from "@/components/ui/button"
 import { Trophy } from "lucide-react"
-import { BookOpen } from "@/components/book-open" // Ensure the BookOpen component is imported correctly
+import { BookOpen } from "@/components/book-open"
+import { useAllModulesProgress } from "@/hooks/use-module-progress"
 
 export default function ModulesPage() {
+  const progress = useAllModulesProgress(modules)
+
   const alphabetModules = modules.filter((m) => m.level === "alphabet")
   const beginnerModules = modules.filter((m) => m.level === "beginner")
   const intermediateModules = modules.filter((m) => m.level === "intermediate")
@@ -58,7 +63,7 @@ export default function ModulesPage() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {alphabetModules.map((module) => (
-              <ModuleCard key={module.id} module={module} />
+              <ModuleCard key={module.id} module={module} progress={progress[String(module.id)] || 0} />
             ))}
           </div>
         </section>
@@ -72,7 +77,7 @@ export default function ModulesPage() {
 
           <div className="grid gap-6 md:grid-cols-2">
             {beginnerModules.map((module) => (
-              <ModuleCard key={module.id} module={module} />
+              <ModuleCard key={module.id} module={module} progress={progress[String(module.id)] || 0} />
             ))}
           </div>
         </section>
@@ -86,7 +91,7 @@ export default function ModulesPage() {
 
           <div className="grid gap-6 md:grid-cols-2">
             {intermediateModules.map((module) => (
-              <ModuleCard key={module.id} module={module} />
+              <ModuleCard key={module.id} module={module} progress={progress[String(module.id)] || 0} />
             ))}
           </div>
         </section>
@@ -100,7 +105,7 @@ export default function ModulesPage() {
 
           <div className="grid gap-6 md:grid-cols-2">
             {advancedModules.map((module) => (
-              <ModuleCard key={module.id} module={module} />
+              <ModuleCard key={module.id} module={module} progress={progress[String(module.id)] || 0} />
             ))}
           </div>
         </section>
