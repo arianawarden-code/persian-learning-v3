@@ -6477,7 +6477,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         transliteration: "pool gereftan",
         english: "to receive money",
         example: "پول می‌گیرَم.",
-        exampleTranslation: "I r
+        exampleTranslation: "I receive money."
       },
     ],
   },
