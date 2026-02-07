@@ -26,7 +26,6 @@ export function ModuleProgressSidebar({
               </span>
             </div>
           </div>
-          <div className="mb-1 text-4xl font-bold text-terracotta">{overallProgress}%</div>
           <div className="text-sm text-charcoal/60">Complete</div>
         </div>
 
