@@ -89,7 +89,7 @@ export default function HomePage() {
             {lastActivity && moduleTitle && (
               <Link href={getResumeUrl(lastActivity)}>
                 <Button size="lg" variant="outline" className="rounded-full px-12 py-6 text-lg shadow-lg bg-transparent">
-                  Continue Where You Left Off →
+                  Resume Learning →
                 </Button>
               </Link>
             )}

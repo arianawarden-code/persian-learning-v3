@@ -1,9 +1,10 @@
 "use client"
 
 import { modules } from "@/lib/module-data"
+import Link from "next/link"
 import { ModuleCard } from "@/components/module-card"
 import { Button } from "@/components/ui/button"
-import { Trophy } from "lucide-react"
+import { Trophy, ArrowLeft } from "lucide-react"
 import { BookOpen } from "@/components/book-open"
 import { useAllModulesProgress } from "@/hooks/use-module-progress"
 
@@ -21,6 +22,11 @@ export default function ModulesPage() {
       <header className="border-b border-sand-200 bg-cream/80 backdrop-blur-sm">
         <div className="container mx-auto flex items-center justify-between px-4 py-4">
           <div className="flex items-center gap-3">
+            <Link href="/">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <ArrowLeft className="h-5 w-5 text-charcoal" />
+              </Button>
+            </Link>
             <span className="font-serif text-3xl font-bold text-terracotta">فارسی</span>
             <span className="text-xl font-semibold text-charcoal">Persian Learning</span>
           </div>
