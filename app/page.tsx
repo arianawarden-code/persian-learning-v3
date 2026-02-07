@@ -1,8 +1,46 @@
+"use client"
+
+import { useState, useEffect } from "react"
 import Link from "next/link"
-import { BookOpen } from "lucide-react"
+import { BookOpen, RotateCcw } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { getLastActivity } from "@/lib/progress-storage"
+import type { LastActivity } from "@/lib/progress-storage"
+import { modules } from "@/lib/module-data"
+
+function getResumeUrl(activity: LastActivity): string {
+  switch (activity.type) {
+    case "reading":
+      return `/modules/${activity.moduleId}/reading/${activity.id}`
+    case "writing":
+      return `/modules/${activity.moduleId}/writing`
+    case "grammar":
+      return `/modules/${activity.moduleId}/grammar`
+  }
+}
+
+function getActivityLabel(activity: LastActivity): string {
+  switch (activity.type) {
+    case "reading":
+      return "Reading"
+    case "writing":
+      return "Writing"
+    case "grammar":
+      return "Grammar"
+  }
+}
 
 export default function HomePage() {
+  const [lastActivity, setLastActivity] = useState<LastActivity | null>(null)
+
+  useEffect(() => {
+    setLastActivity(getLastActivity())
+  }, [])
+
+  const moduleTitle = lastActivity
+    ? modules.find((m) => String(m.id) === String(lastActivity.moduleId))?.title ?? `Module ${lastActivity.moduleId}`
+    : null
+
   return (
     <div className="min-h-screen bg-cream">
       {/* Header */}
@@ -38,6 +76,25 @@ export default function HomePage() {
           Learn to speak, read, and write Persian through comprehensive lessons, interactive exercises, and real-world
           practice. Your journey to fluency starts here.
         </p>
+
+        {/* Resume Button */}
+        {lastActivity && moduleTitle && (
+          <div className="mx-auto mb-8 max-w-md">
+            <Link href={getResumeUrl(lastActivity)}>
+              <div className="rounded-2xl border border-sand-200 bg-white p-6 shadow-md transition-all hover:shadow-lg hover:border-terracotta/40">
+                <div className="flex items-center justify-center gap-3">
+                  <div className="rounded-xl bg-terracotta/10 p-3">
+                    <RotateCcw className="h-6 w-6 text-terracotta" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-sm font-medium text-charcoal/60">Continue where you left off</p>
+                    <p className="font-semibold text-charcoal">{moduleTitle} &middot; {getActivityLabel(lastActivity)}</p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        )}
 
         {/* CTA Section */}
         <div className="mx-auto max-w-4xl rounded-3xl border border-sand-200 bg-white p-12 shadow-lg">

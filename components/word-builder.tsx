@@ -5,6 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
+import { setLastActivity } from "@/lib/progress-storage"
 
 interface WordBuilderProps {
   targetWord: string
@@ -107,6 +108,7 @@ export function WordBuilder({
     if (userWord === targetWord) {
       setFeedback("correct")
       setIsCompleted(true)
+      setLastActivity({ type: "writing", moduleId: String(moduleId), id: exerciseId })
       if (typeof window !== "undefined") {
         const key = "writing-progress"
         const stored = localStorage.getItem(key)

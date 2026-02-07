@@ -6,7 +6,7 @@ import { ArrowLeft, CheckCircle2, XCircle, BookOpen, Brain } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import type { Module, GrammarExercise } from "@/lib/module-data"
-import { getGrammarProgress, markGrammarExerciseComplete } from "@/lib/progress-storage"
+import { getGrammarProgress, markGrammarExerciseComplete, setLastActivity } from "@/lib/progress-storage"
 
 interface GrammarExercisesProps {
   moduleId: string | number
@@ -49,6 +49,7 @@ export default function GrammarExercises({ moduleId, module, exercises }: Gramma
       newCompleted.add(exercise.id)
       setCompletedExercises(newCompleted)
       markGrammarExerciseComplete(moduleId, exercise.id)
+      setLastActivity({ type: "grammar", moduleId: String(moduleId), id: exercise.id })
 
       if (newCompleted.size === exercises.length) {
         setShowCompletion(true)
