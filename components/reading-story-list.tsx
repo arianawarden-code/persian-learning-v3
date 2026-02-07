@@ -98,7 +98,7 @@ export function ReadingStoryList({
                 )}
               >
                 {/* number pill */}
-                <div className="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-lg bg-sand-100 text-sm font-semibold text-charcoal">
+                <div className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border-[3px] border-terracotta/60 bg-white text-base font-semibold text-terracotta/85">
                   {idx + 1}
                 </div>
 
