@@ -18,9 +18,16 @@ export function ModuleCard({ module, progress = 0 }: { module: Module; progress?
           >
             {module.id}
           </div>
-          <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-terracotta">•</span>
-            <span className="text-sm font-medium text-charcoal/60">{progress}%</span>
+          <div className="relative h-12 w-12 flex items-center justify-center">
+            <svg className="absolute inset-0 h-12 w-12 -rotate-90" viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" className={progress >= 100 ? "text-green-500/20" : "text-terracotta/20"} strokeWidth="4" />
+              <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" className={progress >= 100 ? "text-green-500" : "text-terracotta"} strokeWidth="4"
+                strokeDasharray={`${2 * Math.PI * 20}`}
+                strokeDashoffset={`${2 * Math.PI * 20 * (1 - progress / 100)}`}
+                strokeLinecap="round"
+              />
+            </svg>
+            <span className={`text-xs font-semibold ${progress >= 100 ? "text-green-500" : "text-terracotta"}`}>{progress}%</span>
           </div>
         </div>
 

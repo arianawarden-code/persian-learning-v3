@@ -167,7 +167,7 @@ export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingSto
               >
                 <div>
                   <div className="rounded-lg bg-sand-50 p-4">
-                    <p className="font-serif text-2xl leading-loose text-charcoal" dir="rtl">
+                    <p className="text-2xl leading-loose text-charcoal" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
                       {pair.text}
                     </p>
                   </div>
