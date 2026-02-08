@@ -1,15 +1,22 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { modules } from "@/lib/module-data"
 import Link from "next/link"
 import { ModuleCard } from "@/components/module-card"
 import { Button } from "@/components/ui/button"
-import { Trophy, ArrowLeft } from "lucide-react"
+import { Trophy, ArrowLeft, Flame } from "lucide-react"
 import { BookOpen } from "@/components/book-open"
 import { useAllModulesProgress } from "@/hooks/use-module-progress"
+import { getStreak } from "@/lib/srs-storage"
 
 export default function ModulesPage() {
   const progress = useAllModulesProgress(modules)
+  const [streak, setStreak] = useState(0)
+
+  useEffect(() => {
+    setStreak(getStreak())
+  }, [])
 
   const alphabetModules = modules.filter((m) => m.level === "alphabet")
   const beginnerModules = modules.filter((m) => m.level === "beginner")
@@ -30,9 +37,13 @@ export default function ModulesPage() {
             <span className="font-serif text-3xl font-bold text-terracotta">فارسی</span>
             <span className="text-xl font-semibold text-charcoal">Persian Learning</span>
           </div>
-          <Button variant="ghost" size="icon" className="rounded-full">
-            <Trophy className="h-5 w-5 text-terracotta" />
-          </Button>
+          {streak > 0 && (
+            <div className="flex items-center gap-1.5 rounded-full border border-orange-200 bg-orange-50 px-3 py-1.5">
+              <Flame className="h-4 w-4 text-orange-500" />
+              <span className="text-sm font-bold text-orange-700">{streak}</span>
+              <span className="text-xs text-orange-600">day{streak === 1 ? "" : "s"}</span>
+            </div>
+          )}
         </div>
       </header>
 

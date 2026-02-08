@@ -162,6 +162,56 @@ export function getReviewStats(): { dueToday: number; totalCards: number } {
   return { dueToday, totalCards: allCards.length }
 }
 
+// --- Streak tracking ---
+
+const STREAK_KEY = "srs-review-streak"
+
+interface StreakData {
+  currentStreak: number
+  lastReviewDate: string // YYYY-MM-DD
+}
+
+function getDateString(date = new Date()): string {
+  return date.toISOString().slice(0, 10)
+}
+
+function getStreakData(): StreakData {
+  if (typeof window === "undefined") return { currentStreak: 0, lastReviewDate: "" }
+  const stored = localStorage.getItem(STREAK_KEY)
+  return stored ? JSON.parse(stored) : { currentStreak: 0, lastReviewDate: "" }
+}
+
+export function recordReviewCompletion() {
+  if (typeof window === "undefined") return
+  const data = getStreakData()
+  const today = getDateString()
+
+  if (data.lastReviewDate === today) return // already recorded today
+
+  const yesterday = getDateString(new Date(Date.now() - 86400000))
+  if (data.lastReviewDate === yesterday) {
+    data.currentStreak++
+  } else {
+    data.currentStreak = 1
+  }
+
+  data.lastReviewDate = today
+  localStorage.setItem(STREAK_KEY, JSON.stringify(data))
+  window.dispatchEvent(new Event("progress-updated"))
+}
+
+export function getStreak(): number {
+  const data = getStreakData()
+  const today = getDateString()
+  const yesterday = getDateString(new Date(Date.now() - 86400000))
+
+  // Streak is still active if last review was today or yesterday
+  if (data.lastReviewDate === today || data.lastReviewDate === yesterday) {
+    return data.currentStreak
+  }
+  return 0
+}
+
 export function getNextReviewTime(): number | null {
   const cards = getCards()
   const allCards = Object.values(cards)

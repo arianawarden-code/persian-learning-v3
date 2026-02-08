@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, RotateCcw, Check, X, Star, Volume2 } from "lucide-react"
 import type { VocabularyWord } from "@/lib/module-data"
 import { usePersianSpeech } from "@/hooks/use-persian-speech"
-import { seedWordsFromModule } from "@/lib/srs-storage"
+import { seedWordsFromModule, updateCardAfterReview } from "@/lib/srs-storage"
 
 interface VocabularyFlashcardsProps {
   vocabulary: VocabularyWord[]
@@ -20,6 +20,8 @@ type QuizOption = {
   isCorrect: boolean
 }
 
+type CardRating = "again" | "hard" | "good" | "easy" | null
+
 export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashcardsProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isFlipped, setIsFlipped] = useState(false)
@@ -28,6 +30,10 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
   const [score, setScore] = useState({ correct: 0, total: 0 })
   const [quizOptions, setQuizOptions] = useState<QuizOption[]>([])
   const [starredWords, setStarredWords] = useState<Set<string>>(new Set())
+  const [cardRatings, setCardRatings] = useState<Record<string, CardRating>>({})
+  const [goodCounts, setGoodCounts] = useState<Record<string, number>>({})
+  const [deckComplete, setDeckComplete] = useState(false)
+  const [reviewFilter, setReviewFilter] = useState<"all" | "needs-review" | null>(null)
   const { speak, isSpeaking, isSupported } = usePersianSpeech()
 
   useEffect(() => {
@@ -38,8 +44,16 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
     seedWordsFromModule(moduleId, vocabulary)
   }, [moduleId, vocabulary])
 
-  const displayedVocabulary =
+  const baseVocabulary =
     mode === "saved" ? vocabulary.filter((word) => starredWords.has(word.persian)) : vocabulary
+
+  const displayedVocabulary = reviewFilter === "needs-review"
+    ? baseVocabulary.filter((word) => {
+        const rating = cardRatings[word.persian]
+        const gc = goodCounts[word.persian] || 0
+        return rating !== "easy" && !(rating === "good" && gc >= 3)
+      })
+    : baseVocabulary
 
   const currentWord = displayedVocabulary[currentIndex]
 
@@ -97,6 +111,8 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
     setIsFlipped(false)
     setQuizAnswer(null)
     setScore({ correct: 0, total: 0 })
+    setDeckComplete(false)
+    setReviewFilter(null)
   }
 
   const handleQuizAnswer = (index: number) => {
@@ -109,10 +125,47 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
     })
   }
 
+  const handleRate = (rating: CardRating) => {
+    if (!currentWord || !rating) return
+
+    // Map rating to SRS quality
+    const qualityMap: Record<string, number> = { again: 1, hard: 3, good: 4, easy: 5 }
+    updateCardAfterReview(currentWord.persian, qualityMap[rating])
+
+    setCardRatings((prev) => ({ ...prev, [currentWord.persian]: rating }))
+    if (rating === "good") {
+      setGoodCounts((prev) => ({ ...prev, [currentWord.persian]: (prev[currentWord.persian] || 0) + 1 }))
+    }
+
+    // Auto-advance to next card or show deck complete
+    if (currentIndex < displayedVocabulary.length - 1) {
+      setCurrentIndex(currentIndex + 1)
+      setIsFlipped(false)
+    } else {
+      setDeckComplete(true)
+    }
+  }
+
+  const handleStartNeedsReview = () => {
+    setReviewFilter("needs-review")
+    setDeckComplete(false)
+    setCurrentIndex(0)
+    setIsFlipped(false)
+  }
+
+  const handleReviewAll = () => {
+    setReviewFilter(null)
+    setDeckComplete(false)
+    setCurrentIndex(0)
+    setIsFlipped(false)
+  }
+
   const toggleMode = () => {
     setMode(mode === "flashcard" ? "quiz" : "flashcard")
     setIsFlipped(false)
     setQuizAnswer(null)
+    setDeckComplete(false)
+    setReviewFilter(null)
   }
 
   if (mode === "saved" && displayedVocabulary.length === 0) {
@@ -125,6 +178,8 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
               setMode("flashcard")
               setCurrentIndex(0)
               setQuizAnswer(null)
+              setDeckComplete(false)
+              setReviewFilter(null)
             }}
           >
             Flashcards
@@ -136,6 +191,8 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
               setCurrentIndex(0)
               setIsFlipped(false)
               setQuizAnswer(null)
+              setDeckComplete(false)
+              setReviewFilter(null)
             }}
           >
             Quiz Mode
@@ -147,6 +204,8 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
               setCurrentIndex(0)
               setIsFlipped(false)
               setQuizAnswer(null)
+              setDeckComplete(false)
+              setReviewFilter(null)
             }}
           >
             <Star className="mr-2 h-4 w-4" />
@@ -173,6 +232,8 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
               setMode("flashcard")
               setCurrentIndex(0)
               setQuizAnswer(null)
+              setDeckComplete(false)
+              setReviewFilter(null)
             }}
           >
             Flashcards
@@ -184,6 +245,8 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
               setCurrentIndex(0)
               setIsFlipped(false)
               setQuizAnswer(null)
+              setDeckComplete(false)
+              setReviewFilter(null)
             }}
           >
             Quiz Mode
@@ -195,6 +258,8 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
               setCurrentIndex(0)
               setIsFlipped(false)
               setQuizAnswer(null)
+              setDeckComplete(false)
+              setReviewFilter(null)
             }}
           >
             <Star className="mr-2 h-4 w-4" />
@@ -216,83 +281,157 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
         </div>
       </div>
 
-      {/* Flashcard/Quiz Card */}
-      {mode === "flashcard" || mode === "saved" ? (
-        <Card
-          className="relative min-h-[400px] cursor-pointer border-sand-200 bg-white p-8 transition-all hover:shadow-lg"
-          onClick={() => setIsFlipped(!isFlipped)}
-        >
-          {isSupported && (
+      {/* Deck Complete Screen */}
+      {deckComplete && (mode === "flashcard" || mode === "saved") ? (
+        <Card className="border-sand-200 bg-white p-12 text-center">
+          <Check className="mx-auto mb-4 h-12 w-12 text-green-500" />
+          <h3 className="mb-2 text-2xl font-bold text-charcoal">Deck Complete!</h3>
+          <p className="mb-6 text-charcoal/60">
+            You&apos;ve gone through {displayedVocabulary.length} card{displayedVocabulary.length === 1 ? "" : "s"}
+          </p>
+
+          {(() => {
+            const needsReviewWords = baseVocabulary.filter((word) => {
+              const rating = cardRatings[word.persian]
+              const gc = goodCounts[word.persian] || 0
+              return rating !== "easy" && !(rating === "good" && gc >= 3)
+            })
+            return needsReviewWords.length > 0 ? (
+              <div className="space-y-4">
+                <p className="text-sm text-charcoal/60">
+                  {needsReviewWords.length} word{needsReviewWords.length === 1 ? "" : "s"} still need{needsReviewWords.length === 1 ? "s" : ""} practice
+                </p>
+                <div className="flex items-center justify-center gap-3">
+                  <Button onClick={handleStartNeedsReview} className="gap-2">
+                    <RotateCcw className="h-4 w-4" />
+                    Needs Review ({needsReviewWords.length})
+                  </Button>
+                  <Button variant="outline" onClick={handleReviewAll} className="gap-2 bg-transparent">
+                    Review All
+                  </Button>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <p className="text-sm text-green-600 font-medium">Great job — you know all these words!</p>
+                <Button variant="outline" onClick={handleReviewAll} className="gap-2 bg-transparent">
+                  <RotateCcw className="h-4 w-4" />
+                  Review All Again
+                </Button>
+              </div>
+            )
+          })()}
+        </Card>
+      ) : (mode === "flashcard" || mode === "saved") ? (
+        <div className="space-y-4">
+          <Card
+            className="relative min-h-[400px] cursor-pointer border-sand-200 bg-white p-8 transition-all hover:shadow-lg"
+            onClick={() => setIsFlipped(!isFlipped)}
+          >
+            {isSupported && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  speak(currentWord.persian)
+                }}
+                className="absolute left-6 top-6 rounded-full p-2 transition-colors hover:bg-sand-100"
+              >
+                <Volume2
+                  className={`h-6 w-6 transition-all ${
+                    isSpeaking ? "text-terracotta" : "text-sand-300 hover:text-terracotta"
+                  }`}
+                />
+              </button>
+            )}
             <button
-              onClick={(e) => {
-                e.stopPropagation()
-                speak(currentWord.persian)
-              }}
-              className="absolute left-6 top-6 rounded-full p-2 transition-colors hover:bg-sand-100"
+              onClick={(e) => toggleStar(currentWord, e)}
+              className="absolute right-6 top-6 rounded-full p-2 transition-colors hover:bg-sand-100"
             >
-              <Volume2
+              <Star
                 className={`h-6 w-6 transition-all ${
-                  isSpeaking ? "text-terracotta" : "text-sand-300 hover:text-terracotta"
+                  starredWords.has(currentWord.persian)
+                    ? "fill-yellow-400 text-yellow-400"
+                    : "text-sand-300 hover:text-yellow-400"
                 }`}
               />
             </button>
-          )}
-          <button
-            onClick={(e) => toggleStar(currentWord, e)}
-            className="absolute right-6 top-6 rounded-full p-2 transition-colors hover:bg-sand-100"
-          >
-            <Star
-              className={`h-6 w-6 transition-all ${
-                starredWords.has(currentWord.persian)
-                  ? "fill-yellow-400 text-yellow-400"
-                  : "text-sand-300 hover:text-yellow-400"
-              }`}
-            />
-          </button>
 
-          <div className="flex h-full min-h-[350px] flex-col items-center justify-center text-center">
-            {!isFlipped ? (
-              <div className="space-y-4">
-                <p className="text-sm uppercase tracking-wide text-charcoal/60">Persian Word</p>
-                <p className="font-serif text-6xl font-bold text-terracotta">{currentWord.persian}</p>
-                <p className="text-2xl text-charcoal/70">{currentWord.transliteration}</p>
-                <p className="mt-8 text-sm text-charcoal/50">Click to reveal meaning</p>
-              </div>
-            ) : (
-              <div className="space-y-6">
-                <p className="text-sm uppercase tracking-wide text-charcoal/60">English Meaning</p>
-                <p className="text-5xl font-bold text-charcoal">{currentWord.english}</p>
-
-                <div className="mt-8 rounded-lg bg-sand-50 p-6 text-left">
-                  <p className="mb-2 text-sm font-medium text-charcoal/60">Example:</p>
-                  <div className="mb-3 flex items-center gap-2" dir="rtl">
-                    <p className="font-serif text-xl text-charcoal">
-                      {currentWord.example}
-                    </p>
-                    {isSupported && (
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation()
-                          speak(currentWord.example)
-                        }}
-                        className="shrink-0 rounded-full p-1 transition-colors hover:bg-sand-200"
-                      >
-                        <Volume2
-                          className={`h-4 w-4 ${
-                            isSpeaking ? "text-terracotta" : "text-charcoal/40 hover:text-terracotta"
-                          }`}
-                        />
-                      </button>
-                    )}
-                  </div>
-                  <p className="text-lg italic text-charcoal/70">{currentWord.exampleTranslation}</p>
+            <div className="flex h-full min-h-[350px] flex-col items-center justify-center text-center">
+              {!isFlipped ? (
+                <div className="space-y-4">
+                  <p className="text-sm uppercase tracking-wide text-charcoal/60">Persian Word</p>
+                  <p className="font-serif text-6xl font-bold text-terracotta">{currentWord.persian}</p>
+                  <p className="text-2xl text-charcoal/70">{currentWord.transliteration}</p>
+                  <p className="mt-8 text-sm text-charcoal/50">Click to reveal meaning</p>
                 </div>
+              ) : (
+                <div className="space-y-6">
+                  <p className="text-sm uppercase tracking-wide text-charcoal/60">English Meaning</p>
+                  <p className="text-5xl font-bold text-charcoal">{currentWord.english}</p>
 
-                <p className="text-sm text-charcoal/50">Click to flip back</p>
-              </div>
-            )}
-          </div>
-        </Card>
+                  <div className="mt-8 rounded-lg bg-sand-50 p-6 text-left">
+                    <p className="mb-2 text-sm font-medium text-charcoal/60">Example:</p>
+                    <div className="mb-3 flex items-center gap-2" dir="rtl">
+                      <p className="font-serif text-xl text-charcoal">
+                        {currentWord.example}
+                      </p>
+                      {isSupported && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            speak(currentWord.example)
+                          }}
+                          className="shrink-0 rounded-full p-1 transition-colors hover:bg-sand-200"
+                        >
+                          <Volume2
+                            className={`h-4 w-4 ${
+                              isSpeaking ? "text-terracotta" : "text-charcoal/40 hover:text-terracotta"
+                            }`}
+                          />
+                        </button>
+                      )}
+                    </div>
+                    <p className="text-lg italic text-charcoal/70">{currentWord.exampleTranslation}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </Card>
+
+          {/* Rating buttons — shown after flip */}
+          {isFlipped && (
+            <div className="grid grid-cols-4 gap-3">
+              <Button
+                variant="outline"
+                className="border-red-300 bg-red-50 text-red-700 hover:bg-red-100"
+                onClick={() => handleRate("again")}
+              >
+                Again
+              </Button>
+              <Button
+                variant="outline"
+                className="border-orange-300 bg-orange-50 text-orange-700 hover:bg-orange-100"
+                onClick={() => handleRate("hard")}
+              >
+                Hard
+              </Button>
+              <Button
+                variant="outline"
+                className="border-green-300 bg-green-50 text-green-700 hover:bg-green-100"
+                onClick={() => handleRate("good")}
+              >
+                Good
+              </Button>
+              <Button
+                variant="outline"
+                className="border-blue-300 bg-blue-50 text-blue-700 hover:bg-blue-100"
+                onClick={() => handleRate("easy")}
+              >
+                Easy
+              </Button>
+            </div>
+          )}
+        </div>
       ) : (
         <Card className="border-sand-200 bg-white p-8">
           <div className="space-y-8">
@@ -377,22 +516,50 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
         </Card>
       )}
 
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Button
-          variant="outline"
-          onClick={handlePrevious}
-          disabled={currentIndex === 0}
-          className="gap-2 bg-transparent"
-        >
-          <ChevronLeft className="h-4 w-4" />
-          Previous
-        </Button>
-        <Button onClick={handleNext} disabled={currentIndex === displayedVocabulary.length - 1} className="gap-2">
-          Next
-          <ChevronRight className="h-4 w-4" />
-        </Button>
-      </div>
+      {/* Navigation — shown for quiz mode, or flashcard when not using rating buttons */}
+      {mode === "quiz" && (
+        <div className="flex items-center justify-between">
+          <Button
+            variant="outline"
+            onClick={handlePrevious}
+            disabled={currentIndex === 0}
+            className="gap-2 bg-transparent"
+          >
+            <ChevronLeft className="h-4 w-4" />
+            Previous
+          </Button>
+          <Button onClick={handleNext} disabled={currentIndex === displayedVocabulary.length - 1} className="gap-2">
+            Next
+            <ChevronRight className="h-4 w-4" />
+          </Button>
+        </div>
+      )}
+
+      {/* Flashcard navigation — previous only + review filter indicator */}
+      {(mode === "flashcard" || mode === "saved") && !deckComplete && displayedVocabulary.length > 0 && (
+        <div className="flex items-center justify-between">
+          <Button
+            variant="outline"
+            onClick={() => {
+              if (currentIndex > 0) {
+                setCurrentIndex(currentIndex - 1)
+                setIsFlipped(false)
+              }
+            }}
+            disabled={currentIndex === 0}
+            className="gap-2 bg-transparent"
+          >
+            <ChevronLeft className="h-4 w-4" />
+            Previous
+          </Button>
+          {reviewFilter === "needs-review" && (
+            <span className="text-xs font-medium text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
+              Needs Review
+            </span>
+          )}
+          <div className="w-24" />
+        </div>
+      )}
     </div>
   )
 }

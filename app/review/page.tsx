@@ -10,6 +10,7 @@ import {
   syncStarredWords,
   getReviewStats,
   getNextReviewTime,
+  recordReviewCompletion,
 } from "@/lib/srs-storage"
 import type { SRSCard } from "@/lib/srs-storage"
 import { useReviewSession } from "@/hooks/use-review-session"
@@ -248,7 +249,7 @@ function TypingExercise({
 
   const handleSubmit = () => {
     if (!input.trim() || submitted) return
-    const correct = normalize(input) === normalize(word.transliteration)
+    const correct = normalize(input) === normalize(word.english)
     setIsCorrect(correct)
     setSubmitted(true)
   }
@@ -262,10 +263,10 @@ function TypingExercise({
       <Card className="border-sand-200 bg-white p-8">
         <div className="mb-8 text-center">
           <p className="mb-4 text-sm uppercase tracking-wide text-charcoal/60">
-            Type the transliteration
+            Type the English meaning
           </p>
-          <p className="text-4xl font-bold text-charcoal">{word.english}</p>
-          <div className="mt-3 flex items-center justify-center gap-2">
+          <div className="flex items-center justify-center gap-3">
+            <p className="font-serif text-5xl font-bold text-terracotta">{word.persian}</p>
             <button
               onClick={() => speak(word.persian)}
               className="rounded-full p-2 transition-colors hover:bg-sand-100"
@@ -278,8 +279,8 @@ function TypingExercise({
                 }`}
               />
             </button>
-            <span className="text-sm text-charcoal/50">Listen for a hint</span>
           </div>
+          <p className="mt-2 text-2xl text-charcoal/70">{word.transliteration}</p>
         </div>
 
         <div className="space-y-4">
@@ -294,7 +295,7 @@ function TypingExercise({
               }
             }}
             disabled={submitted}
-            placeholder="Type transliteration here..."
+            placeholder="Type English meaning here..."
             className="w-full rounded-lg border-2 border-sand-200 bg-white p-4 text-center text-xl outline-none transition-colors focus:border-terracotta disabled:opacity-60"
             autoFocus
           />
@@ -325,7 +326,7 @@ function TypingExercise({
                     <p className="mt-1">
                       The answer is:{" "}
                       <span className="font-bold">
-                        {word.transliteration}
+                        {word.english}
                       </span>
                     </p>
                   </div>
@@ -370,6 +371,12 @@ export default function ReviewPage() {
   useEffect(() => {
     loadDueWords()
   }, [])
+
+  useEffect(() => {
+    if (sessionState === "complete") {
+      recordReviewCompletion()
+    }
+  }, [sessionState])
 
   const handleStartReview = () => {
     startSession(dueWords)
