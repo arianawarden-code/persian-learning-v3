@@ -1,43 +1,45 @@
 "use client"
 
-import { useState, useCallback, useEffect, useRef } from "react"
+import { useState, useCallback, useRef } from "react"
 
 export function usePersianSpeech() {
   const [isSpeaking, setIsSpeaking] = useState(false)
-  const [isSupported, setIsSupported] = useState(false)
-  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
 
-  useEffect(() => {
-    setIsSupported(
-      typeof window !== "undefined" && "speechSynthesis" in window
-    )
+  const speak = useCallback((text: string) => {
+    // Stop any current playback
+    if (audioRef.current) {
+      audioRef.current.pause()
+      audioRef.current = null
+    }
+
+    const encoded = encodeURIComponent(text)
+    const audio = new Audio(`/api/tts?text=${encoded}`)
+    audioRef.current = audio
+
+    audio.onplay = () => setIsSpeaking(true)
+    audio.onended = () => {
+      setIsSpeaking(false)
+      audioRef.current = null
+    }
+    audio.onerror = () => {
+      setIsSpeaking(false)
+      audioRef.current = null
+    }
+
+    audio.play().catch(() => {
+      setIsSpeaking(false)
+      audioRef.current = null
+    })
   }, [])
 
-  const speak = useCallback(
-    (text: string, rate: number = 0.85) => {
-      if (!isSupported) return
-
-      speechSynthesis.cancel()
-
-      const utterance = new SpeechSynthesisUtterance(text)
-      utterance.lang = "fa-IR"
-      utterance.rate = rate
-
-      utterance.onstart = () => setIsSpeaking(true)
-      utterance.onend = () => setIsSpeaking(false)
-      utterance.onerror = () => setIsSpeaking(false)
-
-      utteranceRef.current = utterance
-      speechSynthesis.speak(utterance)
-    },
-    [isSupported]
-  )
-
   const stop = useCallback(() => {
-    if (!isSupported) return
-    speechSynthesis.cancel()
+    if (audioRef.current) {
+      audioRef.current.pause()
+      audioRef.current = null
+    }
     setIsSpeaking(false)
-  }, [isSupported])
+  }, [])
 
-  return { speak, stop, isSpeaking, isSupported }
+  return { speak, stop, isSpeaking, isSupported: true }
 }
