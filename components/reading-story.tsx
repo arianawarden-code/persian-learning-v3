@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Eye, EyeOff } from "lucide-react"
+import { Eye, EyeOff, Volume2, Square } from "lucide-react"
 import type { ReadingExercise } from "@/lib/module-data"
 import {
   markStoryAttempted,
@@ -12,6 +12,7 @@ import {
   setLastActivity,
 } from "@/lib/progress-storage"
 import { useRouter } from "next/navigation"
+import { usePersianSpeech } from "@/hooks/use-persian-speech"
 
 interface ReadingStoryProps {
   story: ReadingExercise
@@ -25,6 +26,7 @@ export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingSto
   const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: number }>({})
   const [showResults, setShowResults] = useState(false)
   const [isCompleted, setIsCompleted] = useState(false)
+  const { speak, stop, isSpeaking, isSupported } = usePersianSpeech()
 
   const [status, setStatus] = useState<"attempted" | "mastered" | null>(null)
 
@@ -144,19 +146,47 @@ export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingSto
         <div className="mb-6">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-xl font-bold text-charcoal">Story Text</h3>
-            <Button variant="outline" size="sm" onClick={() => setShowTranslation(!showTranslation)} className="gap-2">
-              {showTranslation ? (
-                <>
-                  <EyeOff className="h-4 w-4" />
-                  Hide Translation
-                </>
-              ) : (
-                <>
-                  <Eye className="h-4 w-4" />
-                  Show Translation
-                </>
+            <div className="flex gap-2">
+              {isSupported && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    if (isSpeaking) {
+                      stop()
+                    } else {
+                      speak(story.text)
+                    }
+                  }}
+                  className="gap-2"
+                >
+                  {isSpeaking ? (
+                    <>
+                      <Square className="h-4 w-4" />
+                      Stop
+                    </>
+                  ) : (
+                    <>
+                      <Volume2 className="h-4 w-4" />
+                      Read Aloud
+                    </>
+                  )}
+                </Button>
               )}
-            </Button>
+              <Button variant="outline" size="sm" onClick={() => setShowTranslation(!showTranslation)} className="gap-2">
+                {showTranslation ? (
+                  <>
+                    <EyeOff className="h-4 w-4" />
+                    Hide Translation
+                  </>
+                ) : (
+                  <>
+                    <Eye className="h-4 w-4" />
+                    Show Translation
+                  </>
+                )}
+              </Button>
+            </div>
           </div>
 
           <div className="space-y-4">
@@ -166,10 +196,22 @@ export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingSto
                 className="grid grid-cols-1 lg:grid-cols-2 gap-4"
               >
                 <div>
-                  <div className="rounded-lg bg-sand-50 p-4">
+                  <div className="relative rounded-lg bg-sand-50 p-4">
                     <p className="text-2xl leading-loose text-charcoal" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
                       {pair.text}
                     </p>
+                    {isSupported && (
+                      <button
+                        onClick={() => speak(pair.text)}
+                        className="absolute right-2 top-2 rounded-full p-1.5 transition-colors hover:bg-sand-200"
+                      >
+                        <Volume2
+                          className={`h-4 w-4 ${
+                            isSpeaking ? "text-terracotta" : "text-charcoal/40 hover:text-terracotta"
+                          }`}
+                        />
+                      </button>
+                    )}
                   </div>
                   {pair.transliteration && (
                     <div className="mt-2 rounded-lg bg-blue-50/50 px-4 py-3">

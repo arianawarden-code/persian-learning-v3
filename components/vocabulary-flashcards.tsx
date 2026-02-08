@@ -5,8 +5,9 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, RotateCcw, Check, X, Star } from "lucide-react"
+import { ChevronLeft, ChevronRight, RotateCcw, Check, X, Star, Volume2 } from "lucide-react"
 import type { VocabularyWord } from "@/lib/module-data"
+import { usePersianSpeech } from "@/hooks/use-persian-speech"
 
 interface VocabularyFlashcardsProps {
   vocabulary: VocabularyWord[]
@@ -26,6 +27,7 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
   const [score, setScore] = useState({ correct: 0, total: 0 })
   const [quizOptions, setQuizOptions] = useState<QuizOption[]>([])
   const [starredWords, setStarredWords] = useState<Set<string>>(new Set())
+  const { speak, isSpeaking, isSupported } = usePersianSpeech()
 
   useEffect(() => {
     const stored = localStorage.getItem(`starred-words-${moduleId}`)
@@ -218,6 +220,21 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
           className="relative min-h-[400px] cursor-pointer border-sand-200 bg-white p-8 transition-all hover:shadow-lg"
           onClick={() => setIsFlipped(!isFlipped)}
         >
+          {isSupported && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                speak(currentWord.persian)
+              }}
+              className="absolute left-6 top-6 rounded-full p-2 transition-colors hover:bg-sand-100"
+            >
+              <Volume2
+                className={`h-6 w-6 transition-all ${
+                  isSpeaking ? "text-terracotta" : "text-sand-300 hover:text-terracotta"
+                }`}
+              />
+            </button>
+          )}
           <button
             onClick={(e) => toggleStar(currentWord, e)}
             className="absolute right-6 top-6 rounded-full p-2 transition-colors hover:bg-sand-100"
@@ -246,9 +263,26 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
 
                 <div className="mt-8 rounded-lg bg-sand-50 p-6 text-left">
                   <p className="mb-2 text-sm font-medium text-charcoal/60">Example:</p>
-                  <p className="mb-3 font-serif text-xl text-charcoal" dir="rtl">
-                    {currentWord.example}
-                  </p>
+                  <div className="mb-3 flex items-center gap-2" dir="rtl">
+                    <p className="font-serif text-xl text-charcoal">
+                      {currentWord.example}
+                    </p>
+                    {isSupported && (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          speak(currentWord.example)
+                        }}
+                        className="shrink-0 rounded-full p-1 transition-colors hover:bg-sand-200"
+                      >
+                        <Volume2
+                          className={`h-4 w-4 ${
+                            isSpeaking ? "text-terracotta" : "text-charcoal/40 hover:text-terracotta"
+                          }`}
+                        />
+                      </button>
+                    )}
+                  </div>
                   <p className="text-lg italic text-charcoal/70">{currentWord.exampleTranslation}</p>
                 </div>
 
@@ -262,7 +296,21 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
           <div className="space-y-8">
             <div className="text-center">
               <p className="mb-4 text-sm uppercase tracking-wide text-charcoal/60">What does this word mean?</p>
-              <p className="font-serif text-6xl font-bold text-terracotta">{currentWord.persian}</p>
+              <div className="flex items-center justify-center gap-3">
+                <p className="font-serif text-6xl font-bold text-terracotta">{currentWord.persian}</p>
+                {isSupported && (
+                  <button
+                    onClick={() => speak(currentWord.persian)}
+                    className="rounded-full p-2 transition-colors hover:bg-sand-100"
+                  >
+                    <Volume2
+                      className={`h-6 w-6 ${
+                        isSpeaking ? "text-terracotta" : "text-sand-300 hover:text-terracotta"
+                      }`}
+                    />
+                  </button>
+                )}
+              </div>
               <p className="mt-2 text-2xl text-charcoal/70">{currentWord.transliteration}</p>
             </div>
 
@@ -303,9 +351,23 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
             {quizAnswer !== null && (
               <div className="rounded-lg bg-sand-50 p-6">
                 <p className="mb-2 text-sm font-medium text-charcoal/60">Example usage:</p>
-                <p className="mb-3 font-serif text-xl text-charcoal" dir="rtl">
-                  {currentWord.example}
-                </p>
+                <div className="mb-3 flex items-center gap-2" dir="rtl">
+                  <p className="font-serif text-xl text-charcoal">
+                    {currentWord.example}
+                  </p>
+                  {isSupported && (
+                    <button
+                      onClick={() => speak(currentWord.example)}
+                      className="shrink-0 rounded-full p-1 transition-colors hover:bg-sand-200"
+                    >
+                      <Volume2
+                        className={`h-4 w-4 ${
+                          isSpeaking ? "text-terracotta" : "text-charcoal/40 hover:text-terracotta"
+                        }`}
+                      />
+                    </button>
+                  )}
+                </div>
                 <p className="text-lg italic text-charcoal/70">{currentWord.exampleTranslation}</p>
               </div>
             )}
