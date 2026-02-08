@@ -108,40 +108,6 @@ export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingSto
 
   return (
     <div className="space-y-6">
-            {showResults && (
-        <Card className={status === "mastered" ? "border-green-200 bg-green-50 p-6" : "border-sand-200 bg-white p-6"}>
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-            <div>
-              <div className="text-lg font-semibold text-charcoal">
-                {status === "mastered" ? "Nice work — mastered ✅" : "Good effort — credit earned 👍"}
-              </div>
-              <div className="mt-1 text-sm text-charcoal/70">
-                Score: {correctCount}/{story.questions.length}
-                {status !== "mastered" && " • Get a perfect score to master this story."}
-              </div>
-            </div>
-
-            <div className="flex gap-2">
-              <Button variant="outline" onClick={handleReset}>
-                Try Again
-              </Button>
-
-              <Button
-                className={status === "mastered" ? "bg-green-600 hover:bg-green-700 text-white" : "bg-terracotta hover:bg-terracotta/90"}
-                onClick={() => {
-                  // IMPORTANT: update this route if your app uses a different reading URL pattern
-                  if (nextStoryId) router.push(`/modules/${moduleId}/reading/${nextStoryId}`)
-                  else router.push(`/modules/${moduleId}`)
-                }}
-              >
-                {nextStoryId ? "Continue" : "Back to Module"}
-              </Button>
-            </div>
-          </div>
-        </Card>
-      )}
-
-
       <Card className="border-sand-200 bg-white p-8">
         <div className="mb-6">
           <div className="flex items-center justify-between mb-4">
@@ -203,11 +169,11 @@ export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingSto
                     {isSupported && (
                       <button
                         onClick={() => speak(pair.text)}
-                        className="absolute right-2 top-2 rounded-full p-1.5 transition-colors hover:bg-sand-200"
+                        className="absolute left-2 top-2 rounded-full bg-terracotta/10 p-1.5 transition-colors hover:bg-terracotta/20"
                       >
                         <Volume2
                           className={`h-4 w-4 ${
-                            isSpeaking ? "text-terracotta" : "text-charcoal/40 hover:text-terracotta"
+                            isSpeaking ? "text-terracotta animate-pulse" : "text-terracotta/70 hover:text-terracotta"
                           }`}
                         />
                       </button>
@@ -327,6 +293,38 @@ export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingSto
           )}
         </div>
       </Card>
+
+      {showResults && (
+        <Card className={status === "mastered" ? "border-green-200 bg-green-50 p-6" : "border-sand-200 bg-white p-6"}>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <div className="text-lg font-semibold text-charcoal">
+                {status === "mastered" ? "Nice work — mastered ✅" : "Good effort — credit earned 👍"}
+              </div>
+              <div className="mt-1 text-sm text-charcoal/70">
+                Score: {correctCount}/{story.questions.length}
+                {status !== "mastered" && " • Get a perfect score to master this story."}
+              </div>
+            </div>
+
+            <div className="flex gap-2">
+              <Button variant="outline" onClick={handleReset}>
+                Try Again
+              </Button>
+
+              <Button
+                className={status === "mastered" ? "bg-green-600 hover:bg-green-700 text-white" : "bg-terracotta hover:bg-terracotta/90"}
+                onClick={() => {
+                  if (nextStoryId) router.push(`/modules/${moduleId}/reading/${nextStoryId}`)
+                  else router.push(`/modules/${moduleId}`)
+                }}
+              >
+                {nextStoryId ? "Continue" : "Back to Module"}
+              </Button>
+            </div>
+          </div>
+        </Card>
+      )}
     </div>
   )
 }
