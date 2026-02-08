@@ -117,13 +117,12 @@ export function ReadingStoryList({
                 </div>
 
                 <div className="pt-10">
+                  {story.persianTitle && (
+                    <div className="text-lg text-charcoal" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>{story.persianTitle}</div>
+                  )}
                   <div className="font-medium text-charcoal">{story.title}</div>
 
-                  <div className="mt-2 text-sm text-charcoal/60">
-                    {statusLabel(status)}
-                  </div>
-
-                  <div className="mt-3 text-sm font-medium text-terracotta">
+                  <div className="mt-3 text-sm text-charcoal/40">
                     Read Story →
                   </div>
                 </div>
