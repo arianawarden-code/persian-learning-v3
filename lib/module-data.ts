@@ -17,6 +17,7 @@ export interface VocabularyWord {
 export interface ReadingExercise {
   id: number
   title: string
+  persianTitle?: string
   text: string
   textTransliteration?: string
   textTranslation: string
@@ -104,8 +105,6 @@ export const modules: Module[] = [
     topics: ["Letters گ ل م ن و ه ی", "Final forms", "All diacritics", "Complete words"],
   },
 
-  // BEGINNER MODULES (1-30)
-  export const modules = [
   // BEGINNER MODULES (1–30)
   {
     id: 1,
@@ -823,6 +822,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "First Letters",
+        persianTitle: "حُروفِ اَوَّل",
         text: "اب. آب. باب. تاب. پا. جا.",
         textTransliteration: "ab. âb. bâb. tâb. pâ. jâ.",
         textTranslation: "Father. Water. Chapter. Swing. Foot. Place.",
@@ -1184,6 +1184,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "Tea Time",
+        persianTitle: "وَقتِ چای",
         text: "چا دارد. چا خوب است.",
         textTransliteration: "châ dārad. châ khub ast.",
         textTranslation: "He has tea. Tea is good.",
@@ -1357,6 +1358,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "The Year",
+        persianTitle: "سال",
         text: "سال خوب است. سال جدید.",
         textTransliteration: "sâl khub ast. sâl-e jadid.",
         textTranslation: "The year is good. New year.",
@@ -1512,6 +1514,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "Good Food",
+        persianTitle: "غَذایِ خوب",
         text: "غذا عالی است. غذا خوب است.",
         textTransliteration: "ghazâ âli ast. ghazâ khub ast.",
         textTranslation: "The food is excellent. The food is good.",
@@ -1701,6 +1704,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "Beautiful Flower",
+        persianTitle: "گُلِ زیبا",
         text: "گل زیبا است. گل قرمز است.",
         textTransliteration: "gol zibâ ast. gol ghermez ast.",
         textTranslation: "The flower is beautiful. The flower is red.",
@@ -2029,6 +2033,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "First Meeting",
+        persianTitle: "اَوَّلین دیدار",
         text: "سَلام! مَن عَلی هَستَم. اِسمِ شُما چیست؟ مَن عَلی هَستَم. شُما از کُجا هَستید؟",
         textTransliteration:
           "Salām! Man Ali hastam. Esm-e shomā chist? Man Ali hastam. Shomā az kojā hastid?",
@@ -2050,6 +2055,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 2,
         title: "Greetings",
+        persianTitle: "سَلام و اِحوالپُرسی",
         text: "صُبح بِخَیر! حالِ شُما چِطور اَست؟ مَن خوب هَستَم. مَمنون.",
         textTransliteration:
           "Sobh bekheyr! Hāl-e shomā chetor ast? Man khoob hastam. Mamnoon.",
@@ -2071,6 +2077,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 3,
         title: "At Home",
+        persianTitle: "دَر خانِه",
         text: "مَن اَمروز خانِه هَستَم. دوستِ مَن اینجا هَست. او دوستِ خوب اَست.",
         textTransliteration:
           "Man emrooz khāne hastam. Doost-e man injā hast. Oo doost-e khoob ast.",
@@ -2092,6 +2099,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         title: "Saying Goodbye",
+        persianTitle: "خُداحافِظی",
         text: "خُداحافِظ! شَب بِخَیر. فَردا می‌بینیم.",
         textTransliteration:
           "Khodāhāfez! Shab bekheyr. Fardā mibinim.",
@@ -2113,6 +2121,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 5,
         title: "Polite Conversation",
+        persianTitle: "گُفتِگویِ مُؤَدَّبانِه",
         text: "بِبَخشید. لُطفاً کُمَک. مَمنون. خواهِش می‌کُنَم.",
         textTransliteration:
           "Bebakhshid. Lotfan komak. Mamnoon. Khāhesh mikonam.",
@@ -2634,6 +2643,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "Counting",
+        persianTitle: "شُمُردَن",
         text: "من یک، دو، سه می‌شمارم. یک دوست، دو خانه، سه کتاب. چهار، پنج، شش. هفت، هشت، نه، ده! من ده تا دوست دارم.",
         textTransliteration:
           "Man yek, do, se mishomāram. Yek doost, do khāne, se ketāb. Chahār, panj, shesh. Haft, hasht, noh, dah! Man dah tā doost dāram.",
@@ -2655,6 +2665,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 2,
         title: "What Time Is It?",
+        persianTitle: "ساعَت چَند اَست؟",
         text: "ساعت چند است؟ ساعت سه است. نه، ببخشید. ساعت چهار است! ده دقیقه دیگر ساعت پنج است.",
         textTransliteration:
           "Sā'at chand ast? Sā'at se ast. Na, bebakhshid. Sā'at chahār ast! Dah daghighe digar sā'at panj ast.",
@@ -2676,6 +2687,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 3,
         title: "Days of the Week",
+        persianTitle: "روزهایِ هَفتِه",
         text: "امروز شنبه است. فردا یکشنبه است. دوشنبه کار دارم. پنجشنبه و جمعه خانه هستم. من جمعه را دوست دارم!",
         textTransliteration:
           "Emrooz shanbe ast. Fardā yekshanbe ast. Doshanbe kār dāram. Panjshanbe va jom'e khāne hastam. Man jom'e rā doost dāram!",
@@ -2697,6 +2709,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         title: "Yesterday and Tomorrow",
+        persianTitle: "دیروز و فَردا",
         text: "دیروز خانه بودم. امروز کار دارم. فردا دوست من می‌آید. ساعت شش می‌آید. من خوشحالم!",
         textTransliteration:
           "Dirooz khāne boodam. Emrooz kār dāram. Fardā doost-e man mi-āyad. Sā'at shesh mi-āyad. Man khoshhālam!",
@@ -2718,6 +2731,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 5,
         title: "My Week",
+        persianTitle: "هَفتِهٔ مَن",
         text: "یک هفته هفت روز است. شنبه تا جمعه. من شنبه تا چهارشنبه کار دارم. پنجشنبه و جمعه خانه هستم. هفته خوبی است!",
         textTransliteration:
           "Yek hafte haft rooz ast. Shanbe tā jom'e. Man shanbe tā chahārshanbe kār dāram. Panjshanbe va jom'e khāne hastam. Hafte-ye khoobi ast!",
@@ -2966,6 +2980,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "My Family",
+        persianTitle: "خانِوادِهٔ مَن",
         text: "خانوادِه مَن کوچَک اَست. مَن یِک بَرادَر و یِک خواهَر دارَم. پِدَرِ مَن مُعَلِِّم اَست. مادَرِ مَن دُکتُر اَست. مَن خانوادِهٔ خود را دوست دارَم.",
         textTransliteration:
           "Khānevāde-ye man koochak ast. Man yek barādar va yek khāhar dāram. Pedar-e man mo'allem ast. Mādar-e man doktor ast. Man khānevāde-ye khod rā doost dāram.",
@@ -2987,6 +3002,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 2,
         title: "Grandparents",
+        persianTitle: "پِدَربُزُرگ و مادَربُزُرگ",
         text: "پِدَربُزرگ و مادَربُزرگِ مَن اِمروز می‌آیَند. آن‌ها پیر هَستَند. مَن آن‌ها را دوست دارَم. پِدَربُزرگِ مَن مِهربان اَست. مادَربُزرگِ مَن هَم مِهربان اَست.",
         textTransliteration:
           "Pedarbozorg va mādarbozorg-e man emrooz mi-āyand. Ānhā pir hastand. Man ānhā rā doost dāram. Pedarbozorg-e man mehrabān ast. Mādarbozorg-e man ham mehrabān ast.",
@@ -3008,6 +3024,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 3,
         title: "My Siblings",
+        persianTitle: "خواهَر و بَرادَرهایِ مَن",
         text: "بَرادَرِ مَن بُزرگ اَست. او بیست سالِه اَست. خواهَرِ مَن کوچَک اَست. او دَه سالِه اَست. مَن هَم پانزْدَه سالِه هَستَم. ما با هَم بازی می‌کُنیم.",
         textTransliteration:
           "Barādar-e man bozorg ast. Ū bist sāle ast. Khāhar-e man koochak ast. Ū dah sāle ast. Man ham pānzdah sāle hastam. Mā bā ham bāzi mikonim.",
@@ -3029,6 +3046,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         title: "Uncle and Aunt",
+        persianTitle: "عَمو و خالِه",
         text: "عَمو‌یِ مَن فَردا می‌آیَد. اِسمِ او رِضا اَست. خالِه مَن هَم می‌آیَد. او دو تا بَچِّه دارَد. یِک پِسَر و یِک دُختَر. مَن خُوشحالَم!",
         textTransliteration:
           "Amoo-ye man fardā mi-āyad. Esm-e ū Rezā ast. Khāle-ye man ham mi-āyad. Ū do tā bache dārad. Yek pesar va yek dokhtar. Man khoshhālam!",
@@ -3050,6 +3068,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 5,
         title: "A Big Family",
+        persianTitle: "یِک خانِوادِهٔ بُزُرگ",
         text: "خانوادِه مَن بُزرگ اَست. مَن سِه بَرادَر و دو خواهَر دارَم. پِدَر و مادَرِ مَن دَر خانِه زِندگی میکُنند. ما یِک خانوادِه خوب هَستیم. زِندگی خوب اَست!",
         textTransliteration:
           "Khānevāde-ye man bozorg ast. Man se barādar va do khāhar dāram. Pedar va mādar-e man dar khāne zendegi mikonand. Mā yek khānevāde-ye khoob hastim. Zendegi khoob ast!",
@@ -3338,6 +3357,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "Counting Friends",
+        persianTitle: "شُمُردَنِ دوستان",
         text: "مَن دو دوست دارَم. یِک دوست دَر خانِه اَست. دوستِ دیگَر دَر کار اَست. ما سِه بار دَر هَفته هَم‌دیگَر را می‌بینیم. مَن دوستام را دوست دارَم.",
         textTransliteration:
           "man do doost dāram. yek doost dar khāne ast. doost-e digar dar kār ast. mā se bār dar hafte ham-digar rā mibinim. man doostām rā doost dāram.",
@@ -3359,6 +3379,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 2,
         title: "A Busy Week",
+        persianTitle: "یِک هَفتِهٔ شُلوغ",
         text: "مَن هَفت روز دَر هَفته کار می‌کُنَم. چَهار روز زود بیدار می‌شَوَم. سِه روز دیر بیدار می‌شَوَم. مَن هَر روز هَشت ساعَت می‌خوابَم. زندگی خوب اَست.",
         textTransliteration:
           "man haft rooz dar hafte kār mikonam. chahār rooz zood bidār mishavam. se rooz dir bidār mishavam. man har rooz hasht sā'at mikhābam. zendegi khoob ast.",
@@ -3380,6 +3401,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 3,
         title: "Shopping with Tomans",
+        persianTitle: "خَرید با تومان",
         text: "مَن پَنجاه تومان دارَم. یِک سیب دَه تومان قِیمَت دارَد. مَن سِه سیب می‌خَرَم. بَعد بیست تومان بَرایِ مَن می‌مانَد. مَن خوشحالَم.",
         textTransliteration:
           "man panjāh tomān dāram. yek sib dah tomān gheymat dārad. man se sib mikharam. ba'ad bist tomān barāye man mimānad. man khoshhālam.",
@@ -3401,6 +3423,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         title: "In the Classroom",
+        persianTitle: "دَر کِلاسِ دَرس",
         text: "دَر کِلاسِ ما بیست دانِشجو هَستَند. دَه دانِشجو دُختَر هَستَند و دَه دانِشجو پِسَر هَستَند. مُعَلِّمِ ما می‌گوید: «نَوَد دَرصَد دُرُست اَست». مَن می‌خَندَم.",
         textTransliteration:
           "dar kelās-e mā bist dāneshju hastand. dah dāneshju dokhtar hastand va dah dāneshju pesar hastand. mo'allem-e mā migooyad: «navad darsad dorost ast». man mikhandam.",
@@ -3422,6 +3445,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 5,
         title: "A Big Library",
+        persianTitle: "یِک کِتابخانِهٔ بُزُرگ",
         text: "پِدَربُزرگِ مَن هِزار کِتاب دارَد. مَن صَد کِتاب دَر خانِه دارَم. خواهرِ مَن سی کِتاب دارَد. بَرادَرِ مَن دو کِتاب دارَد. ما کِتاب‌ها را دوست داریم.",
         textTransliteration:
           "pedarbozorg-e man hezār ketāb dārad. man sad ketāb dar khāne dāram. khāhar-e man si ketāb dārad. barādar-e man do ketāb dārad. mā ketāb-hā rā doost dārim.",
@@ -3602,6 +3626,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "At the Restaurant",
+        persianTitle: "دَر رِستوران",
         text: "من به رستوران می‌روم. منو را می‌بینم. برنج و مرغ سفارش می‌دهم. غذا خوشمزه است. چای می‌نوشم.",
         textTransliteration:
           "man be resturān miram. menoo rā mibinam. berenj va morgh sefāresh midaham. ghazā khoshmaze ast. chāy minusham.",
@@ -3623,6 +3648,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 2,
         title: "Breakfast Time",
+        persianTitle: "وَقتِ صُبحانِه",
         text: "صبح من صبحانه می‌خورم. نان و پنیر می‌خورم. چای می‌نوشم. چای گرم است. صبحانه خوشمزه است.",
         textTransliteration:
           "sobh man sobhāne mikhoram. nān va panir mikhoram. chāy minusham. chāy garm ast. sobhāne khoshmaze ast.",
@@ -3640,6 +3666,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 3,
         title: "Favorite Foods",
+        persianTitle: "غَذاهایِ مَوردِ عَلاقِه",
         text: "من برنج دوست دارم. میوه هم دوست دارم. سیب و پرتقال خوشمزه است. من سبزی هم می‌خورم. سبزی سالم است.",
         textTransliteration:
           "man berenj doost dāram. mive ham doost dāram. sib va porteghāl khoshmaze ast. man sabzi ham mikhoram. sabzi sālem ast.",
@@ -3661,6 +3688,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         title: "Shopping for Food",
+        persianTitle: "خَریدِ مَوادِّ غَذایی",
         text: "من به بازار می‌روم. میوه تازه می‌خرم. سیب قرمز خوب است. نان تازه هم می‌خرم. همه چیز خوب است.",
         textTransliteration:
           "man be bāzār miram. mive tāze mikharam. sib ghermez khoob ast. nān tāze ham mikharam. hame chiz khoob ast.",
@@ -3678,6 +3706,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 5,
         title: "Dinner Preparation",
+        persianTitle: "آمادِه‌سازیِ شام",
         text: "شب من شام درست می‌کنم. برنج می‌پزم. مرغ با سبزی درست می‌کنم. غذا آماده است. خانواده شام می‌خورد.",
         textTransliteration:
           "shab man shām dorost mikonam. berenj mipazam. morgh bā sabzi dorost mikonam. ghazā āmāde ast. khānevāde shām mikhored.",
@@ -3851,6 +3880,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "My New House",
+        persianTitle: "خانِهٔ جَدیدِ مَن",
         text: "خانه من نو است. خانه بزرگ است. اتاق‌ها روشن است. دیوارها سفید است. در آبی است. خانه خیلی قشنگ است.",
         textTransliteration:
           "khāne man now ast. khāne bozorg ast. otāgh-hā roshan ast. divār-hā sefid ast. dar ābi ast. khāne kheyli ghashang ast.",
@@ -3864,6 +3894,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 2,
         title: "Colors in Nature",
+        persianTitle: "رَنگ‌ها دَر طَبیعَت",
         text: "آسمان آبی است. خورشید زرد است. چمن سبز است. گل قرمز است. همه چیز قشنگ است. من طبیعت دوست دارم.",
         textTransliteration:
           "āsemān ābi ast. khorshid zard ast. chaman sabz ast. gol ghermez ast. hame chiz ghashang ast. man tabi'at doost dāram.",
@@ -3877,6 +3908,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 3,
         title: "My Room",
+        persianTitle: "اُتاقِ مَن",
         text: "اتاق من کوچک است. اما خیلی تمیز است. میز قهوه‌ای است. صندلی سفید است. تخت بزرگ است. همه چیز خوب است.",
         textTransliteration:
           "otāgh man koochak ast. ammā kheyli tamiz ast. miz ghahve-i ast. sandali sefid ast. takht bozorg ast. hame chiz khoob ast.",
@@ -3890,6 +3922,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         title: "Shopping for Clothes",
+        persianTitle: "خَریدِ لِباس",
         text: "من به مغازه می‌روم. لباس نو می‌خرم. یک پیراهن آبی می‌خرم. خیلی قشنگ است. یک شلوار سیاه هم می‌خرم. همه چیز خوب است.",
         textTransliteration:
           "man be maghāze miram. lebās now mikharam. yek pirāhan ābi mikharam. kheyli ghashang ast. yek shalvār siāh ham mikharam. hame chiz khoob ast.",
@@ -3903,6 +3936,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 5,
         title: "My Car",
+        persianTitle: "ماشینِ مَن",
         text: "ماشین من کوچک است. رنگش قرمز است. خیلی تمیز است. نو نیست اما خوب است. من ماشینم را دوست دارم.",
         textTransliteration:
           "māshin man koochak ast. rangash ghermez ast. kheyli tamiz ast. now nist ammā khoob ast. man māshinam rā doost dāram.",
@@ -4113,6 +4147,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     {
       id: 1,
       title: "Counting Friends",
+      persianTitle: "شُمُردَنِ دوستان",
       text: "مَن دو دوست دارَم. یِک دوست دَر خانِه اَست. دوستِ دیگَر دَر کار اَست. ما سِه بار دَر هَفته هَم‌دیگَر را می‌بینیم. مَن دوستام را دوست دارَم.",
       textTransliteration:
         "man do doost dāram. yek doost dar khāne ast. doost-e digar dar kār ast. mā se bār dar hafte ham-digar rā mibinim. man doostām rā doost dāram.",
@@ -4134,6 +4169,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     {
       id: 2,
       title: "A Busy Week",
+      persianTitle: "یِک هَفتِهٔ شُلوغ",
       text: "مَن هَفت روز دَر هَفته کار می‌کُنَم. چَهار روز زود بیدار می‌شَوَم. سِه روز دیر بیدار می‌شَوَم. مَن هَر روز هَشت ساعَت می‌خوابَم. زِندگی خوب اَست.",
       textTransliteration:
         "man haft rooz dar hafte kār mikonam. chahār rooz zood bidār mishavam. se rooz dir bidār mishavam. man har rooz hasht sā'at mikhābam. zendegi khoob ast.",
@@ -4155,6 +4191,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     {
       id: 3,
       title: "Shopping with Tomans",
+      persianTitle: "خَرید با تومان",
       text: "مَن پَنجاه تومان دارَم. یِک سیب دَه تومان قِیمَت دارَد. مَن سِه سیب می‌خَرَم. بَعد بیست تومان بَرایِ مَن می‌مانَد. مَن خوشحالَم.",
       textTransliteration:
         "man panjāh tomān dāram. yek sib dah tomān gheymat dārad. man se sib mikharam. ba'ad bist tomān barāye man mimānad. man khoshhālam.",
@@ -4176,6 +4213,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     {
       id: 4,
       title: "In the Classroom",
+      persianTitle: "دَر کِلاسِ دَرس",
       text: "دَر کِلاسِ ما بیست دانِشجو هَستَند. دَه دانِشجو دُختَر هَستَند و دَه دانِشجو پِسَر هَستَند. مُعَلِّمِ ما می‌گوید: «نَوَد دَرصَد دُرُست اَست». مَن می‌خَندَم.",
       textTransliteration:
         "dar kelās-e mā bist dāneshju hastand. dah dāneshju dokhtar hastand va dah dāneshju pesar hastand. mo'allem-e mā migooyad: «navad darsad dorost ast». man mikhandam.",
@@ -4197,6 +4235,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     {
       id: 5,
       title: "A Big Library",
+      persianTitle: "یِک کِتابخانِهٔ بُزُرگ",
       text: "پِدَربُزرگِ مَن هِزار کِتاب دارَد. مَن صَد کِتاب دَر خانِه دارَم. خواهرِ مَن سی کِتاب دارَد. بَرادَرِ مَن دو کِتاب دارَد. ما کِتاب‌ها را دوست داریم.",
       textTransliteration:
         "pedarbozorg-e man hezār ketāb dārad. man sad ketāb dar khāne dāram. khāhar-e man si ketāb dārad. barādar-e man do ketāb dārad. mā ketāb-hā rā doost dārim.",
@@ -4340,6 +4379,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "At the Bazaar",
+        persianTitle: "دَر بازار",
         text: "من به بازار می‌روم. یک کیف می‌خواهم. این کیف قشنگ است. قیمت چقدر است? صد هزار تومان. خیلی گران است!",
         textTransliteration:
           "man be bāzār miram. yek kif mikhāham. in kif ghashang ast. gheymat cheghadr ast? sad hezār toomān. kheyli gerān ast!",
@@ -4357,6 +4397,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 2,
         title: "Bargaining",
+        persianTitle: "چانِه‌زَنی",
         text: "این کیف خیلی گران است. تخفیف دارد؟ بله، کمی تخفیف دارد. هشتاد هزار تومان. خوب است. من می‌خرم.",
         textTransliteration:
           "in kif kheyli gerān ast. takhfif dārad? bale, kami takhfif dārad. hashtād hezār toomān. khoob ast. man mikharam.",
@@ -4378,6 +4419,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 3,
         title: "Buying Clothes",
+        persianTitle: "خَریدِ لِباس",
         text: "من لباس می‌خرم. این پیراهن قشنگ است. اندازه من چهل است. رنگ دیگر دارید؟ بله، آبی هم داریم. خوب است.",
         textTransliteration:
           "man lebās mikharam. in pirāhan ghashang ast. andāze man chehel ast. rang-e digar dārid? bale, ābi ham dārim. khoob ast.",
@@ -4395,6 +4437,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         title: "Payment",
+        persianTitle: "پَرداخت",
         text: "حساب چقدر است؟ سیصد هزار تومان. نقد می‌دهم. کارت ندارم. خوب است. رسید لطفا. بفرمایید.",
         textTransliteration:
           "hesāb cheghadr ast? sisad hezār toomān. naghd midaham. kārt nadāram. khoob ast. resid lotfan. befarmāyid.",
@@ -4417,6 +4460,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 5,
         title: "Shopping Day",
+        persianTitle: "روزِ خَرید",
         text: "من خرید می‌کنم. به فروشگاه می‌روم. همه چیز ارزان است. امروز فروش ویژه است. من خیلی خوشحال هستم.",
         textTransliteration:
           "man kharid mikonam. be forooshgāh miram. hame chiz arzān ast. emrooz foroosh vije ast. man kheyli khoshhāl hastam.",
@@ -4554,6 +4598,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "Going to Work",
+        persianTitle: "رَفتَن بِه کار",
         text: "من هر روز با اتوبوس به کار می‌روم. اتوبوس ساعت هشت می‌آید. من سوار می‌شوم. راه کوتاه است. من راضی هستم.",
         textTransliteration:
           "man har rooz bā otobus be kār miram. otobus sā'at hasht miāyad. man savār mishovam. rāh kootāh ast. man rāzi hastam.",
@@ -4567,6 +4612,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 2,
         title: "Taking a Taxi",
+        persianTitle: "سَوارِ تاکسی شُدَن",
         text: "من دیر کردم. تاکسی می‌خواهم. تاکسی می‌آید. من سوار می‌شوم. تاکسی سریع است. خیلی خوب است.",
         textTransliteration:
           "man dir kardam. tāksi mikhāham. tāksi miāyad. man savār mishovam. tāksi sari' ast. kheyli khoob ast.",
@@ -4583,6 +4629,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 3,
         title: "Metro Journey",
+        persianTitle: "سَفَر با مِترو",
         text: "مترو خیلی خوب است. مترو سریع است. بلیط ارزان است. من هر روز با مترو می‌روم. ترافیک نیست.",
         textTransliteration:
           "metro kheyli khoob ast. metro sari' ast. belit arzān ast. man har rooz bā metro miram. terāfik nist.",
@@ -4600,6 +4647,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         title: "Train Trip",
+        persianTitle: "سَفَر با قَطار",
         text: "من با قطار سفر می‌کنم. قطار بزرگ است. بلیط دارم. من مسافر هستم. راه طولانی است. اما قطار راحت است.",
         textTransliteration:
           "man bā ghatār safar mikonam. ghatār bozorg ast. belit dāram. man mosāfer hastam. rāh toolāni ast. ammā ghatār rāhat ast.",
@@ -4613,6 +4661,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 5,
         title: "At the Airport",
+        persianTitle: "دَر فُرودگاه",
         text: "من به فرودگاه می‌روم. هواپیما بزرگ است. بلیط گران است. اما سفر سریع است. من خوشحال هستم.",
         textTransliteration:
           "man be foroodgāh miram. havāpeymā bozorg ast. belit gerān ast. ammā safar sari' ast. man khoshhāl hastam.",
@@ -4872,6 +4921,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "My House",
+        persianTitle: "خانِهٔ مَن",
         text: "خانه من بزرگ است. سه اتاق خواب دارد. حمام تمیز است. آشپزخانه کوچک است. اما همه چیز خوب است.",
         textTransliteration:
           "khāne man bozorg ast. se otāgh khāb dārad. hammām tamiz ast. āshpazkhāne koochak ast. ammā hame chiz khoob ast.",
@@ -4889,6 +4939,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 2,
         title: "Living Room",
+        persianTitle: "اُتاقِ نِشیمَن",
         text: "پذیرایی من بزرگ است. یک مبل راحت دارد. تلویزیون بزرگ است. فرش قشنگ است. من پذیرایی را دوست دارم.",
         textTransliteration:
           "pazirāyi man bozorg ast. yek mobl rāhat dārad. televizion bozorg ast. farsh ghashang ast. man pazirāyi rā doost dāram.",
@@ -4902,6 +4953,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 3,
         title: "Bedroom",
+        persianTitle: "اُتاقِ خواب",
         text: "اتاق خواب من کوچک است. تخت نرم است. کمد بزرگ است. پنجره بزرگ است. اتاق روشن است. خیلی راحت است.",
         textTransliteration:
           "otāgh khāb man koochak ast. takht narm ast. komad bozorg ast. panjere bozorg ast. otāgh roshan ast. kheyli rāhat ast.",
@@ -4915,6 +4967,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         title: "Kitchen",
+        persianTitle: "آشپَزخانِه",
         text: "آشپزخانه تمیز است. یخچال بزرگ است. میز کوچک است. صندلی‌ها سفید است. همه ظرف‌ها تمیز است.",
         textTransliteration:
           "āshpazkhāne tamiz ast. yakhchāl bozorg ast. miz koochak ast. sandali-hā sefid ast. hame zarf-hā tamiz ast.",
@@ -4928,6 +4981,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 5,
         title: "Cleaning Day",
+        persianTitle: "روزِ نِظافَت",
         text: "امروز خانه را تمیز می‌کنم. کف را تمیز می‌کنم. پنجره‌ها را تمیز می‌کنم. همه اتاق‌ها تمیز است. من خوشحال هستم.",
         textTransliteration:
           "emrooz khāne rā tamiz mikonam. kaf rā tamiz mikonam. panjere-hā rā tamiz mikonam. hame otāgh-hā tamiz ast. man khoshhāl hastam.",
@@ -5406,6 +5460,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "Morning Drinks",
+        persianTitle: "نوشیدَنی‌هایِ صُبح",
         text: "مَن صُبح آب و چای می‌نوشَم. چایِ داغ دوست دارَم. بَعد قَهوه می‌خورَم. قَهوه اِنِرژی می‌دَهَد.",
         textTransliteration:
           "man sobh āb va chāy mi-noosham. chāy-e dāgh doost dāram. ba‘d qahve mi-khoram. qahve enerzhi mi-dahad.",
@@ -5427,6 +5482,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 2,
         title: "Cold Drinks",
+        persianTitle: "نوشیدَنی‌هایِ سَرد",
         text: "هَوا داغ اَست. مَن نوشیدَنیِ سَرد دوست دارَم. آبِ گازدار و دوغ می‌خورَم. این نوشیدَنی‌ها خُنَک هَستَند.",
         textTransliteration:
           "havā dāgh ast. man nooshidani-ye sard doost dāram. āb-e gāzdār va doogh mi-khoram. in nooshidani-hā khonak hastand.",
@@ -5448,6 +5504,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 3,
         title: "At the Café",
+        persianTitle: "دَر کافِه",
         text: "مَن دَر کافه چای و شِیک می‌خورَم. یِک فِنجان چایِ سیاه می‌گیرَم. شِیکِ موز هَم خوشمَزِه اَست.",
         textTransliteration:
           "man dar kāfe chāy va sheyk mi-khoram. yek fenjān chāy-e siyāh mi-giram. sheyk-e moz ham khoshmazze ast.",
@@ -5469,6 +5526,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         title: "Drinks with Food",
+        persianTitle: "نوشیدَنی با غَذا",
         text: "مَن با غذا دوغ می‌خورَم. دوغ تُرش اَست. بَعضی وَقت‌ها آب می‌نوشَم. نوشیدَنی با غذا مهم اَست.",
         textTransliteration:
           "man bā ghazā doogh mi-khoram. doogh torsh ast. ba‘zi vaght-hā āb mi-noosham. nooshidani bā ghazā mohem ast.",
@@ -5490,6 +5548,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 5,
         title: "Sweet Drinks",
+        persianTitle: "نوشیدَنی‌هایِ شیرین",
         text: "مَن نوشیدَنیِ شیرین دوست دارَم. آب‌میوه و شِیک می‌خورَم. شِیکِ شُکلات خیلی شیرین اَست. اَمّا نوشابِه کَم می‌خورَم.",
         textTransliteration:
           "man nooshidani-ye shirin doost dāram. āb-mive va sheyk mi-khoram. sheyk-e shokolāt kheili shirin ast. ammā nooshābe kam mi-khoram.",
@@ -6069,6 +6128,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         title: "Breakfast at Home",
+        persianTitle: "صُبحانِه دَر خانِه",
         text: "مَن صُبحانِه می‌خورَم. نان و پَنیر می‌خورَم. چای داغ می‌نوشَم. صُبحانِه اَوَّلین وَعدِه‌ی روز اَست.",
         textTransliteration:
           "man sobhāne mi-khoram. nân va panir mi-khoram. chāy-e dâgh mi-noosham. sobhāne avvalin va‘de-ye rooz ast.",
@@ -6091,6 +6151,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 2,
         title: "Lunch at Work",
+        persianTitle: "ناهار دَر مَحَلِّ کار",
         text: "مَن دَر کار ناهار می‌خورَم. بَرِنج و مُرغ می‌خورَم. آب می‌نوشَم. ناهار وَقتِ اِستِراحت اَست.",
         textTransliteration:
           "man dar kâr nāhâr mi-khoram. berenj va morgh mi-khoram. āb mi-noosham. nāhâr vaght-e esterāhat ast.",
@@ -6113,6 +6174,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 3,
         title: "Dinner with Family",
+        persianTitle: "شام با خانِوادِه",
         text: "ما با هَمسَر و خانوادِه شام می‌خوریم. قورمِه‌سَبزی می‌خوریم. با شام دوغ می‌نوشیم. شام با هَم لَذَّت‌بَخش اَست.",
         textTransliteration:
           "mā bā hamsar va khānevāde shām mi-khorim. ghorme-sabzi mi-khorim. bā shām doogh mi-nooshim. shām bā ham lazzat-bakhsh ast.",
@@ -6135,6 +6197,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         title: "Eating at a Restaurant",
+        persianTitle: "غَذا خوردَن دَر رِستوران",
         text: "مَن دَر رِستوران غَذا می‌خورَم. کِباب می‌خورَم. نان و سَبزی هَم می‌خورَم. غَذای رِستوران خوش‌مَزِه اَست.",
         textTransliteration:
           "man dar resturân ghazâ mi-khoram. kebâb mi-khoram. nân va sabzi ham mi-khoram. ghazâ-ye resturân khosh-maze ast.",
@@ -6157,6 +6220,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 5,
         title: "Snacking During the Day",
+        persianTitle: "میان‌وَعدِه دَر طولِ روز",
         text: "مَن بَینِ وَعدِه‌ها مِیانوَعدِه می‌خورَم. سیب یا موز می‌خورَم. گاهی چای می‌نوشَم. مِیانوَعدِه سَبُک اَست.",
         textTransliteration:
           "man beyn-e va‘de-hā miyân-va‘de mi-khoram. sib yā moz mi-khoram. gāhi chāy mi-noosham. miyân-va‘de sabok ast.",
