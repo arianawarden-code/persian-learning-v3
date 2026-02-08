@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { BookOpen } from "lucide-react"
+import { BookOpen, RotateCcw } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { getLastActivity } from "@/lib/progress-storage"
 import type { LastActivity } from "@/lib/progress-storage"
 import { modules } from "@/lib/module-data"
+import { getReviewStats } from "@/lib/srs-storage"
 
 function getResumeUrl(activity: LastActivity): string {
   switch (activity.type) {
@@ -21,9 +22,11 @@ function getResumeUrl(activity: LastActivity): string {
 
 export default function HomePage() {
   const [lastActivity, setLastActivity] = useState<LastActivity | null>(null)
+  const [reviewStats, setReviewStats] = useState<{ dueToday: number; totalCards: number } | null>(null)
 
   useEffect(() => {
     setLastActivity(getLastActivity())
+    setReviewStats(getReviewStats())
   }, [])
 
   const moduleTitle = lastActivity
@@ -65,6 +68,31 @@ export default function HomePage() {
           Learn to speak, read, and write Persian through comprehensive lessons, interactive exercises, and real-world
           practice. Your journey to fluency starts here.
         </p>
+
+        {/* Daily Review Card */}
+        {reviewStats && reviewStats.dueToday > 0 && (
+          <div className="mx-auto mb-8 max-w-4xl rounded-3xl border border-terracotta/30 bg-terracotta/5 p-8 shadow-md">
+            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+              <div className="flex items-center gap-4">
+                <div className="rounded-xl bg-terracotta p-3 shadow-sm">
+                  <RotateCcw className="h-8 w-8 text-white" />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-xl font-bold text-charcoal">Daily Review</h3>
+                  <p className="text-charcoal/70">
+                    <span className="font-semibold text-terracotta">{reviewStats.dueToday}</span>{" "}
+                    word{reviewStats.dueToday === 1 ? "" : "s"} ready for review
+                  </p>
+                </div>
+              </div>
+              <Link href="/review">
+                <Button size="lg" className="rounded-full px-8 shadow-md">
+                  Start Review →
+                </Button>
+              </Link>
+            </div>
+          </div>
+        )}
 
         {/* CTA Section */}
         <div className="mx-auto max-w-4xl rounded-3xl border border-sand-200 bg-white p-12 shadow-lg">

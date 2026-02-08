@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, RotateCcw, Check, X, Star, Volume2 } from "lucide-react"
 import type { VocabularyWord } from "@/lib/module-data"
 import { usePersianSpeech } from "@/hooks/use-persian-speech"
+import { seedWordsFromModule } from "@/lib/srs-storage"
 
 interface VocabularyFlashcardsProps {
   vocabulary: VocabularyWord[]
@@ -34,7 +35,8 @@ export function VocabularyFlashcards({ vocabulary, moduleId }: VocabularyFlashca
     if (stored) {
       setStarredWords(new Set(JSON.parse(stored)))
     }
-  }, [moduleId])
+    seedWordsFromModule(moduleId, vocabulary)
+  }, [moduleId, vocabulary])
 
   const displayedVocabulary =
     mode === "saved" ? vocabulary.filter((word) => starredWords.has(word.persian)) : vocabulary
