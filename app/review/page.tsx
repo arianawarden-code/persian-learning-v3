@@ -424,7 +424,7 @@ export default function ReviewPage() {
       {/* Header */}
       <header className="border-b border-sand-200 bg-cream/80 backdrop-blur-sm">
         <div className="container mx-auto flex items-center gap-4 px-4 py-4">
-          <Link href="/">
+          <Link href="/modules">
             <Button variant="ghost" size="sm" className="gap-2">
               <ArrowLeft className="h-4 w-4" />
               Back
