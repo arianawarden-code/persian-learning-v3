@@ -5,17 +5,33 @@ import { modules } from "@/lib/module-data"
 import Link from "next/link"
 import { ModuleCard } from "@/components/module-card"
 import { Button } from "@/components/ui/button"
-import { Trophy, ArrowLeft, Flame } from "lucide-react"
+import { ArrowLeft, Flame, Zap, CheckCircle2 } from "lucide-react"
 import { BookOpen } from "@/components/book-open"
 import { useAllModulesProgress } from "@/hooks/use-module-progress"
-import { getStreak } from "@/lib/srs-storage"
+import { getStreak, getReviewStats } from "@/lib/srs-storage"
 
 export default function ModulesPage() {
   const progress = useAllModulesProgress(modules)
   const [streak, setStreak] = useState(0)
+  const [reviewStats, setReviewStats] = useState<{ dueToday: number; totalCards: number } | null>(null)
+  const [todayCompleted, setTodayCompleted] = useState(false)
 
   useEffect(() => {
     setStreak(getStreak())
+    const stats = getReviewStats()
+    setReviewStats(stats)
+
+    // Check if today's review is done: has cards but none due
+    if (stats.totalCards > 0 && stats.dueToday === 0) {
+      // Check streak to confirm they actually reviewed today
+      const streakVal = getStreak()
+      const today = new Date().toISOString().slice(0, 10)
+      const stored = localStorage.getItem("srs-review-streak")
+      if (stored) {
+        const data = JSON.parse(stored)
+        setTodayCompleted(data.lastReviewDate === today)
+      }
+    }
   }, [])
 
   const alphabetModules = modules.filter((m) => m.level === "alphabet")
@@ -37,17 +53,55 @@ export default function ModulesPage() {
             <span className="font-serif text-3xl font-bold text-terracotta">فارسی</span>
             <span className="text-xl font-semibold text-charcoal">Persian Learning</span>
           </div>
-          {streak > 0 && (
-            <div className="flex items-center gap-1.5 rounded-full border border-orange-200 bg-orange-50 px-3 py-1.5">
-              <Flame className="h-4 w-4 text-orange-500" />
-              <span className="text-sm font-bold text-orange-700">{streak}</span>
-              <span className="text-xs text-orange-600">day{streak === 1 ? "" : "s"}</span>
-            </div>
-          )}
+          <div className="flex items-center gap-3">
+            {streak > 0 && (
+              <div className="flex items-center gap-1.5 rounded-full border border-orange-200 bg-orange-50 px-3 py-1.5">
+                <Flame className="h-4 w-4 text-orange-500" />
+                <span className="text-sm font-bold text-orange-700">{streak}</span>
+                <span className="text-xs text-orange-600">day{streak === 1 ? "" : "s"}</span>
+              </div>
+            )}
+          </div>
         </div>
       </header>
 
       <div className="container mx-auto px-4 py-8">
+        {/* Daily Practice Box */}
+        {reviewStats && reviewStats.totalCards > 0 && (
+          <div className="mb-8 flex justify-end">
+            <Link href="/review">
+              {todayCompleted ? (
+                <div className="group relative overflow-hidden rounded-2xl border-2 border-green-200 bg-gradient-to-br from-green-50 to-emerald-50 px-6 py-4 shadow-sm transition-all hover:shadow-md">
+                  <div className="flex items-center gap-3">
+                    <div className="rounded-xl bg-green-500 p-2.5 shadow-sm">
+                      <CheckCircle2 className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-green-800">Done for today!</div>
+                      <div className="text-xs text-green-600">Great work — come back tomorrow</div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="group relative overflow-hidden rounded-2xl border-2 border-terracotta/30 bg-gradient-to-br from-terracotta/5 to-orange-50 px-6 py-4 shadow-sm transition-all hover:shadow-md hover:border-terracotta/50">
+                  <div className="absolute -right-3 -top-3 text-6xl opacity-10">⚡</div>
+                  <div className="flex items-center gap-3">
+                    <div className="rounded-xl bg-terracotta p-2.5 shadow-sm transition-transform group-hover:scale-110">
+                      <Zap className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-charcoal">Daily Practice</div>
+                      <div className="text-xs text-charcoal/60">
+                        <span className="font-semibold text-terracotta">{reviewStats.dueToday}</span> word{reviewStats.dueToday === 1 ? "" : "s"} to review
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </Link>
+          </div>
+        )}
+
         {/* Title Section */}
         <div className="mb-12 text-center">
           <div className="mb-4 inline-block rounded-full border border-terracotta/30 bg-terracotta/10 px-6 py-2">
