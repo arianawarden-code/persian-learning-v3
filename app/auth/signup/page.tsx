@@ -15,6 +15,7 @@ import { ArrowLeft } from "lucide-react"
 
 const signupSchema = z
   .object({
+    firstName: z.string().min(1, "Please enter your first name").regex(/^[a-zA-Z]/, "First name must start with a letter"),
     email: z.string().email("Please enter a valid email address"),
     password: z.string().min(6, "Password must be at least 6 characters"),
     confirmPassword: z.string(),
@@ -48,6 +49,9 @@ export default function SignupPage() {
       password: data.password,
       options: {
         emailRedirectTo: `${window.location.origin}/auth/callback`,
+        data: {
+          first_name: data.firstName,
+        },
       },
     })
 
@@ -100,6 +104,19 @@ export default function SignupPage() {
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="firstName">First Name</Label>
+              <Input
+                id="firstName"
+                type="text"
+                placeholder="Your first name"
+                {...register("firstName")}
+              />
+              {errors.firstName && (
+                <p className="text-sm text-destructive">{errors.firstName.message}</p>
+              )}
+            </div>
+
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input

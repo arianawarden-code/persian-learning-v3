@@ -10,8 +10,10 @@ import { BookOpen } from "@/components/book-open"
 import { useAllModulesProgress } from "@/hooks/use-module-progress"
 import { getStreak, getReviewStats } from "@/lib/srs-storage"
 import { ProfileDropdown } from "@/components/profile-dropdown"
+import { useAuth } from "@/lib/auth-context"
 
 export default function ModulesPage() {
+  const { user } = useAuth()
   const progress = useAllModulesProgress(modules)
   const [streak, setStreak] = useState(0)
   const [reviewStats, setReviewStats] = useState<{ dueToday: number; totalCards: number } | null>(null)
@@ -55,6 +57,11 @@ export default function ModulesPage() {
             <span className="text-xl font-semibold text-charcoal">Persian Learning</span>
           </div>
           <div className="flex items-center gap-3">
+            {user && (
+              <span className="text-sm text-charcoal/60">
+                Welcome back, <span className="font-medium text-charcoal/80">{user.user_metadata?.first_name || user.email?.split("@")[0]}</span>!
+              </span>
+            )}
             {streak > 0 && (
               <div className="flex items-center gap-1.5 rounded-full border border-orange-200 bg-orange-50 px-3 py-1.5">
                 <Flame className="h-4 w-4 text-orange-500" />
