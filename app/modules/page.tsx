@@ -9,6 +9,7 @@ import { ArrowLeft, Flame, Zap, CheckCircle2 } from "lucide-react"
 import { BookOpen } from "@/components/book-open"
 import { useAllModulesProgress } from "@/hooks/use-module-progress"
 import { getStreak, getReviewStats } from "@/lib/srs-storage"
+import { ProfileDropdown } from "@/components/profile-dropdown"
 
 export default function ModulesPage() {
   const progress = useAllModulesProgress(modules)
@@ -61,6 +62,7 @@ export default function ModulesPage() {
                 <span className="text-xs text-orange-600">day{streak === 1 ? "" : "s"}</span>
               </div>
             )}
+            <ProfileDropdown />
           </div>
         </div>
       </header>

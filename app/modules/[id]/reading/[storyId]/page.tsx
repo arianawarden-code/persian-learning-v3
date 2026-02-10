@@ -65,8 +65,10 @@ async function StoryContent({
 
   const stories = content?.reading ?? []
   const idx = stories.findIndex((s) => s?.id === story.id)
-  const nextStoryId =
-    idx >= 0 && idx < stories.length - 1 ? String(stories[idx + 1].id) : null
+  const nextStory =
+    idx >= 0 && idx < stories.length - 1 ? stories[idx + 1] : null
+  const nextStoryId = nextStory ? String(nextStory.id) : null
+  const nextStoryTitle = nextStory?.title ?? null
 
   return (
     <div className="min-h-screen bg-cream">
@@ -92,7 +94,7 @@ async function StoryContent({
           <h1 className="text-3xl font-bold text-charcoal">{story.title}</h1>
         </div>
 
-        <ReadingStory story={story} moduleId={id} nextStoryId={nextStoryId} />
+        <ReadingStory story={story} moduleId={id} nextStoryId={nextStoryId} nextStoryTitle={nextStoryTitle} />
       </div>
     </div>
   )

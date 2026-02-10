@@ -8,6 +8,8 @@ import { getLastActivity } from "@/lib/progress-storage"
 import type { LastActivity } from "@/lib/progress-storage"
 import { modules } from "@/lib/module-data"
 import { getReviewStats } from "@/lib/srs-storage"
+import { useAuth } from "@/lib/auth-context"
+import { ProfileDropdown } from "@/components/profile-dropdown"
 
 function getResumeUrl(activity: LastActivity): string {
   switch (activity.type) {
@@ -21,13 +23,21 @@ function getResumeUrl(activity: LastActivity): string {
 }
 
 export default function HomePage() {
+  const { user, loading } = useAuth()
   const [lastActivity, setLastActivity] = useState<LastActivity | null>(null)
   const [reviewStats, setReviewStats] = useState<{ dueToday: number; totalCards: number } | null>(null)
+  const [hasAccount, setHasAccount] = useState(false)
 
   useEffect(() => {
     setLastActivity(getLastActivity())
     setReviewStats(getReviewStats())
+    setHasAccount(localStorage.getItem("has-account") === "true")
   }, [])
+
+  // Set the flag when user is logged in
+  useEffect(() => {
+    if (user) localStorage.setItem("has-account", "true")
+  }, [user])
 
   const moduleTitle = lastActivity
     ? modules.find((m) => String(m.id) === String(lastActivity.moduleId))?.title ?? `Module ${lastActivity.moduleId}`
@@ -42,11 +52,22 @@ export default function HomePage() {
             <span className="font-serif text-3xl font-bold text-terracotta">فارسی</span>
             <span className="text-xl font-semibold text-charcoal">Persian Learning</span>
           </div>
-          <Link href="/modules">
-            <Button size="lg" className="rounded-full">
-              Get Started
-            </Button>
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link href="/modules">
+              <Button size="lg" className="rounded-full">
+                Get Started
+              </Button>
+            </Link>
+            {user ? (
+              <ProfileDropdown />
+            ) : (
+              <Link href={hasAccount ? "/auth/login" : "/auth/signup"}>
+                <Button size="lg" variant="outline" className="rounded-full bg-transparent">
+                  {hasAccount ? "Sign In" : "Sign Up"}
+                </Button>
+              </Link>
+            )}
+          </div>
         </div>
       </header>
 

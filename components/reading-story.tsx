@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Eye, EyeOff, Volume2, Square } from "lucide-react"
+import { Eye, EyeOff, Volume2, Square, RotateCcw, ArrowRight } from "lucide-react"
 import type { ReadingExercise } from "@/lib/module-data"
 import {
   markStoryAttempted,
@@ -18,9 +18,10 @@ interface ReadingStoryProps {
   story: ReadingExercise
   moduleId: string | number
   nextStoryId?: string | null
+  nextStoryTitle?: string | null
 }
 
-export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingStoryProps) {
+export function ReadingStory({ story, moduleId, nextStoryId = null, nextStoryTitle = null }: ReadingStoryProps) {
   const router = useRouter()
   const [showTranslation, setShowTranslation] = useState(false)
   const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: number }>({})
@@ -156,20 +157,15 @@ export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingSto
           </div>
 
           <div className="space-y-4">
-            {linePairs.map((pair, index) => (
-              <div
-                key={`${story.id}-line-${index}`}   // ✅ changed
-                className="grid grid-cols-1 lg:grid-cols-2 gap-4"
-              >
-                <div>
-                  <div className="relative rounded-lg bg-sand-50 p-4">
-                    <p className="text-2xl leading-loose text-charcoal" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
-                      {pair.text}
-                    </p>
+            {/* All Persian lines together */}
+            <div className="relative rounded-lg bg-sand-50 p-4">
+              <div className="space-y-2">
+                {linePairs.map((pair, index) => (
+                  <div key={`${story.id}-persian-${index}`} className="flex items-start gap-2">
                     {isSupported && (
                       <button
                         onClick={() => speak(pair.text)}
-                        className="absolute left-2 top-2 rounded-full bg-terracotta/10 p-1.5 transition-colors hover:bg-terracotta/20"
+                        className="shrink-0 rounded-full bg-terracotta/10 p-1.5 transition-colors hover:bg-terracotta/20 mt-2"
                       >
                         <Volume2
                           className={`h-4 w-4 ${
@@ -178,23 +174,43 @@ export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingSto
                         />
                       </button>
                     )}
+                    <p className="text-2xl leading-loose text-charcoal flex-1" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
+                      {pair.text}
+                    </p>
                   </div>
-                  {pair.transliteration && (
-                    <div className="mt-2 rounded-lg bg-blue-50/50 px-4 py-3">
-                      <p className="text-sm leading-relaxed text-charcoal/70 italic">{pair.transliteration}</p>
-                    </div>
+                ))}
+              </div>
+            </div>
+
+            {/* All transliteration lines together */}
+            {linePairs.some((pair) => pair.transliteration) && (
+              <div className="rounded-lg bg-blue-50/50 px-4 py-3">
+                <div className="space-y-1">
+                  {linePairs.map((pair, index) =>
+                    pair.transliteration ? (
+                      <p key={`${story.id}-translit-${index}`} className="text-sm leading-relaxed text-charcoal/70 italic">
+                        {pair.transliteration}
+                      </p>
+                    ) : null,
                   )}
                 </div>
-
-                {showTranslation && pair.translation && (
-                  <div className="flex items-center">
-                    <div className="rounded-lg bg-terracotta/5 border-2 border-terracotta/20 p-4 w-full">
-                      <p className="leading-relaxed text-charcoal/80">{pair.translation}</p>
-                    </div>
-                  </div>
-                )}
               </div>
-            ))}
+            )}
+
+            {/* All translation lines together (when shown) */}
+            {showTranslation && linePairs.some((pair) => pair.translation) && (
+              <div className="rounded-lg bg-terracotta/5 border-2 border-terracotta/20 p-4">
+                <div className="space-y-1">
+                  {linePairs.map((pair, index) =>
+                    pair.translation ? (
+                      <p key={`${story.id}-translation-${index}`} className="leading-relaxed text-charcoal/80">
+                        {pair.translation}
+                      </p>
+                    ) : null,
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </Card>
@@ -218,13 +234,13 @@ export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingSto
             return (
               <div
                 key={`${story.id}-question-${qIndex}`}  // ✅ keep (just remove the comment if you want)
-                className="rounded-lg p-6 bg-cream/50"
+                className="rounded-lg p-6 bg-cream/50 overflow-visible"
               >
                 <p className="mb-4 font-semibold text-charcoal">
                   {qIndex + 1}. {question.question}
                 </p>
 
-                <div className="space-y-2">
+                <div className="space-y-2 overflow-visible">
                   {question.options.map((option, oIndex) => {
                     const isSelected = selectedAnswers[qIndex] === oIndex
                     const isCorrectAnswer = oIndex === question.correctAnswer
@@ -239,7 +255,7 @@ export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingSto
                               ? "bg-red-100 border-2 border-red-300"
                               : isSelected
                                 ? "bg-terracotta/10 border-2 border-terracotta/30"
-                                : "hover:bg-sand-100 border border-transparent"
+                                : "hover:bg-sand-100 border-2 border-transparent"
                         }`}
                       >
                         <input
@@ -249,8 +265,20 @@ export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingSto
                           checked={isSelected}
                           onChange={() => handleAnswerSelect(qIndex, oIndex)}
                           disabled={showResults}
-                          className="h-4 w-4 accent-terracotta"
+                          className="sr-only"
                         />
+                        <span className={`h-4 w-4 shrink-0 rounded-full border-2 flex items-center justify-center ${
+                          showResults && isSelected && isCorrectAnswer ? "border-green-600"
+                          : showResults && isSelected && !isCorrectAnswer ? "border-red-600"
+                          : isSelected ? "border-terracotta"
+                          : "border-charcoal/30"
+                        }`}>
+                          {isSelected && <span className={`h-2 w-2 rounded-full ${
+                            showResults && isCorrectAnswer ? "bg-green-600"
+                            : showResults && !isCorrectAnswer ? "bg-red-600"
+                            : "bg-terracotta"
+                          }`} />}
+                        </span>
                         <span className="flex-1 text-charcoal/80">{option}</span>
                         {showResults && isCorrectAnswer && (
                           <span className="text-green-600 font-medium">✓ Correct</span>
@@ -267,8 +295,8 @@ export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingSto
           })}
         </div>
 
-        <div className="mt-6 flex gap-3">
-          {!showResults ? (
+        {!showResults && (
+          <div className="mt-6">
             <Button
               onClick={handleSubmit}
               disabled={Object.keys(selectedAnswers).length !== story.questions.length}
@@ -276,55 +304,50 @@ export function ReadingStory({ story, moduleId, nextStoryId = null }: ReadingSto
             >
               Submit Answers
             </Button>
-          ) : (
-            <>
-              <Button onClick={handleReset} variant="outline">
-                Try Again
-              </Button>
-              {allCorrect && (
+          </div>
+        )}
+
+        {showResults && (
+          <div className={`mt-6 rounded-lg p-5 ${status === "mastered" ? "bg-green-50 border border-green-200" : "bg-sand-50 border border-sand-200"}`}>
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <div className="text-lg font-semibold text-charcoal">
+                  {status === "mastered" ? "Nice work — mastered ✅" : "Good effort — credit earned 👍"}
+                </div>
+                <div className="mt-1 text-sm text-charcoal/70">
+                  Score: {correctCount}/{story.questions.length}
+                  {status !== "mastered" && " · Get a perfect score to master this story."}
+                </div>
+              </div>
+
+              <div className="flex gap-2">
+                <Button variant="outline" size="sm" onClick={handleReset} className="gap-1.5">
+                  <RotateCcw className="h-3.5 w-3.5" />
+                  Retry
+                </Button>
+
                 <Button
+                  variant="outline"
+                  size="sm"
                   onClick={() => router.push(`/modules/${moduleId}`)}
-                  className="bg-green-600 hover:bg-green-700 text-white"
                 >
                   Return to Module
                 </Button>
-              )}
-            </>
-          )}
-        </div>
-      </Card>
 
-      {showResults && (
-        <Card className={status === "mastered" ? "border-green-200 bg-green-50 p-6" : "border-sand-200 bg-white p-6"}>
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-            <div>
-              <div className="text-lg font-semibold text-charcoal">
-                {status === "mastered" ? "Nice work — mastered ✅" : "Good effort — credit earned 👍"}
+                {nextStoryId && (
+                  <Button
+                    size="sm"
+                    className="bg-green-600 hover:bg-green-700 text-white gap-1.5"
+                    onClick={() => router.push(`/modules/${moduleId}/reading/${nextStoryId}`)}
+                  >
+                    Next: {nextStoryTitle} <ArrowRight className="h-3.5 w-3.5" />
+                  </Button>
+                )}
               </div>
-              <div className="mt-1 text-sm text-charcoal/70">
-                Score: {correctCount}/{story.questions.length}
-                {status !== "mastered" && " • Get a perfect score to master this story."}
-              </div>
-            </div>
-
-            <div className="flex gap-2">
-              <Button variant="outline" onClick={handleReset}>
-                Try Again
-              </Button>
-
-              <Button
-                className={status === "mastered" ? "bg-green-600 hover:bg-green-700 text-white" : "bg-terracotta hover:bg-terracotta/90"}
-                onClick={() => {
-                  if (nextStoryId) router.push(`/modules/${moduleId}/reading/${nextStoryId}`)
-                  else router.push(`/modules/${moduleId}`)
-                }}
-              >
-                {nextStoryId ? "Continue" : "Back to Module"}
-              </Button>
             </div>
           </div>
-        </Card>
-      )}
+        )}
+      </Card>
     </div>
   )
 }
