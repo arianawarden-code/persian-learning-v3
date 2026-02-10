@@ -40,7 +40,7 @@ export function ProfileDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="rounded-full outline-none ring-offset-cream focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2">
-        <Avatar className="h-9 w-9 cursor-pointer border-2 border-terracotta/20 transition-colors hover:border-terracotta/40">
+        <Avatar className="h-11 w-11 cursor-pointer border-2 border-terracotta/20 transition-colors hover:border-terracotta/40">
           <AvatarFallback className="bg-terracotta text-sm font-semibold text-white">
             {getInitials(email)}
           </AvatarFallback>

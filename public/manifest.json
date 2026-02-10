@@ -1,0 +1,12 @@
+{
+  "name": "Persian Learning",
+  "short_name": "Persian",
+  "start_url": "/modules",
+  "display": "standalone",
+  "background_color": "#F5EFE7",
+  "theme_color": "#c46b48",
+  "icons": [
+    { "src": "/icon-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

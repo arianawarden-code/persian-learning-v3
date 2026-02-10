@@ -1,8 +1,9 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono, Vazirmatn } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { AuthProvider } from "@/lib/auth-context"
+import { BottomNav } from "@/components/bottom-nav"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -13,11 +14,27 @@ export const vazir = Vazirmatn({
   variable: "--font-persian",
 })
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
+}
+
 export const metadata: Metadata = {
   title: "Persian Learning - Master Farsi from Beginner to Fluent",
   description:
     "Learn Persian (Farsi) through 90 comprehensive modules covering vocabulary, grammar, reading, writing, and conversation from beginner to advanced level.",
   generator: "v0.app",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Persian Learning",
+  },
+  other: {
+    "mobile-web-app-capable": "yes",
+  },
   icons: {
     icon: [
       {
@@ -44,9 +61,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased ${vazir.variable}`}>
+      <body className={`font-sans antialiased ${vazir.variable} pb-[env(safe-area-inset-bottom)]`}>
         <AuthProvider>
           {children}
+          <BottomNav />
         </AuthProvider>
         <Analytics />
       </body>

@@ -68,7 +68,7 @@ export default function ModuleContentClient({ id }: { id: string }) {
           <section>
             <h2 className="mb-6 text-2xl font-bold text-charcoal">Learning Areas</h2>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <LearningAreaCard
                 icon="vocabulary"
                 title="Vocabulary"

@@ -147,3 +147,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Bottom nav spacing on mobile */
+@media (max-width: 767px) {
+  main,
+  .min-h-screen {
+    padding-bottom: 5rem; /* 80px = matches bottom nav height */
+  }
+}

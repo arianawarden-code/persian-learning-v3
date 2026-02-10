@@ -165,7 +165,7 @@ export function ReadingStory({ story, moduleId, nextStoryId = null, nextStoryTit
                     {isSupported && (
                       <button
                         onClick={() => speak(pair.text)}
-                        className="shrink-0 rounded-full bg-terracotta/10 p-1.5 transition-colors hover:bg-terracotta/20 mt-2"
+                        className="shrink-0 rounded-full bg-terracotta/10 p-3 transition-colors hover:bg-terracotta/20 mt-2"
                       >
                         <Volume2
                           className={`h-4 w-4 ${

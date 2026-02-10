@@ -45,7 +45,7 @@ function FlashcardExercise({
             e.stopPropagation()
             speak(word.persian)
           }}
-          className="absolute left-6 top-6 rounded-full p-2 transition-colors hover:bg-sand-100"
+          className="absolute left-6 top-6 rounded-full p-3 transition-colors hover:bg-sand-100"
         >
           <Volume2
             className={`h-6 w-6 transition-all ${
@@ -163,7 +163,7 @@ function MultipleChoiceExercise({
             </p>
             <button
               onClick={() => speak(word.persian)}
-              className="rounded-full p-2 transition-colors hover:bg-sand-100"
+              className="rounded-full p-3 transition-colors hover:bg-sand-100"
             >
               <Volume2
                 className={`h-6 w-6 ${
@@ -269,7 +269,7 @@ function TypingExercise({
             <p className="font-serif text-5xl font-bold text-terracotta">{word.persian}</p>
             <button
               onClick={() => speak(word.persian)}
-              className="rounded-full p-2 transition-colors hover:bg-sand-100"
+              className="rounded-full p-3 transition-colors hover:bg-sand-100"
             >
               <Volume2
                 className={`h-5 w-5 ${

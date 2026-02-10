@@ -300,7 +300,7 @@ export function VocabularyFlashcards({ vocabulary, moduleId, showWordList = fals
           <div className="text-sm text-charcoal/70">
             {currentIndex + 1} / {displayedVocabulary.length}
           </div>
-          <Button variant="ghost" size="sm" onClick={handleReset}>
+          <Button variant="ghost" size="sm" onClick={handleReset} className="min-h-[44px] min-w-[44px]">
             <RotateCcw className="h-4 w-4" />
           </Button>
         </div>
@@ -357,7 +357,7 @@ export function VocabularyFlashcards({ vocabulary, moduleId, showWordList = fals
                   e.stopPropagation()
                   speak(currentWord.persian)
                 }}
-                className="absolute left-6 top-6 rounded-full p-2 transition-colors hover:bg-sand-100"
+                className="absolute left-6 top-6 rounded-full p-3 transition-colors hover:bg-sand-100"
               >
                 <Volume2
                   className={`h-6 w-6 transition-all ${
@@ -368,7 +368,7 @@ export function VocabularyFlashcards({ vocabulary, moduleId, showWordList = fals
             )}
             <button
               onClick={(e) => toggleStar(currentWord, e)}
-              className="absolute right-6 top-6 rounded-full p-2 transition-colors hover:bg-sand-100"
+              className="absolute right-6 top-6 rounded-full p-3 transition-colors hover:bg-sand-100"
             >
               <Star
                 className={`h-6 w-6 transition-all ${
@@ -404,10 +404,10 @@ export function VocabularyFlashcards({ vocabulary, moduleId, showWordList = fals
                             e.stopPropagation()
                             speak(currentWord.example)
                           }}
-                          className="shrink-0 rounded-full p-1 transition-colors hover:bg-sand-200"
+                          className="shrink-0 rounded-full p-2.5 transition-colors hover:bg-sand-200"
                         >
                           <Volume2
-                            className={`h-4 w-4 ${
+                            className={`h-5 w-5 ${
                               isSpeaking ? "text-terracotta" : "text-charcoal/40 hover:text-terracotta"
                             }`}
                           />
@@ -553,10 +553,10 @@ export function VocabularyFlashcards({ vocabulary, moduleId, showWordList = fals
                   {isSupported && (
                     <button
                       onClick={() => speak(currentWord.example)}
-                      className="shrink-0 rounded-full p-1 transition-colors hover:bg-sand-200"
+                      className="shrink-0 rounded-full p-2.5 transition-colors hover:bg-sand-200"
                     >
                       <Volume2
-                        className={`h-4 w-4 ${
+                        className={`h-5 w-5 ${
                           isSpeaking ? "text-terracotta" : "text-charcoal/40 hover:text-terracotta"
                         }`}
                       />
