@@ -21,33 +21,60 @@ const iconMap = {
   conversation: { Icon: MessageCircle, bgColor: "bg-terracotta/10", iconColor: "text-terracotta" },
 }
 
+function ProgressRing({ progress }: { progress: number }) {
+  const isComplete = progress >= 100
+  const size = 44
+  const strokeWidth = 3.5
+  const radius = (size - strokeWidth) / 2
+  const circumference = 2 * Math.PI * radius
+  const offset = circumference - (Math.min(progress, 100) / 100) * circumference
+
+  return (
+    <div className="relative shrink-0" style={{ width: size, height: size }}>
+      <svg width={size} height={size} className="-rotate-90">
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          fill="none"
+          stroke="rgba(196,107,72,0.2)"
+          strokeWidth={strokeWidth}
+        />
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          fill="none"
+          stroke="#c46b48"
+          strokeWidth={strokeWidth}
+          strokeLinecap="round"
+          strokeDasharray={circumference}
+          strokeDashoffset={offset}
+          className="transition-all duration-500"
+        />
+      </svg>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="text-xs font-semibold text-terracotta">{progress}%</span>
+      </div>
+    </div>
+  )
+}
+
 export function LearningAreaCard({ icon, title, description, progress, href }: LearningAreaCardProps) {
   const { Icon, bgColor, iconColor } = iconMap[icon]
 
   return (
-    <Link href={href}>
-      <Card className="group cursor-pointer border-sand-200 bg-white p-6 transition-all hover:shadow-lg">
-        <div className="flex items-start gap-4">
+    <Link href={href} className="h-full">
+      <Card className="group flex h-full cursor-pointer flex-col border-sand-200 bg-white px-8 pt-8 pb-12 transition-all hover:shadow-lg">
+        <div className="flex items-start justify-between gap-3 mb-4">
           <div className={`rounded-2xl ${bgColor} p-4`}>
-            <Icon className={`h-8 w-8 ${iconColor}`} />
+            <Icon className={`h-10 w-10 ${iconColor}`} />
           </div>
-
-          <div className="flex-1">
-            <div className="mb-2 flex items-center justify-between">
-              <h3 className="text-xl font-bold text-charcoal group-hover:text-terracotta">{title}</h3>
-              <span className="text-sm font-medium text-charcoal/60">{progress}%</span>
-            </div>
-
-            <p className="mb-3 text-charcoal/70">{description}</p>
-
-            <div className="mb-2">
-              <div className="text-sm text-charcoal/60">Progress</div>
-            </div>
-            <div className="h-2 overflow-hidden rounded-full bg-sand-100">
-              <div className="h-full rounded-full bg-terracotta transition-all" style={{ width: `${progress}%` }} />
-            </div>
-          </div>
+          <ProgressRing progress={progress} />
         </div>
+
+        <h3 className="text-xl font-bold text-charcoal group-hover:text-terracotta leading-tight">{title}</h3>
+        <p className="text-sm text-charcoal/60 -mt-4">{description}</p>
       </Card>
     </Link>
   )
