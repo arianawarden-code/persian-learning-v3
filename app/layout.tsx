@@ -1,11 +1,12 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Geist, Geist_Mono, Vazirmatn } from "next/font/google"
+import { Inter, Geist, Geist_Mono, Vazirmatn } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { AuthProvider } from "@/lib/auth-context"
 import { BottomNav } from "@/components/bottom-nav"
 import "./globals.css"
 
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
@@ -61,7 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased ${vazir.variable} pb-[env(safe-area-inset-bottom)]`}>
+      <body className={`font-sans antialiased ${inter.variable} ${vazir.variable} pb-[env(safe-area-inset-bottom)]`}>
         <AuthProvider>
           {children}
           <BottomNav />

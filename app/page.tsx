@@ -2,46 +2,82 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { BookOpen, RotateCcw } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { modules, moduleContent } from "@/lib/module-data"
+import { useAuth } from "@/lib/auth-context"
+import { useAllModulesProgress, useModuleProgress } from "@/hooks/use-module-progress"
 import { getLastActivity } from "@/lib/progress-storage"
 import type { LastActivity } from "@/lib/progress-storage"
-import { modules } from "@/lib/module-data"
-import { getReviewStats } from "@/lib/srs-storage"
-import { useAuth } from "@/lib/auth-context"
 import { ProfileDropdown } from "@/components/profile-dropdown"
 
-function getResumeUrl(activity: LastActivity): string {
-  switch (activity.type) {
-    case "reading":
-      return `/modules/${activity.moduleId}/reading/${activity.id}`
-    case "writing":
-      return `/modules/${activity.moduleId}/writing`
-    case "grammar":
-      return `/modules/${activity.moduleId}/grammar`
+function getActivityLabel(activity: LastActivity | null, moduleId: string, progress: { vocabulary: number; reading: number; writing: number; grammar: number }): string | null {
+  const content = moduleContent[moduleId as keyof typeof moduleContent]
+  if (!content) return null
+
+  // Determine which area user was last in, or pick the first incomplete one
+  const area = activity?.moduleId === moduleId
+    ? activity.type
+    : progress.vocabulary < 100 ? "vocabulary"
+    : progress.grammar < 100 ? "grammar"
+    : progress.reading < 100 ? "reading"
+    : progress.writing < 100 ? "writing"
+    : null
+
+  if (!area) return null
+
+  const vocabCount = content.vocabulary?.length || 0
+  const readingCount = content.reading?.length || 0
+  const writingCount = content.writing?.length || 0
+  const grammarCount = content.grammar?.length || 0
+
+  switch (area) {
+    case "vocabulary": {
+      const remaining = Math.round(vocabCount * (1 - progress.vocabulary / 100))
+      return remaining > 0 ? `Up next: Vocabulary (${remaining} words)` : "Vocabulary"
+    }
+    case "reading": {
+      const storiesLeft = Math.round(readingCount * (1 - progress.reading / 100))
+      const mins = storiesLeft * 5
+      return mins > 0 ? `Up next: Reading (~${mins} min)` : "Reading"
+    }
+    case "writing": {
+      const exercisesLeft = Math.round(writingCount * (1 - progress.writing / 100))
+      const mins = exercisesLeft * 8
+      return mins > 0 ? `Up next: Writing (~${mins} min)` : "Writing"
+    }
+    case "grammar": {
+      const exercisesLeft = Math.round(grammarCount * (1 - progress.grammar / 100))
+      const mins = exercisesLeft * 6
+      return mins > 0 ? `Up next: Grammar (~${mins} min)` : "Grammar"
+    }
+    default:
+      return null
   }
 }
 
 export default function HomePage() {
-  const { user, loading } = useAuth()
-  const [lastActivity, setLastActivity] = useState<LastActivity | null>(null)
-  const [reviewStats, setReviewStats] = useState<{ dueToday: number; totalCards: number } | null>(null)
+  const { user } = useAuth()
   const [hasAccount, setHasAccount] = useState(false)
+  const [lastActivity, setLastActivity] = useState<LastActivity | null>(null)
+  const allProgress = useAllModulesProgress(modules)
+
+  // Find the current module: first one not at 100%, or fall back to first module
+  const currentModuleId =
+    modules.find((m) => (allProgress[String(m.id)] ?? 0) < 100)?.id ?? modules[0].id
+  const currentModule = modules.find((m) => String(m.id) === String(currentModuleId))!
+  const currentProgress = useModuleProgress(String(currentModuleId))
+
+  const isReturning = !!user && Object.values(allProgress).some((p) => p > 0)
+  const activityLabel = getActivityLabel(lastActivity, String(currentModuleId), currentProgress)
 
   useEffect(() => {
-    setLastActivity(getLastActivity())
-    setReviewStats(getReviewStats())
     setHasAccount(localStorage.getItem("has-account") === "true")
+    setLastActivity(getLastActivity())
   }, [])
 
-  // Set the flag when user is logged in
   useEffect(() => {
     if (user) localStorage.setItem("has-account", "true")
   }, [user])
-
-  const moduleTitle = lastActivity
-    ? modules.find((m) => String(m.id) === String(lastActivity.moduleId))?.title ?? `Module ${lastActivity.moduleId}`
-    : null
 
   return (
     <div className="min-h-screen bg-cream">
@@ -53,11 +89,6 @@ export default function HomePage() {
             <span className="text-xl font-semibold text-charcoal">Persian Learning</span>
           </div>
           <div className="flex items-center gap-3">
-            <Link href="/modules">
-              <Button size="lg" className="rounded-full">
-                Get Started
-              </Button>
-            </Link>
             {user ? (
               <ProfileDropdown />
             ) : (
@@ -72,77 +103,55 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 text-center">
-        <div className="mb-8 inline-block">
-          <div className="mb-4 flex items-center justify-center gap-2">
-            <span className="text-2xl">⭐</span>
-            <span className="font-serif text-4xl text-terracotta">سلام</span>
-            <span className="text-2xl">⭐</span>
-          </div>
-        </div>
-
-        <h1 className="mb-6 text-balance font-serif text-6xl font-bold leading-tight text-charcoal">
-          Master Persian <span className="text-terracotta italic">from Beginner to Fluent</span>
-        </h1>
-
-        <p className="mx-auto mb-12 max-w-3xl text-balance text-xl leading-relaxed text-charcoal/70">
-          Learn to speak, read, and write Persian through comprehensive lessons, interactive exercises, and real-world
-          practice. Your journey to fluency starts here.
+      <section className="container mx-auto px-4 pt-2 text-center">
+        <p className="mb-4 animate-salam-fade select-none text-8xl text-charcoal/[0.12]" style={{ fontFamily: "var(--font-persian)" }}>
+          سلام
         </p>
 
-        {/* Daily Review Card */}
-        {reviewStats && reviewStats.dueToday > 0 && (
-          <div className="mx-auto mb-8 max-w-4xl rounded-3xl border border-terracotta/30 bg-terracotta/5 p-8 shadow-md">
-            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-              <div className="flex items-center gap-4">
-                <div className="rounded-xl bg-terracotta p-3 shadow-sm">
-                  <RotateCcw className="h-8 w-8 text-white" />
-                </div>
-                <div className="text-left">
-                  <h3 className="text-xl font-bold text-charcoal">Daily Review</h3>
-                  <p className="text-charcoal/70">
-                    <span className="font-semibold text-terracotta">{reviewStats.dueToday}</span>{" "}
-                    word{reviewStats.dueToday === 1 ? "" : "s"} ready for review
-                  </p>
-                </div>
+        <div className="mx-auto max-w-md rounded-2xl border border-sand-200 bg-white px-8 py-7 shadow-lg">
+          {isReturning ? (
+            <>
+              <p className="mb-1 text-base font-medium text-charcoal/65">Welcome back</p>
+              <p className="mb-1 text-[11px] uppercase tracking-wider text-terracotta/50">
+                Module {currentModule.id}
+              </p>
+              <h1 className="text-[22px] font-bold leading-snug text-charcoal" style={{ fontFamily: "var(--font-inter)" }}>
+                {currentModule.title}
+              </h1>
+              {activityLabel && (
+                <p className="mt-1.5 text-base font-medium text-charcoal/55">
+                  {activityLabel}
+                </p>
+              )}
+              <div className="mt-5">
+                <Link href={`/modules/${currentModule.id}`}>
+                  <Button size="lg" className="w-full rounded-full text-lg shadow-md">
+                    Continue Learning →
+                  </Button>
+                </Link>
+                <Link href="/modules" className="mt-3 inline-block text-xs text-charcoal/40 hover:text-terracotta transition-colors">
+                  View all modules →
+                </Link>
               </div>
-              <Link href="/review">
-                <Button size="lg" className="rounded-full px-8 shadow-md">
-                  Start Review →
+            </>
+          ) : (
+            <>
+              <h1 className="mb-2 font-serif text-2xl font-bold text-charcoal">
+                Start learning Persian
+              </h1>
+              <p className="mb-5 text-sm text-charcoal/50">
+                Begin with short, guided lessons designed for beginners.
+              </p>
+              <Link href={`/modules/${modules[0].id}`}>
+                <Button size="lg" className="w-full rounded-full text-lg shadow-md">
+                  Start Module 1 →
                 </Button>
               </Link>
-            </div>
-          </div>
-        )}
-
-        {/* CTA Section */}
-        <div className="mx-auto max-w-4xl rounded-3xl border border-sand-200 bg-white p-12 shadow-lg">
-          <div className="mb-6 flex justify-center">
-            <div className="rounded-2xl bg-terracotta p-6 shadow-md">
-              <BookOpen className="h-12 w-12 text-white" />
-            </div>
-          </div>
-
-          <h2 className="mb-4 text-3xl font-bold text-terracotta">Explore Learning Modules</h2>
-
-          <p className="mb-8 text-lg leading-relaxed text-charcoal/70">
-            Start your journey with structured modules designed to take you from beginner to advanced fluency
-          </p>
-
-          <div className="flex items-center justify-center gap-4">
-            <Link href="/modules">
-              <Button size="lg" className="rounded-full px-12 py-6 text-lg shadow-lg">
-                View All Modules →
-              </Button>
-            </Link>
-            {lastActivity && moduleTitle && (
-              <Link href={getResumeUrl(lastActivity)}>
-                <Button size="lg" variant="outline" className="rounded-full px-12 py-6 text-lg shadow-lg bg-transparent">
-                  Resume Learning →
-                </Button>
+              <Link href="/modules" className="mt-3 inline-block text-xs text-charcoal/40 hover:text-terracotta transition-colors">
+                View all modules →
               </Link>
-            )}
-          </div>
+            </>
+          )}
         </div>
       </section>
     </div>

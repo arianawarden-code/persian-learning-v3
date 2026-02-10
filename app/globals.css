@@ -148,6 +148,15 @@
   }
 }
 
+@keyframes salam-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-salam-fade {
+  animation: salam-fade 2.5s ease-in both;
+}
+
 /* Bottom nav spacing on mobile */
 @media (max-width: 767px) {
   main,
