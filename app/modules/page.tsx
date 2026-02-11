@@ -120,12 +120,12 @@ export default function ModulesPage() {
             </div>
           </div>
 
-          <h1 className="mb-4 text-balance font-serif text-5xl font-bold text-charcoal">
-            Your Path to <span className="text-terracotta italic">Persian Fluency</span>
+          <h1 className="mb-4 text-balance font-serif text-4xl font-bold text-charcoal">
+            Let&apos;s continue your <span className="text-terracotta">Persian journey</span>
           </h1>
 
           <p className="mx-auto max-w-3xl text-balance text-lg leading-relaxed text-charcoal/70">
-            Progress through 15 comprehensive modules designed to take you from complete beginner to advanced fluency
+            Begin with the alphabet and progress toward fluency
           </p>
         </div>
 
@@ -137,8 +137,7 @@ export default function ModulesPage() {
           </div>
 
           <p className="mb-6 text-charcoal/70">
-            Master the Persian alphabet with 5 progressive modules. Learn letters, pronunciation, diacritics, and build
-            your first words.
+            Learn the Persian alphabet step by step with short, guided lessons.
           </p>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
