@@ -22,7 +22,7 @@ export function ModuleProgressSidebar({
           <div className="mb-2 inline-block h-24 w-24 rounded-full bg-terracotta/10 p-6">
             <div className="flex h-full items-center justify-center">
               <span className="text-2xl font-bold text-terracotta">
-                {overallProgress > 0 ? `${overallProgress}%` : "•"}
+                {overallProgress}%
               </span>
             </div>
           </div>

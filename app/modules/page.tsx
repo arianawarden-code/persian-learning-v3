@@ -53,7 +53,7 @@ export default function ModulesPage() {
                 <ArrowLeft className="h-5 w-5 text-charcoal" />
               </Button>
             </Link>
-            <span className="font-serif text-3xl font-bold text-terracotta">فارسی</span>
+            <Link href="/"><span className="font-serif text-3xl font-bold text-terracotta cursor-pointer">فارسی</span></Link>
             <span className="text-xl font-semibold text-charcoal">Persian Learning</span>
           </div>
           <div className="flex items-center gap-3">
