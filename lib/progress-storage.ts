@@ -223,6 +223,48 @@ export function getLastActivity(): LastActivity | null {
 }
 
 // =========================
+// Lesson progress tracking
+// =========================
+
+export interface LessonProgress {
+  [moduleId: string]: {
+    [lessonId: string]: boolean
+  }
+}
+
+export function getLessonProgress(): LessonProgress {
+  if (typeof window === "undefined") return {}
+  const stored = localStorage.getItem("lesson-progress")
+  return stored ? JSON.parse(stored) : {}
+}
+
+export function markLessonComplete(moduleId: string | number, lessonId: string): void {
+  if (typeof window === "undefined") return
+  const progress = getLessonProgress()
+  const moduleKey = String(moduleId)
+  if (!progress[moduleKey]) progress[moduleKey] = {}
+  progress[moduleKey][lessonId] = true
+  localStorage.setItem("lesson-progress", JSON.stringify(progress))
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new Event("progress-updated"))
+  }
+}
+
+export function isLessonComplete(moduleId: string | number, lessonId: string): boolean {
+  const progress = getLessonProgress()
+  const moduleKey = String(moduleId)
+  return progress[moduleKey]?.[lessonId] || false
+}
+
+export function getModuleLessonProgress(moduleId: string | number, totalLessons: number): number {
+  const progress = getLessonProgress()
+  const moduleKey = String(moduleId)
+  const moduleProgress = progress[moduleKey] || {}
+  const completedCount = Object.values(moduleProgress).filter(Boolean).length
+  return totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0
+}
+
+// =========================
 // Backward-compatible wrapper (old API)
 // Returns % of stories that are at least attempted.
 // =========================

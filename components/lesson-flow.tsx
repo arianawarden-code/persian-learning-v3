@@ -1,0 +1,718 @@
+"use client"
+
+import { useState, useCallback } from "react"
+import { useRouter } from "next/navigation"
+import { Card } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import {
+  ArrowRight,
+  ArrowLeft,
+  BookOpen,
+  Check,
+  Clock,
+  RotateCcw,
+  Volume2,
+} from "lucide-react"
+import type { Lesson } from "@/lib/lesson-data"
+import type { VocabularyWord, ReadingExercise } from "@/lib/module-data"
+import { ReadingStory } from "@/components/reading-story"
+import { markLessonComplete } from "@/lib/progress-storage"
+
+// ─── Phase types ─────────────────────────────────────────────────
+
+type Phase = "intro" | "vocabulary" | "grammar" | "reading" | "writing" | "completion"
+
+const PHASE_ORDER: Phase[] = ["intro", "vocabulary", "grammar", "reading", "writing", "completion"]
+
+interface LessonFlowProps {
+  lesson: Lesson
+  vocabWords: VocabularyWord[]
+  readingStory: ReadingExercise
+  moduleId: string
+}
+
+// ─── Component ───────────────────────────────────────────────────
+
+export function LessonFlow({ lesson, vocabWords, readingStory, moduleId }: LessonFlowProps) {
+  const router = useRouter()
+  const [phase, setPhase] = useState<Phase>("intro")
+
+  const goNext = useCallback(() => {
+    const idx = PHASE_ORDER.indexOf(phase)
+    if (idx < PHASE_ORDER.length - 1) {
+      setPhase(PHASE_ORDER[idx + 1])
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+  }, [phase])
+
+  const goBack = useCallback(() => {
+    const idx = PHASE_ORDER.indexOf(phase)
+    if (idx > 0) {
+      setPhase(PHASE_ORDER[idx - 1])
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+  }, [phase])
+
+  // Progress bar
+  const currentIdx = PHASE_ORDER.indexOf(phase)
+  const progressPercent = Math.round((currentIdx / (PHASE_ORDER.length - 1)) * 100)
+
+  return (
+    <div className="mx-auto max-w-3xl">
+      {/* Progress bar */}
+      {phase !== "intro" && phase !== "completion" && (
+        <div className="mb-6">
+          <div className="flex items-center justify-between mb-2">
+            <button
+              onClick={goBack}
+              className="flex items-center gap-1 text-sm text-charcoal/60 hover:text-charcoal transition-colors"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back
+            </button>
+            <span className="text-xs text-charcoal/50 capitalize">{phase}</span>
+          </div>
+          <div className="h-2 w-full rounded-full bg-sand-200">
+            <div
+              className="h-2 rounded-full bg-terracotta transition-all duration-500"
+              style={{ width: `${progressPercent}%` }}
+            />
+          </div>
+        </div>
+      )}
+
+      {phase === "intro" && (
+        <IntroPhase lesson={lesson} onStart={goNext} />
+      )}
+      {phase === "vocabulary" && (
+        <VocabularyPhase words={vocabWords} onComplete={goNext} />
+      )}
+      {phase === "grammar" && (
+        <GrammarPhase grammar={lesson.phases.grammar} onComplete={goNext} />
+      )}
+      {phase === "reading" && (
+        <ReadingPhase story={readingStory} moduleId={moduleId} onComplete={goNext} />
+      )}
+      {phase === "writing" && (
+        <WritingPhase writing={lesson.phases.writing} onComplete={goNext} />
+      )}
+      {phase === "completion" && (
+        <CompletionPhase lesson={lesson} moduleId={moduleId} />
+      )}
+    </div>
+  )
+}
+
+// ─── Intro Phase ─────────────────────────────────────────────────
+
+function IntroPhase({ lesson, onStart }: { lesson: Lesson; onStart: () => void }) {
+  return (
+    <Card className="border-sand-200 bg-white p-10 text-center">
+      <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-terracotta/10">
+        <BookOpen className="h-10 w-10 text-terracotta" />
+      </div>
+
+      <p className="mb-2 text-sm font-medium text-terracotta">Lesson {lesson.number}</p>
+      <h1 className="mb-3 font-serif text-3xl font-bold text-charcoal">{lesson.title}</h1>
+      <p className="mb-6 text-lg text-charcoal/70">{lesson.goal}</p>
+
+      <div className="mb-8 flex items-center justify-center gap-2 text-sm text-charcoal/50">
+        <Clock className="h-4 w-4" />
+        <span>{lesson.timeEstimate}</span>
+      </div>
+
+      <Button
+        onClick={onStart}
+        size="lg"
+        className="bg-terracotta hover:bg-terracotta/90 gap-2 text-base px-8"
+      >
+        Start Lesson
+        <ArrowRight className="h-5 w-5" />
+      </Button>
+    </Card>
+  )
+}
+
+// ─── Vocabulary Phase ────────────────────────────────────────────
+
+function VocabularyPhase({
+  words,
+  onComplete,
+}: {
+  words: VocabularyWord[]
+  onComplete: () => void
+}) {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [flipped, setFlipped] = useState(false)
+  const [showInterstitial, setShowInterstitial] = useState(false)
+
+  const INTERSTITIAL_AFTER = 6
+
+  const handleNext = () => {
+    if (currentIndex === INTERSTITIAL_AFTER - 1 && !showInterstitial) {
+      setShowInterstitial(true)
+      setFlipped(false)
+      return
+    }
+
+    if (currentIndex < words.length - 1) {
+      setCurrentIndex(currentIndex + 1)
+      setFlipped(false)
+    } else {
+      onComplete()
+    }
+  }
+
+  const handleContinueFromInterstitial = () => {
+    setShowInterstitial(false)
+    setCurrentIndex(INTERSTITIAL_AFTER)
+    setFlipped(false)
+  }
+
+  if (showInterstitial) {
+    return (
+      <Card className="border-sand-200 bg-white p-10 text-center">
+        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
+          <Check className="h-8 w-8 text-green-700" />
+        </div>
+        <h2 className="mb-2 text-2xl font-bold text-charcoal">Nice progress!</h2>
+        <p className="mb-6 text-charcoal/70">
+          You&apos;ve learned {INTERSTITIAL_AFTER} words so far. {words.length - INTERSTITIAL_AFTER} more to go!
+        </p>
+        <Button
+          onClick={handleContinueFromInterstitial}
+          className="bg-terracotta hover:bg-terracotta/90 gap-2"
+        >
+          Keep Going
+          <ArrowRight className="h-4 w-4" />
+        </Button>
+      </Card>
+    )
+  }
+
+  const word = words[currentIndex]
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg font-semibold text-charcoal">Vocabulary</h2>
+        <span className="text-sm text-charcoal/50">
+          {currentIndex + 1} / {words.length}
+        </span>
+      </div>
+
+      <Card
+        className="border-sand-200 bg-white p-8 cursor-pointer min-h-[280px] flex flex-col items-center justify-center text-center transition-all hover:shadow-md"
+        onClick={() => setFlipped(!flipped)}
+      >
+        {!flipped ? (
+          <>
+            <p
+              className="mb-3 text-5xl leading-relaxed text-charcoal"
+              dir="rtl"
+              style={{ fontFamily: "var(--font-persian)" }}
+            >
+              {word.persian}
+            </p>
+            <p className="text-sm text-charcoal/50 italic">{word.transliteration}</p>
+            <p className="mt-6 text-xs text-charcoal/40">Tap to reveal meaning</p>
+          </>
+        ) : (
+          <>
+            <p
+              className="mb-2 text-3xl text-charcoal"
+              dir="rtl"
+              style={{ fontFamily: "var(--font-persian)" }}
+            >
+              {word.persian}
+            </p>
+            <p className="mb-1 text-sm text-charcoal/50 italic">{word.transliteration}</p>
+            <p className="mb-4 text-2xl font-semibold text-terracotta">{word.english}</p>
+            <div className="rounded-lg bg-sand-50 px-4 py-3 w-full">
+              <p className="text-sm text-charcoal/70" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
+                {word.example}
+              </p>
+              <p className="mt-1 text-xs text-charcoal/50">{word.exampleTranslation}</p>
+            </div>
+          </>
+        )}
+      </Card>
+
+      <div className="flex justify-end">
+        <Button
+          onClick={handleNext}
+          className="bg-terracotta hover:bg-terracotta/90 gap-2"
+        >
+          {currentIndex < words.length - 1 ? "Next Word" : "Continue to Grammar"}
+          <ArrowRight className="h-4 w-4" />
+        </Button>
+      </div>
+    </div>
+  )
+}
+
+// ─── Grammar Phase ───────────────────────────────────────────────
+
+function GrammarPhase({
+  grammar,
+  onComplete,
+}: {
+  grammar: Lesson["phases"]["grammar"]
+  onComplete: () => void
+}) {
+  const [showCheck, setShowCheck] = useState(false)
+  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
+  const [submitted, setSubmitted] = useState(false)
+
+  const isCorrect = selectedAnswer === grammar.microCheck.correctAnswer
+
+  return (
+    <div className="space-y-6">
+      <h2 className="text-lg font-semibold text-charcoal">Grammar</h2>
+
+      {/* Pattern display */}
+      <Card className="border-sand-200 bg-white p-8">
+        <h3 className="mb-4 text-xl font-bold text-charcoal">{grammar.title}</h3>
+
+        <div className="mb-6 rounded-xl bg-terracotta/5 border border-terracotta/20 p-6 text-center">
+          <div className="flex items-center justify-center gap-3 text-2xl" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
+            {grammar.patternParts.map((part, i) => (
+              <span
+                key={i}
+                className={
+                  part.startsWith("[")
+                    ? "rounded bg-terracotta/20 px-3 py-1 text-terracotta font-medium"
+                    : "text-charcoal"
+                }
+              >
+                {part}
+              </span>
+            ))}
+          </div>
+          <p className="mt-3 text-sm text-charcoal/50">{grammar.pattern}</p>
+        </div>
+
+        {/* Examples */}
+        <div className="space-y-3 mb-6">
+          {grammar.examples.map((ex, i) => (
+            <div key={i} className="flex items-center gap-4 rounded-lg bg-sand-50 px-4 py-3">
+              <p className="text-xl text-charcoal flex-1" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
+                {ex.persian}
+              </p>
+              <div className="text-right">
+                <p className="text-sm text-charcoal/50 italic">{ex.transliteration}</p>
+                <p className="text-sm text-charcoal/70">{ex.english}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Note */}
+        <div className="rounded-lg bg-blue-50 border border-blue-200 px-4 py-3">
+          <p className="text-sm text-blue-800">{grammar.note}</p>
+        </div>
+      </Card>
+
+      {/* Micro-check or transition */}
+      {!showCheck ? (
+        <div className="flex gap-3">
+          <Button
+            onClick={() => setShowCheck(true)}
+            variant="outline"
+            className="flex-1 gap-2"
+          >
+            Quick Check
+          </Button>
+          <Button
+            onClick={onComplete}
+            className="flex-1 bg-terracotta hover:bg-terracotta/90 gap-2"
+          >
+            See it in a conversation
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        </div>
+      ) : (
+        <Card className="border-sand-200 bg-white p-6">
+          <p className="mb-4 font-semibold text-charcoal">{grammar.microCheck.question}</p>
+          <div className="space-y-2 mb-4">
+            {grammar.microCheck.options.map((option, i) => {
+              const isSelected = selectedAnswer === i
+              const isCorrectOption = i === grammar.microCheck.correctAnswer
+
+              return (
+                <button
+                  key={i}
+                  onClick={() => !submitted && setSelectedAnswer(i)}
+                  disabled={submitted}
+                  className={`w-full rounded-lg border-2 px-4 py-3 text-left transition-colors ${
+                    submitted && isCorrectOption
+                      ? "border-green-300 bg-green-50"
+                      : submitted && isSelected && !isCorrectOption
+                        ? "border-red-300 bg-red-50"
+                        : isSelected
+                          ? "border-terracotta/50 bg-terracotta/5"
+                          : "border-sand-200 hover:border-sand-300"
+                  }`}
+                >
+                  <span dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>{option}</span>
+                </button>
+              )
+            })}
+          </div>
+
+          {!submitted ? (
+            <Button
+              onClick={() => setSubmitted(true)}
+              disabled={selectedAnswer === null}
+              className="bg-terracotta hover:bg-terracotta/90"
+            >
+              Check Answer
+            </Button>
+          ) : (
+            <div className="space-y-3">
+              <div className={`rounded-lg p-3 ${isCorrect ? "bg-green-50 border border-green-200" : "bg-red-50 border border-red-200"}`}>
+                <p className={`text-sm font-medium ${isCorrect ? "text-green-800" : "text-red-800"}`}>
+                  {isCorrect ? "Correct!" : "Not quite."}
+                </p>
+                <p className="text-sm text-charcoal/70 mt-1">{grammar.microCheck.explanation}</p>
+              </div>
+              <Button
+                onClick={onComplete}
+                className="bg-terracotta hover:bg-terracotta/90 gap-2"
+              >
+                See it in a conversation
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </div>
+          )}
+        </Card>
+      )}
+    </div>
+  )
+}
+
+// ─── Reading Phase ───────────────────────────────────────────────
+
+function ReadingPhase({
+  story,
+  moduleId,
+  onComplete,
+}: {
+  story: ReadingExercise
+  moduleId: string
+  onComplete: () => void
+}) {
+  return (
+    <div className="space-y-6">
+      <h2 className="text-lg font-semibold text-charcoal">Reading</h2>
+      <ReadingStory story={story} moduleId={moduleId} />
+      <div className="flex justify-end">
+        <Button
+          onClick={onComplete}
+          className="bg-terracotta hover:bg-terracotta/90 gap-2"
+        >
+          Continue to Writing
+          <ArrowRight className="h-4 w-4" />
+        </Button>
+      </div>
+    </div>
+  )
+}
+
+// ─── Writing Phase ───────────────────────────────────────────────
+
+function WritingPhase({
+  writing,
+  onComplete,
+}: {
+  writing: Lesson["phases"]["writing"]
+  onComplete: () => void
+}) {
+  const [step, setStep] = useState<"word-order" | "fill-blank">("word-order")
+
+  return (
+    <div className="space-y-6">
+      <h2 className="text-lg font-semibold text-charcoal">Writing</h2>
+
+      {step === "word-order" ? (
+        <WordOrderExercise
+          exercise={writing.wordOrder}
+          onComplete={() => setStep("fill-blank")}
+        />
+      ) : (
+        <FillBlankExercise exercise={writing.fillBlank} onComplete={onComplete} />
+      )}
+    </div>
+  )
+}
+
+function WordOrderExercise({
+  exercise,
+  onComplete,
+}: {
+  exercise: Lesson["phases"]["writing"]["wordOrder"]
+  onComplete: () => void
+}) {
+  const [selected, setSelected] = useState<string[]>([])
+  const [submitted, setSubmitted] = useState(false)
+  const [availableTiles, setAvailableTiles] = useState(() =>
+    [...exercise.tiles].sort(() => Math.random() - 0.5)
+  )
+
+  const isCorrect =
+    selected.length === exercise.correct.length &&
+    selected.every((w, i) => w === exercise.correct[i])
+
+  const handleTileClick = (tile: string, fromSelected: boolean) => {
+    if (submitted) return
+    if (fromSelected) {
+      setSelected(selected.filter((_, i) => i !== selected.indexOf(tile)))
+      setAvailableTiles([...availableTiles, tile])
+    } else {
+      setSelected([...selected, tile])
+      const idx = availableTiles.indexOf(tile)
+      setAvailableTiles(availableTiles.filter((_, i) => i !== idx))
+    }
+  }
+
+  return (
+    <Card className="border-sand-200 bg-white p-6">
+      <p className="mb-4 font-semibold text-charcoal">{exercise.instruction}</p>
+
+      {/* Answer area */}
+      <div
+        className={`mb-4 flex min-h-[60px] flex-wrap items-center gap-2 rounded-lg border-2 border-dashed p-4 ${
+          submitted && isCorrect
+            ? "border-green-300 bg-green-50"
+            : submitted && !isCorrect
+              ? "border-red-300 bg-red-50"
+              : "border-sand-300 bg-sand-50"
+        }`}
+        dir="rtl"
+      >
+        {selected.length === 0 && (
+          <span className="text-sm text-charcoal/40">Tap words below to arrange them</span>
+        )}
+        {selected.map((word, i) => (
+          <button
+            key={`selected-${i}`}
+            onClick={() => handleTileClick(word, true)}
+            className="rounded-lg bg-terracotta/10 border border-terracotta/30 px-4 py-2 text-lg text-charcoal transition-colors hover:bg-terracotta/20"
+            style={{ fontFamily: "var(--font-persian)" }}
+            disabled={submitted}
+          >
+            {word}
+          </button>
+        ))}
+      </div>
+
+      {/* Available tiles */}
+      <div className="mb-6 flex flex-wrap gap-2 justify-center" dir="rtl">
+        {availableTiles.map((tile, i) => (
+          <button
+            key={`available-${i}`}
+            onClick={() => handleTileClick(tile, false)}
+            className="rounded-lg bg-white border border-sand-300 px-4 py-2 text-lg text-charcoal transition-colors hover:bg-sand-100 hover:border-sand-400"
+            style={{ fontFamily: "var(--font-persian)" }}
+            disabled={submitted}
+          >
+            {tile}
+          </button>
+        ))}
+      </div>
+
+      {!submitted ? (
+        <Button
+          onClick={() => setSubmitted(true)}
+          disabled={selected.length !== exercise.correct.length}
+          className="bg-terracotta hover:bg-terracotta/90"
+        >
+          Check
+        </Button>
+      ) : (
+        <div className="space-y-3">
+          <p className={`text-sm font-medium ${isCorrect ? "text-green-700" : "text-red-700"}`}>
+            {isCorrect ? "Perfect!" : `The correct order is: ${exercise.correct.join(" ")}`}
+          </p>
+          <Button onClick={onComplete} className="bg-terracotta hover:bg-terracotta/90 gap-2">
+            {isCorrect ? "Next Exercise" : "Continue"}
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        </div>
+      )}
+    </Card>
+  )
+}
+
+function FillBlankExercise({
+  exercise,
+  onComplete,
+}: {
+  exercise: Lesson["phases"]["writing"]["fillBlank"]
+  onComplete: () => void
+}) {
+  const [selected, setSelected] = useState<string | null>(null)
+  const [submitted, setSubmitted] = useState(false)
+
+  const isCorrect = selected === exercise.correctAnswer
+
+  // Split sentence around ___
+  const parts = exercise.sentence.split("___")
+
+  return (
+    <Card className="border-sand-200 bg-white p-6">
+      <p className="mb-4 font-semibold text-charcoal">Fill in the blank</p>
+
+      {/* Sentence with blank */}
+      <div
+        className="mb-6 rounded-lg bg-sand-50 p-4 text-center text-2xl text-charcoal"
+        dir="rtl"
+        style={{ fontFamily: "var(--font-persian)" }}
+      >
+        {parts[0]}
+        <span
+          className={`inline-block min-w-[80px] mx-2 border-b-2 px-2 py-1 ${
+            submitted && isCorrect
+              ? "border-green-500 text-green-700"
+              : submitted && !isCorrect
+                ? "border-red-500 text-red-700"
+                : selected
+                  ? "border-terracotta text-terracotta"
+                  : "border-charcoal/30"
+          }`}
+        >
+          {selected || "\u00A0"}
+        </span>
+        {parts[1]}
+      </div>
+
+      {/* Choices */}
+      <div className="mb-6 flex flex-wrap gap-3 justify-center">
+        {exercise.choices.map((choice) => (
+          <button
+            key={choice}
+            onClick={() => !submitted && setSelected(choice)}
+            disabled={submitted}
+            className={`rounded-lg border-2 px-5 py-3 text-lg transition-colors ${
+              submitted && choice === exercise.correctAnswer
+                ? "border-green-300 bg-green-50"
+                : submitted && choice === selected && !isCorrect
+                  ? "border-red-300 bg-red-50"
+                  : choice === selected
+                    ? "border-terracotta/50 bg-terracotta/5"
+                    : "border-sand-200 hover:border-sand-300"
+            }`}
+            style={{ fontFamily: "var(--font-persian)" }}
+          >
+            {choice}
+          </button>
+        ))}
+      </div>
+
+      {!submitted ? (
+        <Button
+          onClick={() => setSubmitted(true)}
+          disabled={!selected}
+          className="bg-terracotta hover:bg-terracotta/90"
+        >
+          Check
+        </Button>
+      ) : (
+        <div className="space-y-3">
+          <p className={`text-sm font-medium ${isCorrect ? "text-green-700" : "text-red-700"}`}>
+            {isCorrect ? "Correct!" : `The answer is: ${exercise.correctAnswer}`}
+          </p>
+          <Button onClick={onComplete} className="bg-terracotta hover:bg-terracotta/90 gap-2">
+            Complete Lesson
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        </div>
+      )}
+    </Card>
+  )
+}
+
+// ─── Completion Phase ────────────────────────────────────────────
+
+function CompletionPhase({
+  lesson,
+  moduleId,
+}: {
+  lesson: Lesson
+  moduleId: string
+}) {
+  const router = useRouter()
+
+  // Mark lesson complete on mount
+  useState(() => {
+    markLessonComplete(moduleId, lesson.id)
+  })
+
+  return (
+    <Card className="border-sand-200 bg-white p-10 text-center">
+      <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-100">
+        <Check className="h-10 w-10 text-green-700" />
+      </div>
+
+      <h2 className="mb-2 font-serif text-3xl font-bold text-charcoal">Lesson Complete!</h2>
+      <p className="mb-6 text-charcoal/70">Great job finishing &ldquo;{lesson.title}&rdquo;</p>
+
+      {/* What you learned */}
+      <div className="mb-8 rounded-xl bg-sand-50 p-6 text-left">
+        <h3 className="mb-3 font-semibold text-charcoal">What you learned:</h3>
+        <ul className="space-y-2 text-sm text-charcoal/70">
+          <li className="flex items-start gap-2">
+            <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
+            <span>{lesson.phases.grammar.title}</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
+            <span>{lesson.phases.vocabIndices[1] - lesson.phases.vocabIndices[0]} new vocabulary words</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
+            <span>Reading comprehension practice</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
+            <span>Writing exercises</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Next lesson preview */}
+      {lesson.nextLesson && (
+        <div className="mb-8 rounded-xl border border-terracotta/20 bg-terracotta/5 p-4">
+          <p className="text-sm text-charcoal/50 mb-1">Up next</p>
+          <p className="font-semibold text-charcoal">{lesson.nextLesson.title}</p>
+        </div>
+      )}
+
+      {/* Navigation buttons */}
+      <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
+        {lesson.nextLesson && (
+          <Button
+            onClick={() => router.push(`/modules/1/lessons/${lesson.nextLesson!.id}`)}
+            className="bg-terracotta hover:bg-terracotta/90 gap-2"
+          >
+            Continue to Next Lesson
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        )}
+        <Button
+          variant="outline"
+          onClick={() => router.push(`/modules/1/lessons/${lesson.id}`)}
+        >
+          <RotateCcw className="mr-2 h-4 w-4" />
+          Review Lesson
+        </Button>
+        <Button
+          variant="outline"
+          onClick={() => router.push(`/modules/${moduleId}`)}
+        >
+          Back to Module
+        </Button>
+      </div>
+    </Card>
+  )
+}

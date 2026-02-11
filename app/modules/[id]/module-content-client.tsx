@@ -3,14 +3,19 @@
 import Link from "next/link"
 import { modules } from "@/lib/module-data"
 import { LearningAreaCard } from "@/components/learning-area-card"
+import { LessonCard } from "@/components/lesson-card"
 import { ModuleProgressSidebar } from "@/components/module-progress-sidebar"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import { useModuleProgress } from "@/hooks/use-module-progress"
+import { module1Lessons } from "@/lib/lesson-data"
+import { isLessonComplete } from "@/lib/progress-storage"
 
 export default function ModuleContentClient({ id }: { id: string }) {
   const module = modules.find((m) => m.id.toString() === id)
   const { vocabulary: vocabularyProgress, reading: readingProgress, writing: writingProgress, grammar: grammarProgress, overall: overallProgress } = useModuleProgress(id)
+
+  const isModule1 = id === "1"
 
   const levelColors = {
     alphabet: "bg-blue-100 text-blue-700 border-blue-300",
@@ -64,44 +69,60 @@ export default function ModuleContentClient({ id }: { id: string }) {
             </div>
           </div>
 
-          {/* Learning Areas */}
-          <section>
-            <h2 className="mb-6 text-2xl font-bold text-charcoal">Learning Areas</h2>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <LearningAreaCard
-                icon="vocabulary"
-                title="Vocabulary"
-                description="Learn essential words and phrases for this module"
-                progress={vocabularyProgress}
-                href={`/modules/${module.id}/vocabulary`}
-              />
-
-              <LearningAreaCard
-                icon="grammar"
-                title="Grammar"
-                description="Master grammar concepts and sentence structures"
-                progress={grammarProgress}
-                href={`/modules/${module.id}/grammar`}
-              />
-
-              <LearningAreaCard
-                icon="reading"
-                title="Reading"
-                description="Practice reading comprehension with relevant texts"
-                progress={readingProgress}
-                href={`/modules/${module.id}/reading`}
-              />
-
-              <LearningAreaCard
-                icon="writing"
-                title="Writing"
-                description="Develop writing skills through guided exercises"
-                progress={writingProgress}
-                href={`/modules/${module.id}/writing`}
-              />
-            </div>
-          </section>
+          {/* Lessons (Module 1) or Learning Areas (all other modules) */}
+          {isModule1 ? (
+            <section>
+              <h2 className="mb-6 text-2xl font-bold text-charcoal">Lessons</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {module1Lessons.map((lesson, index) => {
+                  const complete = isLessonComplete("1", lesson.id)
+                  const previousComplete = index === 0 || isLessonComplete("1", module1Lessons[index - 1].id)
+                  return (
+                    <LessonCard
+                      key={lesson.id}
+                      lesson={lesson}
+                      isComplete={complete}
+                      isLocked={!previousComplete}
+                    />
+                  )
+                })}
+              </div>
+            </section>
+          ) : (
+            <section>
+              <h2 className="mb-6 text-2xl font-bold text-charcoal">Learning Areas</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <LearningAreaCard
+                  icon="vocabulary"
+                  title="Vocabulary"
+                  description="Learn essential words and phrases for this module"
+                  progress={vocabularyProgress}
+                  href={`/modules/${module.id}/vocabulary`}
+                />
+                <LearningAreaCard
+                  icon="grammar"
+                  title="Grammar"
+                  description="Master grammar concepts and sentence structures"
+                  progress={grammarProgress}
+                  href={`/modules/${module.id}/grammar`}
+                />
+                <LearningAreaCard
+                  icon="reading"
+                  title="Reading"
+                  description="Practice reading comprehension with relevant texts"
+                  progress={readingProgress}
+                  href={`/modules/${module.id}/reading`}
+                />
+                <LearningAreaCard
+                  icon="writing"
+                  title="Writing"
+                  description="Develop writing skills through guided exercises"
+                  progress={writingProgress}
+                  href={`/modules/${module.id}/writing`}
+                />
+              </div>
+            </section>
+          )}
         </div>
 
         {/* Progress Sidebar */}
