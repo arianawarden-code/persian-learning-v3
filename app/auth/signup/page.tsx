@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useForm } from "react-hook-form"
@@ -31,6 +31,11 @@ export default function SignupPage() {
   const router = useRouter()
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
+  const [submittedEmail, setSubmittedEmail] = useState("")
+  const [submittedPassword, setSubmittedPassword] = useState("")
+  const [showResend, setShowResend] = useState(false)
+  const [resending, setResending] = useState(false)
+  const [resent, setResent] = useState(false)
 
   const {
     register,
@@ -60,8 +65,30 @@ export default function SignupPage() {
       return
     }
 
+    setSubmittedEmail(data.email)
+    setSubmittedPassword(data.password)
     setSuccess(true)
   }
+
+  async function handleResend() {
+    setResending(true)
+    const supabase = createClient()
+    await supabase.auth.signUp({
+      email: submittedEmail,
+      password: submittedPassword,
+      options: {
+        emailRedirectTo: `${window.location.origin}/auth/callback`,
+      },
+    })
+    setResending(false)
+    setResent(true)
+  }
+
+  useEffect(() => {
+    if (!success) return
+    const timer = setTimeout(() => setShowResend(true), 15000)
+    return () => clearTimeout(timer)
+  }, [success])
 
   if (success) {
     return (
@@ -70,7 +97,7 @@ export default function SignupPage() {
           <CardHeader className="text-center">
             <CardTitle className="font-serif text-2xl text-terracotta">Check Your Email</CardTitle>
             <CardDescription className="text-charcoal/60">
-              We sent a confirmation link to your email address. Click it to activate your account.
+              We sent a confirmation link to <span className="font-semibold text-charcoal">{submittedEmail}</span>. Click it to activate your account. It may take a minute to arrive.
             </CardDescription>
           </CardHeader>
           <CardContent className="text-center">
@@ -79,6 +106,22 @@ export default function SignupPage() {
                 Back to Home
               </Button>
             </Link>
+            {showResend && (
+              <p className="mt-4 text-sm text-charcoal/50">
+                Didn&apos;t receive it?{" "}
+                {resent ? (
+                  <span className="text-green-600">Email resent!</span>
+                ) : (
+                  <button
+                    onClick={handleResend}
+                    disabled={resending}
+                    className="font-medium text-terracotta hover:underline"
+                  >
+                    {resending ? "Resending..." : "Resend email"}
+                  </button>
+                )}
+              </p>
+            )}
           </CardContent>
         </Card>
       </div>
