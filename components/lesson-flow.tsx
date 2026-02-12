@@ -9,13 +9,18 @@ import {
   ArrowLeft,
   BookOpen,
   Check,
+  ChevronLeft,
   Clock,
   RotateCcw,
+  Star,
+  Volume2,
 } from "lucide-react"
 import type { Lesson } from "@/lib/lesson-data"
 import type { VocabularyWord, ReadingExercise, GrammarExercise, WritingExercise } from "@/lib/module-data"
 import { ReadingStory } from "@/components/reading-story"
 import { markLessonComplete } from "@/lib/progress-storage"
+import { seedWordsFromModule, updateCardAfterReview } from "@/lib/srs-storage"
+import { usePersianSpeech } from "@/hooks/use-persian-speech"
 
 // ─── Phase types ─────────────────────────────────────────────────
 
@@ -86,7 +91,7 @@ export function LessonFlow({ lesson, vocabWords, grammarExercise, readingStory, 
         <IntroPhase lesson={lesson} onStart={goNext} />
       )}
       {phase === "vocabulary" && (
-        <VocabularyPhase words={vocabWords} onComplete={goNext} />
+        <VocabularyPhase words={vocabWords} moduleId={moduleId} onComplete={goNext} />
       )}
       {phase === "grammar" && (
         <GrammarPhase grammar={grammarExercise} onComplete={goNext} />
@@ -136,38 +141,77 @@ function IntroPhase({ lesson, onStart }: { lesson: Lesson; onStart: () => void }
 
 // ─── Vocabulary Phase ────────────────────────────────────────────
 
+type CardRating = "again" | "hard" | "good" | "easy"
+
 function VocabularyPhase({
   words,
+  moduleId,
   onComplete,
 }: {
   words: VocabularyWord[]
+  moduleId: string
   onComplete: () => void
 }) {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [flipped, setFlipped] = useState(false)
+  const [isFlipped, setIsFlipped] = useState(false)
   const [showInterstitial, setShowInterstitial] = useState(false)
+  const [starredWords, setStarredWords] = useState<Set<string>>(new Set())
+  const { speak, isSpeaking, isSupported } = usePersianSpeech()
 
   const INTERSTITIAL_AFTER = 6
 
-  const handleNext = () => {
+  // Seed SRS on mount
+  useState(() => {
+    seedWordsFromModule(moduleId, words)
+    const stored = localStorage.getItem(`starred-words-${moduleId}`)
+    if (stored) {
+      setStarredWords(new Set(JSON.parse(stored)))
+    }
+  })
+
+  const toggleStar = (word: VocabularyWord, e: React.MouseEvent) => {
+    e.stopPropagation()
+    const newStarred = new Set(starredWords)
+    if (newStarred.has(word.persian)) {
+      newStarred.delete(word.persian)
+    } else {
+      newStarred.add(word.persian)
+    }
+    setStarredWords(newStarred)
+    localStorage.setItem(`starred-words-${moduleId}`, JSON.stringify([...newStarred]))
+  }
+
+  const handleRate = (rating: CardRating) => {
+    const qualityMap: Record<CardRating, number> = { again: 1, hard: 3, good: 4, easy: 5 }
+    updateCardAfterReview(words[currentIndex].persian, qualityMap[rating])
+
+    // Check for interstitial
     if (currentIndex === INTERSTITIAL_AFTER - 1 && !showInterstitial) {
       setShowInterstitial(true)
-      setFlipped(false)
+      setIsFlipped(false)
       return
     }
 
+    // Auto-advance or complete
     if (currentIndex < words.length - 1) {
       setCurrentIndex(currentIndex + 1)
-      setFlipped(false)
+      setIsFlipped(false)
     } else {
       onComplete()
+    }
+  }
+
+  const handlePrevious = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1)
+      setIsFlipped(false)
     }
   }
 
   const handleContinueFromInterstitial = () => {
     setShowInterstitial(false)
     setCurrentIndex(INTERSTITIAL_AFTER)
-    setFlipped(false)
+    setIsFlipped(false)
   }
 
   if (showInterstitial) {
@@ -202,52 +246,129 @@ function VocabularyPhase({
         </span>
       </div>
 
+      {/* Flashcard */}
       <Card
-        className="border-sand-200 bg-white p-8 cursor-pointer min-h-[280px] flex flex-col items-center justify-center text-center transition-all hover:shadow-md"
-        onClick={() => setFlipped(!flipped)}
+        className="relative min-h-[400px] cursor-pointer border-sand-200 bg-white p-8 transition-all hover:shadow-lg"
+        onClick={() => setIsFlipped(!isFlipped)}
       >
-        {!flipped ? (
-          <>
-            <p
-              className="mb-3 text-5xl leading-relaxed text-charcoal"
-              dir="rtl"
-              style={{ fontFamily: "var(--font-persian)" }}
-            >
-              {word.persian}
-            </p>
-            <p className="text-sm text-charcoal/50 italic">{word.transliteration}</p>
-            <p className="mt-6 text-xs text-charcoal/40">Tap to reveal meaning</p>
-          </>
-        ) : (
-          <>
-            <p
-              className="mb-2 text-3xl text-charcoal"
-              dir="rtl"
-              style={{ fontFamily: "var(--font-persian)" }}
-            >
-              {word.persian}
-            </p>
-            <p className="mb-1 text-sm text-charcoal/50 italic">{word.transliteration}</p>
-            <p className="mb-4 text-2xl font-semibold text-terracotta">{word.english}</p>
-            <div className="rounded-lg bg-sand-50 px-4 py-3 w-full">
-              <p className="text-sm text-charcoal/70" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
-                {word.example}
-              </p>
-              <p className="mt-1 text-xs text-charcoal/50">{word.exampleTranslation}</p>
-            </div>
-          </>
+        {/* Audio button */}
+        {isSupported && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              speak(word.persian)
+            }}
+            className="absolute left-6 top-6 rounded-full p-3 transition-colors hover:bg-sand-100"
+          >
+            <Volume2
+              className={`h-6 w-6 transition-all ${
+                isSpeaking ? "text-terracotta" : "text-sand-300 hover:text-terracotta"
+              }`}
+            />
+          </button>
         )}
+
+        {/* Star button */}
+        <button
+          onClick={(e) => toggleStar(word, e)}
+          className="absolute right-6 top-6 rounded-full p-3 transition-colors hover:bg-sand-100"
+        >
+          <Star
+            className={`h-6 w-6 transition-all ${
+              starredWords.has(word.persian)
+                ? "fill-yellow-400 text-yellow-400"
+                : "text-sand-300 hover:text-yellow-400"
+            }`}
+          />
+        </button>
+
+        <div className="flex h-full min-h-[350px] flex-col items-center justify-center text-center">
+          {!isFlipped ? (
+            <div className="space-y-4">
+              <p className="text-sm uppercase tracking-wide text-charcoal/60">Persian Word</p>
+              <p className="font-serif text-6xl font-bold text-terracotta">{word.persian}</p>
+              <p className="text-2xl text-charcoal/70">{word.transliteration}</p>
+              <p className="mt-8 text-sm text-charcoal/50">Click to reveal meaning</p>
+            </div>
+          ) : (
+            <div className="space-y-6">
+              <p className="text-sm uppercase tracking-wide text-charcoal/60">English Meaning</p>
+              <p className="text-5xl font-bold text-charcoal">{word.english}</p>
+
+              <div className="mt-8 rounded-lg bg-sand-50 p-6 text-left">
+                <p className="mb-2 text-sm font-medium text-charcoal/60">Example:</p>
+                <div className="mb-3 flex items-center gap-2" dir="rtl">
+                  <p className="font-serif text-xl text-charcoal">{word.example}</p>
+                  {isSupported && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        speak(word.example)
+                      }}
+                      className="shrink-0 rounded-full p-2.5 transition-colors hover:bg-sand-200"
+                    >
+                      <Volume2
+                        className={`h-5 w-5 ${
+                          isSpeaking ? "text-terracotta" : "text-charcoal/40 hover:text-terracotta"
+                        }`}
+                      />
+                    </button>
+                  )}
+                </div>
+                <p className="text-lg italic text-charcoal/70">{word.exampleTranslation}</p>
+              </div>
+            </div>
+          )}
+        </div>
       </Card>
 
-      <div className="flex justify-end">
-        <Button
-          onClick={handleNext}
-          className="bg-terracotta hover:bg-terracotta/90 gap-2"
-        >
-          {currentIndex < words.length - 1 ? "Next Word" : "Continue to Grammar"}
-          <ArrowRight className="h-4 w-4" />
-        </Button>
-      </div>
+      {/* Rating buttons — shown after flip */}
+      {isFlipped && (
+        <div className="grid grid-cols-4 gap-3">
+          <Button
+            variant="outline"
+            className="border-red-300 bg-red-50 text-red-700 hover:bg-red-100"
+            onClick={() => handleRate("again")}
+          >
+            Again
+          </Button>
+          <Button
+            variant="outline"
+            className="border-orange-300 bg-orange-50 text-orange-700 hover:bg-orange-100"
+            onClick={() => handleRate("hard")}
+          >
+            Hard
+          </Button>
+          <Button
+            variant="outline"
+            className="border-green-300 bg-green-50 text-green-700 hover:bg-green-100"
+            onClick={() => handleRate("good")}
+          >
+            Good
+          </Button>
+          <Button
+            variant="outline"
+            className="border-blue-300 bg-blue-50 text-blue-700 hover:bg-blue-100"
+            onClick={() => handleRate("easy")}
+          >
+            Easy
+          </Button>
+        </div>
+      )}
+
+      {/* Previous button */}
+      {currentIndex > 0 && (
+        <div className="flex items-center">
+          <Button
+            variant="outline"
+            onClick={handlePrevious}
+            className="gap-2 bg-transparent"
+          >
+            <ChevronLeft className="h-4 w-4" />
+            Previous
+          </Button>
+        </div>
+      )}
     </div>
   )
 }
