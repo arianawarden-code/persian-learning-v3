@@ -39,7 +39,7 @@ export const module1Lessons: Lesson[] = [
     number: 2,
     title: "Greetings & Politeness",
     goal: "Master common greetings and polite expressions",
-    timeEstimate: "15 min",
+    timeEstimate: "7 min",
     phases: {
       vocabIndices: [10, 20],   // اسم through هست
       grammarIndex: 1,          // "Asking 'How are you?'"
@@ -51,9 +51,9 @@ export const module1Lessons: Lesson[] = [
   {
     id: "3",
     number: 3,
-    title: "At Home & Goodbye",
-    goal: "Talk about places and say goodbye properly",
-    timeEstimate: "15 min",
+    title: "Saying Goodbye",
+    goal: "You’ll be able to say goodbye politely and use basic courtesy phrases in Persian",
+    timeEstimate: "6 min",
     phases: {
       vocabIndices: [20, 25],   // چه through امروز
       grammarIndex: 2,          // "Using است and هست"
