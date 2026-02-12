@@ -11,10 +11,9 @@ import {
   Check,
   Clock,
   RotateCcw,
-  Volume2,
 } from "lucide-react"
 import type { Lesson } from "@/lib/lesson-data"
-import type { VocabularyWord, ReadingExercise } from "@/lib/module-data"
+import type { VocabularyWord, ReadingExercise, GrammarExercise, WritingExercise } from "@/lib/module-data"
 import { ReadingStory } from "@/components/reading-story"
 import { markLessonComplete } from "@/lib/progress-storage"
 
@@ -27,13 +26,15 @@ const PHASE_ORDER: Phase[] = ["intro", "vocabulary", "grammar", "reading", "writ
 interface LessonFlowProps {
   lesson: Lesson
   vocabWords: VocabularyWord[]
+  grammarExercise: GrammarExercise
   readingStory: ReadingExercise
+  writingExercises: WritingExercise[]
   moduleId: string
 }
 
 // ─── Component ───────────────────────────────────────────────────
 
-export function LessonFlow({ lesson, vocabWords, readingStory, moduleId }: LessonFlowProps) {
+export function LessonFlow({ lesson, vocabWords, grammarExercise, readingStory, writingExercises, moduleId }: LessonFlowProps) {
   const router = useRouter()
   const [phase, setPhase] = useState<Phase>("intro")
 
@@ -88,16 +89,16 @@ export function LessonFlow({ lesson, vocabWords, readingStory, moduleId }: Lesso
         <VocabularyPhase words={vocabWords} onComplete={goNext} />
       )}
       {phase === "grammar" && (
-        <GrammarPhase grammar={lesson.phases.grammar} onComplete={goNext} />
+        <GrammarPhase grammar={grammarExercise} onComplete={goNext} />
       )}
       {phase === "reading" && (
         <ReadingPhase story={readingStory} moduleId={moduleId} onComplete={goNext} />
       )}
       {phase === "writing" && (
-        <WritingPhase writing={lesson.phases.writing} onComplete={goNext} />
+        <WritingPhase exercises={writingExercises} onComplete={goNext} />
       )}
       {phase === "completion" && (
-        <CompletionPhase lesson={lesson} moduleId={moduleId} />
+        <CompletionPhase lesson={lesson} grammarTitle={grammarExercise.instruction} moduleId={moduleId} />
       )}
     </div>
   )
@@ -257,14 +258,17 @@ function GrammarPhase({
   grammar,
   onComplete,
 }: {
-  grammar: Lesson["phases"]["grammar"]
+  grammar: GrammarExercise
   onComplete: () => void
 }) {
   const [showCheck, setShowCheck] = useState(false)
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
   const [submitted, setSubmitted] = useState(false)
 
-  const isCorrect = selectedAnswer === grammar.microCheck.correctAnswer
+  const isCorrect = selectedAnswer === grammar.correctAnswer
+  const patternParts = grammar.patternParts || []
+  const patternExamples = grammar.patternExamples || []
+  const note = grammar.note || ""
 
   return (
     <div className="space-y-6">
@@ -272,45 +276,51 @@ function GrammarPhase({
 
       {/* Pattern display */}
       <Card className="border-sand-200 bg-white p-8">
-        <h3 className="mb-4 text-xl font-bold text-charcoal">{grammar.title}</h3>
+        <h3 className="mb-4 text-xl font-bold text-charcoal">{grammar.instruction}</h3>
 
-        <div className="mb-6 rounded-xl bg-terracotta/5 border border-terracotta/20 p-6 text-center">
-          <div className="flex items-center justify-center gap-3 text-2xl" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
-            {grammar.patternParts.map((part, i) => (
-              <span
-                key={i}
-                className={
-                  part.startsWith("[")
-                    ? "rounded bg-terracotta/20 px-3 py-1 text-terracotta font-medium"
-                    : "text-charcoal"
-                }
-              >
-                {part}
-              </span>
-            ))}
+        {grammar.pattern && (
+          <div className="mb-6 rounded-xl bg-terracotta/5 border border-terracotta/20 p-6 text-center">
+            <div className="flex items-center justify-center gap-3 text-2xl" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
+              {patternParts.map((part, i) => (
+                <span
+                  key={i}
+                  className={
+                    part.startsWith("[")
+                      ? "rounded bg-terracotta/20 px-3 py-1 text-terracotta font-medium"
+                      : "text-charcoal"
+                  }
+                >
+                  {part}
+                </span>
+              ))}
+            </div>
+            <p className="mt-3 text-sm text-charcoal/50">{grammar.pattern}</p>
           </div>
-          <p className="mt-3 text-sm text-charcoal/50">{grammar.pattern}</p>
-        </div>
+        )}
 
         {/* Examples */}
-        <div className="space-y-3 mb-6">
-          {grammar.examples.map((ex, i) => (
-            <div key={i} className="flex items-center gap-4 rounded-lg bg-sand-50 px-4 py-3">
-              <p className="text-xl text-charcoal flex-1" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
-                {ex.persian}
-              </p>
-              <div className="text-right">
-                <p className="text-sm text-charcoal/50 italic">{ex.transliteration}</p>
-                <p className="text-sm text-charcoal/70">{ex.english}</p>
+        {patternExamples.length > 0 && (
+          <div className="space-y-3 mb-6">
+            {patternExamples.map((ex, i) => (
+              <div key={i} className="flex items-center gap-4 rounded-lg bg-sand-50 px-4 py-3">
+                <p className="text-xl text-charcoal flex-1" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
+                  {ex.persian}
+                </p>
+                <div className="text-right">
+                  <p className="text-sm text-charcoal/50 italic">{ex.transliteration}</p>
+                  <p className="text-sm text-charcoal/70">{ex.english}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
         {/* Note */}
-        <div className="rounded-lg bg-blue-50 border border-blue-200 px-4 py-3">
-          <p className="text-sm text-blue-800">{grammar.note}</p>
-        </div>
+        {note && (
+          <div className="rounded-lg bg-blue-50 border border-blue-200 px-4 py-3">
+            <p className="text-sm text-blue-800">{note}</p>
+          </div>
+        )}
       </Card>
 
       {/* Micro-check or transition */}
@@ -333,11 +343,11 @@ function GrammarPhase({
         </div>
       ) : (
         <Card className="border-sand-200 bg-white p-6">
-          <p className="mb-4 font-semibold text-charcoal">{grammar.microCheck.question}</p>
+          <p className="mb-4 font-semibold text-charcoal">{grammar.question}</p>
           <div className="space-y-2 mb-4">
-            {grammar.microCheck.options.map((option, i) => {
+            {grammar.options.map((option, i) => {
               const isSelected = selectedAnswer === i
-              const isCorrectOption = i === grammar.microCheck.correctAnswer
+              const isCorrectOption = i === grammar.correctAnswer
 
               return (
                 <button
@@ -374,7 +384,9 @@ function GrammarPhase({
                 <p className={`text-sm font-medium ${isCorrect ? "text-green-800" : "text-red-800"}`}>
                   {isCorrect ? "Correct!" : "Not quite."}
                 </p>
-                <p className="text-sm text-charcoal/70 mt-1">{grammar.microCheck.explanation}</p>
+                {grammar.explanation && (
+                  <p className="text-sm text-charcoal/70 mt-1">{grammar.explanation}</p>
+                )}
               </div>
               <Button
                 onClick={onComplete}
@@ -422,46 +434,63 @@ function ReadingPhase({
 // ─── Writing Phase ───────────────────────────────────────────────
 
 function WritingPhase({
-  writing,
+  exercises,
   onComplete,
 }: {
-  writing: Lesson["phases"]["writing"]
+  exercises: WritingExercise[]
   onComplete: () => void
 }) {
-  const [step, setStep] = useState<"word-order" | "fill-blank">("word-order")
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const exercise = exercises[currentIndex]
+  const isLast = currentIndex >= exercises.length - 1
+
+  const handleExerciseComplete = () => {
+    if (isLast) {
+      onComplete()
+    } else {
+      setCurrentIndex(currentIndex + 1)
+    }
+  }
+
+  if (exercise.type === "word-order") {
+    return (
+      <div className="space-y-6">
+        <h2 className="text-lg font-semibold text-charcoal">Writing</h2>
+        <WordOrderExerciseCard exercise={exercise} onComplete={handleExerciseComplete} isLast={isLast} />
+      </div>
+    )
+  }
 
   return (
     <div className="space-y-6">
       <h2 className="text-lg font-semibold text-charcoal">Writing</h2>
-
-      {step === "word-order" ? (
-        <WordOrderExercise
-          exercise={writing.wordOrder}
-          onComplete={() => setStep("fill-blank")}
-        />
-      ) : (
-        <FillBlankExercise exercise={writing.fillBlank} onComplete={onComplete} />
-      )}
+      <FillBlankExerciseCard exercise={exercise} onComplete={handleExerciseComplete} isLast={isLast} />
     </div>
   )
 }
 
-function WordOrderExercise({
+function WordOrderExerciseCard({
   exercise,
   onComplete,
+  isLast,
 }: {
-  exercise: Lesson["phases"]["writing"]["wordOrder"]
+  exercise: WritingExercise
   onComplete: () => void
+  isLast: boolean
 }) {
+  const tiles = exercise.tiles || []
+  const correctOrder = exercise.correctOrder || []
+
   const [selected, setSelected] = useState<string[]>([])
   const [submitted, setSubmitted] = useState(false)
   const [availableTiles, setAvailableTiles] = useState(() =>
-    [...exercise.tiles].sort(() => Math.random() - 0.5)
+    [...tiles].sort(() => Math.random() - 0.5)
   )
 
   const isCorrect =
-    selected.length === exercise.correct.length &&
-    selected.every((w, i) => w === exercise.correct[i])
+    selected.length === correctOrder.length &&
+    selected.every((w, i) => w === correctOrder[i])
 
   const handleTileClick = (tile: string, fromSelected: boolean) => {
     if (submitted) return
@@ -524,7 +553,7 @@ function WordOrderExercise({
       {!submitted ? (
         <Button
           onClick={() => setSubmitted(true)}
-          disabled={selected.length !== exercise.correct.length}
+          disabled={selected.length !== correctOrder.length}
           className="bg-terracotta hover:bg-terracotta/90"
         >
           Check
@@ -532,10 +561,10 @@ function WordOrderExercise({
       ) : (
         <div className="space-y-3">
           <p className={`text-sm font-medium ${isCorrect ? "text-green-700" : "text-red-700"}`}>
-            {isCorrect ? "Perfect!" : `The correct order is: ${exercise.correct.join(" ")}`}
+            {isCorrect ? "Perfect!" : `The correct order is: ${correctOrder.join(" ")}`}
           </p>
           <Button onClick={onComplete} className="bg-terracotta hover:bg-terracotta/90 gap-2">
-            {isCorrect ? "Next Exercise" : "Continue"}
+            {isLast ? "Complete Lesson" : "Next Exercise"}
             <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
@@ -544,20 +573,26 @@ function WordOrderExercise({
   )
 }
 
-function FillBlankExercise({
+function FillBlankExerciseCard({
   exercise,
   onComplete,
+  isLast,
 }: {
-  exercise: Lesson["phases"]["writing"]["fillBlank"]
+  exercise: WritingExercise
   onComplete: () => void
+  isLast: boolean
 }) {
+  const sentence = exercise.sentence || ""
+  const choices = exercise.choices || []
+  const correctChoice = exercise.correctChoice || ""
+
   const [selected, setSelected] = useState<string | null>(null)
   const [submitted, setSubmitted] = useState(false)
 
-  const isCorrect = selected === exercise.correctAnswer
+  const isCorrect = selected === correctChoice
 
   // Split sentence around ___
-  const parts = exercise.sentence.split("___")
+  const parts = sentence.split("___")
 
   return (
     <Card className="border-sand-200 bg-white p-6">
@@ -588,13 +623,13 @@ function FillBlankExercise({
 
       {/* Choices */}
       <div className="mb-6 flex flex-wrap gap-3 justify-center">
-        {exercise.choices.map((choice) => (
+        {choices.map((choice) => (
           <button
             key={choice}
             onClick={() => !submitted && setSelected(choice)}
             disabled={submitted}
             className={`rounded-lg border-2 px-5 py-3 text-lg transition-colors ${
-              submitted && choice === exercise.correctAnswer
+              submitted && choice === correctChoice
                 ? "border-green-300 bg-green-50"
                 : submitted && choice === selected && !isCorrect
                   ? "border-red-300 bg-red-50"
@@ -620,10 +655,10 @@ function FillBlankExercise({
       ) : (
         <div className="space-y-3">
           <p className={`text-sm font-medium ${isCorrect ? "text-green-700" : "text-red-700"}`}>
-            {isCorrect ? "Correct!" : `The answer is: ${exercise.correctAnswer}`}
+            {isCorrect ? "Correct!" : `The answer is: ${correctChoice}`}
           </p>
           <Button onClick={onComplete} className="bg-terracotta hover:bg-terracotta/90 gap-2">
-            Complete Lesson
+            {isLast ? "Complete Lesson" : "Next Exercise"}
             <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
@@ -636,9 +671,11 @@ function FillBlankExercise({
 
 function CompletionPhase({
   lesson,
+  grammarTitle,
   moduleId,
 }: {
   lesson: Lesson
+  grammarTitle: string
   moduleId: string
 }) {
   const router = useRouter()
@@ -663,7 +700,7 @@ function CompletionPhase({
         <ul className="space-y-2 text-sm text-charcoal/70">
           <li className="flex items-start gap-2">
             <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
-            <span>{lesson.phases.grammar.title}</span>
+            <span>{grammarTitle}</span>
           </li>
           <li className="flex items-start gap-2">
             <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />

@@ -20,11 +20,16 @@ export default async function LessonPage({
     lesson.phases.vocabIndices[0],
     lesson.phases.vocabIndices[1]
   )
+  const grammarExercise = content.grammar?.[lesson.phases.grammarIndex]
   const readingStory = content.reading.find(
     (s) => s.id === lesson.phases.readingStoryId
   )
+  const writingExercises = content.writing.slice(
+    lesson.phases.writingIndices[0],
+    lesson.phases.writingIndices[1]
+  )
 
-  if (!readingStory) {
+  if (!readingStory || !grammarExercise) {
     notFound()
   }
 
@@ -43,7 +48,9 @@ export default async function LessonPage({
         <LessonPageClient
           lesson={lesson}
           vocabWords={vocabWords}
+          grammarExercise={grammarExercise}
           readingStory={readingStory}
+          writingExercises={writingExercises}
           moduleId="1"
         />
       </div>
