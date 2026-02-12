@@ -574,19 +574,19 @@ function WritingPhase({
     }
   }
 
+  let exerciseCard: React.ReactNode
   if (exercise.type === "word-order") {
-    return (
-      <div className="space-y-6">
-        <h2 className="text-lg font-semibold text-charcoal">Writing</h2>
-        <WordOrderExerciseCard exercise={exercise} onComplete={handleExerciseComplete} isLast={isLast} />
-      </div>
-    )
+    exerciseCard = <WordOrderExerciseCard exercise={exercise} onComplete={handleExerciseComplete} isLast={isLast} />
+  } else if (exercise.type === "build-word") {
+    exerciseCard = <BuildWordExerciseCard exercise={exercise} onComplete={handleExerciseComplete} isLast={isLast} />
+  } else {
+    exerciseCard = <FillBlankExerciseCard exercise={exercise} onComplete={handleExerciseComplete} isLast={isLast} />
   }
 
   return (
     <div className="space-y-6">
       <h2 className="text-lg font-semibold text-charcoal">Writing</h2>
-      <FillBlankExerciseCard exercise={exercise} onComplete={handleExerciseComplete} isLast={isLast} />
+      {exerciseCard}
     </div>
   )
 }
@@ -778,6 +778,144 @@ function FillBlankExerciseCard({
           <p className={`text-sm font-medium ${isCorrect ? "text-green-700" : "text-red-700"}`}>
             {isCorrect ? "Correct!" : `The answer is: ${correctChoice}`}
           </p>
+          <Button onClick={onComplete} className="bg-terracotta hover:bg-terracotta/90 gap-2">
+            {isLast ? "Complete Lesson" : "Next Exercise"}
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        </div>
+      )}
+    </Card>
+  )
+}
+
+function BuildWordExerciseCard({
+  exercise,
+  onComplete,
+  isLast,
+}: {
+  exercise: WritingExercise
+  onComplete: () => void
+  isLast: boolean
+}) {
+  const targetWord = exercise.targetWord || ""
+  const targetWordTransliteration = exercise.targetWordTransliteration || ""
+  const letters = exercise.availableLetters || []
+
+  const [availablePool, setAvailablePool] = useState<{ letter: string; id: number }[]>(
+    () => letters.map((letter, idx) => ({ letter, id: idx }))
+  )
+  const [answerSlots, setAnswerSlots] = useState<{ letter: string; id: number }[]>([])
+  const [submitted, setSubmitted] = useState(false)
+
+  const userWord = answerSlots.map((s) => s.letter).join("")
+  const isCorrect = userWord === targetWord
+
+  const handleLetterClick = (item: { letter: string; id: number }, fromAnswer: boolean) => {
+    if (submitted) return
+    if (fromAnswer) {
+      setAnswerSlots(answerSlots.filter((s) => s.id !== item.id))
+      setAvailablePool([...availablePool, item])
+    } else {
+      setAnswerSlots([...answerSlots, item])
+      setAvailablePool(availablePool.filter((s) => s.id !== item.id))
+    }
+  }
+
+  const handleReset = () => {
+    setAvailablePool(letters.map((letter, idx) => ({ letter, id: idx })))
+    setAnswerSlots([])
+    setSubmitted(false)
+  }
+
+  return (
+    <Card className="border-sand-200 bg-white p-6">
+      <div className="mb-4 flex items-center gap-2">
+        <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700">Build Word</span>
+      </div>
+      <p className="mb-4 font-semibold text-charcoal">{exercise.instruction}</p>
+
+      {/* Target word */}
+      <div className="mb-6 rounded-lg bg-sand-50 p-4">
+        <p className="mb-1 text-sm text-charcoal/70">Target word:</p>
+        <p className="font-serif text-3xl font-bold text-terracotta">{targetWord}</p>
+        <p className="text-lg text-charcoal/70">{targetWordTransliteration}</p>
+      </div>
+
+      {/* Available letters */}
+      <div className="mb-4">
+        <p className="mb-2 text-sm font-medium text-charcoal">Available letters:</p>
+        <div className="flex min-h-[68px] flex-wrap gap-2 rounded-lg border-2 border-sand-200 bg-white p-3">
+          {availablePool.length === 0 ? (
+            <p className="w-full text-center text-sm text-charcoal/40">All letters used</p>
+          ) : (
+            availablePool.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => handleLetterClick(item, false)}
+                disabled={submitted}
+                className="flex h-14 w-14 items-center justify-center rounded-lg border-2 border-sand-200 bg-white font-serif text-2xl font-bold text-terracotta transition-all hover:border-terracotta hover:shadow-md"
+              >
+                {item.letter}
+              </button>
+            ))
+          )}
+        </div>
+      </div>
+
+      {/* Answer area */}
+      <div className="mb-4">
+        <p className="mb-2 text-sm font-medium text-charcoal">Your answer:</p>
+        <div
+          className={`min-h-[68px] rounded-lg border-2 border-dashed p-3 ${
+            submitted && isCorrect
+              ? "border-green-300 bg-green-50"
+              : submitted && !isCorrect
+                ? "border-red-300 bg-red-50"
+                : "border-sand-300 bg-cream/30"
+          }`}
+        >
+          {answerSlots.length === 0 ? (
+            <p className="text-center font-serif text-3xl text-charcoal/30">Tap letters above</p>
+          ) : (
+            <div className="flex flex-wrap gap-2" dir="rtl">
+              {answerSlots.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => handleLetterClick(item, true)}
+                  disabled={submitted}
+                  className="flex h-14 w-14 items-center justify-center rounded-lg border-2 border-terracotta bg-terracotta/10 font-serif text-2xl font-bold text-terracotta transition-all hover:bg-terracotta/20"
+                >
+                  {item.letter}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {!submitted ? (
+        <div className="flex gap-3">
+          <Button variant="outline" onClick={handleReset}>
+            Reset
+          </Button>
+          <Button
+            onClick={() => setSubmitted(true)}
+            disabled={answerSlots.length === 0}
+            className="bg-terracotta hover:bg-terracotta/90"
+          >
+            Check
+          </Button>
+        </div>
+      ) : (
+        <div className="space-y-3">
+          <p className={`text-sm font-medium ${isCorrect ? "text-green-700" : "text-red-700"}`}>
+            {isCorrect ? "Perfect! You built the word correctly!" : `Not quite — the correct word is: ${targetWord}`}
+          </p>
+          {!isCorrect && (
+            <Button variant="outline" onClick={handleReset}>
+              Try Again
+            </Button>
+          )}
           <Button onClick={onComplete} className="bg-terracotta hover:bg-terracotta/90 gap-2">
             {isLast ? "Complete Lesson" : "Next Exercise"}
             <ArrowRight className="h-4 w-4" />

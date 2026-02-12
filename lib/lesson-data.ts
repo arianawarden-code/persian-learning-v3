@@ -30,7 +30,7 @@ export const module1Lessons: Lesson[] = [
       vocabIndices: [0, 10],    // سلام through ببخشید
       grammarIndex: 0,          // "Saying 'I am...'"
       readingStoryId: 1,        // "First Meeting"
-      writingIndices: [0, 2],   // word-order + fill-blank
+      writingIndices: [0, 3],   // word-order + fill-blank + build-word
     },
     nextLesson: { id: "2", title: "Greetings & Politeness" },
   },
@@ -44,7 +44,7 @@ export const module1Lessons: Lesson[] = [
       vocabIndices: [10, 20],   // اسم through هست
       grammarIndex: 1,          // "Asking 'How are you?'"
       readingStoryId: 2,        // "Greetings"
-      writingIndices: [2, 4],   // word-order + fill-blank
+      writingIndices: [3, 6],   // word-order + fill-blank + build-word
     },
     nextLesson: { id: "3", title: "At Home & Goodbye" },
   },
@@ -58,7 +58,7 @@ export const module1Lessons: Lesson[] = [
       vocabIndices: [20, 25],   // چه through امروز
       grammarIndex: 2,          // "Using است and هست"
       readingStoryId: 3,        // "At Home"
-      writingIndices: [4, 6],   // word-order + fill-blank
+      writingIndices: [6, 9],   // word-order + fill-blank + build-word
     },
     nextLesson: null,
   },

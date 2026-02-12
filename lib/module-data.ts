@@ -2155,7 +2155,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
     ],
     writing: [
-      // Lesson 1: word-order + fill-blank
+      // Lesson 1: word-order + fill-blank + build-word
       {
         id: 1,
         type: "word-order",
@@ -2171,37 +2171,61 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         choices: ["علی", "سلام", "اسم"],
         correctChoice: "علی",
       },
-      // Lesson 2: word-order + fill-blank
       {
         id: 3,
+        type: "build-word",
+        instruction: "Build the word 'سلام' (hello) using the letters below",
+        targetWord: "سلام",
+        targetWordTransliteration: "salām",
+        availableLetters: ["س", "ل", "ا", "م", "ر", "ت"],
+      },
+      // Lesson 2: word-order + fill-blank + build-word
+      {
+        id: 4,
         type: "word-order",
         instruction: "Arrange the words to say 'I am well, thank you'",
         tiles: ["من", "خوب", "هستم", "ممنون"],
         correctOrder: ["من", "خوب", "هستم", "ممنون"],
       },
       {
-        id: 4,
+        id: 5,
         type: "fill-blank",
         instruction: "Fill in the blank",
         sentence: "حال شما ___ است؟",
         choices: ["چطور", "خوب", "بد"],
         correctChoice: "چطور",
       },
-      // Lesson 3: word-order + fill-blank
       {
-        id: 5,
+        id: 6,
+        type: "build-word",
+        instruction: "Build the word 'ممنون' (thank you) using the letters below",
+        targetWord: "ممنون",
+        targetWordTransliteration: "mamnoon",
+        availableLetters: ["م", "ن", "و", "ا", "س", "ن", "خ", "م"],
+      },
+      // Lesson 3: word-order + fill-blank + build-word
+      {
+        id: 7,
         type: "word-order",
         instruction: "Arrange the words to say 'Goodbye, see you tomorrow'",
         tiles: ["خداحافظ", "فردا", "می‌بینیم"],
         correctOrder: ["خداحافظ", "فردا", "می‌بینیم"],
       },
       {
-        id: 6,
+        id: 8,
         type: "fill-blank",
         instruction: "Fill in the blank",
         sentence: "من امروز ___ هستم",
         choices: ["خانه", "سلام", "ممنون"],
         correctChoice: "خانه",
+      },
+      {
+        id: 9,
+        type: "build-word",
+        instruction: "Build the word 'خانه' (house) using the letters below",
+        targetWord: "خانه",
+        targetWordTransliteration: "khāne",
+        availableLetters: ["خ", "ا", "ن", "ه", "ب", "د"],
       },
     ],
 
