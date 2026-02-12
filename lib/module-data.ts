@@ -2051,7 +2051,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         textTransliteration:
           "Salām! Man Ali hastam. Esm-e shomā chist? Man Royā hastam.",
         textTranslation:
-          "Hello! I am Ali. What is your name? I am Roya.,
+          "Hello! I am Ali. What is your name? I am Roya.",
         questions: [
           {
             question: "What is the first speaker's name?",
