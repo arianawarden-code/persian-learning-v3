@@ -572,18 +572,35 @@ function ReadingPhase({
   moduleId: string
   onComplete: () => void
 }) {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const isLast = currentIndex >= stories.length - 1
+
+  const handleNext = () => {
+    if (isLast) {
+      onComplete()
+    } else {
+      setCurrentIndex(currentIndex + 1)
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+  }
+
   return (
     <div className="space-y-6">
-      <h2 className="text-lg font-semibold text-charcoal">Reading</h2>
-      {stories.map((story) => (
-        <ReadingStory key={story.id} story={story} moduleId={moduleId} />
-      ))}
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg font-semibold text-charcoal">Reading</h2>
+        {stories.length > 1 && (
+          <span className="text-sm text-charcoal/50">
+            {currentIndex + 1} / {stories.length}
+          </span>
+        )}
+      </div>
+      <ReadingStory story={stories[currentIndex]} moduleId={moduleId} />
       <div className="flex justify-end">
         <Button
-          onClick={onComplete}
+          onClick={handleNext}
           className="bg-terracotta hover:bg-terracotta/90 gap-2"
         >
-          Continue to Writing
+          {isLast ? "Continue to Writing" : "Next Story"}
           <ArrowRight className="h-4 w-4" />
         </Button>
       </div>
