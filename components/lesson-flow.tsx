@@ -920,7 +920,13 @@ function BuildWordExerciseCard({
                   key={item.id}
                   onClick={() => handleLetterClick(item, true)}
                   disabled={submitted}
-                  className="flex h-14 w-14 items-center justify-center rounded-lg border-2 border-terracotta bg-terracotta/10 font-serif text-2xl font-bold text-terracotta transition-all hover:bg-terracotta/20"
+                  className={`flex h-14 w-14 items-center justify-center rounded-lg border-2 font-serif text-2xl font-bold transition-all ${
+                    submitted && isCorrect
+                      ? "border-green-500 bg-green-100 text-green-700"
+                      : submitted && !isCorrect
+                        ? "border-red-400 bg-red-100 text-red-700"
+                        : "border-terracotta bg-terracotta/10 text-terracotta hover:bg-terracotta/20"
+                  }`}
                 >
                   {item.letter}
                 </button>
