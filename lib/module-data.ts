@@ -3015,11 +3015,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "My Grandparents",
         persianTitle: "پِدَربُزُرگ و مادَربُزُرگِ مَن",
-        text: "پِدَربُزرگِ مَن خوب اَست. اِسمِ او عَلی اَست. مادَربُزرگِ مَن خوب اَست. اِسمِ او مَریَم اَست. آن‌ها خوب هَستَند. عَمویِ مَن پِسَرِ پِدَربُزرگِ مَن اَست.",
+        text: "اِسمِ پِدَربُزرگِ مَن عَلی اَست. او خوب اَست. اِسمِ مادَربُزرگِ مَن مَریَم اَست. او خوب اَست. عَمویِ مَن پِسَرِ پِدَربُزرگِ مَن اَست. خانوادِهٔ مَن خوب اَست!",
         textTransliteration:
-          "Pedarbozorg-e man khoob ast. Esm-e ū Ali ast. Mādarbozorg-e man khoob ast. Esm-e ū Maryam ast. Ānhā khoob hastand. Amoo-ye man pesar-e pedarbozorg-e man ast.",
+          "Esm-e pedarbozorg-e man Ali ast. Ū khoob ast. Esm-e mādarbozorg-e man Maryam ast. Ū khoob ast. Amoo-ye man pesar-e pedarbozorg-e man ast. Khānevāde-ye man khoob ast!",
         textTranslation:
-          "My grandfather is well. His name is Ali. My grandmother is well. Her name is Maryam. They are well. My uncle is my grandfather's son.",
+          "My grandfather's name is Ali. He is well. My grandmother's name is Maryam. She is well. My uncle is my grandfather's son. My family is good!",
         questions: [
           {
             question: "What is the grandfather's name?",
@@ -3036,13 +3036,13 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       // Lesson 2 readings (use M1+M2 + M3 L1+L2 vocab)
       {
         id: 3,
-        title: "My Uncle",
-        persianTitle: "عَمویِ مَن",
-        text: "عَمویِ مَن خوب اَست. اِسمِ او رِضا اَست. او هَمسَر و بَچِّه دارَد. پِسَرِ او جَوان اَست. دُختَرِ او کوچَک اَست. خالِهٔ مَن خوب اَست.",
+        title: "My Uncle's Family",
+        persianTitle: "خانوادِهٔ عَمویِ مَن",
+        text: "اِسمِ عَمویِ مَن رِضا اَست. او هَمسَر دارَد. او بَچِّه دارَد. پِسَرِ عَمویِ مَن جَوان اَست. دُختَرِ عَمویِ مَن کوچَک اَست. خالِهٔ مَن دُکتُر اَست.",
         textTransliteration:
-          "Amoo-ye man khoob ast. Esm-e ū Rezā ast. Ū hamsar va bache dārad. Pesar-e ū javān ast. Dokhtar-e ū koochak ast. Khāle-ye man khoob ast.",
+          "Esm-e amoo-ye man Rezā ast. Ū hamsar dārad. Ū bache dārad. Pesar-e amoo-ye man javān ast. Dokhtar-e amoo-ye man koochak ast. Khāle-ye man doktor ast.",
         textTranslation:
-          "My uncle is well. His name is Reza. He has a spouse and children. His son is young. His daughter is little. My aunt is well.",
+          "My uncle's name is Reza. He has a spouse. He has children. My uncle's son is young. My uncle's daughter is little. My aunt is a doctor.",
         questions: [
           {
             question: "What is the uncle's name?",
@@ -3050,8 +3050,8 @@ export const moduleContent: Record<string | number, ModuleContent> = {
             correctAnswer: 1,
           },
           {
-            question: "How is the uncle's daughter described?",
-            options: ["Young", "Old", "Small", "Big"],
+            question: "What is the aunt's job?",
+            options: ["Teacher", "Student", "Doctor", "Engineer"],
             correctAnswer: 2,
           },
         ],
@@ -3059,22 +3059,22 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         title: "A Young and Old Family",
-        persianTitle: "خانوادِه‌ی جَوان و پیر",
-        text: "شُوهَرِ عَمِّهٔ مَن پیر اَست. زَنِ دایْیِ مَن جَوان اَست. آن‌ها بَچِّه دارَند. بَچِّه‌ها کوچَک هَستَند. خانوادِهٔ ما خوب اَست.",
+        persianTitle: "جَوان و پیر",
+        text: "دایْیِ مَن جَوان اَست. شُوهَرِ عَمِّهٔ مَن پیر اَست. دایْیِ مَن بَچِّه دارَد. بَچِّه‌ها کوچَک هَستَند. زَنِ دایْیِ مَن مُعَلِّم اَست. خانوادِهٔ ما خوب اَست.",
         textTransliteration:
-          "Showhar-e amme-ye man pir ast. Zan-e dāyi-ye man javān ast. Ānhā bache dārand. Bache-hā koochak hastand. Khānevāde-ye mā khoob ast.",
+          "Dāyi-ye man javān ast. Showhar-e amme-ye man pir ast. Dāyi-ye man bache dārad. Bache-hā koochak hastand. Zan-e dāyi-ye man mo'allem ast. Khānevāde-ye mā khoob ast.",
         textTranslation:
-          "My paternal aunt's husband is old. My maternal uncle's wife is young. They have children. The children are small. Our family is good.",
+          "My maternal uncle is young. My paternal aunt's husband is old. My uncle has children. The children are small. My uncle's wife is a teacher. Our family is good.",
         questions: [
           {
-            question: "How is the aunt's husband described?",
-            options: ["Young", "Good", "Old", "Small"],
+            question: "How is the maternal uncle described?",
+            options: ["Old", "Small", "Young", "Bad"],
             correctAnswer: 2,
           },
           {
-            question: "What are the children described as?",
-            options: ["Big", "Small", "Old", "Young"],
-            correctAnswer: 1,
+            question: "What is the uncle's wife's job?",
+            options: ["Doctor", "Student", "Engineer", "Teacher"],
+            correctAnswer: 3,
           },
         ],
       },
@@ -3083,11 +3083,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 5,
         title: "A Kind Family",
         persianTitle: "خانوادِهٔ مِهربان",
-        text: "خانوادِهٔ مَن مِهربان اَست. ما با هَم در خانِه زِندگی می‌کُنیم. مادَرِ مَن مِهربان اَست. پِدَرِ مَن مِهربان اَست. خانوادِهٔ مَن عَزیز اَست. مَحَبَّتِ خانوادِه خوب اَست.",
+        text: "خانوادِهٔ مَن مِهربان اَست. ما با هَم در خانِه زِندگی می‌کُنیم. مادَرِ مَن مِهربان اَست. پِدَرِ مَن خوب اَست. مَحَبَّتِ خانوادِه خوب اَست. خانوادِهٔ مَن عَزیز اَست!",
         textTransliteration:
-          "Khānevāde-ye man mehrabān ast. Mā bā ham dar khāne zendegi mikonim. Mādar-e man mehrabān ast. Pedar-e man mehrabān ast. Khānevāde-ye man aziz ast. Mohabbat-e khānevāde khoob ast.",
+          "Khānevāde-ye man mehrabān ast. Mā bā ham dar khāne zendegi mikonim. Mādar-e man mehrabān ast. Pedar-e man khoob ast. Mohabbat-e khānevāde khoob ast. Khānevāde-ye man aziz ast!",
         textTranslation:
-          "My family is kind. We live together at home. My mother is kind. My father is kind. My family is dear. Family love is good.",
+          "My family is kind. We live together at home. My mother is kind. My father is good. Family love is good. My family is dear!",
         questions: [
           {
             question: "Where does the family live together?",
