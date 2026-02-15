@@ -412,6 +412,13 @@ function GrammarPhase({
       <Card className="border-sand-200 bg-white p-8">
         <h3 className="mb-4 text-xl font-bold text-charcoal">{grammar.instruction}</h3>
 
+        {grammar.teachingContent && (
+          <div className="mb-6 rounded-lg bg-amber-50 border border-amber-200 p-4">
+            <h4 className="font-semibold text-amber-900 mb-2">{grammar.teachingContent.title}</h4>
+            <p className="text-sm text-amber-800 leading-relaxed">{grammar.teachingContent.explanation}</p>
+          </div>
+        )}
+
         {grammar.pattern && (
           <div className="mb-6 rounded-xl bg-terracotta/5 border border-terracotta/20 p-6 text-center">
             {/* Check if pattern parts contain English labels (brackets) */}

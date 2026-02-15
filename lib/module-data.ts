@@ -3138,7 +3138,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         type: "fill-blank",
         instruction: "Fill in the blank",
         sentence: "___ِ من دکتر است",
-        choices: ["مادر", "برادر", "پسر"],
+        choices: ["مادر", "سلام", "خوب"],
         correctChoice: "مادر",
       },
       {
@@ -3204,6 +3204,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         type: "pattern-intro",
         instruction: "The Ezafe construction (-e)",
+        teachingContent: {
+          title: "What is Ezafe?",
+          explanation: "Ezafe (اضافه) is one of the most important grammar features in Persian. It is a short '-e' sound added between two words to connect them — like invisible glue. You won't always see it written, but you will always hear it spoken. It is used to show possession ('my father'), to connect adjectives ('big house'), and to link nouns ('door of the house'). In writing, it appears as a small diagonal stroke ( ِ ) called kasre under the last letter of the first word. Think of it like the English words 'of' or ''s' — but in Persian, it comes as a sound between the words rather than a separate word.",
+          examples: [],
+        },
         pattern: "[noun] + ِ + من = my [noun]",
         patternParts: ["[noun]", "ِ (ezafe)", "من"],
         patternExamples: [
