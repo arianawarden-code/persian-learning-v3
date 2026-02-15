@@ -116,7 +116,7 @@ export function LessonFlow({ lesson, vocabWords, grammarExercise, readingStory, 
         <WritingPhase exercises={writingExercises} onComplete={goNext} />
       )}
       {phase === "completion" && (
-        <CompletionPhase lesson={lesson} grammarTitle={grammarExercise.instruction} moduleId={moduleId} />
+        <CompletionPhase lesson={lesson} grammarTitle={grammarExercise.instruction} moduleId={moduleId} onReviewVocabulary={() => { setPhase("vocabulary"); window.scrollTo({ top: 0, behavior: "smooth" }) }} />
       )}
     </div>
   )
@@ -945,10 +945,12 @@ function CompletionPhase({
   lesson,
   grammarTitle,
   moduleId,
+  onReviewVocabulary,
 }: {
   lesson: Lesson
   grammarTitle: string
   moduleId: string
+  onReviewVocabulary: () => void
 }) {
   const router = useRouter()
 
@@ -1010,10 +1012,10 @@ function CompletionPhase({
         )}
         <Button
           variant="outline"
-          onClick={() => router.push(`/modules/${moduleId}/lessons/${lesson.id}`)}
+          onClick={onReviewVocabulary}
         >
           <RotateCcw className="mr-2 h-4 w-4" />
-          Review Lesson
+          Review Vocabulary
         </Button>
         <Button
           variant="outline"
