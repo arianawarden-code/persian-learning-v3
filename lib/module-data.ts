@@ -2819,11 +2819,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "He is my son",
       },
       {
-        persian: "دُختَر",
-        transliteration: "dokhtar",
-        english: "daughter / girl",
-        example: "دُختَرِ مَن شِش سالِه اَست",
-        exampleTranslation: "My daughter is six years old",
+        persian: "کوچَک",
+        transliteration: "koochak",
+        english: "small / little / young",
+        example: "بَرادَرِ کوچَکِ مَن",
+        exampleTranslation: "My little brother",
       },
       {
         persian: "پِدَربُزرگ",
@@ -2896,18 +2896,18 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I have two children",
       },
       {
-        persian: "کوچَک",
-        transliteration: "koochak",
-        english: "small / little / young",
-        example: "بَرادَرِ کوچَکِ مَن",
-        exampleTranslation: "My little brother",
+        persian: "دُختَر",
+        transliteration: "dokhtar",
+        english: "daughter / girl",
+        example: "دُختَرِ مَن شِش سالِه اَست",
+        exampleTranslation: "My daughter is six years old",
       },
       {
-        persian: "بُزرگ",
-        transliteration: "bozorg",
-        english: "big / large / old",
-        example: "خواهَرِ بُزرگِ مَن",
-        exampleTranslation: "My big sister",
+        persian: "پیر",
+        transliteration: "pir",
+        english: "old (for people)",
+        example: "پِدَربُزرگِ مَن پیر اَست",
+        exampleTranslation: "My grandfather is old",
       },
       {
         persian: "جَوان",
@@ -2917,11 +2917,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "He/she is young",
       },
       {
-        persian: "پیر",
-        transliteration: "pir",
-        english: "old (for people)",
-        example: "پِدَربُزرگِ مَن پیر اَست",
-        exampleTranslation: "My grandfather is old",
+        persian: "بُزرگ",
+        transliteration: "bozorg",
+        english: "big / large / old",
+        example: "خواهَرِ بُزرگِ مَن",
+        exampleTranslation: "My big sister",
       },
       {
         persian: "مَرد",
@@ -3015,11 +3015,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "My Grandparents",
         persianTitle: "پِدَربُزُرگ و مادَربُزُرگِ مَن",
-        text: "پِدَربُزرگِ مَن پیر اَست. اِسمِ او عَلی اَست. مادَربُزرگِ مَن هَم پیر اَست. اِسمِ او مَریَم اَست. آن‌ها خوب هَستَند. عَمویِ مَن پِسَرِ پِدَربُزرگِ مَن اَست.",
+        text: "پِدَربُزرگِ مَن خوب اَست. اِسمِ او عَلی اَست. مادَربُزرگِ مَن هَم خوب اَست. اِسمِ او مَریَم اَست. آن‌ها خوب هَستَند. عَمویِ مَن پِسَرِ پِدَربُزرگِ مَن اَست.",
         textTransliteration:
-          "Pedarbozorg-e man pir ast. Esm-e ū Ali ast. Mādarbozorg-e man ham pir ast. Esm-e ū Maryam ast. Ānhā khoob hastand. Amoo-ye man pesar-e pedarbozorg-e man ast.",
+          "Pedarbozorg-e man khoob ast. Esm-e ū Ali ast. Mādarbozorg-e man ham khoob ast. Esm-e ū Maryam ast. Ānhā khoob hastand. Amoo-ye man pesar-e pedarbozorg-e man ast.",
         textTranslation:
-          "My grandfather is old. His name is Ali. My grandmother is also old. Her name is Maryam. They are well. My uncle is my grandfather's son.",
+          "My grandfather is well. His name is Ali. My grandmother is also well. Her name is Maryam. They are well. My uncle is my grandfather's son.",
         questions: [
           {
             question: "What is the grandfather's name?",
@@ -3060,11 +3060,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 4,
         title: "A Young and Old Family",
         persianTitle: "خانوادِه‌ی جَوان و پیر",
-        text: "شُوهَرِ عَمِّهٔ مَن پیر اَست. او شَصت سال دارَد. زَنِ دایْیِ مَن جَوان اَست. او سی سال دارَد. آن‌ها بَچِّه دارَند. بَچِّه‌ها کوچَک هَستَند. خانوادِهٔ ما بُزرگ اَست.",
+        text: "شُوهَرِ عَمِّهٔ مَن پیر اَست. او شَصت سال دارَد. زَنِ دایْیِ مَن جَوان اَست. او سی سال دارَد. آن‌ها بَچِّه دارَند. بَچِّه‌ها کوچَک هَستَند. خانوادِهٔ ما خوب اَست.",
         textTransliteration:
-          "Showhar-e amme-ye man pir ast. Ū shast sāl dārad. Zan-e dāyi-ye man javān ast. Ū si sāl dārad. Ānhā bache dārand. Bache-hā koochak hastand. Khānevāde-ye mā bozorg ast.",
+          "Showhar-e amme-ye man pir ast. Ū shast sāl dārad. Zan-e dāyi-ye man javān ast. Ū si sāl dārad. Ānhā bache dārand. Bache-hā koochak hastand. Khānevāde-ye mā khoob ast.",
         textTranslation:
-          "My paternal aunt's husband is old. He is sixty years old. My maternal uncle's wife is young. She is thirty years old. They have children. The children are small. Our family is big.",
+          "My paternal aunt's husband is old. He is sixty years old. My maternal uncle's wife is young. She is thirty years old. They have children. The children are small. Our family is good.",
         questions: [
           {
             question: "How old is the aunt's husband?",
