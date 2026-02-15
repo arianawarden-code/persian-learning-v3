@@ -2892,7 +2892,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         persian: "بَچِّه",
         transliteration: "bache",
         english: "child / kid",
-        example: "مَن دو تا بَچِّه دارَم",
+        example: "مَن دو بَچِّه دارَم",
         exampleTranslation: "I have two children",
       },
       {
@@ -3038,9 +3038,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "Uncle's Visit",
         persianTitle: "عَمو می‌آیَد",
-        text: "عَمویِ مَن اِمروز می‌آیَد. اِسمِ او رِضا اَست. او یِک هَمسَر و دو تا بَچِّه دارَد. یِک پِسَر و یِک دُختَر. دُختَرِ او کوچَک اَست. پِسَرِ او جَوان اَست. خالِهٔ مَن هَم می‌آیَد.",
+        text: "عَمویِ مَن اِمروز می‌آیَد. اِسمِ او رِضا اَست. او یِک هَمسَر و دو بَچِّه دارَد. یِک پِسَر و یِک دُختَر. دُختَرِ او کوچَک اَست. پِسَرِ او جَوان اَست. خالِهٔ مَن هَم می‌آیَد.",
         textTransliteration:
-          "Amoo-ye man emrooz mi-āyad. Esm-e ū Rezā ast. Ū yek hamsar va do tā bache dārad. Yek pesar va yek dokhtar. Dokhtar-e ū koochak ast. Pesar-e ū javān ast. Khāle-ye man ham mi-āyad.",
+          "Amoo-ye man emrooz mi-āyad. Esm-e ū Rezā ast. Ū yek hamsar va do bache dārad. Yek pesar va yek dokhtar. Dokhtar-e ū koochak ast. Pesar-e ū javān ast. Khāle-ye man ham mi-āyad.",
         textTranslation:
           "My uncle is coming today. His name is Reza. He has a spouse and two children. One boy and one girl. His daughter is little. His son is young. My aunt is also coming.",
         questions: [
@@ -3060,11 +3060,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 4,
         title: "A Young and Old Family",
         persianTitle: "خانوادِه‌ی جَوان و پیر",
-        text: "شُوهَرِ عَمِّهٔ مَن پیر اَست. او شَصت سال دارَد. زَنِ دایْیِ مَن جَوان اَست. او سی سال دارَد. آن‌ها بَچِّه دارَند. بَچِّه‌ها کوچَک هَستَند. مَن آن‌ها را دوست دارَم.",
+        text: "شُوهَرِ عَمِّهٔ مَن پیر اَست. او شَصت سال دارَد. زَنِ دایْیِ مَن جَوان اَست. او سی سال دارَد. آن‌ها بَچِّه دارَند. بَچِّه‌ها کوچَک هَستَند. خانوادِهٔ ما بُزرگ اَست.",
         textTransliteration:
-          "Showhar-e amme-ye man pir ast. Ū shast sāl dārad. Zan-e dāyi-ye man javān ast. Ū si sāl dārad. Ānhā bache dārand. Bache-hā koochak hastand. Man ānhā rā doost dāram.",
+          "Showhar-e amme-ye man pir ast. Ū shast sāl dārad. Zan-e dāyi-ye man javān ast. Ū si sāl dārad. Ānhā bache dārand. Bache-hā koochak hastand. Khānevāde-ye mā bozorg ast.",
         textTranslation:
-          "My paternal aunt's husband is old. He is sixty years old. My maternal uncle's wife is young. She is thirty years old. They have children. The children are small. I love them.",
+          "My paternal aunt's husband is old. He is sixty years old. My maternal uncle's wife is young. She is thirty years old. They have children. The children are small. Our family is big.",
         questions: [
           {
             question: "How old is the aunt's husband?",
@@ -3083,11 +3083,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 5,
         title: "A Kind Family",
         persianTitle: "یِک خانوادِهٔ مِهربان",
-        text: "خانوادِهٔ مَن مِهربان اَست. ما با هَم در خانِه زِندگی می‌کُنیم. مادَرِ مَن مِهربان اَست. پِدَرِ مَن هَم مِهربان اَست. مَن خانوادِهٔ خود را دوست دارَم. مَحَبَّتِ خانوادِه خوب اَست.",
+        text: "خانوادِهٔ مَن مِهربان اَست. ما با هَم در خانِه زِندگی می‌کُنیم. مادَرِ مَن مِهربان اَست. پِدَرِ مَن هَم مِهربان اَست. خانوادِهٔ مَن عَزیز اَست. مَحَبَّتِ خانوادِه خوب اَست.",
         textTransliteration:
-          "Khānevāde-ye man mehrabān ast. Mā bā ham dar khāne zendegi mikonim. Mādar-e man mehrabān ast. Pedar-e man ham mehrabān ast. Man khānevāde-ye khod rā doost dāram. Mohabbat-e khānevāde khoob ast.",
+          "Khānevāde-ye man mehrabān ast. Mā bā ham dar khāne zendegi mikonim. Mādar-e man mehrabān ast. Pedar-e man ham mehrabān ast. Khānevāde-ye man aziz ast. Mohabbat-e khānevāde khoob ast.",
         textTranslation:
-          "My family is kind. We live together at home. My mother is kind. My father is also kind. I love my family. Family love is good.",
+          "My family is kind. We live together at home. My mother is kind. My father is also kind. My family is dear. Family love is good.",
         questions: [
           {
             question: "Where does the family live together?",
@@ -3105,9 +3105,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 6,
         title: "A Big Family Gathering",
         persianTitle: "یِک خانوادِهٔ بُزُرگ",
-        text: "خانوادِهٔ مَن بُزرگ اَست. مَن سِه تا بَرادَر و دو تا خواهَر دارَم. پِدَربُزرگ و مادَربُزرگِ مَن هَم با ما زِندگی می‌کُنَند. عَمو و خالِهٔ مَن هَم می‌آیَند. ما با هَم در خانِه هَستیم. زِندگی با هَم خوب اَست!",
+        text: "خانوادِهٔ مَن بُزرگ اَست. مَن سِه بَرادَر و دو خواهَر دارَم. پِدَربُزرگ و مادَربُزرگِ مَن هَم با ما زِندگی می‌کُنَند. عَمو و خالِهٔ مَن هَم می‌آیَند. ما با هَم در خانِه هَستیم. زِندگی با هَم خوب اَست!",
         textTransliteration:
-          "Khānevāde-ye man bozorg ast. Man se tā barādar va do tā khāhar dāram. Pedarbozorg va mādarbozorg-e man ham bā mā zendegi mikonand. Amoo va khāle-ye man ham mi-āyand. Mā bā ham dar khāne hastim. Zendegi bā ham khoob ast!",
+          "Khānevāde-ye man bozorg ast. Man se barādar va do khāhar dāram. Pedarbozorg va mādarbozorg-e man ham bā mā zendegi mikonand. Amoo va khāle-ye man ham mi-āyand. Mā bā ham dar khāne hastim. Zendegi bā ham khoob ast!",
         textTranslation:
           "My family is big. I have three brothers and two sisters. My grandfather and grandmother also live with us. My uncle and aunt also come. We are together at home. Life together is good!",
         questions: [
@@ -3153,9 +3153,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         type: "word-order",
-        instruction: "Arrange the words to say 'I have two children'",
-        tiles: ["من", "دو", "تا", "بچه", "دارم"],
-        correctOrder: ["من", "دو", "تا", "بچه", "دارم"],
+        instruction: "Arrange the words to say 'I have one brother'",
+        tiles: ["من", "یک", "برادر", "دارم"],
+        correctOrder: ["من", "یک", "برادر", "دارم"],
       },
       {
         id: 5,
@@ -3222,18 +3222,18 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         type: "pattern-intro",
         instruction: "Saying 'I have...'",
-        pattern: "من + [number] + تا + [noun] + دارم",
-        patternParts: ["من", "[number] تا", "[noun]", "دارم"],
+        pattern: "من + [number] + [noun] + دارم",
+        patternParts: ["من", "[number]", "[noun]", "دارم"],
         patternExamples: [
-          { persian: "من دو تا بچه دارم", transliteration: "man do tā bache dāram", english: "I have two children" },
+          { persian: "من دو بچه دارم", transliteration: "man do bache dāram", english: "I have two children" },
           { persian: "من یک برادر دارم", transliteration: "man yek barādar dāram", english: "I have one brother" },
-          { persian: "او سه تا خواهر دارد", transliteration: "u se tā khāhar dārad", english: "He/She has three sisters" },
+          { persian: "او سه خواهر دارد", transliteration: "u se khāhar dārad", english: "He/She has three sisters" },
         ],
-        note: "'دارم' means 'I have'. The verb changes with the subject: دارم (I have), داری (you have), دارد (he/she has), داریم (we have), دارید (you have - formal), دارند (they have). The word 'تا' is a counter word used with numbers greater than one.",
+        note: "'دارم' means 'I have'. The verb changes with the subject: دارم (I have), داری (you have), دارد (he/she has), داریم (we have), دارید (you have - formal), دارند (they have). The verb always comes at the end of the sentence.",
         question: "How do you say 'I have three brothers'?",
-        options: ["من سه تا برادر دارم", "من برادر سه دارم", "سه برادر من دارم", "دارم سه تا برادر من"],
+        options: ["من سه برادر دارم", "من برادر سه دارم", "سه برادر من دارم", "دارم سه برادر من"],
         correctAnswer: 0,
-        explanation: "The pattern is: من (I) + سه تا (three) + برادر (brothers) + دارم (have).",
+        explanation: "The pattern is: من (I) + سه (three) + برادر (brothers) + دارم (have).",
       },
       // Lesson 3: Adjectives with nouns
       {
