@@ -3486,43 +3486,43 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       // Lesson 1 readings (use M1+M2+M3 + M4 L1 vocab: numbers 0-9)
       {
         id: 1,
-        title: "My Family",
-        persianTitle: "خانوادِهٔ مَن",
-        text: "سَلام! مَن سارا هَستَم. مَن دو بَرادَر دارَم. مَن سِه خواهَر دارَم. پِدَرِ مَن مُعَلِّم اَست. مادَرِ مَن دُکتُر اَست. خانوادِهٔ مَن بُزرگ اَست!",
+        title: "Ali and Friends",
+        persianTitle: "عَلی و دوست‌ها",
+        text: "مَن عَلی هَستَم. مُهَندِس هَستَم و دَر شَهرِ بُزرگ کار می‌کُنَم. هَشت دوستِ خوب دارَم! چَهار دوست مُعَلِّم هَستَند و دو دوست دُکتُر هَستَند. دوست‌هایِ مَن مِهربان هَستَند و ما با هَم خوب هَستیم.",
         textTransliteration:
-          "Salām! Man Sārā hastam. Man do barādar dāram. Man se khāhar dāram. Pedar-e man mo'allem ast. Mādar-e man doktor ast. Khānevāde-ye man bozorg ast!",
+          "Man Ali hastam. Mohandes hastam va dar shahr-e bozorg kār mikonam. Hasht doost-e khoob dāram! Chahār doost mo'allem hastand va do doost doktor hastand. Doost-hāye man mehrabān hastand va mā bā ham khoob hastim.",
         textTranslation:
-          "Hello! I am Sara. I have two brothers. I have three sisters. My father is a teacher. My mother is a doctor. My family is big!",
+          "I am Ali. I'm an engineer and I work in a big city. I have eight good friends! Four friends are teachers and two friends are doctors. My friends are kind and we get along well together.",
         questions: [
           {
-            question: "How many brothers does Sara have?",
-            options: ["One", "Two", "Three", "Four"],
-            correctAnswer: 1,
+            question: "How many friends does Ali have?",
+            options: ["Four", "Six", "Eight", "Ten"],
+            correctAnswer: 2,
           },
           {
-            question: "How many sisters does Sara have?",
-            options: ["One", "Two", "Three", "Four"],
+            question: "How many friends are teachers?",
+            options: ["Two", "Three", "Four", "Five"],
             correctAnswer: 2,
           },
         ],
       },
       {
         id: 2,
-        title: "How Many?",
-        persianTitle: "چَند؟",
-        text: "مَن پَنج دوست دارَم. دو دوست دانِشجو هَستَند. سِه دوست مُعَلِّم هَستَند. یِک دوست دُکتُر اَست. مَن چَهار بَرادَر دارَم. خانوادِهٔ مَن خوب اَست.",
+        title: "Life in the City",
+        persianTitle: "زِندگی دَر شَهر",
+        text: "مَن دَر شَهرِ بُزرگ زِندگی می‌کُنَم و کار می‌کُنَم. شِش دوست دَر شَهر دارَم. سِه دوست دانِشجو هَستَند و با هَم یاد می‌گیرَند. دو دوست مُهَندِس هَستَند و یِک دوست دُکتُر اَست. شَهرِ مَن خوب اَست!",
         textTransliteration:
-          "Man panj doost dāram. Do doost dāneshju hastand. Se doost mo'allem hastand. Yek doost doktor ast. Man chahār barādar dāram. Khānevāde-ye man khoob ast.",
+          "Man dar shahr-e bozorg zendegi mikonam va kār mikonam. Shesh doost dar shahr dāram. Se doost dāneshju hastand va bā ham yād migīrand. Do doost mohandes hastand va yek doost doktor ast. Shahr-e man khoob ast!",
         textTranslation:
-          "I have five friends. Two friends are students. Three friends are teachers. One friend is a doctor. I have four brothers. My family is good.",
+          "I live and work in a big city. I have six friends in the city. Three friends are students and they learn together. Two friends are engineers and one friend is a doctor. My city is great!",
         questions: [
           {
-            question: "How many friends does the speaker have?",
-            options: ["Three", "Four", "Five", "Six"],
+            question: "How many friends does the speaker have in the city?",
+            options: ["Three", "Five", "Six", "Eight"],
             correctAnswer: 2,
           },
           {
-            question: "How many friends are teachers?",
+            question: "How many friends are students?",
             options: ["One", "Two", "Three", "Four"],
             correctAnswer: 2,
           },
@@ -3531,44 +3531,44 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       // Lesson 2 readings (use M1+M2+M3 + M4 L1+L2 vocab: numbers 0-19)
       {
         id: 3,
-        title: "How Old Are You?",
-        persianTitle: "چَند ساله هَستی؟",
-        text: "سَلام! مَن عَلی هَستَم. مَن شانزدَه ساله هَستَم. بَرادَرِ مَن چَهاردَه ساله اَست. خواهَرِ مَن دَوازدَه ساله اَست. ما دانِشجو هَستیم.",
+        title: "Maryam and Sara",
+        persianTitle: "مَریَم و سارا",
+        text: "مَن مَریَم هَستَم و هِفدَه ساله هَستَم. دانِشجو هَستَم و زَبان یاد می‌گیرَم. دوستِ مَن سارا نوزدَه ساله اَست و مُهَندِس اَست. او دَر شَهرِ بُزرگ کار می‌کُنَد. دوستِ مَن عَزیز و مِهربان اَست!",
         textTransliteration:
-          "Salām! Man Ali hastam. Man shānzdah sāle hastam. Barādar-e man chahārdah sāle ast. Khāhar-e man davāzdah sāle ast. Mā dāneshju hastim.",
+          "Man Maryam hastam va hefdah sāle hastam. Dāneshju hastam va zabān yād migīram. Doost-e man Sārā noozdah sāle ast va mohandes ast. Ū dar shahr-e bozorg kār mikonad. Doost-e man aziz va mehrabān ast!",
         textTranslation:
-          "Hello! I am Ali. I am sixteen years old. My brother is fourteen years old. My sister is twelve years old. We are students.",
+          "I am Maryam and I am seventeen years old. I'm a student and I'm learning a language. My friend Sara is nineteen years old and is an engineer. She works in a big city. My friend is dear and kind!",
         questions: [
           {
-            question: "How old is Ali?",
-            options: ["Twelve", "Fourteen", "Sixteen", "Eighteen"],
-            correctAnswer: 2,
+            question: "How old is Maryam?",
+            options: ["Fifteen", "Seventeen", "Nineteen", "Twenty"],
+            correctAnswer: 1,
           },
           {
-            question: "How old is Ali's sister?",
-            options: ["Ten", "Twelve", "Fourteen", "Sixteen"],
-            correctAnswer: 1,
+            question: "What is Sara's job?",
+            options: ["Student", "Teacher", "Engineer", "Doctor"],
+            correctAnswer: 2,
           },
         ],
       },
       {
         id: 4,
-        title: "In the Family",
-        persianTitle: "دَر خانوادِه",
-        text: "پِدَرِ مَن مُعَلِّم اَست. مادَرِ مَن دُکتُر اَست. پِدَرِ مَن بُزرگ اَست. مادَرِ مَن مِهربان اَست. مَن سیزدَه ساله هَستَم. بَرادَرِ مَن نوزدَه ساله اَست. او دانِشجو اَست.",
+        title: "The Young Student",
+        persianTitle: "دانِشجویِ جَوان",
+        text: "بَرادَرِ مَن جَوان اَست و پانزدَه ساله اَست. او دانِشجو اَست و سِه دوستِ خوب دارَد. یِک دوست سیزدَه ساله اَست و دو دوست شانزدَه ساله هَستَند. آن‌ها با هَم یاد می‌گیرَند. بَرادَرِ مَن خوب و مِهربان اَست!",
         textTransliteration:
-          "Pedar-e man mo'allem ast. Mādar-e man doktor ast. Pedar-e man bozorg ast. Mādar-e man mehrabān ast. Man sizdah sāle hastam. Barādar-e man noozdah sāle ast. Ū dāneshju ast.",
+          "Barādar-e man javān ast va pānzdah sāle ast. Ū dāneshju ast va se doost-e khoob dārad. Yek doost sizdah sāle ast va do doost shānzdah sāle hastand. Ānhā bā ham yād migīrand. Barādar-e man khoob va mehrabān ast!",
         textTranslation:
-          "My father is a teacher. My mother is a doctor. My father is big. My mother is kind. I am thirteen years old. My brother is nineteen years old. He is a student.",
+          "My brother is young and fifteen years old. He is a student and has three good friends. One friend is thirteen and two friends are sixteen. They learn together. My brother is good and kind!",
         questions: [
           {
-            question: "How old is the speaker?",
-            options: ["Eleven", "Thirteen", "Fifteen", "Seventeen"],
+            question: "How old is the brother?",
+            options: ["Thirteen", "Fifteen", "Sixteen", "Nineteen"],
             correctAnswer: 1,
           },
           {
-            question: "How old is the brother?",
-            options: ["Fifteen", "Seventeen", "Nineteen", "Twenty"],
+            question: "How many friends does the brother have?",
+            options: ["One", "Two", "Three", "Four"],
             correctAnswer: 2,
           },
         ],
@@ -3576,45 +3576,45 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       // Lesson 3 readings (use all M1+M2+M3+M4 vocab)
       {
         id: 5,
-        title: "A Big Family",
-        persianTitle: "خانوادِهٔ بُزُرگ",
-        text: "خانوادِهٔ مَن بُزرگ اَست. پِدَربُزرگِ مَن هَفتاد ساله اَست. مادَربُزرگِ مَن شَصت ساله اَست. عَمویِ مَن چِهِل ساله اَست. مَن بیست ساله هَستَم. بَرادَرِ مَن سی ساله اَست.",
+        title: "Grandfather's Town",
+        persianTitle: "شَهرِ پِدَربُزرگ",
+        text: "پِدَربُزرگِ مَن هَشتاد ساله اَست و مِهربان اَست. او دَر شَهرِ کوچَک زِندگی می‌کُنَد. پِدَربُزرگِ مَن پَنج نَوِه دارَد و ما عَزیز هَستیم. مَن بیست ساله هَستَم و دانِشجو هَستَم. خانوادِهٔ مَن خوب اَست!",
         textTransliteration:
-          "Khānevāde-ye man bozorg ast. Pedarbozorg-e man haftād sāle ast. Mādarbozorg-e man shast sāle ast. Amoo-ye man chehel sāle ast. Man bist sāle hastam. Barādar-e man si sāle ast.",
+          "Pedarbozorg-e man hashtād sāle ast va mehrabān ast. Ū dar shahr-e koochak zendegi mikonad. Pedarbozorg-e man panj nave dārad va mā aziz hastim. Man bist sāle hastam va dāneshju hastam. Khānevāde-ye man khoob ast!",
         textTranslation:
-          "My family is big. My grandfather is seventy years old. My grandmother is sixty years old. My uncle is forty years old. I am twenty years old. My brother is thirty years old.",
+          "My grandfather is eighty years old and kind. He lives in a small town. My grandfather has five grandchildren and we are dear to each other. I am twenty years old and a student. My family is wonderful!",
         questions: [
           {
             question: "How old is the grandfather?",
-            options: ["Fifty", "Sixty", "Seventy", "Eighty"],
+            options: ["Sixty", "Seventy", "Eighty", "Ninety"],
             correctAnswer: 2,
           },
           {
-            question: "How old is the speaker?",
-            options: ["Twenty", "Thirty", "Forty", "Fifty"],
-            correctAnswer: 0,
+            question: "How many grandchildren does the grandfather have?",
+            options: ["Three", "Four", "Five", "Six"],
+            correctAnswer: 2,
           },
         ],
       },
       {
         id: 6,
-        title: "Counting Together",
-        persianTitle: "با هَم شُمُردَن",
-        text: "مَن صَد کِتاب دارَم. بَرادَرِ مَن پَنجاه کِتاب دارَد. خواهَرِ مَن بیست کِتاب دارَد. پِدَرِ مَن هِزار کِتاب دارَد! ما کِتاب دوست داریم. خانوادِهٔ مَن خوب اَست.",
+        title: "My Life",
+        persianTitle: "زِندگیِ مَن",
+        text: "مَن سی ساله هَستَم و مُهَندِس هَستَم. دَر شَهرِ بُزرگ زِندگی می‌کُنَم و کار می‌کُنَم. خانوادِهٔ مَن کوچَک اَست. یِک بَرادَر دارَم و او چِهِل ساله اَست. بَرادَرِ مَن مُعَلِّم اَست. مَن صَد دوست دَر شَهر دارَم! زِندگی خوب اَست.",
         textTransliteration:
-          "Man sad ketāb dāram. Barādar-e man panjāh ketāb dārad. Khāhar-e man bist ketāb dārad. Pedar-e man hezār ketāb dārad! Mā ketāb doost dārim. Khānevāde-ye man khoob ast.",
+          "Man si sāle hastam va mohandes hastam. Dar shahr-e bozorg zendegi mikonam va kār mikonam. Khānevāde-ye man koochak ast. Yek barādar dāram va ū chehel sāle ast. Barādar-e man mo'allem ast. Man sad doost dar shahr dāram! Zendegi khoob ast.",
         textTranslation:
-          "I have one hundred books. My brother has fifty books. My sister has twenty books. My father has one thousand books! We love books. My family is good.",
+          "I am thirty years old and an engineer. I live and work in a big city. My family is small. I have one brother and he is forty years old. My brother is a teacher. I have a hundred friends in the city! Life is good.",
         questions: [
           {
-            question: "How many books does the speaker have?",
-            options: ["Twenty", "Fifty", "One hundred", "One thousand"],
-            correctAnswer: 2,
+            question: "How old is the speaker?",
+            options: ["Twenty", "Thirty", "Forty", "Fifty"],
+            correctAnswer: 1,
           },
           {
-            question: "How many books does the father have?",
-            options: ["One hundred", "Two hundred", "Five hundred", "One thousand"],
-            correctAnswer: 3,
+            question: "What is the brother's job?",
+            options: ["Engineer", "Doctor", "Teacher", "Student"],
+            correctAnswer: 2,
           },
         ],
       },
