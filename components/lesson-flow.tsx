@@ -65,6 +65,19 @@ export function LessonFlow({ lesson, vocabWords, grammarExercise, readingStory, 
 
   return (
     <div className="mx-auto max-w-3xl">
+      {/* Back to Module button */}
+      <div className="mb-4 flex justify-end">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="gap-1.5 text-charcoal/60 hover:text-charcoal"
+          onClick={() => router.push(`/modules/${moduleId}`)}
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Back to Module
+        </Button>
+      </div>
+
       {/* Progress bar */}
       {phase !== "intro" && phase !== "completion" && (
         <div className="mb-6">
@@ -158,7 +171,7 @@ function VocabularyPhase({
   const [starredWords, setStarredWords] = useState<Set<string>>(new Set())
   const { speak, isSpeaking, isSupported } = usePersianSpeech()
 
-  const INTERSTITIAL_AFTER = 6
+  const INTERSTITIAL_AFTER = 5
 
   // Seed SRS on mount
   useState(() => {
