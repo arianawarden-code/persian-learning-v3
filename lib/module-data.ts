@@ -4245,11 +4245,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "The Persian Calendar",
         persianTitle: "ماه‌هایِ سال",
-        text: "سال دَوازدَه ماه دارَد. فَروَردین اوّلِ سال اَست. مَن فَروَردین خوب دوست دارَم. خُرداد و تیر و مُرداد خوب اَست. مِهر و آبان و آذَر خوب اَست. اِسفَند آخِرِ سال اَست.",
+        text: "سال دَوازدَه ماه دارَد. فَروَردین اوّلِ ماه اَست. مَن فَروَردین خوب دوست دارَم. خُرداد و تیر و مُرداد خوب اَست. مِهر و آبان و آذَر خوب اَست. اِسفَند آخِرِ ماه اَست.",
         textTransliteration:
-          "Sāl davāzdah māh dārad. Farvardin avval-e sāl ast. Man farvardin khoob doost dāram. Khordād va tir va mordād khoob ast. Mehr va ābān va āzar khoob ast. Esfand ākhare sāl ast.",
+          "Sāl davāzdah māh dārad. Farvardin avval-e māh ast. Man farvardin khoob doost dāram. Khordād va tir va mordād khoob ast. Mehr va ābān va āzar khoob ast. Esfand ākhare māh ast.",
         textTranslation:
-          "A year has twelve months. Farvardin is the beginning of the year. I like Farvardin. Khordad, Tir, and Mordad are nice. Mehr, Aban, and Azar are nice. Esfand is the end of the year.",
+          "A year has twelve months. Farvardin is the first month. I like Farvardin. Khordad, Tir, and Mordad are nice. Mehr, Aban, and Azar are nice. Esfand is the last month.",
         questions: [
           {
             question: "How many months are in a year?",
@@ -4336,15 +4336,15 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 1,
         type: "word-order",
-        instruction: "Arrange the words to say 'Farvardin is the beginning of the year'",
-        tiles: ["فروردین", "اوّلِ", "سال", "است"],
-        correctOrder: ["فروردین", "اوّلِ", "سال", "است"],
+        instruction: "Arrange the words to say 'Farvardin is the first month'",
+        tiles: ["فروردین", "اوّلِ", "ماه", "است"],
+        correctOrder: ["فروردین", "اوّلِ", "ماه", "است"],
       },
       {
         id: 2,
         type: "fill-blank",
         instruction: "Fill in the blank",
-        sentence: "___ آخرِ سال است",
+        sentence: "___ آخرِ ماه است",
         choices: ["اسفند", "فروردین", "خوب"],
         correctChoice: "اسفند",
       },
