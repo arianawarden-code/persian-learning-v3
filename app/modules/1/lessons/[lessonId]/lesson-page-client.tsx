@@ -8,7 +8,7 @@ interface LessonPageClientProps {
   lesson: Lesson
   vocabWords: VocabularyWord[]
   grammarExercise: GrammarExercise
-  readingStory: ReadingExercise
+  readingStories: ReadingExercise[]
   writingExercises: WritingExercise[]
   moduleId: string
 }
@@ -17,7 +17,7 @@ export default function LessonPageClient({
   lesson,
   vocabWords,
   grammarExercise,
-  readingStory,
+  readingStories,
   writingExercises,
   moduleId,
 }: LessonPageClientProps) {
@@ -26,7 +26,7 @@ export default function LessonPageClient({
       lesson={lesson}
       vocabWords={vocabWords}
       grammarExercise={grammarExercise}
-      readingStory={readingStory}
+      readingStories={readingStories}
       writingExercises={writingExercises}
       moduleId={moduleId}
     />

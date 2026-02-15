@@ -3,7 +3,7 @@
 export interface LessonPhases {
   vocabIndices: [number, number]    // [start, end) into module vocabulary
   grammarIndex: number              // index into module grammar array
-  readingStoryId: number            // story id in module reading array
+  readingStoryIds: number[]          // story ids in module reading array
   writingIndices: [number, number]  // [start, end) into module writing array
 }
 
@@ -29,7 +29,7 @@ export const module1Lessons: Lesson[] = [
     phases: {
       vocabIndices: [0, 10],    // سلام through ببخشید
       grammarIndex: 0,          // "Saying 'I am...'"
-      readingStoryId: 1,        // "First Meeting"
+      readingStoryIds: [1],      // "First Meeting"
       writingIndices: [0, 3],   // word-order + fill-blank + build-word
     },
     nextLesson: { id: "2", title: "Greetings & Politeness" },
@@ -43,7 +43,7 @@ export const module1Lessons: Lesson[] = [
     phases: {
       vocabIndices: [10, 20],   // اسم through هست
       grammarIndex: 1,          // "Asking 'How are you?'"
-      readingStoryId: 2,        // "Greetings"
+      readingStoryIds: [2],      // "Greetings"
       writingIndices: [3, 6],   // word-order + fill-blank + build-word
     },
     nextLesson: { id: "3", title: "At Home & Goodbye" },
@@ -57,7 +57,7 @@ export const module1Lessons: Lesson[] = [
     phases: {
       vocabIndices: [20, 25],   // چه through امروز
       grammarIndex: 2,          // "Using است and هست"
-      readingStoryId: 3,        // "At Home"
+      readingStoryIds: [3],      // "At Home"
       writingIndices: [6, 9],   // word-order + fill-blank + build-word
     },
     nextLesson: null,
@@ -76,7 +76,7 @@ export const module2Lessons: Lesson[] = [
     phases: {
       vocabIndices: [0, 10],    // اسم through دانشجو (identity + من/هستم/است)
       grammarIndex: 0,          // "Saying 'My name is...'"
-      readingStoryId: 1,        // "My Name"
+      readingStoryIds: [1],      // "My Name"
       writingIndices: [0, 3],   // word-order + fill-blank + build-word
     },
     nextLesson: { id: "2", title: "Pronouns & Origin" },
@@ -90,7 +90,7 @@ export const module2Lessons: Lesson[] = [
     phases: {
       vocabIndices: [10, 20],   // تو through سن (pronouns + اهل/دوست)
       grammarIndex: 1,          // "Pronouns with the verb 'to be'"
-      readingStoryId: 3,        // "Meeting a New Friend"
+      readingStoryIds: [3],      // "Meeting a New Friend"
       writingIndices: [3, 6],   // word-order + fill-blank + build-word
     },
     nextLesson: { id: "3", title: "What I Do" },
@@ -104,7 +104,7 @@ export const module2Lessons: Lesson[] = [
     phases: {
       vocabIndices: [20, 30],   // زبان through دکتر (verbs + professions)
       grammarIndex: 2,          // "Saying where you're from"
-      readingStoryId: 5,        // "My Job"
+      readingStoryIds: [5],      // "My Job"
       writingIndices: [6, 9],   // word-order + fill-blank + build-word
     },
     nextLesson: null,
@@ -123,7 +123,7 @@ export const module3Lessons: Lesson[] = [
     phases: {
       vocabIndices: [0, 10],    // خانواده through عمو
       grammarIndex: 0,          // "The Ezafe construction (-e)"
-      readingStoryId: 1,        // "My Family"
+      readingStoryIds: [1, 2],   // "My Family" + story 2
       writingIndices: [0, 3],   // word-order + fill-blank + build-word
     },
     nextLesson: { id: "2", title: "Extended Family" },
@@ -137,7 +137,7 @@ export const module3Lessons: Lesson[] = [
     phases: {
       vocabIndices: [10, 20],   // دایی through جوان
       grammarIndex: 1,          // "Saying 'I have...'"
-      readingStoryId: 3,        // "Uncle's Visit"
+      readingStoryIds: [3, 4],   // "Uncle's Visit" + story 4
       writingIndices: [3, 6],   // word-order + fill-blank + build-word
     },
     nextLesson: { id: "3", title: "Family Life" },
@@ -151,7 +151,7 @@ export const module3Lessons: Lesson[] = [
     phases: {
       vocabIndices: [20, 30],   // پیر through خانه
       grammarIndex: 2,          // "Describing family members"
-      readingStoryId: 5,        // "A Kind Family"
+      readingStoryIds: [5, 6],   // "A Kind Family" + story 6
       writingIndices: [6, 9],   // word-order + fill-blank + build-word
     },
     nextLesson: null,
@@ -170,7 +170,7 @@ export const module4Lessons: Lesson[] = [
     phases: {
       vocabIndices: [0, 10],    // صفر through نه (0-9)
       grammarIndex: 0,          // "Counting things"
-      readingStoryId: 1,        // "My Family"
+      readingStoryIds: [1, 2],   // "My Family" + story 2
       writingIndices: [0, 3],   // word-order + fill-blank + build-word
     },
     nextLesson: { id: "2", title: "Saying Your Age" },
@@ -184,7 +184,7 @@ export const module4Lessons: Lesson[] = [
     phases: {
       vocabIndices: [10, 20],   // ده through نوزده (10-19)
       grammarIndex: 1,          // "Saying your age"
-      readingStoryId: 3,        // "How Old Are You?"
+      readingStoryIds: [3, 4],   // "How Old Are You?" + story 4
       writingIndices: [3, 6],   // word-order + fill-blank + build-word
     },
     nextLesson: { id: "3", title: "Big Numbers" },
@@ -198,7 +198,7 @@ export const module4Lessons: Lesson[] = [
     phases: {
       vocabIndices: [20, 31],   // بیست through هزار (20-1000)
       grammarIndex: 2,          // "Combining numbers"
-      readingStoryId: 5,        // "A Big Family"
+      readingStoryIds: [5, 6],   // "A Big Family" + story 6
       writingIndices: [6, 9],   // word-order + fill-blank + build-word
     },
     nextLesson: null,
@@ -217,7 +217,7 @@ export const module5Lessons: Lesson[] = [
     phases: {
       vocabIndices: [0, 10],    // شنبه through دیروز (days + today/tomorrow/yesterday)
       grammarIndex: 0,          // "Talking about your schedule"
-      readingStoryId: 1,        // "My Week"
+      readingStoryIds: [1, 2],   // "My Week" + story 2
       writingIndices: [0, 3],   // word-order + fill-blank + build-word
     },
     nextLesson: { id: "2", title: "Time Expressions" },
@@ -231,7 +231,7 @@ export const module5Lessons: Lesson[] = [
     phases: {
       vocabIndices: [10, 20],   // هفته through هر هفته (time expressions)
       grammarIndex: 1,          // "Using time expressions"
-      readingStoryId: 3,        // "A Busy Week"
+      readingStoryIds: [3, 4],   // "A Busy Week" + story 4
       writingIndices: [3, 6],   // word-order + fill-blank + build-word
     },
     nextLesson: null,
@@ -250,7 +250,7 @@ export const module6Lessons: Lesson[] = [
     phases: {
       vocabIndices: [0, 12],    // فروردین through اسفند (12 month names)
       grammarIndex: 0,          // "Saying which month it is"
-      readingStoryId: 1,        // "The Persian Calendar"
+      readingStoryIds: [1, 2],   // "The Persian Calendar" + story 2
       writingIndices: [0, 3],   // word-order + fill-blank + build-word
     },
     nextLesson: { id: "2", title: "Seasons" },
@@ -264,7 +264,7 @@ export const module6Lessons: Lesson[] = [
     phases: {
       vocabIndices: [12, 19],   // بهار through فصل (seasons + month/year/season)
       grammarIndex: 1,          // "Talking about seasons"
-      readingStoryId: 3,        // "The Four Seasons"
+      readingStoryIds: [3, 4],   // "The Four Seasons" + story 4
       writingIndices: [3, 6],   // word-order + fill-blank + build-word
     },
     nextLesson: null,

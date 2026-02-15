@@ -32,14 +32,14 @@ interface LessonFlowProps {
   lesson: Lesson
   vocabWords: VocabularyWord[]
   grammarExercise: GrammarExercise
-  readingStory: ReadingExercise
+  readingStories: ReadingExercise[]
   writingExercises: WritingExercise[]
   moduleId: string
 }
 
 // ─── Component ───────────────────────────────────────────────────
 
-export function LessonFlow({ lesson, vocabWords, grammarExercise, readingStory, writingExercises, moduleId }: LessonFlowProps) {
+export function LessonFlow({ lesson, vocabWords, grammarExercise, readingStories, writingExercises, moduleId }: LessonFlowProps) {
   const router = useRouter()
   const [phase, setPhase] = useState<Phase>("intro")
 
@@ -110,7 +110,7 @@ export function LessonFlow({ lesson, vocabWords, grammarExercise, readingStory, 
         <GrammarPhase grammar={grammarExercise} onComplete={goNext} />
       )}
       {phase === "reading" && (
-        <ReadingPhase story={readingStory} moduleId={moduleId} onComplete={goNext} />
+        <ReadingPhase stories={readingStories} moduleId={moduleId} onComplete={goNext} />
       )}
       {phase === "writing" && (
         <WritingPhase exercises={writingExercises} onComplete={goNext} />
@@ -564,18 +564,20 @@ function GrammarPhase({
 // ─── Reading Phase ───────────────────────────────────────────────
 
 function ReadingPhase({
-  story,
+  stories,
   moduleId,
   onComplete,
 }: {
-  story: ReadingExercise
+  stories: ReadingExercise[]
   moduleId: string
   onComplete: () => void
 }) {
   return (
     <div className="space-y-6">
       <h2 className="text-lg font-semibold text-charcoal">Reading</h2>
-      <ReadingStory story={story} moduleId={moduleId} />
+      {stories.map((story) => (
+        <ReadingStory key={story.id} story={story} moduleId={moduleId} />
+      ))}
       <div className="flex justify-end">
         <Button
           onClick={onComplete}
