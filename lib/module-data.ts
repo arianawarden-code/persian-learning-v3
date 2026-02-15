@@ -2945,18 +2945,18 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Family love is good",
       },
       {
-        persian: "نام",
-        transliteration: "nām",
-        english: "name",
-        example: "نامِ پِدَرِ مَن عَلی اَست",
-        exampleTranslation: "My father's name is Ali",
+        persian: "نَوِه",
+        transliteration: "nave",
+        english: "grandchild",
+        example: "او نَوِهٔ پِدَربُزرگ اَست",
+        exampleTranslation: "He/She is the grandfather's grandchild",
       },
       {
-        persian: "دوست داشتَن",
-        transliteration: "doost dāshtan",
-        english: "to love",
-        example: "مَن مادَرِ خود را دوست دارَم",
-        exampleTranslation: "I love my mother",
+        persian: "دوست",
+        transliteration: "doost",
+        english: "friend",
+        example: "او دوستِ بَرادَرِ مَن اَست",
+        exampleTranslation: "He/She is my brother's friend",
       },
       {
         persian: "مِهربان",
@@ -2973,11 +2973,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "We live together",
       },
       {
-        persian: "تا",
-        transliteration: "tā",
-        english: "(counter word)",
-        example: "مَن دو تا بَرادَر دارَم",
-        exampleTranslation: "I have two brothers",
+        persian: "عَزیز",
+        transliteration: "aziz",
+        english: "dear / beloved",
+        example: "مادَرِ عَزیزِ مَن",
+        exampleTranslation: "My dear mother",
       },
       {
         persian: "خانِه",
@@ -3015,9 +3015,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "My Grandparents",
         persianTitle: "پِدَربُزُرگ و مادَربُزُرگِ مَن",
-        text: "پِدَربُزرگِ مَن پیر اَست. نامِ او عَلی اَست. مادَربُزرگِ مَن هَم پیر اَست. نامِ او مَریَم اَست. آن‌ها خوب هَستَند. عَمویِ مَن پِسَرِ پِدَربُزرگِ مَن اَست.",
+        text: "پِدَربُزرگِ مَن پیر اَست. اِسمِ او عَلی اَست. مادَربُزرگِ مَن هَم پیر اَست. اِسمِ او مَریَم اَست. آن‌ها خوب هَستَند. عَمویِ مَن پِسَرِ پِدَربُزرگِ مَن اَست.",
         textTransliteration:
-          "Pedarbozorg-e man pir ast. Nām-e ū Ali ast. Mādarbozorg-e man ham pir ast. Nām-e ū Maryam ast. Ānhā khoob hastand. Amoo-ye man pesar-e pedarbozorg-e man ast.",
+          "Pedarbozorg-e man pir ast. Esm-e ū Ali ast. Mādarbozorg-e man ham pir ast. Esm-e ū Maryam ast. Ānhā khoob hastand. Amoo-ye man pesar-e pedarbozorg-e man ast.",
         textTranslation:
           "My grandfather is old. His name is Ali. My grandmother is also old. Her name is Maryam. They are well. My uncle is my grandfather's son.",
         questions: [
