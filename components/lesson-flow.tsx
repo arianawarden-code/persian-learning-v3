@@ -988,7 +988,7 @@ function CompletionPhase({
       <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
         {lesson.nextLesson && (
           <Button
-            onClick={() => router.push(`/modules/1/lessons/${lesson.nextLesson!.id}`)}
+            onClick={() => router.push(`/modules/${moduleId}/lessons/${lesson.nextLesson!.id}`)}
             className="bg-terracotta hover:bg-terracotta/90 gap-2"
           >
             Continue to Next Lesson
@@ -997,7 +997,7 @@ function CompletionPhase({
         )}
         <Button
           variant="outline"
-          onClick={() => router.push(`/modules/1/lessons/${lesson.id}`)}
+          onClick={() => router.push(`/modules/${moduleId}/lessons/${lesson.id}`)}
         >
           <RotateCcw className="mr-2 h-4 w-4" />
           Review Lesson

@@ -64,6 +64,56 @@ export const module1Lessons: Lesson[] = [
   },
 ]
 
-export function getLessonById(lessonId: string): Lesson | undefined {
+// ─── Lesson Definitions for Module 2 ───────────────────────────────
+
+export const module2Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Who Am I?",
+    goal: "Learn to share your name, age, and where you're from",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],    // اسم through دانشجو
+      grammarIndex: 0,          // "Saying 'My name is...'"
+      readingStoryId: 1,        // "My Name"
+      writingIndices: [0, 3],   // word-order + fill-blank + build-word
+    },
+    nextLesson: { id: "2", title: "Pronouns & Being" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Pronouns & Being",
+    goal: "Master Persian pronouns and the verb 'to be'",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],   // من through است
+      grammarIndex: 1,          // "Pronouns with the verb 'to be'"
+      readingStoryId: 3,        // "Meeting a New Friend"
+      writingIndices: [3, 6],   // word-order + fill-blank + build-word
+    },
+    nextLesson: { id: "3", title: "What I Do" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "What I Do",
+    goal: "Talk about your job, where you live, and what languages you speak",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],   // دارم through دکتر
+      grammarIndex: 2,          // "Saying where you're from"
+      readingStoryId: 5,        // "My Job"
+      writingIndices: [6, 9],   // word-order + fill-blank + build-word
+    },
+    nextLesson: null,
+  },
+]
+
+export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "2") {
+    return module2Lessons.find((l) => l.id === lessonId)
+  }
   return module1Lessons.find((l) => l.id === lessonId)
 }

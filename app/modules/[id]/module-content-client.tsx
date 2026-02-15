@@ -8,14 +8,15 @@ import { ModuleProgressSidebar } from "@/components/module-progress-sidebar"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import { useModuleProgress } from "@/hooks/use-module-progress"
-import { module1Lessons } from "@/lib/lesson-data"
+import { module1Lessons, module2Lessons } from "@/lib/lesson-data"
 import { isLessonComplete } from "@/lib/progress-storage"
 
 export default function ModuleContentClient({ id }: { id: string }) {
   const module = modules.find((m) => m.id.toString() === id)
   const { vocabulary: vocabularyProgress, reading: readingProgress, writing: writingProgress, grammar: grammarProgress, overall: overallProgress } = useModuleProgress(id)
 
-  const isModule1 = id === "1"
+  const isLessonModule = id === "1" || id === "2"
+  const lessonsForModule = id === "1" ? module1Lessons : id === "2" ? module2Lessons : []
 
   const levelColors = {
     alphabet: "bg-blue-100 text-blue-700 border-blue-300",
@@ -70,19 +71,20 @@ export default function ModuleContentClient({ id }: { id: string }) {
           </div>
 
           {/* Lessons (Module 1) or Learning Areas (all other modules) */}
-          {isModule1 ? (
+          {isLessonModule ? (
             <section>
               <h2 className="mb-6 text-2xl font-bold text-charcoal">Lessons</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {module1Lessons.map((lesson, index) => {
-                  const complete = isLessonComplete("1", lesson.id)
-                  const previousComplete = index === 0 || isLessonComplete("1", module1Lessons[index - 1].id)
+                {lessonsForModule.map((lesson, index) => {
+                  const complete = isLessonComplete(id, lesson.id)
+                  const previousComplete = index === 0 || isLessonComplete(id, lessonsForModule[index - 1].id)
                   return (
                     <LessonCard
                       key={lesson.id}
                       lesson={lesson}
                       isComplete={complete}
                       isLocked={!previousComplete}
+                      moduleId={id}
                     />
                   )
                 })}

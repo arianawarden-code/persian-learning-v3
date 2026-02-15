@@ -9,9 +9,10 @@ interface LessonCardProps {
   lesson: Lesson
   isComplete: boolean
   isLocked: boolean
+  moduleId?: string
 }
 
-export function LessonCard({ lesson, isComplete, isLocked }: LessonCardProps) {
+export function LessonCard({ lesson, isComplete, isLocked, moduleId = "1" }: LessonCardProps) {
   const content = (
     <Card
       className={`group flex h-full cursor-pointer flex-col border-sand-200 bg-white px-8 pt-8 pb-8 transition-all ${
@@ -49,7 +50,7 @@ export function LessonCard({ lesson, isComplete, isLocked }: LessonCardProps) {
   }
 
   return (
-    <Link href={`/modules/1/lessons/${lesson.id}`} className="h-full">
+    <Link href={`/modules/${moduleId}/lessons/${lesson.id}`} className="h-full">
       {content}
     </Link>
   )
