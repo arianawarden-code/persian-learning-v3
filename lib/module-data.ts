@@ -3911,118 +3911,193 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
     ],
     reading: [
+      // Lesson 1 readings (use M1+M2+M3+M4 + M5 L1 vocab: days + today/tomorrow/yesterday)
       {
         id: 1,
-        title: "At the Restaurant",
-        persianTitle: "دَر رِستوران",
-        text: "من به رستوران می‌روم. منو را می‌بینم. برنج و مرغ سفارش می‌دهم. غذا خوشمزه است. چای می‌نوشم.",
+        title: "My Week",
+        persianTitle: "هَفتِهٔ مَن",
+        text: "مَن مُهَندِس هَستَم و دَر شَهرِ بُزرگ کار می‌کُنَم. شَنبه و یَکشَنبه و دوشَنبه کار می‌کُنَم. سِه‌شَنبه و چَهارشَنبه یاد می‌گیرَم. پَنج‌شَنبه و جُمعه دَر خانِه هَستَم. اِمروز جُمعه اَست و مَن خوب هَستَم!",
         textTransliteration:
-          "man be resturān miram. menoo rā mibinam. berenj va morgh sefāresh midaham. ghazā khoshmaze ast. chāy minusham.",
+          "Man mohandes hastam va dar shahr-e bozorg kār mikonam. Shanbe va yekshanbe va doshanbe kār mikonam. Seshanbe va chahārshanbe yād migīram. Panjshanbe va jom'e dar khāne hastam. Emruz jom'e ast va man khoob hastam!",
         textTranslation:
-          "I go to the restaurant. I see the menu. I order rice and chicken. The food is delicious. I drink tea.",
+          "I am an engineer and I work in a big city. On Saturday, Sunday, and Monday I work. On Tuesday and Wednesday I study. On Thursday and Friday I am at home. Today is Friday and I am doing well!",
         questions: [
           {
-            question: "Where does the person go?",
-            options: ["Home", "Restaurant", "Shop", "School"],
+            question: "How many days does the speaker work?",
+            options: ["Two", "Three", "Four", "Five"],
             correctAnswer: 1,
           },
           {
-            question: "What does the person order?",
-            options: ["Fish", "Rice and chicken", "Vegetables", "Fruit"],
+            question: "What day is it today?",
+            options: ["Thursday", "Friday", "Saturday", "Sunday"],
             correctAnswer: 1,
           },
         ],
       },
       {
         id: 2,
-        title: "Breakfast Time",
-        persianTitle: "وَقتِ صُبحانِه",
-        text: "صبح من صبحانه می‌خورم. نان و پنیر می‌خورم. چای می‌نوشم. چای گرم است. صبحانه خوشمزه است.",
+        title: "Tomorrow's Plan",
+        persianTitle: "فَردا",
+        text: "اِمروز شَنبه اَست. دیروز جُمعه بود و مَن دَر خانِه بودَم. فَردا یَکشَنبه اَست و مَن کار می‌کُنَم. بَرادَرِ مَن دانِشجو اَست و فَردا یاد می‌گیرَد. ما با هَم دَر شَهر هَستیم.",
         textTransliteration:
-          "sobh man sobhāne mikhoram. nān va panir mikhoram. chāy minusham. chāy garm ast. sobhāne khoshmaze ast.",
+          "Emruz shanbe ast. Diruz jom'e bud va man dar khāne budam. Fardā yekshanbe ast va man kār mikonam. Barādar-e man dāneshju ast va fardā yād migīrad. Mā bā ham dar shahr hastim.",
         textTranslation:
-          "In the morning I eat breakfast. I eat bread and cheese. I drink tea. The tea is hot. Breakfast is delicious.",
+          "Today is Saturday. Yesterday was Friday and I was at home. Tomorrow is Sunday and I will work. My brother is a student and tomorrow he will study. We are together in the city.",
         questions: [
           {
-            question: "What does the person eat for breakfast?",
-            options: ["Rice", "Bread and cheese", "Meat", "Fish"],
+            question: "What day is tomorrow?",
+            options: ["Saturday", "Sunday", "Monday", "Friday"],
             correctAnswer: 1,
           },
-          { question: "What does the person drink?", options: ["Water", "Coffee", "Tea", "Milk"], correctAnswer: 2 },
+          {
+            question: "What will the brother do tomorrow?",
+            options: ["Work", "Study", "Stay home", "Travel"],
+            correctAnswer: 1,
+          },
         ],
       },
+      // Lesson 2 readings (use M1+M2+M3+M4 + all M5 vocab)
       {
         id: 3,
-        title: "Favorite Foods",
-        persianTitle: "غَذاهایِ مَوردِ عَلاقِه",
-        text: "من برنج دوست دارم. میوه هم دوست دارم. سیب و پرتقال خوشمزه است. من سبزی هم می‌خورم. سبزی سالم است.",
+        title: "A Busy Week",
+        persianTitle: "هَفتِهٔ شُلوغ",
+        text: "هَر روز کار می‌کُنَم. اوّلِ هَفته کار زیاد اَست. اِمروز صُبح زود کار می‌کُنَم. اِمروز شَب دَر خانِه هَستَم. آخِرِ هَفته خوب اَست! جُمعه دَر خانِه هَستَم و خانوادِهٔ مَن با هَم هَستیم.",
         textTransliteration:
-          "man berenj doost dāram. mive ham doost dāram. sib va porteghāl khoshmaze ast. man sabzi ham mikhoram. sabzi sālem ast.",
+          "Har ruz kār mikonam. Avval-e hafte kār ziyād ast. Emruz sobh zud kār mikonam. Emruz shab dar khāne hastam. Ākhare hafte khoob ast! Jom'e dar khāne hastam va khānevāde-ye man bā ham hastim.",
         textTranslation:
-          "I like rice. I also like fruit. Apples and oranges are delicious. I also eat vegetables. Vegetables are healthy.",
+          "I work every day. At the beginning of the week there is a lot of work. This morning I work early. Tonight I am at home. The weekend is great! On Friday I am at home and my family is together.",
         questions: [
           {
-            question: "What does the person like?",
-            options: ["Only meat", "Rice and fruit", "Only vegetables", "Only bread"],
+            question: "When does the speaker work early?",
+            options: ["Tonight", "This morning", "The weekend", "Friday"],
             correctAnswer: 1,
           },
           {
-            question: "Why does the person eat vegetables?",
-            options: ["They are expensive", "They are healthy", "They are cold", "They are hot"],
-            correctAnswer: 1,
+            question: "What does the speaker do on Friday?",
+            options: ["Works", "Studies", "Stays at home", "Travels"],
+            correctAnswer: 2,
           },
         ],
       },
       {
         id: 4,
-        title: "Shopping for Food",
-        persianTitle: "خَریدِ مَوادِّ غَذایی",
-        text: "من به بازار می‌روم. میوه تازه می‌خرم. سیب قرمز خوب است. نان تازه هم می‌خرم. همه چیز خوب است.",
+        title: "Next Week",
+        persianTitle: "هَفتِهٔ بَعد",
+        text: "هَفته‌یِ پیش مَن دَر خانِه بودَم. هَر هَفته دوشَنبه و چَهارشَنبه کار می‌کُنَم. هَفته‌یِ بَعد بَرادَرِ مَن و دوستِ او خانِهٔ ما هَستَند. بَرادَرِ مَن بیست ساله اَست و جَوان اَست. او مِهربان و عَزیز اَست!",
         textTransliteration:
-          "man be bāzār miram. mive tāze mikharam. sib ghermez khoob ast. nān tāze ham mikharam. hame chiz khoob ast.",
+          "Hafte-ye pish man dar khāne budam. Har hafte doshanbe va chahārshanbe kār mikonam. Hafte-ye ba'd barādar-e man va doost-e ū khāne-ye mā hastand. Barādar-e man bist sāle ast va javān ast. Ū mehrabān va aziz ast!",
         textTranslation:
-          "I go to the market. I buy fresh fruit. Red apples are good. I also buy fresh bread. Everything is good.",
+          "Last week I was at home. Every week on Monday and Wednesday I work. Next week my brother and his friend will be at our house. My brother is twenty years old and young. He is kind and dear!",
         questions: [
           {
-            question: "Where does the person go?",
-            options: ["Restaurant", "Market", "Home", "School"],
+            question: "When does the speaker work?",
+            options: ["Saturday and Sunday", "Monday and Wednesday", "Thursday and Friday", "Every day"],
             correctAnswer: 1,
           },
-          { question: "What color are the apples?", options: ["Green", "Yellow", "Red", "Orange"], correctAnswer: 2 },
-        ],
-      },
-      {
-        id: 5,
-        title: "Dinner Preparation",
-        persianTitle: "آمادِه‌سازیِ شام",
-        text: "شب من شام درست می‌کنم. برنج می‌پزم. مرغ با سبزی درست می‌کنم. غذا آماده است. خانواده شام می‌خورد.",
-        textTransliteration:
-          "shab man shām dorost mikonam. berenj mipazam. morgh bā sabzi dorost mikonam. ghazā āmāde ast. khānevāde shām mikhored.",
-        textTranslation:
-          "At night I make dinner. I cook rice. I make chicken with vegetables. The food is ready. The family eats dinner.",
-        questions: [
           {
-            question: "When does the person cook?",
-            options: ["Morning", "Afternoon", "Night", "Noon"],
-            correctAnswer: 2,
-          },
-          {
-            question: "What does the person cook?",
-            options: ["Rice and chicken with vegetables", "Only rice", "Only meat", "Only vegetables"],
-            correctAnswer: 0,
+            question: "Who is coming next week?",
+            options: ["The speaker's father", "The speaker's brother and his friend", "The speaker's uncle", "The speaker's sister"],
+            correctAnswer: 1,
           },
         ],
       },
     ],
     writing: [
-      { targetWord: "غذا", availableLetters: ["غ", "ذ", "ا", "ن", "م"], description: "Build the word for 'food'" },
-      { targetWord: "نان", availableLetters: ["ن", "ا", "ب", "م"], description: "Build the word for 'bread'" },
-      { targetWord: "آب", availableLetters: ["آ", "ب", "ش", "م"], description: "Build the word for 'water'" },
-      { targetWord: "چای", availableLetters: ["چ", "ا", "ی", "م", "ن"], description: "Build the word for 'tea'" },
+      // Lesson 1: word-order + fill-blank + build-word (uses L1 vocab: days + today/tomorrow/yesterday)
       {
-        targetWord: "میوه",
-        availableLetters: ["م", "ی", "و", "ه", "ن", "ا"],
-        description: "Build the word for 'fruit'",
+        id: 1,
+        type: "word-order",
+        instruction: "Arrange the words to say 'Today is Saturday'",
+        tiles: ["امروز", "شنبه", "است"],
+        correctOrder: ["امروز", "شنبه", "است"],
+      },
+      {
+        id: 2,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "امروز شنبه است و ___ یکشنبه است",
+        choices: ["فردا", "دیروز", "خوب"],
+        correctChoice: "فردا",
+      },
+      {
+        id: 3,
+        type: "build-word",
+        instruction: "Build the word 'جمعه' (Friday) using the letters below",
+        targetWord: "جمعه",
+        targetWordTransliteration: "jom'e",
+        availableLetters: ["ج", "م", "ع", "ه", "ب", "د"],
+      },
+      // Lesson 2: word-order + fill-blank + build-word (uses all M5 vocab)
+      {
+        id: 4,
+        type: "word-order",
+        instruction: "Arrange the words to say 'I work every day'",
+        tiles: ["هر", "روز", "کار", "می‌کنم"],
+        correctOrder: ["هر", "روز", "کار", "می‌کنم"],
+      },
+      {
+        id: 5,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "___ هفته دوشنبه کار می‌کنم",
+        choices: ["هر", "بله", "خوب"],
+        correctChoice: "هر",
+      },
+      {
+        id: 6,
+        type: "build-word",
+        instruction: "Build the word 'هفته' (week) using the letters below",
+        targetWord: "هفته",
+        targetWordTransliteration: "hafte",
+        availableLetters: ["ه", "ف", "ت", "ه", "ب", "د"],
+      },
+    ],
+    grammar: [
+      // Lesson 1: Talking about your schedule
+      {
+        id: 1,
+        type: "pattern-intro",
+        instruction: "Talking about your schedule",
+        teachingContent: {
+          title: "What Do You Do on...?",
+          explanation: "In Persian, to say what you do on a specific day, simply put the day name at the beginning of the sentence, then say what you do. There is no word for 'on' — you just say the day directly. For example, 'شنبه کار می‌کنم' (shanbe kār mikonam) means 'On Saturday I work'. You can list multiple days with و (and): 'شنبه و یکشنبه کار می‌کنم' = 'On Saturday and Sunday I work'.",
+          examples: [],
+        },
+        pattern: "[day] + [activity]",
+        patternParts: ["[day]", "[what you do]"],
+        patternExamples: [
+          { persian: "شنبه کار می‌کنم", transliteration: "shanbe kār mikonam", english: "On Saturday I work" },
+          { persian: "دوشنبه یاد می‌گیرم", transliteration: "doshanbe yād migīram", english: "On Monday I study" },
+          { persian: "جمعه در خانه هستم", transliteration: "jom'e dar khāne hastam", english: "On Friday I am at home" },
+        ],
+        note: "No preposition needed! Just put the day at the start of the sentence. You can also say 'امروز' (today), 'فردا' (tomorrow), or 'دیروز' (yesterday) the same way.",
+        question: "How do you say 'On Thursday I work'?",
+        options: ["کار می‌کنم پنج‌شنبه", "در پنج‌شنبه کار می‌کنم", "پنج‌شنبه کار می‌کنم", "من پنج‌شنبه در کار"],
+        correctAnswer: 2,
+        explanation: "Put the day first, then the activity: پنج‌شنبه کار می‌کنم (panjshanbe kār mikonam).",
+      },
+      // Lesson 2: Using time expressions
+      {
+        id: 2,
+        type: "pattern-intro",
+        instruction: "Using time expressions",
+        teachingContent: {
+          title: "When Did It Happen?",
+          explanation: "Persian has simple time expressions to talk about the past, present, and future. 'هفته‌ی پیش' (hafte-ye pish) means 'last week' and 'هفته‌ی بعد' (hafte-ye ba'd) means 'next week'. The ezafe (-e) connects هفته to the time word. 'هر روز' (har ruz) means 'every day' and 'هر هفته' (har hafte) means 'every week'. Put these at the beginning of a sentence, just like day names.",
+          examples: [],
+        },
+        pattern: "[time expression] + [activity]",
+        patternParts: ["[time expression]", "[what you do]"],
+        patternExamples: [
+          { persian: "هر روز کار می‌کنم", transliteration: "har ruz kār mikonam", english: "I work every day" },
+          { persian: "هفته‌ی بعد یاد می‌گیرم", transliteration: "hafte-ye ba'd yād migīram", english: "Next week I will study" },
+          { persian: "آخرِ هفته در خانه هستم", transliteration: "ākhare hafte dar khāne hastam", english: "On the weekend I am at home" },
+        ],
+        note: "'هر' (har) means 'every' — combine it with any time word: هر روز (every day), هر هفته (every week). 'پیش' means 'before/last' and 'بعد' means 'after/next' when used with هفته.",
+        question: "How do you say 'Every week I work'?",
+        options: ["من هر کار هفته می‌کنم", "هر هفته کار می‌کنم", "کار هر هفته می‌کنم", "هفته هر کار می‌کنم"],
+        correctAnswer: 1,
+        explanation: "Time expression first: هر هفته کار می‌کنم (har hafte kār mikonam).",
       },
     ],
   },

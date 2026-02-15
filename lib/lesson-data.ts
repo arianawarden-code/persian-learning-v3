@@ -205,7 +205,43 @@ export const module4Lessons: Lesson[] = [
   },
 ]
 
+// ─── Lesson Definitions for Module 5 ───────────────────────────────
+
+export const module5Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Days of the Week",
+    goal: "Learn the seven days of the week and how to talk about your schedule",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],    // شنبه through دیروز (days + today/tomorrow/yesterday)
+      grammarIndex: 0,          // "Talking about your schedule"
+      readingStoryId: 1,        // "My Week"
+      writingIndices: [0, 3],   // word-order + fill-blank + build-word
+    },
+    nextLesson: { id: "2", title: "Time Expressions" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Time Expressions",
+    goal: "Learn to talk about weeks, weekends, and use time expressions like 'every day' and 'next week'",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],   // هفته through هر هفته (time expressions)
+      grammarIndex: 1,          // "Using time expressions"
+      readingStoryId: 3,        // "A Busy Week"
+      writingIndices: [3, 6],   // word-order + fill-blank + build-word
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "5") {
+    return module5Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "4") {
     return module4Lessons.find((l) => l.id === lessonId)
   }
