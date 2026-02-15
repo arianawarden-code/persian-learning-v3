@@ -414,20 +414,37 @@ function GrammarPhase({
 
         {grammar.pattern && (
           <div className="mb-6 rounded-xl bg-terracotta/5 border border-terracotta/20 p-6 text-center">
-            <div className="flex items-center justify-center gap-3 text-2xl" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
-              {patternParts.map((part, i) => (
-                <span
-                  key={i}
-                  className={
-                    part.startsWith("[")
-                      ? "rounded bg-terracotta/20 px-3 py-1 text-terracotta font-medium"
-                      : "text-charcoal"
-                  }
-                >
-                  {part}
-                </span>
-              ))}
-            </div>
+            {/* Check if pattern parts contain English labels (brackets) */}
+            {patternParts.some(p => p.startsWith("[")) ? (
+              <>
+                <p className="mb-2 text-xs font-medium uppercase tracking-wide text-charcoal/40">Persian word order</p>
+                <div className="flex items-center justify-center gap-3 text-lg">
+                  {patternParts.map((part, i) => (
+                    <span
+                      key={i}
+                      className="rounded bg-terracotta/20 px-3 py-1.5 text-terracotta font-medium"
+                    >
+                      {part}
+                    </span>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <div className="flex items-center justify-center gap-3 text-2xl" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
+                {patternParts.map((part, i) => (
+                  <span
+                    key={i}
+                    className={
+                      part.startsWith("[")
+                        ? "rounded bg-terracotta/20 px-3 py-1 text-terracotta font-medium"
+                        : "text-charcoal"
+                    }
+                  >
+                    {part}
+                  </span>
+                ))}
+              </div>
+            )}
             <p className="mt-3 text-sm text-charcoal/50">{grammar.pattern}</p>
           </div>
         )}
