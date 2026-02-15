@@ -19,9 +19,10 @@ interface ReadingStoryProps {
   moduleId: string | number
   nextStoryId?: string | null
   nextStoryTitle?: string | null
+  onSubmit?: () => void
 }
 
-export function ReadingStory({ story, moduleId, nextStoryId = null, nextStoryTitle = null }: ReadingStoryProps) {
+export function ReadingStory({ story, moduleId, nextStoryId = null, nextStoryTitle = null, onSubmit }: ReadingStoryProps) {
   const router = useRouter()
   const [showTranslation, setShowTranslation] = useState(false)
   const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: number }>({})
@@ -94,6 +95,8 @@ export function ReadingStory({ story, moduleId, nextStoryId = null, nextStoryTit
     if (nextStoryId) {
       setLastActivity({ type: "reading", moduleId: String(moduleId), id: nextStoryId })
     }
+
+    onSubmit?.()
   }
 
   const handleReset = () => {

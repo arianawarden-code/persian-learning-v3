@@ -573,6 +573,7 @@ function ReadingPhase({
   onComplete: () => void
 }) {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [submitted, setSubmitted] = useState(false)
   const isLast = currentIndex >= stories.length - 1
 
   const handleNext = () => {
@@ -580,6 +581,7 @@ function ReadingPhase({
       onComplete()
     } else {
       setCurrentIndex(currentIndex + 1)
+      setSubmitted(false)
       window.scrollTo({ top: 0, behavior: "smooth" })
     }
   }
@@ -594,16 +596,23 @@ function ReadingPhase({
           </span>
         )}
       </div>
-      <ReadingStory story={stories[currentIndex]} moduleId={moduleId} />
-      <div className="flex justify-end">
-        <Button
-          onClick={handleNext}
-          className="bg-terracotta hover:bg-terracotta/90 gap-2"
-        >
-          {isLast ? "Continue to Writing" : "Next Story"}
-          <ArrowRight className="h-4 w-4" />
-        </Button>
-      </div>
+      <ReadingStory
+        key={stories[currentIndex].id}
+        story={stories[currentIndex]}
+        moduleId={moduleId}
+        onSubmit={() => setSubmitted(true)}
+      />
+      {submitted && (
+        <div className="flex justify-end">
+          <Button
+            onClick={handleNext}
+            className="bg-terracotta hover:bg-terracotta/90 gap-2"
+          >
+            {isLast ? "Continue to Writing" : "Next Story"}
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        </div>
+      )}
     </div>
   )
 }
