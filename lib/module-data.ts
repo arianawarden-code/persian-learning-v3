@@ -3483,127 +3483,286 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
     ],
     reading: [
+      // Lesson 1 readings (use M1+M2+M3 + M4 L1 vocab: numbers 0-9)
       {
         id: 1,
-        title: "Counting Friends",
-        persianTitle: "شُمُردَنِ دوستان",
-        text: "مَن دو دوست دارَم. یِک دوست دَر خانِه اَست. دوستِ دیگَر دَر کار اَست. ما سِه بار دَر هَفته هَم‌دیگَر را می‌بینیم. مَن دوستام را دوست دارَم.",
+        title: "My Family",
+        persianTitle: "خانوادِهٔ مَن",
+        text: "سَلام! مَن سارا هَستَم. مَن دو بَرادَر دارَم. مَن سِه خواهَر دارَم. پِدَرِ مَن مُعَلِّم اَست. مادَرِ مَن دُکتُر اَست. خانوادِهٔ مَن بُزرگ اَست!",
         textTransliteration:
-          "man do doost dāram. yek doost dar khāne ast. doost-e digar dar kār ast. mā se bār dar hafte ham-digar rā mibinim. man doostām rā doost dāram.",
+          "Salām! Man Sārā hastam. Man do barādar dāram. Man se khāhar dāram. Pedar-e man mo'allem ast. Mādar-e man doktor ast. Khānevāde-ye man bozorg ast!",
         textTranslation:
-          "I have two friends. One friend is at home. The other friend is at work. We see each other three times a week. I love my friends.",
+          "Hello! I am Sara. I have two brothers. I have three sisters. My father is a teacher. My mother is a doctor. My family is big!",
         questions: [
           {
-            question: "How many friends does the person have?",
+            question: "How many brothers does Sara have?",
             options: ["One", "Two", "Three", "Four"],
             correctAnswer: 1,
           },
           {
-            question: "How many times a week do they see each other?",
-            options: ["Two", "Three", "Five", "Seven"],
-            correctAnswer: 1,
+            question: "How many sisters does Sara have?",
+            options: ["One", "Two", "Three", "Four"],
+            correctAnswer: 2,
           },
         ],
       },
       {
         id: 2,
-        title: "A Busy Week",
-        persianTitle: "یِک هَفتِهٔ شُلوغ",
-        text: "مَن هَفت روز دَر هَفته کار می‌کُنَم. چَهار روز زود بیدار می‌شَوَم. سِه روز دیر بیدار می‌شَوَم. مَن هَر روز هَشت ساعَت می‌خوابَم. زندگی خوب اَست.",
+        title: "How Many?",
+        persianTitle: "چَند؟",
+        text: "مَن پَنج دوست دارَم. دو دوست دانِشجو هَستَند. سِه دوست مُعَلِّم هَستَند. یِک دوست دُکتُر اَست. مَن چَهار بَرادَر دارَم. خانوادِهٔ مَن خوب اَست.",
         textTransliteration:
-          "man haft rooz dar hafte kār mikonam. chahār rooz zood bidār mishavam. se rooz dir bidār mishavam. man har rooz hasht sā'at mikhābam. zendegi khoob ast.",
+          "Man panj doost dāram. Do doost dāneshju hastand. Se doost mo'allem hastand. Yek doost doktor ast. Man chahār barādar dāram. Khānevāde-ye man khoob ast.",
         textTranslation:
-          "I work seven days a week. Four days I wake up early. Three days I wake up late. I sleep eight hours every day. Life is good.",
+          "I have five friends. Two friends are students. Three friends are teachers. One friend is a doctor. I have four brothers. My family is good.",
         questions: [
           {
-            question: "How many days does the person work?",
-            options: ["Three", "Four", "Seven", "Eight"],
+            question: "How many friends does the speaker have?",
+            options: ["Three", "Four", "Five", "Six"],
             correctAnswer: 2,
           },
           {
-            question: "How many hours does the person sleep?",
-            options: ["Six", "Seven", "Eight", "Nine"],
-            correctAnswer: 2,
-          },
-        ],
-      },
-      {
-        id: 3,
-        title: "Shopping with Tomans",
-        persianTitle: "خَرید با تومان",
-        text: "مَن پَنجاه تومان دارَم. یِک سیب دَه تومان قِیمَت دارَد. مَن سِه سیب می‌خَرَم. بَعد بیست تومان بَرایِ مَن می‌مانَد. مَن خوشحالَم.",
-        textTransliteration:
-          "man panjāh tomān dāram. yek sib dah tomān gheymat dārad. man se sib mikharam. ba'ad bist tomān barāye man mimānad. man khoshhālam.",
-        textTranslation:
-          "I have fifty tomans. One apple costs ten tomans. I buy three apples. Then twenty tomans remain for me. I am happy.",
-        questions: [
-          {
-            question: "How much money does the person have?",
-            options: ["Ten tomans", "Twenty tomans", "Fifty tomans", "One hundred tomans"],
-            correctAnswer: 2,
-          },
-          {
-            question: "How many apples does the person buy?",
+            question: "How many friends are teachers?",
             options: ["One", "Two", "Three", "Four"],
             correctAnswer: 2,
           },
         ],
       },
+      // Lesson 2 readings (use M1+M2+M3 + M4 L1+L2 vocab: numbers 0-19)
       {
-        id: 4,
-        title: "In the Classroom",
-        persianTitle: "دَر کِلاسِ دَرس",
-        text: "دَر کِلاسِ ما بیست دانِشجو هَستَند. دَه دانِشجو دُختَر هَستَند و دَه دانِشجو پِسَر هَستَند. مُعَلِّمِ ما می‌گوید: «نَوَد دَرصَد دُرُست اَست». مَن می‌خَندَم.",
+        id: 3,
+        title: "How Old Are You?",
+        persianTitle: "چَند ساله هَستی؟",
+        text: "سَلام! مَن عَلی هَستَم. مَن شانزدَه ساله هَستَم. بَرادَرِ مَن چَهاردَه ساله اَست. خواهَرِ مَن دَوازدَه ساله اَست. ما دانِشجو هَستیم.",
         textTransliteration:
-          "dar kelās-e mā bist dāneshju hastand. dah dāneshju dokhtar hastand va dah dāneshju pesar hastand. mo'allem-e mā migooyad: «navad darsad dorost ast». man mikhandam.",
+          "Salām! Man Ali hastam. Man shānzdah sāle hastam. Barādar-e man chahārdah sāle ast. Khāhar-e man davāzdah sāle ast. Mā dāneshju hastim.",
         textTranslation:
-          "In our class there are twenty students. Ten students are girls and ten students are boys. Our teacher says: “Ninety percent is correct.” I laugh.",
+          "Hello! I am Ali. I am sixteen years old. My brother is fourteen years old. My sister is twelve years old. We are students.",
         questions: [
           {
-            question: "How many students are in the class?",
-            options: ["Ten", "Twenty", "Thirty", "Forty"],
-            correctAnswer: 1,
+            question: "How old is Ali?",
+            options: ["Twelve", "Fourteen", "Sixteen", "Eighteen"],
+            correctAnswer: 2,
           },
           {
-            question: "How many girls are in the class?",
-            options: ["Nine", "Ten", "Nineteen", "Twenty"],
+            question: "How old is Ali's sister?",
+            options: ["Ten", "Twelve", "Fourteen", "Sixteen"],
             correctAnswer: 1,
           },
         ],
       },
       {
-        id: 5,
-        title: "A Big Library",
-        persianTitle: "یِک کِتابخانِهٔ بُزُرگ",
-        text: "پِدَربُزرگِ مَن هِزار کِتاب دارَد. مَن صَد کِتاب دَر خانِه دارَم. خواهرِ مَن سی کِتاب دارَد. بَرادَرِ مَن دو کِتاب دارَد. ما کِتاب‌ها را دوست داریم.",
+        id: 4,
+        title: "In the Family",
+        persianTitle: "دَر خانوادِه",
+        text: "پِدَرِ مَن مُعَلِّم اَست. مادَرِ مَن دُکتُر اَست. پِدَرِ مَن بُزرگ اَست. مادَرِ مَن مِهربان اَست. مَن سیزدَه ساله هَستَم. بَرادَرِ مَن نوزدَه ساله اَست. او دانِشجو اَست.",
         textTransliteration:
-          "pedarbozorg-e man hezār ketāb dārad. man sad ketāb dar khāne dāram. khāhar-e man si ketāb dārad. barādar-e man do ketāb dārad. mā ketāb-hā rā doost dārim.",
+          "Pedar-e man mo'allem ast. Mādar-e man doktor ast. Pedar-e man bozorg ast. Mādar-e man mehrabān ast. Man sizdah sāle hastam. Barādar-e man noozdah sāle ast. Ū dāneshju ast.",
         textTranslation:
-          "My grandfather has one thousand books. I have one hundred books at home. My sister has thirty books. My brother has two books. We love books.",
+          "My father is a teacher. My mother is a doctor. My father is big. My mother is kind. I am thirteen years old. My brother is nineteen years old. He is a student.",
         questions: [
           {
-            question: "How many books does the grandfather have?",
-            options: ["One hundred", "Two hundred", "One thousand", "Thirty"],
+            question: "How old is the speaker?",
+            options: ["Eleven", "Thirteen", "Fifteen", "Seventeen"],
+            correctAnswer: 1,
+          },
+          {
+            question: "How old is the brother?",
+            options: ["Fifteen", "Seventeen", "Nineteen", "Twenty"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      // Lesson 3 readings (use all M1+M2+M3+M4 vocab)
+      {
+        id: 5,
+        title: "A Big Family",
+        persianTitle: "خانوادِهٔ بُزُرگ",
+        text: "خانوادِهٔ مَن بُزرگ اَست. پِدَربُزرگِ مَن هَفتاد ساله اَست. مادَربُزرگِ مَن شَصت ساله اَست. عَمویِ مَن چِهِل ساله اَست. مَن بیست ساله هَستَم. بَرادَرِ مَن سی ساله اَست.",
+        textTransliteration:
+          "Khānevāde-ye man bozorg ast. Pedarbozorg-e man haftād sāle ast. Mādarbozorg-e man shast sāle ast. Amoo-ye man chehel sāle ast. Man bist sāle hastam. Barādar-e man si sāle ast.",
+        textTranslation:
+          "My family is big. My grandfather is seventy years old. My grandmother is sixty years old. My uncle is forty years old. I am twenty years old. My brother is thirty years old.",
+        questions: [
+          {
+            question: "How old is the grandfather?",
+            options: ["Fifty", "Sixty", "Seventy", "Eighty"],
             correctAnswer: 2,
           },
           {
+            question: "How old is the speaker?",
+            options: ["Twenty", "Thirty", "Forty", "Fifty"],
+            correctAnswer: 0,
+          },
+        ],
+      },
+      {
+        id: 6,
+        title: "Counting Together",
+        persianTitle: "با هَم شُمُردَن",
+        text: "مَن صَد کِتاب دارَم. بَرادَرِ مَن پَنجاه کِتاب دارَد. خواهَرِ مَن بیست کِتاب دارَد. پِدَرِ مَن هِزار کِتاب دارَد! ما کِتاب دوست داریم. خانوادِهٔ مَن خوب اَست.",
+        textTransliteration:
+          "Man sad ketāb dāram. Barādar-e man panjāh ketāb dārad. Khāhar-e man bist ketāb dārad. Pedar-e man hezār ketāb dārad! Mā ketāb doost dārim. Khānevāde-ye man khoob ast.",
+        textTranslation:
+          "I have one hundred books. My brother has fifty books. My sister has twenty books. My father has one thousand books! We love books. My family is good.",
+        questions: [
+          {
             question: "How many books does the speaker have?",
-            options: ["Two", "Thirty", "One hundred", "One thousand"],
+            options: ["Twenty", "Fifty", "One hundred", "One thousand"],
             correctAnswer: 2,
+          },
+          {
+            question: "How many books does the father have?",
+            options: ["One hundred", "Two hundred", "Five hundred", "One thousand"],
+            correctAnswer: 3,
           },
         ],
       },
     ],
     writing: [
+      // Lesson 1: word-order + fill-blank + build-word (uses L1 vocab: numbers 0-9)
       {
-        targetWord: "صبحانه",
-        availableLetters: ["ص", "ب", "ح", "ا", "ن", "ه", "م"],
-        description: "Build the word for 'breakfast'",
+        id: 1,
+        type: "word-order",
+        instruction: "Arrange the words to say 'I have three brothers'",
+        tiles: ["من", "سه", "برادر", "دارم"],
+        correctOrder: ["من", "سه", "برادر", "دارم"],
       },
-      { targetWord: "کار", availableLetters: ["ک", "ا", "ر", "م", "ن"], description: "Build the word for 'work'" },
-      { targetWord: "شام", availableLetters: ["ش", "ا", "م", "ب", "ر"], description: "Build the word for 'dinner'" },
-      { targetWord: "صبح", availableLetters: ["ص", "ب", "ح", "ش", "م"], description: "Build the word for 'morning'" },
-      { targetWord: "روز", availableLetters: ["ر", "و", "ز", "ش", "ب"], description: "Build the word for 'day'" },
+      {
+        id: 2,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "من ___ خواهر دارم",
+        choices: ["دو", "خوب", "سلام"],
+        correctChoice: "دو",
+      },
+      {
+        id: 3,
+        type: "build-word",
+        instruction: "Build the word 'پنج' (five) using the letters below",
+        targetWord: "پنج",
+        targetWordTransliteration: "panj",
+        availableLetters: ["پ", "ن", "ج", "ب", "د"],
+      },
+      // Lesson 2: word-order + fill-blank + build-word (uses L1+L2 vocab: numbers 0-19)
+      {
+        id: 4,
+        type: "word-order",
+        instruction: "Arrange the words to say 'I am fifteen years old'",
+        tiles: ["من", "پانزده", "ساله", "هستم"],
+        correctOrder: ["من", "پانزده", "ساله", "هستم"],
+      },
+      {
+        id: 5,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "مادرِ من ___ ساله است",
+        choices: ["چهارده", "خوب", "بله"],
+        correctChoice: "چهارده",
+      },
+      {
+        id: 6,
+        type: "build-word",
+        instruction: "Build the word 'دوازده' (twelve) using the letters below",
+        targetWord: "دوازده",
+        targetWordTransliteration: "davāzdah",
+        availableLetters: ["د", "و", "ا", "ز", "د", "ه", "ب", "ن"],
+      },
+      // Lesson 3: word-order + fill-blank + build-word (uses all vocab)
+      {
+        id: 7,
+        type: "word-order",
+        instruction: "Arrange the words to say 'My grandfather is seventy years old'",
+        tiles: ["پدربزرگِ", "من", "هفتاد", "ساله", "است"],
+        correctOrder: ["پدربزرگِ", "من", "هفتاد", "ساله", "است"],
+      },
+      {
+        id: 8,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "من ___ کتاب دارم",
+        choices: ["صد", "خوب", "بله"],
+        correctChoice: "صد",
+      },
+      {
+        id: 9,
+        type: "build-word",
+        instruction: "Build the word 'پنجاه' (fifty) using the letters below",
+        targetWord: "پنجاه",
+        targetWordTransliteration: "panjāh",
+        availableLetters: ["پ", "ن", "ج", "ا", "ه", "ب", "د"],
+      },
+    ],
+    grammar: [
+      // Lesson 1: Counting things
+      {
+        id: 1,
+        type: "pattern-intro",
+        instruction: "Counting things",
+        teachingContent: {
+          title: "Using Numbers with Nouns",
+          explanation: "In Persian, counting things is simple: put the number BEFORE the noun. Unlike English, the noun after a number stays singular — you don't add a plural ending. So 'two brothers' is 'دو برادر' (do barādar), not 'دو برادرها'. This is one of the easiest grammar rules in Persian!",
+          examples: [],
+        },
+        pattern: "[number] + [noun]",
+        patternParts: ["[number]", "[noun]"],
+        patternExamples: [
+          { persian: "یک برادر", transliteration: "yek barādar", english: "one brother" },
+          { persian: "دو خواهر", transliteration: "do khāhar", english: "two sisters" },
+          { persian: "سه دوست", transliteration: "se doost", english: "three friends" },
+        ],
+        note: "In Persian, the number comes before the noun and the noun stays singular. 'سه برادر' (se barādar) means 'three brothers' — no plural marker needed after a number.",
+        question: "How do you say 'five sisters' in Persian?",
+        options: ["خواهر پنج", "پنج خواهرها", "پنج خواهر", "خواهرِ پنج"],
+        correctAnswer: 2,
+        explanation: "The number comes before the noun, and the noun stays singular: پنج خواهر (panj khāhar).",
+      },
+      // Lesson 2: Saying your age
+      {
+        id: 2,
+        type: "pattern-intro",
+        instruction: "Saying your age",
+        teachingContent: {
+          title: "How Old Are You?",
+          explanation: "To say your age in Persian, use the pattern: من + [number] + ساله + هستم. The word 'ساله' (sāle) means 'years old' — it combines سال (year) with the suffix ه. For other people, change the verb: او ... ساله است (he/she is ... years old).",
+          examples: [],
+        },
+        pattern: "من + [number] + ساله + هستم",
+        patternParts: ["من", "[number]", "ساله", "هستم"],
+        patternExamples: [
+          { persian: "من پانزده ساله هستم", transliteration: "man pānzdah sāle hastam", english: "I am fifteen years old" },
+          { persian: "او شانزده ساله است", transliteration: "u shānzdah sāle ast", english: "He/She is sixteen years old" },
+          { persian: "برادرِ من هجده ساله است", transliteration: "barādar-e man hejdah sāle ast", english: "My brother is eighteen years old" },
+        ],
+        note: "'ساله' (sāle) means 'years old'. The verb changes with the subject: هستم (I am), هستی (you are), است (he/she is). The number goes right before ساله.",
+        question: "How do you say 'I am seventeen years old'?",
+        options: ["من هفده هستم ساله", "من ساله هفده هستم", "من هفده ساله هستم", "هفده ساله من هستم"],
+        correctAnswer: 2,
+        explanation: "The pattern is: من (I) + هفده (seventeen) + ساله (years old) + هستم (am).",
+      },
+      // Lesson 3: Combining numbers
+      {
+        id: 3,
+        type: "pattern-intro",
+        instruction: "Combining numbers",
+        teachingContent: {
+          title: "Making Bigger Numbers",
+          explanation: "To make compound numbers in Persian (like twenty-one, thirty-five), combine the tens number with the ones number using و (va, meaning 'and'). This is similar to English 'twenty-one' — just add 'and' between them: بیست و یک (bist-o yek = twenty and one).",
+          examples: [],
+        },
+        pattern: "[tens] + و + [ones]",
+        patternParts: ["[tens]", "و (and)", "[ones]"],
+        patternExamples: [
+          { persian: "بیست و یک", transliteration: "bist-o yek", english: "twenty-one" },
+          { persian: "سی و پنج", transliteration: "si-o panj", english: "thirty-five" },
+          { persian: "پنجاه و دو", transliteration: "panjāh-o do", english: "fifty-two" },
+        ],
+        note: "Use و (and) to combine tens and ones. The tens come first, then و, then the ones. This works for all compound numbers: چهل و سه (chehel-o se) = forty-three.",
+        question: "How do you say 'sixty-seven' in Persian?",
+        options: ["هفت و شصت", "شصت هفت", "شصت و هفت", "هفت شصت و"],
+        correctAnswer: 2,
+        explanation: "Tens come first, then و (and), then ones: شصت و هفت (shast-o haft).",
+      },
     ],
   },
 //module 5: days of the week

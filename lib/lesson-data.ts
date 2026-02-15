@@ -158,7 +158,57 @@ export const module3Lessons: Lesson[] = [
   },
 ]
 
+// ─── Lesson Definitions for Module 4 ───────────────────────────────
+
+export const module4Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Counting Things",
+    goal: "Learn numbers 0-9 and how to count things in Persian",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],    // صفر through نه (0-9)
+      grammarIndex: 0,          // "Counting things"
+      readingStoryId: 1,        // "My Family"
+      writingIndices: [0, 3],   // word-order + fill-blank + build-word
+    },
+    nextLesson: { id: "2", title: "Saying Your Age" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Saying Your Age",
+    goal: "Learn numbers 10-19 and how to say your age in Persian",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],   // ده through نوزده (10-19)
+      grammarIndex: 1,          // "Saying your age"
+      readingStoryId: 3,        // "How Old Are You?"
+      writingIndices: [3, 6],   // word-order + fill-blank + build-word
+    },
+    nextLesson: { id: "3", title: "Big Numbers" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "Big Numbers",
+    goal: "Learn tens 20-100 and how to combine numbers in Persian",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 31],   // بیست through هزار (20-1000)
+      grammarIndex: 2,          // "Combining numbers"
+      readingStoryId: 5,        // "A Big Family"
+      writingIndices: [6, 9],   // word-order + fill-blank + build-word
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "4") {
+    return module4Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "3") {
     return module3Lessons.find((l) => l.id === lessonId)
   }
