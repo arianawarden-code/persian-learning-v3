@@ -4240,89 +4240,193 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
     ],
     reading: [
+      // Lesson 1 readings (use M1+M2+M3+M4+M5 + M6 L1 vocab: 12 month names)
       {
         id: 1,
-        title: "My New House",
-        persianTitle: "خانِهٔ جَدیدِ مَن",
-        text: "خانه من نو است. خانه بزرگ است. اتاق‌ها روشن است. دیوارها سفید است. در آبی است. خانه خیلی قشنگ است.",
+        title: "The Persian Calendar",
+        persianTitle: "ماه‌هایِ سال",
+        text: "سال دَوازدَه ماه دارَد. فَروَردین اوّلِ سال اَست. مَن فَروَردین خوب دوست دارَم. خُرداد و تیر و مُرداد خوب اَست. مِهر و آبان و آذَر خوب اَست. اِسفَند آخِرِ سال اَست.",
         textTransliteration:
-          "khāne man now ast. khāne bozorg ast. otāgh-hā roshan ast. divār-hā sefid ast. dar ābi ast. khāne kheyli ghashang ast.",
+          "Sāl davāzdah māh dārad. Farvardin avval-e sāl ast. Man farvardin khoob doost dāram. Khordād va tir va mordād khoob ast. Mehr va ābān va āzar khoob ast. Esfand ākhare sāl ast.",
         textTranslation:
-          "My house is new. The house is big. The rooms are bright. The walls are white. The door is blue. The house is very beautiful.",
+          "A year has twelve months. Farvardin is the beginning of the year. I like Farvardin. Khordad, Tir, and Mordad are nice. Mehr, Aban, and Azar are nice. Esfand is the end of the year.",
         questions: [
-          { question: "Is the house new or old?", options: ["Old", "New", "Small", "Dirty"], correctAnswer: 1 },
-          { question: "What color are the walls?", options: ["Blue", "Red", "White", "Green"], correctAnswer: 2 },
+          {
+            question: "How many months are in a year?",
+            options: ["Ten", "Eleven", "Twelve", "Thirteen"],
+            correctAnswer: 2,
+          },
+          {
+            question: "Which month is at the end of the year?",
+            options: ["Farvardin", "Mehr", "Dey", "Esfand"],
+            correctAnswer: 3,
+          },
         ],
       },
       {
         id: 2,
-        title: "Colors in Nature",
-        persianTitle: "رَنگ‌ها دَر طَبیعَت",
-        text: "آسمان آبی است. خورشید زرد است. چمن سبز است. گل قرمز است. همه چیز قشنگ است. من طبیعت دوست دارم.",
+        title: "When Is Your Birthday?",
+        persianTitle: "ماهِ مَن",
+        text: "مَن دَر اُردیبهِشت بیست ساله هَستَم. بَرادَرِ مَن دَر شَهریوَر سی ساله اَست. خواهَرِ مَن دَر بَهمَن دَه ساله اَست. او کوچَک و مِهربان اَست. خانوادِهٔ مَن خوب اَست!",
         textTransliteration:
-          "āsemān ābi ast. khorshid zard ast. chaman sabz ast. gol ghermez ast. hame chiz ghashang ast. man tabi'at doost dāram.",
+          "Man dar ordibehesht bist sāle hastam. Barādar-e man dar shahrivar si sāle ast. Khāhar-e man dar bahman dah sāle ast. Ū koochak va mehrabān ast. Khānevāde-ye man khoob ast!",
         textTranslation:
-          "The sky is blue. The sun is yellow. The grass is green. The flower is red. Everything is beautiful. I love nature.",
+          "In Ordibehesht I will be twenty years old. My brother turns thirty in Shahrivar. My sister turns ten in Bahman. She is little and kind. My family is wonderful!",
         questions: [
-          { question: "What color is the sky?", options: ["Yellow", "Green", "Blue", "Red"], correctAnswer: 2 },
-          { question: "What color is the grass?", options: ["Green", "Blue", "Red", "Yellow"], correctAnswer: 0 },
+          {
+            question: "How old will the speaker be?",
+            options: ["Ten", "Twenty", "Thirty", "Forty"],
+            correctAnswer: 1,
+          },
+          {
+            question: "In which month does the sister have a birthday?",
+            options: ["Ordibehesht", "Shahrivar", "Bahman", "Esfand"],
+            correctAnswer: 2,
+          },
         ],
       },
+      // Lesson 2 readings (use M1+M2+M3+M4+M5 + all M6 vocab)
       {
         id: 3,
-        title: "My Room",
-        persianTitle: "اُتاقِ مَن",
-        text: "اتاق من کوچک است. اما خیلی تمیز است. میز قهوه‌ای است. صندلی سفید است. تخت بزرگ است. همه چیز خوب است.",
+        title: "The Four Seasons",
+        persianTitle: "چَهار فَصل",
+        text: "سال چَهار فَصل دارَد. بَهار خوب اَست و فَروَردین دَر بَهار اَست. تابِستان بُزرگ اَست و تیر و مُرداد دَر تابِستان اَست. پاییز مِهربان اَست. زِمِستان کوچَک اَست. مَن بَهار دوست دارَم!",
         textTransliteration:
-          "otāgh man koochak ast. ammā kheyli tamiz ast. miz ghahve-i ast. sandali sefid ast. takht bozorg ast. hame chiz khoob ast.",
+          "Sāl chahār fasl dārad. Bahār khoob ast va farvardin dar bahār ast. Tābestān bozorg ast va tir va mordād dar tābestān ast. Pāyiz mehrabān ast. Zemestān koochak ast. Man bahār doost dāram!",
         textTranslation:
-          "My room is small. But it's very clean. The desk is brown. The chair is white. The bed is big. Everything is good.",
+          "A year has four seasons. Spring is lovely and Farvardin is in spring. Summer is long and Tir and Mordad are in summer. Autumn is gentle. Winter is short. I love spring!",
         questions: [
-          { question: "Is the room big or small?", options: ["Big", "Small", "Dirty", "Dark"], correctAnswer: 1 },
-          { question: "What color is the chair?", options: ["Brown", "White", "Black", "Red"], correctAnswer: 1 },
+          {
+            question: "How many seasons are in a year?",
+            options: ["Two", "Three", "Four", "Five"],
+            correctAnswer: 2,
+          },
+          {
+            question: "Which season does the speaker love?",
+            options: ["Summer", "Autumn", "Winter", "Spring"],
+            correctAnswer: 3,
+          },
         ],
       },
       {
         id: 4,
-        title: "Shopping for Clothes",
-        persianTitle: "خَریدِ لِباس",
-        text: "من به مغازه می‌روم. لباس نو می‌خرم. یک پیراهن آبی می‌خرم. خیلی قشنگ است. یک شلوار سیاه هم می‌خرم. همه چیز خوب است.",
+        title: "My Favorite Month",
+        persianTitle: "ماهِ مَن",
+        text: "مَن مُهَندِس هَستَم و دَر شَهرِ بُزرگ کار می‌کُنَم. هَر سال دَر تابِستان دَر خانِه هَستَم. تیر و مُرداد فَصلِ تابِستان اَست. بَرادَرِ مَن زِمِستان دوست دارَد و دِی ماهِ او اَست. هَر فَصل خوب اَست!",
         textTransliteration:
-          "man be maghāze miram. lebās now mikharam. yek pirāhan ābi mikharam. kheyli ghashang ast. yek shalvār siāh ham mikharam. hame chiz khoob ast.",
+          "Man mohandes hastam va dar shahr-e bozorg kār mikonam. Har sāl dar tābestān dar khāne hastam. Tir va mordād fasl-e tābestān ast. Barādar-e man zemestān doost dārad va dey māh-e ū ast. Har fasl khoob ast!",
         textTranslation:
-          "I go to the store. I buy new clothes. I buy a blue shirt. It's very beautiful. I also buy black pants. Everything is good.",
+          "I am an engineer and I work in a big city. Every year in summer I am at home. Tir and Mordad are the summer season. My brother likes winter and Dey is his month. Every season is wonderful!",
         questions: [
-          { question: "What color is the shirt?", options: ["Black", "White", "Blue", "Red"], correctAnswer: 2 },
-          { question: "Are the clothes new or old?", options: ["Old", "New", "Dirty", "Big"], correctAnswer: 1 },
-        ],
-      },
-      {
-        id: 5,
-        title: "My Car",
-        persianTitle: "ماشینِ مَن",
-        text: "ماشین من کوچک است. رنگش قرمز است. خیلی تمیز است. نو نیست اما خوب است. من ماشینم را دوست دارم.",
-        textTransliteration:
-          "māshin man koochak ast. rangash ghermez ast. kheyli tamiz ast. now nist ammā khoob ast. man māshinam rā doost dāram.",
-        textTranslation: "My car is small. Its color is red. It's very clean. It's not new but it's good. I love my car.",
-        questions: [
-          { question: "What color is the car?", options: ["Blue", "White", "Red", "Black"], correctAnswer: 2 },
-          { question: "Is the car new?", options: ["Yes", "No", "Big", "Dirty"], correctAnswer: 1 },
+          {
+            question: "When is the speaker at home?",
+            options: ["Spring", "Summer", "Autumn", "Winter"],
+            correctAnswer: 1,
+          },
+          {
+            question: "Which season does the brother like?",
+            options: ["Spring", "Summer", "Autumn", "Winter"],
+            correctAnswer: 3,
+          },
         ],
       },
     ],
     writing: [
-      { targetWord: "رنگ", availableLetters: ["ر", "ن", "گ", "م", "ب"], description: "Build the word for 'color'" },
+      // Lesson 1: word-order + fill-blank + build-word (uses L1 vocab: month names)
       {
-        targetWord: "سفید",
-        availableLetters: ["س", "ف", "ی", "د", "ا", "م"],
-        description: "Build the word for 'white'",
+        id: 1,
+        type: "word-order",
+        instruction: "Arrange the words to say 'Farvardin is the beginning of the year'",
+        tiles: ["فروردین", "اوّلِ", "سال", "است"],
+        correctOrder: ["فروردین", "اوّلِ", "سال", "است"],
       },
-      { targetWord: "قرمز", availableLetters: ["ق", "ر", "م", "ز", "ن", "ب"], description: "Build the word for 'red'" },
-      { targetWord: "بزرگ", availableLetters: ["ب", "ز", "ر", "گ", "م", "ن"], description: "Build the word for 'big'" },
       {
-        targetWord: "قشنگ",
-        availableLetters: ["ق", "ش", "ن", "گ", "ز", "م"],
-        description: "Build the word for 'beautiful'",
+        id: 2,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "___ آخرِ سال است",
+        choices: ["اسفند", "فروردین", "خوب"],
+        correctChoice: "اسفند",
+      },
+      {
+        id: 3,
+        type: "build-word",
+        instruction: "Build the word 'آبان' (Aban) using the letters below",
+        targetWord: "آبان",
+        targetWordTransliteration: "ābān",
+        availableLetters: ["آ", "ب", "ا", "ن", "د", "م"],
+      },
+      // Lesson 2: word-order + fill-blank + build-word (uses all M6 vocab)
+      {
+        id: 4,
+        type: "word-order",
+        instruction: "Arrange the words to say 'A year has four seasons'",
+        tiles: ["سال", "چهار", "فصل", "دارد"],
+        correctOrder: ["سال", "چهار", "فصل", "دارد"],
+      },
+      {
+        id: 5,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "تیر و مرداد فصلِ ___ است",
+        choices: ["تابستان", "بله", "خوب"],
+        correctChoice: "تابستان",
+      },
+      {
+        id: 6,
+        type: "build-word",
+        instruction: "Build the word 'بهار' (spring) using the letters below",
+        targetWord: "بهار",
+        targetWordTransliteration: "bahār",
+        availableLetters: ["ب", "ه", "ا", "ر", "د", "ن"],
+      },
+    ],
+    grammar: [
+      // Lesson 1: Saying which month it is
+      {
+        id: 1,
+        type: "pattern-intro",
+        instruction: "Saying which month it is",
+        teachingContent: {
+          title: "Talking About Months",
+          explanation: "To say something happens in a specific month, use 'در' (dar, meaning 'in') before the month name: 'در فروردین' (dar farvardin) = 'in Farvardin'. To say which month it currently is, use the month name + است: 'فروردین است' = 'It is Farvardin'. The Persian calendar (Solar Hijri) starts with Farvardin in spring, unlike the Western calendar which starts in January.",
+          examples: [],
+        },
+        pattern: "در + [month name]",
+        patternParts: ["در (in)", "[month name]"],
+        patternExamples: [
+          { persian: "در فروردین", transliteration: "dar farvardin", english: "in Farvardin" },
+          { persian: "در شهریور کار می‌کنم", transliteration: "dar shahrivar kār mikonam", english: "In Shahrivar I work" },
+          { persian: "در اسفند خانه هستم", transliteration: "dar esfand khāne hastam", english: "In Esfand I am at home" },
+        ],
+        note: "The 12 Persian months are: فروردین، اردیبهشت، خرداد، تیر، مرداد، شهریور، مهر، آبان، آذر، دی، بهمن، اسفند. Use 'در' before the month name to say when something happens.",
+        question: "How do you say 'In Mehr I work'?",
+        options: ["مهر در کار می‌کنم", "در مهر کار می‌کنم", "کار می‌کنم مهر در", "کار در مهر می‌کنم"],
+        correctAnswer: 1,
+        explanation: "Use در before the month: در مهر کار می‌کنم (dar mehr kār mikonam).",
+      },
+      // Lesson 2: Talking about seasons
+      {
+        id: 2,
+        type: "pattern-intro",
+        instruction: "Talking about seasons",
+        teachingContent: {
+          title: "Seasons and Months",
+          explanation: "Persian has four seasons: بهار (spring), تابستان (summer), پاییز (autumn), زمستان (winter). To say a month is in a certain season, use: [month] + در + [season] + است. To say which season something happens in, use: در + [season]. The word 'فصل' (fasl) means 'season' — 'فصلِ بهار' = 'the season of spring'.",
+          examples: [],
+        },
+        pattern: "فصلِ + [season name]",
+        patternParts: ["فصلِ (season of)", "[season name]"],
+        patternExamples: [
+          { persian: "فصلِ بهار خوب است", transliteration: "fasl-e bahār khoob ast", english: "The spring season is nice" },
+          { persian: "فروردین در بهار است", transliteration: "farvardin dar bahār ast", english: "Farvardin is in spring" },
+          { persian: "در زمستان خانه هستم", transliteration: "dar zemestān khāne hastam", english: "In winter I am at home" },
+        ],
+        note: "Spring months: فروردین، اردیبهشت، خرداد. Summer: تیر، مرداد، شهریور. Autumn: مهر، آبان، آذر. Winter: دی، بهمن، اسفند.",
+        question: "How do you say 'Tir is in summer'?",
+        options: ["تابستان در تیر است", "تیر تابستان است", "تیر در تابستان است", "در تیر تابستان"],
+        correctAnswer: 2,
+        explanation: "Month + در + season + است: تیر در تابستان است (tir dar tābestān ast).",
       },
     ],
   },

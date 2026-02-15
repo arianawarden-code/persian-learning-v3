@@ -238,7 +238,43 @@ export const module5Lessons: Lesson[] = [
   },
 ]
 
+// ─── Lesson Definitions for Module 6 ───────────────────────────────
+
+export const module6Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Months of the Year",
+    goal: "Learn the twelve Persian month names and how to say which month it is",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 12],    // فروردین through اسفند (12 month names)
+      grammarIndex: 0,          // "Saying which month it is"
+      readingStoryId: 1,        // "The Persian Calendar"
+      writingIndices: [0, 3],   // word-order + fill-blank + build-word
+    },
+    nextLesson: { id: "2", title: "Seasons" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Seasons",
+    goal: "Learn the four seasons, connect months to seasons, and talk about your favorite time of year",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [12, 19],   // بهار through فصل (seasons + month/year/season)
+      grammarIndex: 1,          // "Talking about seasons"
+      readingStoryId: 3,        // "The Four Seasons"
+      writingIndices: [3, 6],   // word-order + fill-blank + build-word
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "6") {
+    return module6Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "5") {
     return module5Lessons.find((l) => l.id === lessonId)
   }
