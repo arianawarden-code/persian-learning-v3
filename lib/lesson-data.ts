@@ -111,7 +111,57 @@ export const module2Lessons: Lesson[] = [
   },
 ]
 
+// ─── Lesson Definitions for Module 3 ───────────────────────────────
+
+export const module3Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "My Family",
+    goal: "Learn to talk about your immediate family using the ezafe construction",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],    // خانواده through عمو
+      grammarIndex: 0,          // "The Ezafe construction (-e)"
+      readingStoryId: 1,        // "My Family"
+      writingIndices: [0, 3],   // word-order + fill-blank + build-word
+    },
+    nextLesson: { id: "2", title: "Extended Family" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Extended Family",
+    goal: "Talk about extended family members and say what you have",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],   // دایی through جوان
+      grammarIndex: 1,          // "Saying 'I have...'"
+      readingStoryId: 3,        // "Uncle's Visit"
+      writingIndices: [3, 6],   // word-order + fill-blank + build-word
+    },
+    nextLesson: { id: "3", title: "Family Life" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "Family Life",
+    goal: "Describe family members and talk about living together",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],   // پیر through خانه
+      grammarIndex: 2,          // "Describing family members"
+      readingStoryId: 5,        // "A Kind Family"
+      writingIndices: [6, 9],   // word-order + fill-blank + build-word
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "3") {
+    return module3Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "2") {
     return module2Lessons.find((l) => l.id === lessonId)
   }
