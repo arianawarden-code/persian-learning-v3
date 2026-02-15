@@ -74,21 +74,21 @@ export const module2Lessons: Lesson[] = [
     goal: "Learn to share your name, age, and where you're from",
     timeEstimate: "15 min",
     phases: {
-      vocabIndices: [0, 10],    // اسم through دانشجو
+      vocabIndices: [0, 10],    // اسم through دانشجو (identity + من/هستم/است)
       grammarIndex: 0,          // "Saying 'My name is...'"
       readingStoryId: 1,        // "My Name"
       writingIndices: [0, 3],   // word-order + fill-blank + build-word
     },
-    nextLesson: { id: "2", title: "Pronouns & Being" },
+    nextLesson: { id: "2", title: "Pronouns & Origin" },
   },
   {
     id: "2",
     number: 2,
-    title: "Pronouns & Being",
-    goal: "Master Persian pronouns and the verb 'to be'",
+    title: "Pronouns & Origin",
+    goal: "Master Persian pronouns and say where you're from",
     timeEstimate: "12 min",
     phases: {
-      vocabIndices: [10, 20],   // من through است
+      vocabIndices: [10, 20],   // تو through سن (pronouns + اهل/دوست)
       grammarIndex: 1,          // "Pronouns with the verb 'to be'"
       readingStoryId: 3,        // "Meeting a New Friend"
       writingIndices: [3, 6],   // word-order + fill-blank + build-word
@@ -102,7 +102,7 @@ export const module2Lessons: Lesson[] = [
     goal: "Talk about your job, where you live, and what languages you speak",
     timeEstimate: "12 min",
     phases: {
-      vocabIndices: [20, 30],   // دارم through دکتر
+      vocabIndices: [20, 30],   // زبان through دکتر (verbs + professions)
       grammarIndex: 2,          // "Saying where you're from"
       readingStoryId: 5,        // "My Job"
       writingIndices: [6, 9],   // word-order + fill-blank + build-word

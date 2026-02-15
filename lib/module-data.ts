@@ -2288,7 +2288,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
   2: {
     moduleId: 2,
     vocabulary: [
-      // Lesson 1 (0-9): Identity basics
+      // Lesson 1 (0-9): Identity basics + essential grammar words
       {
         persian: "اِسم",
         transliteration: "esm",
@@ -2311,17 +2311,31 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "My last name is Ahmadi",
       },
       {
-        persian: "سِن",
-        transliteration: "sen",
-        english: "age",
-        example: "سِنِ مَن بیست سال اَست",
-        exampleTranslation: "My age is twenty",
+        persian: "مَن",
+        transliteration: "man",
+        english: "I",
+        example: "مَن دانِشجو هَستَم",
+        exampleTranslation: "I am a student",
+      },
+      {
+        persian: "هَستَم",
+        transliteration: "hastam",
+        english: "I am",
+        example: "مَن اینجا هَستَم",
+        exampleTranslation: "I am here",
+      },
+      {
+        persian: "اَست",
+        transliteration: "ast",
+        english: "is",
+        example: "اِسمِ او سارا اَست",
+        exampleTranslation: "Her name is Sara",
       },
       {
         persian: "سال",
         transliteration: "sāl",
         english: "year",
-        example: "بیست سال دارَم",
+        example: "مَن بیست سال دارَم",
         exampleTranslation: "I am twenty years old",
       },
       {
@@ -2339,34 +2353,13 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "My city is Tehran",
       },
       {
-        persian: "زَبان",
-        transliteration: "zabān",
-        english: "language",
-        example: "زَبانِ مَن فارسی اَست",
-        exampleTranslation: "My language is Persian",
-      },
-      {
-        persian: "شُغل",
-        transliteration: "shoql",
-        english: "job / occupation",
-        example: "شُغلِ مَن مُهَندِس اَست",
-        exampleTranslation: "My job is engineer",
-      },
-      {
         persian: "دانِشجو",
         transliteration: "dāneshju",
         english: "student",
         example: "مَن دانِشجو هَستَم",
         exampleTranslation: "I am a student",
       },
-      // Lesson 2 (10-19): Pronouns & being
-      {
-        persian: "مَن",
-        transliteration: "man",
-        english: "I",
-        example: "مَن اینجا هَستَم",
-        exampleTranslation: "I am here",
-      },
+      // Lesson 2 (10-19): Pronouns, being, & origin
       {
         persian: "تو",
         transliteration: "to",
@@ -2403,13 +2396,6 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "They are friends",
       },
       {
-        persian: "هَستَم",
-        transliteration: "hastam",
-        english: "I am",
-        example: "مَن دانِشجو هَستَم",
-        exampleTranslation: "I am a student",
-      },
-      {
         persian: "هَستی",
         transliteration: "hasti",
         english: "you are (informal)",
@@ -2424,13 +2410,41 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Are you a student?",
       },
       {
-        persian: "اَست",
-        transliteration: "ast",
-        english: "is",
-        example: "اِسمِ او سارا اَست",
-        exampleTranslation: "Her name is Sara",
+        persian: "اَهلِ",
+        transliteration: "ahl-e",
+        english: "from (origin)",
+        example: "مَن اَهلِ ایران هَستَم",
+        exampleTranslation: "I am from Iran",
       },
-      // Lesson 3 (20-29): Actions & descriptions
+      {
+        persian: "دوست",
+        transliteration: "dust",
+        english: "friend",
+        example: "او دوستِ مَن اَست",
+        exampleTranslation: "He/She is my friend",
+      },
+      {
+        persian: "سِن",
+        transliteration: "sen",
+        english: "age",
+        example: "سِنِ مَن بیست سال اَست",
+        exampleTranslation: "My age is twenty",
+      },
+      // Lesson 3 (20-29): Actions & professions
+      {
+        persian: "زَبان",
+        transliteration: "zabān",
+        english: "language",
+        example: "زَبانِ مَن فارسی اَست",
+        exampleTranslation: "My language is Persian",
+      },
+      {
+        persian: "شُغل",
+        transliteration: "shoql",
+        english: "job / occupation",
+        example: "شُغلِ مَن مُهَندِس اَست",
+        exampleTranslation: "My job is engineer",
+      },
       {
         persian: "دارَم",
         transliteration: "dāram",
@@ -2467,20 +2481,6 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I am learning Persian",
       },
       {
-        persian: "اَهلِ",
-        transliteration: "ahl-e",
-        english: "from (origin)",
-        example: "مَن اَهلِ ایران هَستَم",
-        exampleTranslation: "I am from Iran",
-      },
-      {
-        persian: "دوست",
-        transliteration: "dust",
-        english: "friend",
-        example: "او دوستِ مَن اَست",
-        exampleTranslation: "He/She is my friend",
-      },
-      {
         persian: "مُهَندِس",
         transliteration: "mohandes",
         english: "engineer",
@@ -2503,16 +2503,16 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
     ],
     reading: [
-      // Lesson 1 readings
+      // Lesson 1 readings — uses only L1 vocab + Module 1 vocab
       {
         id: 1,
         title: "My Name",
         persianTitle: "اِسمِ مَن",
-        text: "سَلام! اِسمِ مَن سارا اَست. نامِ خانوادگیِ مَن احمدی اَست. مَن بیست سال دارَم. مَن اَهلِ ایران هَستَم. شَهرِ مَن تِهران اَست.",
+        text: "سَلام! اِسمِ مَن سارا اَست. نامِ خانوادگیِ مَن احمدی اَست. مَن دانِشجو هَستَم. شَهرِ مَن تِهران اَست. کِشوَرِ مَن ایران اَست.",
         textTransliteration:
-          "Salām! Esm-e man Sārā ast. Nām-e khānevādegi-ye man Ahmadi ast. Man bist sāl dāram. Man ahl-e Irān hastam. Shahr-e man Tehrān ast.",
+          "Salām! Esm-e man Sārā ast. Nām-e khānevādegi-ye man Ahmadi ast. Man dāneshju hastam. Shahr-e man Tehrān ast. Keshvar-e man Irān ast.",
         textTranslation:
-          "Hello! My name is Sara. My last name is Ahmadi. I am twenty years old. I am from Iran. My city is Tehran.",
+          "Hello! My name is Sara. My last name is Ahmadi. I am a student. My city is Tehran. My country is Iran.",
         questions: [
           {
             question: "What is the speaker's last name?",
@@ -2520,35 +2520,35 @@ export const moduleContent: Record<string | number, ModuleContent> = {
             correctAnswer: 1,
           },
           {
-            question: "How old is the speaker?",
-            options: ["Fifteen", "Eighteen", "Twenty", "Twenty-five"],
+            question: "What is the speaker's city?",
+            options: ["Isfahan", "Shiraz", "Tehran", "Tabriz"],
             correctAnswer: 2,
           },
         ],
       },
       {
         id: 2,
-        title: "At the University",
-        persianTitle: "دَر دانِشگاه",
-        text: "مَن دانِشجو هَستَم. زَبانِ مَن فارسی اَست. مَن اِنگلیسی هَم یاد می‌گیرَم. شُغلِ مَن دانِشجو اَست. مَن دَر تِهران زِندگی می‌کُنَم.",
+        title: "A New Student",
+        persianTitle: "دانِشجویِ جَدید",
+        text: "سَلام! اِسمِ مَن علی اَست. مَن دانِشجو هَستَم. مَن خوب هَستَم. شَهرِ مَن اِصفَهان اَست. مَمنون!",
         textTransliteration:
-          "Man dāneshju hastam. Zabān-e man Fārsi ast. Man Engelisi ham yād migiram. Shoql-e man dāneshju ast. Man dar Tehrān zendegi mikonam.",
+          "Salām! Esm-e man Ali ast. Man dāneshju hastam. Man khoob hastam. Shahr-e man Esfahān ast. Mamnoon!",
         textTranslation:
-          "I am a student. My language is Persian. I am also learning English. My occupation is student. I live in Tehran.",
+          "Hello! My name is Ali. I am a student. I am well. My city is Isfahan. Thank you!",
         questions: [
           {
-            question: "What is the speaker's job?",
-            options: ["Teacher", "Engineer", "Student", "Doctor"],
+            question: "What is the speaker's name?",
+            options: ["Sara", "Reza", "Ali", "Maryam"],
             correctAnswer: 2,
           },
           {
-            question: "What language is the speaker learning?",
-            options: ["Persian", "English", "Arabic", "French"],
+            question: "How is the speaker?",
+            options: ["Bad", "Good", "Tired", "Sad"],
             correctAnswer: 1,
           },
         ],
       },
-      // Lesson 2 readings
+      // Lesson 2 readings — uses L1 + L2 vocab + Module 1 vocab
       {
         id: 3,
         title: "Meeting a New Friend",
@@ -2593,12 +2593,12 @@ export const moduleContent: Record<string | number, ModuleContent> = {
           },
         ],
       },
-      // Lesson 3 readings
+      // Lesson 3 readings — uses L1 + L2 + L3 vocab + Module 1 vocab
       {
         id: 5,
         title: "My Job",
         persianTitle: "شُغلِ مَن",
-        text: "مَن مُهَندِس هَستَم. مَن دَر تِهران کار می‌کُنَم. دوستِ مَن مُعَلِّم اَست. او دَر مَدرِسه کار می‌کُنَم. ما هَر روز کار می‌کُنیم.",
+        text: "مَن مُهَندِس هَستَم. مَن دَر تِهران کار می‌کُنَم. دوستِ مَن مُعَلِّم اَست. او دَر مَدرِسه کار می‌کُنَد. ما هَر روز کار می‌کُنیم.",
         textTransliteration:
           "Man mohandes hastam. Man dar Tehrān kār mikonam. Doost-e man mo'allem ast. U dar madrese kār mikonad. Mā har ruz kār mikonim.",
         textTranslation:
@@ -2640,7 +2640,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
     ],
     writing: [
-      // Lesson 1: word-order + fill-blank + build-word
+      // Lesson 1: word-order + fill-blank + build-word (uses L1 vocab only)
       {
         id: 1,
         type: "word-order",
@@ -2664,7 +2664,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         targetWordTransliteration: "esm",
         availableLetters: ["ا", "س", "م", "ن", "ر", "ت"],
       },
-      // Lesson 2: word-order + fill-blank + build-word
+      // Lesson 2: word-order + fill-blank + build-word (uses L1 + L2 vocab)
       {
         id: 4,
         type: "word-order",
@@ -2683,12 +2683,12 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 6,
         type: "build-word",
-        instruction: "Build the word 'شُما' (you - formal) using the letters below",
-        targetWord: "شما",
-        targetWordTransliteration: "shomā",
-        availableLetters: ["ش", "م", "ا", "ن", "ر", "ت"],
+        instruction: "Build the word 'دوست' (friend) using the letters below",
+        targetWord: "دوست",
+        targetWordTransliteration: "dust",
+        availableLetters: ["د", "و", "س", "ت", "ر", "ن"],
       },
-      // Lesson 3: word-order + fill-blank + build-word
+      // Lesson 3: word-order + fill-blank + build-word (uses L1 + L2 + L3 vocab)
       {
         id: 7,
         type: "word-order",
@@ -2707,10 +2707,10 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 9,
         type: "build-word",
-        instruction: "Build the word 'دوست' (friend) using the letters below",
-        targetWord: "دوست",
-        targetWordTransliteration: "dust",
-        availableLetters: ["د", "و", "س", "ت", "ر", "ن"],
+        instruction: "Build the word 'زَبان' (language) using the letters below",
+        targetWord: "زبان",
+        targetWordTransliteration: "zabān",
+        availableLetters: ["ز", "ب", "ا", "ن", "س", "ت"],
       },
     ],
     grammar: [
