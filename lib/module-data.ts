@@ -3961,15 +3961,15 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "A Busy Week",
         persianTitle: "هَفتِهٔ شُلوغ",
-        text: "هَر روز کار می‌کُنَم. اوّلِ هَفته کار زیاد اَست. اِمروز صُبح زود کار می‌کُنَم. اِمروز شَب دَر خانِه هَستَم. آخِرِ هَفته خوب اَست! جُمعه دَر خانِه هَستَم و خانوادِهٔ مَن با هَم هَستیم.",
+        text: "هَر روز کار می‌کُنَم. اوّلِ هَفته کار می‌کُنَم و اِمروز صُبح کار می‌کُنَم. اِمروز شَب دَر خانِه هَستَم. آخِرِ هَفته خوب اَست! جُمعه دَر خانِه هَستَم و خانوادِهٔ مَن با هَم هَستیم.",
         textTransliteration:
-          "Har ruz kār mikonam. Avval-e hafte kār ziyād ast. Emruz sobh zud kār mikonam. Emruz shab dar khāne hastam. Ākhare hafte khoob ast! Jom'e dar khāne hastam va khānevāde-ye man bā ham hastim.",
+          "Har ruz kār mikonam. Avval-e hafte kār mikonam va emruz sobh kār mikonam. Emruz shab dar khāne hastam. Ākhare hafte khoob ast! Jom'e dar khāne hastam va khānevāde-ye man bā ham hastim.",
         textTranslation:
-          "I work every day. At the beginning of the week there is a lot of work. This morning I work early. Tonight I am at home. The weekend is great! On Friday I am at home and my family is together.",
+          "I work every day. At the beginning of the week I work and this morning I work. Tonight I am at home. The weekend is great! On Friday I am at home and my family is together.",
         questions: [
           {
-            question: "When does the speaker work early?",
-            options: ["Tonight", "This morning", "The weekend", "Friday"],
+            question: "What does the speaker do this morning?",
+            options: ["Stays home", "Works", "Studies", "Rests"],
             correctAnswer: 1,
           },
           {
