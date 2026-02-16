@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback } from "react"
+import { useState, useCallback, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -41,7 +41,18 @@ interface LessonFlowProps {
 
 export function LessonFlow({ lesson, vocabWords, grammarExercise, readingStories, writingExercises, moduleId }: LessonFlowProps) {
   const router = useRouter()
-  const [phase, setPhase] = useState<Phase>("intro")
+  const storageKey = `lesson-phase-m${moduleId}-l${lesson.id}`
+
+  const [phase, setPhase] = useState<Phase>(() => {
+    if (typeof window === "undefined") return "intro"
+    const saved = sessionStorage.getItem(storageKey)
+    if (saved && PHASE_ORDER.includes(saved as Phase)) return saved as Phase
+    return "intro"
+  })
+
+  useEffect(() => {
+    sessionStorage.setItem(storageKey, phase)
+  }, [phase, storageKey])
 
   const goNext = useCallback(() => {
     const idx = PHASE_ORDER.indexOf(phase)
