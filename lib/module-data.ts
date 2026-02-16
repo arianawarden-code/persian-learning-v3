@@ -3021,9 +3021,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "A Kind Grandmother",
         persianTitle: "مادَربُزرگِ مِهربان",
-        text: "رِضا: مادَربُزرگِ تو کُجایی اَست؟ سارا: مادَربُزرگِ مَن اَهلِ اِصفَهان اَست. او خِیلی مِهربان اَست! رِضا: مادَربُزرگِ مَن هَم مِهربان اَست. او اَهلِ تِهران اَست. سارا: خوب اَست! خانوادِهٔ تو بُزرگ اَست؟ رِضا: نَه، کوچَک اَست!",
+        text: "رِضا: مادَربُزرگِ تو اَهلِ کُجا اَست؟ سارا: مادَربُزرگِ مَن اَهلِ اِصفَهان اَست. او خِیلی مِهربان اَست! رِضا: مادَربُزرگِ مَن هَم مِهربان اَست. او اَهلِ تِهران اَست. سارا: خوب اَست! خانوادِهٔ تو بُزرگ اَست؟ رِضا: نَه، کوچَک اَست!",
         textTransliteration:
-          "Rezā: Mādarbozorg-e to kojāyi ast? Sārā: Mādarbozorg-e man ahl-e Esfahān ast. Ū kheyli mehrabān ast! Rezā: Mādarbozorg-e man ham mehrabān ast. Ū ahl-e Tehrān ast. Sārā: Khoob ast! Khānevāde-ye to bozorg ast? Rezā: Na, koochak ast!",
+          "Rezā: Mādarbozorg-e to ahl-e kojā ast? Sārā: Mādarbozorg-e man ahl-e Esfahān ast. Ū kheyli mehrabān ast! Rezā: Mādarbozorg-e man ham mehrabān ast. Ū ahl-e Tehrān ast. Sārā: Khoob ast! Khānevāde-ye to bozorg ast? Rezā: Na, koochak ast!",
         textTranslation:
           "Reza: Where is your grandmother from? Sara: My grandmother is from Isfahan. She is very kind! Reza: My grandmother is also kind. She is from Tehran. Sara: Nice! Is your family big? Reza: No, it's small!",
         questions: [

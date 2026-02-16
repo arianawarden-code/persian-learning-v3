@@ -25,6 +25,7 @@ interface ReadingStoryProps {
 export function ReadingStory({ story, moduleId, nextStoryId = null, nextStoryTitle = null, onSubmit }: ReadingStoryProps) {
   const router = useRouter()
   const [showTranslation, setShowTranslation] = useState(false)
+  const [showSpoken, setShowSpoken] = useState(false)
   const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: number }>({})
   const [showResults, setShowResults] = useState(false)
   const [isCompleted, setIsCompleted] = useState(false)
@@ -67,6 +68,62 @@ export function ReadingStory({ story, moduleId, nextStoryId = null, nextStoryTit
     }
 
     return pairs
+  }
+
+  const toSpoken = (translit: string): string => {
+    let s = translit
+
+    // Specific ān → un words (only approved list)
+    const anToUn: [RegExp, string][] = [
+      [/\bmehrabān\b/gi, 'mehrabun'],
+      [/\bnegārān\b/gi, 'negārun'],
+      [/\bmehmān\b/gi, 'mehmun'],
+      [/\bkhāneh\b/gi, 'khuneh'],
+      [/\bgerān\b/gi, 'gerun'],
+      [/\bhendevāneh\b/gi, 'hendevuneh'],
+      [/\bjavān\b/gi, 'javun'],
+      [/\bānjā\b/gi, 'unjā'],
+      [/\bheyvān\b/gi, 'heyvun'],
+      [/\barzān\b/gi, 'arzun'],
+      [/\bāsān\b/gi, 'āsun'],
+    ]
+    for (const [pattern, replacement] of anToUn) {
+      s = s.replace(pattern, (m) => m[0] === m[0].toUpperCase() ? replacement[0].toUpperCase() + replacement.slice(1) : replacement)
+    }
+
+    // mikhāham → mikhām, mikhāhi → mikhāyi, mikhāhad → mikhā
+    s = s.replace(/\bmikhāham\b/gi, (m) => m[0] === 'M' ? 'Mikhām' : 'mikhām')
+    s = s.replace(/\bmikhāhi\b/gi, (m) => m[0] === 'M' ? 'Mikhāyi' : 'mikhāyi')
+    s = s.replace(/\bmikhāhad\b/gi, (m) => m[0] === 'M' ? 'Mikhā' : 'mikhā')
+
+    // "az kojā hasti?" → "kojāyi?"
+    s = s.replace(/\baz kojā hasti\b/gi, 'kojāyi')
+
+    // Possessives attach: X-e man → X-am, X-e to → X-et
+    s = s.replace(/(\w)-e man\b/g, '$1-am')
+    s = s.replace(/(\w)-e to\b/g, '$1-et')
+    s = s.replace(/(\w)-ye man\b/g, '$1-m')
+    s = s.replace(/(\w)-ye to\b/g, '$1-t')
+
+    // Personal endings contract: "X hastam" → "X-am", "X hasti" → "X-i"
+    s = s.replace(/ hastam\b/g, '-am')
+    s = s.replace(/ hasti\b/g, '-i')
+    // hastand → hastan
+    s = s.replace(/\bhastand\b/gi, (m) => m[0] === 'H' ? 'Hastan' : 'hastan')
+
+    // Drop pronouns when verb/adjective already encodes the person
+    s = s.replace(/\b[Mm]an (\w+-am\b)/g, '$1')
+    s = s.replace(/\b[Tt]o (\w+-i\b)/g, '$1')
+    s = s.replace(/\b[Mm]an (mi\w+)/g, '$1')
+
+    // "ast" contraction: after long vowels → "-st", after consonant → "-e"
+    s = s.replace(/([āūī]|oo|ey) ast([.!?,; ]|$)/g, '$1-st$2')
+    s = s.replace(/ ast([.!?,; ]|$)/g, '-e$1')
+
+    // rā → ro
+    s = s.replace(/ rā\b/g, ' ro')
+
+    return s
   }
 
   const linePairs = getLinePairs()
@@ -212,6 +269,33 @@ export function ReadingStory({ story, moduleId, nextStoryId = null, nextStoryTit
                     ) : null
                   })}
                 </div>
+              </div>
+            )}
+
+            {/* Spoken version toggle */}
+            {linePairs.some((pair) => pair.transliteration) && (
+              <div>
+                <button
+                  onClick={() => setShowSpoken(!showSpoken)}
+                  className="text-sm font-medium text-terracotta hover:text-terracotta/80 transition-colors"
+                >
+                  {showSpoken ? "Hide Spoken Version" : "See Spoken Version"}
+                </button>
+                {showSpoken && (
+                  <div className="mt-2 rounded-lg bg-amber-50/50 border border-amber-200/50 px-4 py-3">
+                    <p className="text-xs font-medium text-amber-700 mb-1">Spoken / Colloquial</p>
+                    <div className="space-y-1">
+                      {speakerGroups.map((group, gIndex) => {
+                        const translit = group.pairs.map(p => p.transliteration).filter(Boolean).join(" ")
+                        return translit ? (
+                          <p key={`${story.id}-spoken-g${gIndex}`} className="text-sm leading-relaxed text-charcoal/70 italic">
+                            {toSpoken(translit)}
+                          </p>
+                        ) : null
+                      })}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
 
