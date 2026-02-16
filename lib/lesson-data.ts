@@ -363,7 +363,55 @@ export const module8Lessons: Lesson[] = [
   },
 ]
 
+export const module9Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Red, Blue & Green",
+    goal: "Learn basic color names like red, blue, green, yellow, and ask what color something is using چِه رَنگی اَست؟",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],
+      grammarIndex: 0,
+      readingStoryIds: [1, 2],
+      writingIndices: [0, 3],
+    },
+    nextLesson: { id: "2", title: "Colors in Nature" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Colors in Nature",
+    goal: "Learn more colors like pink, purple, and gray, describe things with colors using the Ezafe construction, and talk about flowers, trees, and fruit",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],
+      grammarIndex: 1,
+      readingStoryIds: [3, 4],
+      writingIndices: [3, 6],
+    },
+    nextLesson: { id: "3", title: "Light & Dark" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "Light & Dark",
+    goal: "Learn light and dark, golden and silver, compare colors using مِثلِ (like), and use words like which, that, all, and better",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],
+      grammarIndex: 2,
+      readingStoryIds: [5, 6],
+      writingIndices: [6, 9],
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "9") {
+    return module9Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "8") {
     return module8Lessons.find((l) => l.id === lessonId)
   }
