@@ -2050,11 +2050,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "First Meeting",
         persianTitle: "اَوَّلین دیدار",
-        text: "عَلی: سَلام! مَن عَلی هَستَم. اِسمِ شُما چیست؟ رُیا: سَلام! مَن رُیا هَستَم. عَلی: رُیا، مَمنون! رُیا: خواهِش می‌کُنَم! شُما عَلی هَستید، بَله؟ عَلی: بَله!",
+        text: "عَلی: سَلام! مَن عَلی هَستَم. اِسمِ شُما چیست؟ رُیا: سَلام! مَن رُیا هَستَم. شُما عَلی هَستید، بَله؟ عَلی: بَله! مَمنون! رُیا: خواهِش می‌کُنَم!",
         textTransliteration:
-          "Ali: Salām! Man Ali hastam. Esm-e shomā chist? Royā: Salām! Man Royā hastam. Ali: Royā, mamnoon! Royā: Khāhesh mikonam! Shomā Ali hastid, bale? Ali: Bale!",
+          "Ali: Salām! Man Ali hastam. Esm-e shomā chist? Royā: Salām! Man Royā hastam. Shomā Ali hastid, bale? Ali: Bale! Mamnoon! Royā: Khāhesh mikonam!",
         textTranslation:
-          "Ali: Hello! I am Ali. What is your name? Roya: Hello! I am Roya. Ali: Roya, thank you! Roya: You're welcome! You are Ali, yes? Ali: Yes!",
+          "Ali: Hello! I am Ali. What is your name? Roya: Hello! I am Roya. You are Ali, yes? Ali: Yes! Thank you! Roya: You're welcome!",
         questions: [
           {
             question: "What is the man's name?",
