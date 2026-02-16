@@ -318,7 +318,55 @@ export const module7Lessons: Lesson[] = [
   },
 ]
 
+export const module8Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Sun, Rain & Snow",
+    goal: "Learn basic weather words like sunny, rainy, snowy, hot, and cold, and describe the weather using هَوا + adjective + اَست",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],
+      grammarIndex: 0,
+      readingStoryIds: [1, 2],
+      writingIndices: [0, 3],
+    },
+    nextLesson: { id: "2", title: "Four Seasons" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Four Seasons",
+    goal: "Learn the four seasons, say what the weather is like in each season, and use inside/outside with weather descriptions",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],
+      grammarIndex: 1,
+      readingStoryIds: [3, 4],
+      writingIndices: [3, 6],
+    },
+    nextLesson: { id: "3", title: "What Do I Need?" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "What Do I Need?",
+    goal: "Learn weather items like umbrella and clothes, sky words like sun, moon, and stars, and say what you need for the weather",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],
+      grammarIndex: 2,
+      readingStoryIds: [5, 6],
+      writingIndices: [6, 9],
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "8") {
+    return module8Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "7") {
     return module7Lessons.find((l) => l.id === lessonId)
   }

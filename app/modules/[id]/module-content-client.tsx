@@ -8,15 +8,15 @@ import { ModuleProgressSidebar } from "@/components/module-progress-sidebar"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import { useModuleProgress } from "@/hooks/use-module-progress"
-import { module1Lessons, module2Lessons, module3Lessons, module4Lessons, module5Lessons, module6Lessons, module7Lessons } from "@/lib/lesson-data"
+import { module1Lessons, module2Lessons, module3Lessons, module4Lessons, module5Lessons, module6Lessons, module7Lessons, module8Lessons } from "@/lib/lesson-data"
 import { isLessonComplete } from "@/lib/progress-storage"
 
 export default function ModuleContentClient({ id }: { id: string }) {
   const module = modules.find((m) => m.id.toString() === id)
   const { vocabulary: vocabularyProgress, reading: readingProgress, writing: writingProgress, grammar: grammarProgress, overall: overallProgress } = useModuleProgress(id)
 
-  const isLessonModule = id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7"
-  const lessonsForModule = id === "1" ? module1Lessons : id === "2" ? module2Lessons : id === "3" ? module3Lessons : id === "4" ? module4Lessons : id === "5" ? module5Lessons : id === "6" ? module6Lessons : id === "7" ? module7Lessons : []
+  const isLessonModule = id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8"
+  const lessonsForModule = id === "1" ? module1Lessons : id === "2" ? module2Lessons : id === "3" ? module3Lessons : id === "4" ? module4Lessons : id === "5" ? module5Lessons : id === "6" ? module6Lessons : id === "7" ? module7Lessons : id === "8" ? module8Lessons : []
 
   const levelColors = {
     alphabet: "bg-blue-100 text-blue-700 border-blue-300",
