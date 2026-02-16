@@ -65,8 +65,13 @@ export function LessonFlow({ lesson, vocabWords, grammarExercise, readingStories
 
   return (
     <div className="mx-auto max-w-3xl">
-      {/* Back to Module button */}
-      <div className="mb-4 flex justify-end">
+      {/* Module / Lesson label */}
+      <p className="mb-3 text-sm font-medium text-charcoal/60">
+        Module {moduleId} · Lesson {lesson.number}
+      </p>
+
+      {/* Back to Module button + progress bar */}
+      <div className="mb-4 flex items-center justify-between">
         <Button
           variant="ghost"
           size="sm"

@@ -41,7 +41,6 @@ export default async function LessonPage({
             <span className="font-serif text-3xl font-bold text-terracotta">فارسی</span>
             <span className="text-xl font-semibold text-charcoal">Persian Learning</span>
           </div>
-          <span className="text-sm font-medium text-charcoal/60">Module 1 Lesson {lessonId}</span>
         </div>
       </header>
 
