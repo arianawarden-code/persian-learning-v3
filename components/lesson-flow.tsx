@@ -70,23 +70,19 @@ export function LessonFlow({ lesson, vocabWords, grammarExercise, readingStories
         Module {moduleId} · Lesson {lesson.number}
       </p>
 
-      {/* Back to Module button + progress bar */}
-      <div className="mb-4 flex items-center justify-between">
-        <Button
-          variant="ghost"
-          size="sm"
-          className="gap-1.5 text-charcoal/60 hover:text-charcoal"
-          onClick={() => router.push(`/modules/${moduleId}`)}
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Back to Module
-        </Button>
-      </div>
-
       {/* Progress bar */}
       {phase !== "intro" && phase !== "completion" && (
         <div className="mb-6">
-          <div className="flex items-center justify-end mb-2">
+          <div className="flex items-center justify-between mb-2">
+            <Button
+              variant="ghost"
+              size="sm"
+              className="gap-1.5 text-charcoal/60 hover:text-charcoal -ml-3"
+              onClick={() => router.push(`/modules/${moduleId}`)}
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back to Module
+            </Button>
             <span className="text-xs text-charcoal/50 capitalize">{phase}</span>
           </div>
           <div className="h-2 w-full rounded-full bg-sand-200">
