@@ -3019,22 +3019,22 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
       {
         id: 2,
-        title: "Two Alis!",
-        persianTitle: "دو عَلی!",
-        text: "سارا: اِسمِ پِدَربُزرگِ مَن عَلی اَست. اِسمِ بَرادَرِ مَن هَم عَلی اَست! رِضا: پِدَربُزرگ عَلی و بَرادَر عَلی! سارا: بَله! مادَربُزرگِ مَن اَهلِ اِصفَهان اَست. عَمویِ مَن اَهلِ تِهران اَست. رِضا: خانوادِهٔ تو خوب اَست! سارا: بَله! خانوادِهٔ مَن خوب اَست!",
+        title: "A Kind Grandmother",
+        persianTitle: "مادَربُزرگِ مِهربان",
+        text: "رِضا: مادَربُزرگِ تو کُجایی اَست؟ سارا: مادَربُزرگِ مَن اَهلِ اِصفَهان اَست. او خِیلی مِهربان اَست! رِضا: مادَربُزرگِ مَن هَم مِهربان اَست. او اَهلِ تِهران اَست. سارا: خوب اَست! خانوادِهٔ تو بُزرگ اَست؟ رِضا: نَه، کوچَک اَست!",
         textTransliteration:
-          "Sārā: Esm-e pedarbozorg-e man Ali ast. Esm-e barādar-e man ham Ali ast! Rezā: Pedarbozorg Ali va barādar Ali! Sārā: Bale! Mādarbozorg-e man ahl-e Esfahān ast. Amoo-ye man ahl-e Tehrān ast. Rezā: Khānevāde-ye to khoob ast! Sārā: Bale! Khānevāde-ye man khoob ast!",
+          "Rezā: Mādarbozorg-e to kojāyi ast? Sārā: Mādarbozorg-e man ahl-e Esfahān ast. Ū kheyli mehrabān ast! Rezā: Mādarbozorg-e man ham mehrabān ast. Ū ahl-e Tehrān ast. Sārā: Khoob ast! Khānevāde-ye to bozorg ast? Rezā: Na, koochak ast!",
         textTranslation:
-          "Sara: My grandfather's name is Ali. My brother's name is also Ali! Reza: Grandfather Ali and Brother Ali! Sara: Yes! My grandmother is from Isfahan. My uncle is from Tehran. Reza: Your family is great! Sara: Yes! My family is great!",
+          "Reza: Where is your grandmother from? Sara: My grandmother is from Isfahan. She is very kind! Reza: My grandmother is also kind. She is from Tehran. Sara: Nice! Is your family big? Reza: No, it's small!",
         questions: [
           {
-            question: "What name do the grandfather and brother share?",
-            options: ["Reza", "Ali", "Ahmad", "Hassan"],
-            correctAnswer: 1,
+            question: "Where is Sara's grandmother from?",
+            options: ["Tehran", "Shiraz", "Isfahan", "Tabriz"],
+            correctAnswer: 2,
           },
           {
-            question: "Where is the grandmother from?",
-            options: ["Tehran", "Shiraz", "Isfahan", "Tabriz"],
+            question: "How does Sara describe her grandmother?",
+            options: ["Old", "Young", "Kind", "Big"],
             correctAnswer: 2,
           },
         ],
