@@ -271,7 +271,57 @@ export const module6Lessons: Lesson[] = [
   },
 ]
 
+// ─── Lesson Definitions for Module 7 ───────────────────────────────
+
+export const module7Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "What Time Is It?",
+    goal: "Learn to tell time, talk about today, tomorrow, and yesterday, and use basic time words like hour, minute, week, and month",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],    // زمان through ماه
+      grammarIndex: 0,          // "Telling the time"
+      readingStoryIds: [1, 2],   // "What Time Is It?" + "Tomorrow Is Friday!"
+      writingIndices: [0, 3],   // word-order + fill-blank + build-word
+    },
+    nextLesson: { id: "2", title: "Morning, Noon & Night" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Morning, Noon & Night",
+    goal: "Learn the parts of the day, say when you do things, and use time adverbs like always, never, and sometimes",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],   // سال through گاهی
+      grammarIndex: 1,          // "Using always, never, and sometimes"
+      readingStoryIds: [3, 4],   // "Morning Person" + "Always Late!"
+      writingIndices: [3, 6],   // word-order + fill-blank + build-word
+    },
+    nextLesson: { id: "3", title: "Before & After" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "Before & After",
+    goal: "Learn to say half past, quarter past, ask what time it is, and use before and after with time expressions",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],   // به‌موقع through قبل از
+      grammarIndex: 2,          // "Saying before and after"
+      readingStoryIds: [5, 6],   // "Before and After" + "On Time!"
+      writingIndices: [6, 9],   // word-order + fill-blank + build-word
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "7") {
+    return module7Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "6") {
     return module6Lessons.find((l) => l.id === lessonId)
   }

@@ -4609,140 +4609,307 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         example: "وَقتی رِسیدی زَنگ بِزَن",
         exampleTranslation: "Call when you arrive",
       },
+      {
+        persian: "نیم",
+        transliteration: "nim",
+        english: "half (time)",
+        example: "ساعَت سِه و نیم اَست",
+        exampleTranslation: "It is three thirty",
+      },
+      {
+        persian: "رُبع",
+        transliteration: "rob'",
+        english: "quarter (time)",
+        example: "ساعَت دو و رُبع اَست",
+        exampleTranslation: "It is two fifteen",
+      },
+      {
+        persian: "ساعَت چَند اَست؟",
+        transliteration: "sâ'at chand ast?",
+        english: "what time is it?",
+        example: "بِبَخشید، ساعَت چَند اَست؟",
+        exampleTranslation: "Excuse me, what time is it?",
+      },
+      {
+        persian: "بَعد اَز",
+        transliteration: "ba'd az",
+        english: "after",
+        example: "بَعد اَز ظُهر",
+        exampleTranslation: "After noon",
+      },
+      {
+        persian: "قَبل اَز",
+        transliteration: "ghabl az",
+        english: "before",
+        example: "قَبل اَز صُبح",
+        exampleTranslation: "Before morning",
+      },
     ],
     reading: [
-    {
-      id: 1,
-      title: "Counting Friends",
-      persianTitle: "شُمُردَنِ دوستان",
-      text: "مَن دو دوست دارَم. یِک دوست دَر خانِه اَست. دوستِ دیگَر دَر کار اَست. ما سِه بار دَر هَفته هَم‌دیگَر را می‌بینیم. مَن دوستام را دوست دارَم.",
-      textTransliteration:
-        "man do doost dāram. yek doost dar khāne ast. doost-e digar dar kār ast. mā se bār dar hafte ham-digar rā mibinim. man doostām rā doost dāram.",
-      textTranslation:
-        "I have two friends. One friend is at home. The other friend is at work. We see each other three times a week. I love my friends.",
-      questions: [
-        {
-          question: "How many friends does the person have?",
-          options: ["One", "Two", "Three", "Four"],
-          correctAnswer: 1,
-        },
-        {
-          question: "How many times a week do they see each other?",
-          options: ["Two", "Three", "Five", "Seven"],
-          correctAnswer: 1,
-        },
-      ],
-    },
-    {
-      id: 2,
-      title: "A Busy Week",
-      persianTitle: "یِک هَفتِهٔ شُلوغ",
-      text: "مَن هَفت روز دَر هَفته کار می‌کُنَم. چَهار روز زود بیدار می‌شَوَم. سِه روز دیر بیدار می‌شَوَم. مَن هَر روز هَشت ساعَت می‌خوابَم. زِندگی خوب اَست.",
-      textTransliteration:
-        "man haft rooz dar hafte kār mikonam. chahār rooz zood bidār mishavam. se rooz dir bidār mishavam. man har rooz hasht sā'at mikhābam. zendegi khoob ast.",
-      textTranslation:
-        "I work seven days a week. Four days I wake up early. Three days I wake up late. I sleep eight hours every day. Life is good.",
-      questions: [
-        {
-          question: "How many days does the person work?",
-          options: ["Three", "Four", "Seven", "Eight"],
-          correctAnswer: 2,
-        },
-        {
-          question: "How many hours does the person sleep?",
-          options: ["Six", "Seven", "Eight", "Nine"],
-          correctAnswer: 2,
-        },
-      ],
-    },
-    {
-      id: 3,
-      title: "Shopping with Tomans",
-      persianTitle: "خَرید با تومان",
-      text: "مَن پَنجاه تومان دارَم. یِک سیب دَه تومان قِیمَت دارَد. مَن سِه سیب می‌خَرَم. بَعد بیست تومان بَرایِ مَن می‌مانَد. مَن خوشحالَم.",
-      textTransliteration:
-        "man panjāh tomān dāram. yek sib dah tomān gheymat dārad. man se sib mikharam. ba'ad bist tomān barāye man mimānad. man khoshhālam.",
-      textTranslation:
-        "I have fifty tomans. One apple costs ten tomans. I buy three apples. Then twenty tomans remain for me. I am happy.",
-      questions: [
-        {
-          question: "How much money does the person have?",
-          options: ["Ten tomans", "Twenty tomans", "Fifty tomans", "One hundred tomans"],
-          correctAnswer: 2,
-        },
-        {
-          question: "How many apples does the person buy?",
-          options: ["One", "Two", "Three", "Four"],
-          correctAnswer: 2,
-        },
-      ],
-    },
-    {
-      id: 4,
-      title: "In the Classroom",
-      persianTitle: "دَر کِلاسِ دَرس",
-      text: "دَر کِلاسِ ما بیست دانِشجو هَستَند. دَه دانِشجو دُختَر هَستَند و دَه دانِشجو پِسَر هَستَند. مُعَلِّمِ ما می‌گوید: «نَوَد دَرصَد دُرُست اَست». مَن می‌خَندَم.",
-      textTransliteration:
-        "dar kelās-e mā bist dāneshju hastand. dah dāneshju dokhtar hastand va dah dāneshju pesar hastand. mo'allem-e mā migooyad: «navad darsad dorost ast». man mikhandam.",
-      textTranslation:
-        "In our class there are twenty students. Ten students are girls and ten students are boys. Our teacher says: “Ninety percent is correct.” I laugh.",
-      questions: [
-        {
-          question: "How many students are in the class?",
-          options: ["Ten", "Twenty", "Thirty", "Forty"],
-          correctAnswer: 1,
-        },
-        {
-          question: "How many girls are in the class?",
-          options: ["Nine", "Ten", "Nineteen", "Twenty"],
-          correctAnswer: 1,
-        },
-      ],
-    },
-    {
-      id: 5,
-      title: "A Big Library",
-      persianTitle: "یِک کِتابخانِهٔ بُزُرگ",
-      text: "پِدَربُزرگِ مَن هِزار کِتاب دارَد. مَن صَد کِتاب دَر خانِه دارَم. خواهرِ مَن سی کِتاب دارَد. بَرادَرِ مَن دو کِتاب دارَد. ما کِتاب‌ها را دوست داریم.",
-      textTransliteration:
-        "pedarbozorg-e man hezār ketāb dārad. man sad ketāb dar khāne dāram. khāhar-e man si ketāb dārad. barādar-e man do ketāb dārad. mā ketāb-hā rā doost dārim.",
-      textTranslation:
-        "My grandfather has one thousand books. I have one hundred books at home. My sister has thirty books. My brother has two books. We love books.",
-      questions: [
-        {
-          question: "How many books does the grandfather have?",
-          options: ["One hundred", "Two hundred", "One thousand", "Thirty"],
-          correctAnswer: 2,
-        },
-        {
-          question: "How many books does the speaker have?",
-          options: ["Two", "Thirty", "One hundred", "One thousand"],
-          correctAnswer: 2,
-        },
-      ],
-    },
-  ],
+      // Lesson 1 readings — uses M1-M6 + M7 L1 vocab (indices 0-9)
+      {
+        id: 1,
+        title: "What Time Is It?",
+        persianTitle: "ساعَت چِه اَست؟",
+        text: "عَلی: سَلام سارا! اَلان ساعَت چِه اَست؟ سارا: اَلان ساعَت هَفت اَست. عَلی: هَفت؟ اِمروز دوشَنبه اَست. مَن کار می‌کُنَم! سارا: مَن هَم کار می‌کُنَم! عَلی: فَردا سِه‌شَنبه اَست. فَردا هَم کار می‌کُنَم. سارا: بَله. یِک هَفته! مَمنون! خُداحافِظ عَلی!",
+        textTransliteration:
+          "Ali: Salām Sārā! Alān sā'at che ast? Sārā: Alān sā'at haft ast. Ali: Haft? Emruz doshanbe ast. Man kār mikonam! Sārā: Man ham kār mikonam! Ali: Fardā seshanbe ast. Fardā ham kār mikonam. Sārā: Bale. Yek hafte! Mamnoon! Khodāhāfez, Ali!",
+        textTranslation:
+          "Ali: Hello Sara! What time is it now? Sara: It's seven o'clock now. Ali: Seven? Today is Monday. I work! Sara: I work too! Ali: Tomorrow is Tuesday. I work tomorrow too. Sara: Yes. One week! Thanks! Goodbye, Ali!",
+        questions: [
+          {
+            question: "What time is it?",
+            options: ["Five o'clock", "Seven o'clock", "Nine o'clock", "Ten o'clock"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What day is it today?",
+            options: ["Sunday", "Monday", "Tuesday", "Friday"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      {
+        id: 2,
+        title: "Tomorrow Is Friday!",
+        persianTitle: "فَردا جُمعه اَست!",
+        text: "مَریَم: سارا، اِمروز چِه روزیه؟ سارا: اِمروز پَنج‌شَنبه اَست. مَریَم: فَردا جُمعه اَست! مَن جُمعه خانِه هَستَم. سارا: مَن هَم! آخِرِ هَفته خوب اَست. مَریَم: اَلان ساعَت چِه اَست؟ سارا: ساعَت دَه اَست. مَریَم: دَه؟ مَمنون! خُداحافِظ!",
+        textTransliteration:
+          "Maryam: Sārā, emruz che ruziye? Sārā: Emruz panjshanbe ast. Maryam: Fardā jome ast! Man jome khāne hastam. Sārā: Man ham! Ākhare hafte khoob ast. Maryam: Alān sā'at che ast? Sārā: Sā'at dah ast. Maryam: Dah? Mamnoon! Khodāhāfez!",
+        textTranslation:
+          "Maryam: Sara, what day is it today? Sara: Today is Thursday. Maryam: Tomorrow is Friday! I'm at home on Friday. Sara: Me too! The weekend is nice. Maryam: What time is it now? Sara: It's ten o'clock. Maryam: Ten? Thanks! Goodbye!",
+        questions: [
+          {
+            question: "What day is tomorrow?",
+            options: ["Thursday", "Friday", "Saturday", "Sunday"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What time is it now?",
+            options: ["Seven", "Eight", "Nine", "Ten"],
+            correctAnswer: 3,
+          },
+        ],
+      },
+      // Lesson 2 readings — uses M1-M6 + M7 L1+L2 vocab (indices 0-19)
+      {
+        id: 3,
+        title: "Morning Person",
+        persianTitle: "آدَمِ صُبح",
+        text: "عَلی: مَن هَمیشه صُبح کار می‌کُنَم. سارا: مَن گاهی صُبح و گاهی عَصر کار می‌کُنَم. عَلی: تو شَب کار می‌کُنی؟ سارا: هَرگِز! مَن شَب خانِه هَستَم. عَلی: مَن هَم! شَب خوب اَست. سارا: ظُهر چِه؟ تو ظُهر کار می‌کُنی؟ عَلی: بَله، گاهی ظُهر هَم کار می‌کُنَم.",
+        textTransliteration:
+          "Ali: Man hamishe sobh kār mikonam. Sārā: Man gāhi sobh va gāhi asr kār mikonam. Ali: To shab kār mikoni? Sārā: Hargez! Man shab khāne hastam. Ali: Man ham! Shab khoob ast. Sārā: Zohr che? To zohr kār mikoni? Ali: Bale, gāhi zohr ham kār mikonam.",
+        textTranslation:
+          "Ali: I always work in the morning. Sara: I sometimes work in the morning and sometimes in the afternoon. Ali: Do you work at night? Sara: Never! I'm at home at night. Ali: Me too! Night is nice. Sara: What about noon? Do you work at noon? Ali: Yes, sometimes I work at noon too.",
+        questions: [
+          {
+            question: "When does Ali always work?",
+            options: ["At noon", "In the morning", "In the afternoon", "At night"],
+            correctAnswer: 1,
+          },
+          {
+            question: "Does Sara ever work at night?",
+            options: ["Yes, always", "Yes, sometimes", "Never", "Only on Friday"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      {
+        id: 4,
+        title: "Always Late!",
+        persianTitle: "هَمیشه دیر!",
+        text: "سارا: عَلی! اَلان ساعَت نُه اَست! تو دیر هَستی! عَلی: مَن دیر هَستَم؟ نَه! مَن زود هَستَم! سارا: نَه! ساعَت نُه اَست! تو هَمیشه دیر هَستی. عَلی: مَن صُبح زود هَستَم! مَن گاهی عَصر دیر هَستَم. سارا: اِمروز عَصر اَست! تو دیر هَستی! عَلی: بِبَخشید سارا!",
+        textTransliteration:
+          "Sārā: Ali! Alān sā'at noh ast! To dir hasti! Ali: Man dir hastam? Na! Man zud hastam! Sārā: Na! Sā'at noh ast! To hamishe dir hasti. Ali: Man sobh zud hastam! Man gāhi asr dir hastam. Sārā: Emruz asr ast! To dir hasti! Ali: Bebakhshid, Sārā!",
+        textTranslation:
+          "Sara: Ali! It's nine o'clock now! You're late! Ali: I'm late? No! I'm early! Sara: No! It's nine o'clock! You're always late. Ali: I'm early in the morning! I'm sometimes late in the afternoon. Sara: Today is afternoon! You're late! Ali: Sorry, Sara!",
+        questions: [
+          {
+            question: "What time is it?",
+            options: ["Seven", "Eight", "Nine", "Ten"],
+            correctAnswer: 2,
+          },
+          {
+            question: "When is Ali sometimes late?",
+            options: ["In the morning", "At noon", "In the afternoon", "At night"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      // Lesson 3 readings — uses M1-M6 + all M7 vocab (indices 0-29)
+      {
+        id: 5,
+        title: "Before and After",
+        persianTitle: "قَبل و بَعد",
+        text: "عَلی: ساعَت چَند اَست؟ سارا: ساعَت دَه و نیم اَست. عَلی: مَن بَعد اَز ظُهر کار می‌کُنَم. سارا: مَن قَبل اَز ظُهر کار می‌کُنَم. مَن صُبح کار می‌کُنَم. عَلی: مَن اَز ساعَت یِک تا ساعَت پَنج کار می‌کُنَم. سارا: اَز یِک تا پَنج؟ بُزُرگ اَست!",
+        textTransliteration:
+          "Ali: Sā'at chand ast? Sārā: Sā'at dah va nim ast. Ali: Man ba'd az zohr kār mikonam. Sārā: Man ghabl az zohr kār mikonam. Man sobh kār mikonam. Ali: Man az sā'at yek tā sā'at panj kār mikonam. Sārā: Az yek tā panj? Bozorg ast!",
+        textTranslation:
+          "Ali: What time is it? Sara: It's ten thirty. Ali: I work after noon. Sara: I work before noon. I work in the morning. Ali: I work from one o'clock to five o'clock. Sara: From one to five? That's a lot!",
+        questions: [
+          {
+            question: "What time is it?",
+            options: ["Nine o'clock", "Ten thirty", "Twelve o'clock", "One o'clock"],
+            correctAnswer: 1,
+          },
+          {
+            question: "When does Ali work?",
+            options: ["Before noon", "In the morning", "After noon", "At night"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      {
+        id: 6,
+        title: "On Time!",
+        persianTitle: "بِه‌موقِع!",
+        text: "سارا: عَلی، ساعَت چَند اَست؟ عَلی: ساعَت سِه و رُبع اَست. سارا: سِه و رُبع؟ مَن قَبل اَز چَهار کار می‌کُنَم! عَلی: تو هَمیشه بِه‌موقِع هَستی! سارا: بَله! وَقتی مَن کار می‌کُنَم، مَن زود هَستَم! عَلی: مَن گاهی دیر هَستَم. بَعد اَز ظُهر مَن خانِه هَستَم. سارا: مَن قَبل اَز شَب خانِه هَستَم.",
+        textTransliteration:
+          "Sārā: Ali, sā'at chand ast? Ali: Sā'at se va rob' ast. Sārā: Se va rob'? Man ghabl az chahār kār mikonam! Ali: To hamishe be-moghe' hasti! Sārā: Bale! Vaghti man kār mikonam, man zud hastam! Ali: Man gāhi dir hastam. Ba'd az zohr man khāne hastam. Sārā: Man ghabl az shab khāne hastam.",
+        textTranslation:
+          "Sara: Ali, what time is it? Ali: It's three fifteen. Sara: Three fifteen? I work before four! Ali: You're always on time! Sara: Yes! When I work, I'm early! Ali: I'm sometimes late. After noon I'm at home. Sara: I'm at home before night.",
+        questions: [
+          {
+            question: "What time is it?",
+            options: ["Two thirty", "Three fifteen", "Four o'clock", "Five thirty"],
+            correctAnswer: 1,
+          },
+          {
+            question: "Is Sara always on time?",
+            options: ["No, she is always late", "Yes, always", "Only in the morning", "Sometimes"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+    ],
     writing: [
+      // Lesson 1: word-order + fill-blank + build-word (uses M7 L1 vocab)
       {
-        targetWord: "راست",
-        availableLetters: ["ر", "ا", "س", "ت", "چ", "پ"],
-        description: "Build the word for 'right'",
-      },
-      { targetWord: "چپ", availableLetters: ["چ", "پ", "ر", "ا", "س"], description: "Build the word for 'left'" },
-      {
-        targetWord: "نزدیک",
-        availableLetters: ["ن", "ز", "د", "ی", "ک", "م", "ر"],
-        description: "Build the word for 'near'",
+        id: 1,
+        type: "word-order",
+        instruction: "Arrange the words to say 'It is seven o'clock now'",
+        tiles: ["الان", "ساعت", "هفت", "است"],
+        correctOrder: ["الان", "ساعت", "هفت", "است"],
       },
       {
-        targetWord: "پارک",
-        availableLetters: ["پ", "ا", "ر", "ک", "م", "ن"],
-        description: "Build the word for 'park'",
+        id: 2,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "___ ساعت سه است",
+        choices: ["الان", "خانه", "دوست"],
+        correctChoice: "الان",
       },
       {
-        targetWord: "بانک",
-        availableLetters: ["ب", "ا", "ن", "ک", "م", "ر"],
-        description: "Build the word for 'bank'",
+        id: 3,
+        type: "build-word",
+        instruction: "Build the word 'ساعَت' (clock/hour) using the letters below",
+        targetWord: "ساعت",
+        targetWordTransliteration: "sā'at",
+        availableLetters: ["س", "ا", "ع", "ت", "م", "ن"],
+      },
+      // Lesson 2: word-order + fill-blank + build-word (uses M7 L1+L2 vocab)
+      {
+        id: 4,
+        type: "word-order",
+        instruction: "Arrange the words to say 'I always work in the morning'",
+        tiles: ["من", "همیشه", "صبح", "کار", "می‌کنم"],
+        correctOrder: ["من", "همیشه", "صبح", "کار", "می‌کنم"],
+      },
+      {
+        id: 5,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "من ___ صبح کار می‌کنم",
+        choices: ["همیشه", "خانه", "دوست"],
+        correctChoice: "همیشه",
+      },
+      {
+        id: 6,
+        type: "build-word",
+        instruction: "Build the word 'صُبح' (morning) using the letters below",
+        targetWord: "صبح",
+        targetWordTransliteration: "sobh",
+        availableLetters: ["ص", "ب", "ح", "م", "ن", "ت"],
+      },
+      // Lesson 3: word-order + fill-blank + build-word (uses all M7 vocab)
+      {
+        id: 7,
+        type: "word-order",
+        instruction: "Arrange the words to say 'I work after noon'",
+        tiles: ["من", "بعد از", "ظهر", "کار", "می‌کنم"],
+        correctOrder: ["من", "بعد از", "ظهر", "کار", "می‌کنم"],
+      },
+      {
+        id: 8,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "من ___ ظهر کار می‌کنم",
+        choices: ["بعد از", "خانه", "دوست"],
+        correctChoice: "بعد از",
+      },
+      {
+        id: 9,
+        type: "build-word",
+        instruction: "Build the word 'زَمان' (time) using the letters below",
+        targetWord: "زمان",
+        targetWordTransliteration: "zamān",
+        availableLetters: ["ز", "م", "ا", "ن", "س", "ت"],
+      },
+    ],
+    grammar: [
+      // Lesson 1: Telling the time
+      {
+        id: 1,
+        type: "pattern-intro",
+        instruction: "Telling the time",
+        pattern: "ساعت + [number] + است",
+        patternParts: ["ساعت", "[number]", "است"],
+        patternExamples: [
+          { persian: "ساعت یک است", transliteration: "sā'at yek ast", english: "It's one o'clock" },
+          { persian: "ساعت پنج است", transliteration: "sā'at panj ast", english: "It's five o'clock" },
+          { persian: "ساعت دوازده است", transliteration: "sā'at davāzdah ast", english: "It's twelve o'clock" },
+        ],
+        note: "Telling time in Persian is simple: say 'ساعت' (sā'at = hour/o'clock), then the number, then 'است' (ast = is). For example, 'ساعت سه است' means 'It's three o'clock.' The number always comes in the middle.",
+        question: "How do you say 'It's three o'clock'?",
+        options: ["ساعت است سه", "سه ساعت است", "ساعت سه است", "است ساعت سه"],
+        correctAnswer: 2,
+        explanation: "The pattern is: ساعت (o'clock) + number + است (is). So 'It's three o'clock' = ساعت سه است.",
+      },
+      // Lesson 2: Using always, never, and sometimes
+      {
+        id: 2,
+        type: "pattern-intro",
+        instruction: "Using always, never, and sometimes",
+        pattern: "[subject] + [time adverb] + [rest of sentence]",
+        patternParts: ["[subject]", "[time adverb]", "[rest of sentence]"],
+        patternExamples: [
+          { persian: "من همیشه صبح کار می‌کنم", transliteration: "man hamishe sobh kār mikonam", english: "I always work in the morning" },
+          { persian: "او هرگز دیر است", transliteration: "u hargez dir ast", english: "He/She is never late" },
+          { persian: "من گاهی عصر کار می‌کنم", transliteration: "man gāhi asr kār mikonam", english: "I sometimes work in the afternoon" },
+        ],
+        note: "Time adverbs like 'همیشه' (always), 'هرگز' (never), and 'گاهی' (sometimes) come right after the subject. They describe how often something happens. For example, 'من همیشه زود هستم' means 'I am always early.'",
+        question: "How do you say 'I sometimes work at night'?",
+        options: ["من کار می‌کنم گاهی شب", "من گاهی شب کار می‌کنم", "شب گاهی من کار می‌کنم", "گاهی شب کار من می‌کنم"],
+        correctAnswer: 1,
+        explanation: "The time adverb 'گاهی' (sometimes) comes after the subject 'من' (I): من گاهی شب کار می‌کنم.",
+      },
+      // Lesson 3: Saying before and after
+      {
+        id: 3,
+        type: "pattern-intro",
+        instruction: "Saying before and after",
+        pattern: "قبل از / بعد از + [noun]",
+        patternParts: ["قبل از / بعد از", "[noun]"],
+        patternExamples: [
+          { persian: "قبل از ظهر", transliteration: "ghabl az zohr", english: "before noon" },
+          { persian: "بعد از ظهر", transliteration: "ba'd az zohr", english: "after noon" },
+          { persian: "قبل از شب", transliteration: "ghabl az shab", english: "before night" },
+        ],
+        note: "'قبل از' (ghabl az = before) and 'بعد از' (ba'd az = after) come before the noun. Think of them as 'before of' and 'after of.' You can use them with any time word: قبل از صبح (before morning), بعد از ظهر (after noon), قبل از شب (before night).",
+        question: "How do you say 'after noon'?",
+        options: ["ظهر بعد از", "بعد از ظهر", "از بعد ظهر", "ظهر از بعد"],
+        correctAnswer: 1,
+        explanation: "'بعد از' (after) comes before the noun: بعد از ظهر (after noon).",
       },
     ],
   },
