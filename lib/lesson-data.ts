@@ -77,7 +77,7 @@ export const module2Lessons: Lesson[] = [
       vocabIndices: [0, 10],    // اسم through دانشجو (identity + من/هستم/است)
       grammarIndex: 0,          // "Saying 'My name is...'"
       readingStoryIds: [1],      // "My Name"
-      writingIndices: [0, 3],   // word-order + fill-blank + build-word
+      writingIndices: [0, 6],   // 6 exercises per lesson
     },
     nextLesson: { id: "2", title: "Pronouns & Origin" },
   },
@@ -91,7 +91,7 @@ export const module2Lessons: Lesson[] = [
       vocabIndices: [10, 20],   // تو through سن (pronouns + اهل/دوست)
       grammarIndex: 1,          // "Pronouns with the verb 'to be'"
       readingStoryIds: [3],      // "Meeting a New Friend"
-      writingIndices: [3, 6],   // word-order + fill-blank + build-word
+      writingIndices: [6, 12],  // 6 exercises per lesson
     },
     nextLesson: { id: "3", title: "What I Do" },
   },
@@ -105,7 +105,7 @@ export const module2Lessons: Lesson[] = [
       vocabIndices: [20, 30],   // زبان through دکتر (verbs + professions)
       grammarIndex: 2,          // "Saying where you're from"
       readingStoryIds: [5],      // "My Job"
-      writingIndices: [6, 9],   // word-order + fill-blank + build-word
+      writingIndices: [12, 18], // 6 exercises per lesson
     },
     nextLesson: null,
   },
@@ -124,7 +124,7 @@ export const module3Lessons: Lesson[] = [
       vocabIndices: [0, 10],    // خانواده through عمو
       grammarIndex: 0,          // "The Ezafe construction (-e)"
       readingStoryIds: [1, 2],   // "My Family" + story 2
-      writingIndices: [0, 3],   // word-order + fill-blank + build-word
+      writingIndices: [0, 6],   // 6 exercises per lesson
     },
     nextLesson: { id: "2", title: "Extended Family" },
   },
@@ -138,7 +138,7 @@ export const module3Lessons: Lesson[] = [
       vocabIndices: [10, 20],   // دایی through جوان
       grammarIndex: 1,          // "Saying 'I have...'"
       readingStoryIds: [3, 4],   // "Uncle's Visit" + story 4
-      writingIndices: [3, 6],   // word-order + fill-blank + build-word
+      writingIndices: [6, 12],  // 6 exercises per lesson
     },
     nextLesson: { id: "3", title: "Family Life" },
   },
@@ -152,7 +152,7 @@ export const module3Lessons: Lesson[] = [
       vocabIndices: [20, 30],   // پیر through خانه
       grammarIndex: 2,          // "Describing family members"
       readingStoryIds: [5, 6],   // "A Kind Family" + story 6
-      writingIndices: [6, 9],   // word-order + fill-blank + build-word
+      writingIndices: [12, 18], // 6 exercises per lesson
     },
     nextLesson: null,
   },
@@ -171,7 +171,7 @@ export const module4Lessons: Lesson[] = [
       vocabIndices: [0, 10],    // صفر through نه (0-9)
       grammarIndex: 0,          // "Counting things"
       readingStoryIds: [1, 2],   // "My Family" + story 2
-      writingIndices: [0, 3],   // word-order + fill-blank + build-word
+      writingIndices: [0, 6],   // 6 exercises per lesson
     },
     nextLesson: { id: "2", title: "Saying Your Age" },
   },
@@ -185,7 +185,7 @@ export const module4Lessons: Lesson[] = [
       vocabIndices: [10, 20],   // ده through نوزده (10-19)
       grammarIndex: 1,          // "Saying your age"
       readingStoryIds: [3, 4],   // "How Old Are You?" + story 4
-      writingIndices: [3, 6],   // word-order + fill-blank + build-word
+      writingIndices: [6, 12],  // 6 exercises per lesson
     },
     nextLesson: { id: "3", title: "Big Numbers" },
   },
@@ -199,7 +199,7 @@ export const module4Lessons: Lesson[] = [
       vocabIndices: [20, 31],   // بیست through هزار (20-1000)
       grammarIndex: 2,          // "Combining numbers"
       readingStoryIds: [5, 6],   // "A Big Family" + story 6
-      writingIndices: [6, 9],   // word-order + fill-blank + build-word
+      writingIndices: [12, 18], // 6 exercises per lesson
     },
     nextLesson: null,
   },
@@ -218,7 +218,7 @@ export const module5Lessons: Lesson[] = [
       vocabIndices: [0, 10],    // شنبه through دیروز (days + today/tomorrow/yesterday)
       grammarIndex: 0,          // "Talking about your schedule"
       readingStoryIds: [1, 2],   // "My Week" + story 2
-      writingIndices: [0, 3],   // word-order + fill-blank + build-word
+      writingIndices: [0, 6],   // 6 exercises per lesson
     },
     nextLesson: { id: "2", title: "Time Expressions" },
   },
@@ -232,7 +232,7 @@ export const module5Lessons: Lesson[] = [
       vocabIndices: [10, 20],   // هفته through هر هفته (time expressions)
       grammarIndex: 1,          // "Using time expressions"
       readingStoryIds: [3, 4],   // "A Busy Week" + story 4
-      writingIndices: [3, 6],   // word-order + fill-blank + build-word
+      writingIndices: [6, 12],  // 6 exercises per lesson
     },
     nextLesson: null,
   },
@@ -251,7 +251,7 @@ export const module6Lessons: Lesson[] = [
       vocabIndices: [0, 12],    // فروردین through اسفند (12 month names)
       grammarIndex: 0,          // "Saying which month it is"
       readingStoryIds: [1, 2],   // "The Persian Calendar" + story 2
-      writingIndices: [0, 3],   // word-order + fill-blank + build-word
+      writingIndices: [0, 6],   // 6 exercises per lesson
     },
     nextLesson: { id: "2", title: "Seasons" },
   },
@@ -265,7 +265,7 @@ export const module6Lessons: Lesson[] = [
       vocabIndices: [12, 19],   // بهار through فصل (seasons + month/year/season)
       grammarIndex: 1,          // "Talking about seasons"
       readingStoryIds: [3, 4],   // "The Four Seasons" + story 4
-      writingIndices: [3, 6],   // word-order + fill-blank + build-word
+      writingIndices: [6, 12],  // 6 exercises per lesson
     },
     nextLesson: null,
   },
@@ -284,7 +284,7 @@ export const module7Lessons: Lesson[] = [
       vocabIndices: [0, 10],    // زمان through ماه
       grammarIndex: 0,          // "Telling the time"
       readingStoryIds: [1, 2],   // "What Time Is It?" + "Tomorrow Is Friday!"
-      writingIndices: [0, 3],   // word-order + fill-blank + build-word
+      writingIndices: [0, 6],   // 6 exercises per lesson
     },
     nextLesson: { id: "2", title: "Morning, Noon & Night" },
   },
@@ -298,7 +298,7 @@ export const module7Lessons: Lesson[] = [
       vocabIndices: [10, 20],   // سال through گاهی
       grammarIndex: 1,          // "Using always, never, and sometimes"
       readingStoryIds: [3, 4],   // "Morning Person" + "Always Late!"
-      writingIndices: [3, 6],   // word-order + fill-blank + build-word
+      writingIndices: [6, 12],  // 6 exercises per lesson
     },
     nextLesson: { id: "3", title: "Before & After" },
   },
@@ -312,7 +312,7 @@ export const module7Lessons: Lesson[] = [
       vocabIndices: [20, 30],   // به‌موقع through قبل از
       grammarIndex: 2,          // "Saying before and after"
       readingStoryIds: [5, 6],   // "Before and After" + "On Time!"
-      writingIndices: [6, 9],   // word-order + fill-blank + build-word
+      writingIndices: [12, 18], // 6 exercises per lesson
     },
     nextLesson: null,
   },
@@ -329,7 +329,7 @@ export const module8Lessons: Lesson[] = [
       vocabIndices: [0, 10],
       grammarIndex: 0,
       readingStoryIds: [1, 2],
-      writingIndices: [0, 3],
+      writingIndices: [0, 6],
     },
     nextLesson: { id: "2", title: "Four Seasons" },
   },
@@ -343,7 +343,7 @@ export const module8Lessons: Lesson[] = [
       vocabIndices: [10, 20],
       grammarIndex: 1,
       readingStoryIds: [3, 4],
-      writingIndices: [3, 6],
+      writingIndices: [6, 12],
     },
     nextLesson: { id: "3", title: "What Do I Need?" },
   },
@@ -357,7 +357,7 @@ export const module8Lessons: Lesson[] = [
       vocabIndices: [20, 30],
       grammarIndex: 2,
       readingStoryIds: [5, 6],
-      writingIndices: [6, 9],
+      writingIndices: [12, 18],
     },
     nextLesson: null,
   },
@@ -374,7 +374,7 @@ export const module9Lessons: Lesson[] = [
       vocabIndices: [0, 10],
       grammarIndex: 0,
       readingStoryIds: [1, 2],
-      writingIndices: [0, 3],
+      writingIndices: [0, 6],
     },
     nextLesson: { id: "2", title: "Colors in Nature" },
   },
@@ -388,7 +388,7 @@ export const module9Lessons: Lesson[] = [
       vocabIndices: [10, 20],
       grammarIndex: 1,
       readingStoryIds: [3, 4],
-      writingIndices: [3, 6],
+      writingIndices: [6, 12],
     },
     nextLesson: { id: "3", title: "Light & Dark" },
   },
@@ -402,7 +402,7 @@ export const module9Lessons: Lesson[] = [
       vocabIndices: [20, 30],
       grammarIndex: 2,
       readingStoryIds: [5, 6],
-      writingIndices: [6, 9],
+      writingIndices: [12, 18],
     },
     nextLesson: null,
   },
