@@ -2999,9 +2999,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "Who Is the Doctor?",
         persianTitle: "دُکتُر کیست؟",
-        text: "سارا: خانوادِهٔ مَن کوچَک اَست. پِدَرِ مَن مُهَندِس اَست. مَریَم: مادَرِ تو چِطور؟ سارا: مادَرِ مَن دُکتُر اَست! پِدَربُزرگِ مَن هَم دُکتُر اَست! مَریَم: بَرادَرِ تو هَم دُکتُر اَست؟ سارا: نَه! بَرادَرِ مَن دانِشجو اَست.",
+        text: "سارا: خانوادِهٔ مَن کوچَک اَست. پِدَرِ مَن مُهَندِس اَست. مَریَم: مادَرِ تو چِه کارِه اَست؟ سارا: مادَرِ مَن دُکتُر اَست! پِدَربُزرگِ مَن هَم دُکتُر اَست! مَریَم: بَرادَرِ تو هَم دُکتُر اَست؟ سارا: نَه! بَرادَرِ مَن دانِشجو اَست.",
         textTransliteration:
-          "Sārā: Khānevāde-ye man koochak ast. Pedar-e man mohandes ast. Maryam: Mādar-e to chetor? Sārā: Mādar-e man doktor ast! Pedarbozorg-e man ham doktor ast! Maryam: Barādar-e to ham doktor ast? Sārā: Na! Barādar-e man dāneshju ast.",
+          "Sārā: Khānevāde-ye man koochak ast. Pedar-e man mohandes ast. Maryam: Mādar-e to che kāre ast? Sārā: Mādar-e man doktor ast! Pedarbozorg-e man ham doktor ast! Maryam: Barādar-e to ham doktor ast? Sārā: Na! Barādar-e man dāneshju ast.",
         textTranslation:
           "Sara: My family is small. My father is an engineer. Maryam: What about your mother? Sara: My mother is a doctor! My grandfather is also a doctor! Maryam: Is your brother also a doctor? Sara: No! My brother is a student.",
         questions: [
@@ -3044,9 +3044,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "The Teaching Couple",
         persianTitle: "زَن و شُوهَرِ مُعَلِّم",
-        text: "سارا: عَمویِ مَن رِضا اَست و هَمسَر دارَد. زَنِ عَمو مُعَلِّم اَست. مَریَم: عَمو هَم مُعَلِّم اَست؟ سارا: بَله! هَمسَر و شُوهَر مُعَلِّم هَستَند! آن‌ها بَچِّه دارَند. پِسَر جَوان اَست و دُختَر کوچَک اَست. مَریَم: خالِهٔ تو چِطور؟ سارا: خالِهٔ مَن دُکتُر اَست. او جَوان اَست!",
+        text: "سارا: عَمویِ مَن رِضا اَست و هَمسَر دارَد. زَنِ عَمو مُعَلِّم اَست. مَریَم: عَمو هَم مُعَلِّم اَست؟ سارا: بَله! هَمسَر و شُوهَر مُعَلِّم هَستَند! آن‌ها بَچِّه دارَند. پِسَر جَوان اَست و دُختَر کوچَک اَست. مَریَم: خالِهٔ تو چِه کارِه اَست؟ سارا: خالِهٔ مَن دُکتُر اَست. او جَوان اَست!",
         textTransliteration:
-          "Sārā: Amoo-ye man Rezā ast va hamsar dārad. Zan-e amoo mo'allem ast. Maryam: Amoo ham mo'allem ast? Sārā: Bale! Hamsar va showhar mo'allem hastand! Ānhā bache dārand. Pesar javān ast va dokhtar koochak ast. Maryam: Khāle-ye to chetor? Sārā: Khāle-ye man doktor ast. Ū javān ast!",
+          "Sārā: Amoo-ye man Rezā ast va hamsar dārad. Zan-e amoo mo'allem ast. Maryam: Amoo ham mo'allem ast? Sārā: Bale! Hamsar va showhar mo'allem hastand! Ānhā bache dārand. Pesar javān ast va dokhtar koochak ast. Maryam: Khāle-ye to che kāre ast? Sārā: Khāle-ye man doktor ast. Ū javān ast!",
         textTranslation:
           "Sara: My uncle is Reza and he has a spouse. The uncle's wife is a teacher. Maryam: Is your uncle also a teacher? Sara: Yes! The husband and wife are both teachers! They have children. The son is young and the daughter is little. Maryam: What about your aunt? Sara: My aunt is a doctor. She is young!",
         questions: [
