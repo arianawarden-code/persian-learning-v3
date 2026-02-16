@@ -99,15 +99,22 @@ export function ReadingStory({ story, moduleId, nextStoryId = null, nextStoryTit
     // "az kojā hasti?" → "kojāyi?"
     s = s.replace(/\baz kojā hasti\b/gi, 'kojāyi')
 
+    // "chist" → "chiye"
+    s = s.replace(/\bchist\b/gi, (m) => m[0] === 'C' ? 'Chiye' : 'chiye')
+
+    // Possessives with shomā: X-e shomā → X-etun
+    s = s.replace(/(\w)-e shomā\b/g, '$1-etun')
+    s = s.replace(/(\w)-ye shomā\b/g, '$1-tun')
     // Possessives attach: X-e man → X-am, X-e to → X-et
     s = s.replace(/(\w)-e man\b/g, '$1-am')
     s = s.replace(/(\w)-e to\b/g, '$1-et')
     s = s.replace(/(\w)-ye man\b/g, '$1-m')
     s = s.replace(/(\w)-ye to\b/g, '$1-t')
 
-    // Personal endings contract: "X hastam" → "X-am", "X hasti" → "X-i"
+    // Personal endings contract: "X hastam" → "X-am", "X hasti" → "X-i", "X hastid" → "X-id"
     s = s.replace(/ hastam\b/g, '-am')
     s = s.replace(/ hasti\b/g, '-i')
+    s = s.replace(/ hastid\b/g, '-id')
     // hastand → hastan
     s = s.replace(/\bhastand\b/gi, (m) => m[0] === 'H' ? 'Hastan' : 'hastan')
 

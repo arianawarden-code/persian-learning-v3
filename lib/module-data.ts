@@ -2048,23 +2048,23 @@ export const moduleContent: Record<string | number, ModuleContent> = {
     reading: [
       {
         id: 1,
-        title: "The Name Game",
-        persianTitle: "بازیِ اِسم",
-        text: "عَلی: سَلام! مَن عَلی هَستَم. اِسمِ شُما چیست؟ رُیا: مَریَم؟ عَلی: نَه! سارا؟ رُیا: نَه، نَه! اِسمِ مَن رُیا اَست! عَلی: رُیا! بَله! مَمنون! رُیا: خواهِش می‌کُنَم، عَلی!",
+        title: "First Meeting",
+        persianTitle: "اَوَّلین دیدار",
+        text: "عَلی: سَلام! مَن عَلی هَستَم. اِسمِ شُما چیست؟ رُیا: سَلام! مَن رُیا هَستَم. عَلی: رُیا، مَمنون! رُیا: خواهِش می‌کُنَم! شُما عَلی هَستید، بَله؟ عَلی: بَله!",
         textTransliteration:
-          "Ali: Salām! Man Ali hastam. Esm-e shomā chist? Royā: Maryam? Ali: Na! Sārā? Royā: Na, na! Esm-e man Royā ast! Ali: Royā! Bale! Mamnoon! Royā: Khāhesh mikonam, Ali!",
+          "Ali: Salām! Man Ali hastam. Esm-e shomā chist? Royā: Salām! Man Royā hastam. Ali: Royā, mamnoon! Royā: Khāhesh mikonam! Shomā Ali hastid, bale? Ali: Bale!",
         textTranslation:
-          "Ali: Hello! I am Ali. What is your name? Roya: Maryam? Ali: No! Sara? Roya: No, no! My name is Roya! Ali: Roya! Yes! Thank you! Roya: You're welcome, Ali!",
+          "Ali: Hello! I am Ali. What is your name? Roya: Hello! I am Roya. Ali: Roya, thank you! Roya: You're welcome! You are Ali, yes? Ali: Yes!",
         questions: [
           {
-            question: "How many times does Ali guess the wrong name?",
-            options: ["One", "Two", "Three", "Zero"],
-            correctAnswer: 1,
+            question: "What is the man's name?",
+            options: ["Roya", "Reza", "Ali", "Sara"],
+            correctAnswer: 2,
           },
           {
-            question: "What is her real name?",
-            options: ["Maryam", "Sara", "Roya", "Ali"],
-            correctAnswer: 2,
+            question: "What is the woman's name?",
+            options: ["Maryam", "Sara", "Ali", "Roya"],
+            correctAnswer: 3,
           },
         ],
       },
