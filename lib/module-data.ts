@@ -2069,11 +2069,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "Morning or Night?",
         persianTitle: "صُبح یا شَب؟",
-        text: "عَلی: صُبح بِخَیر! سارا: صُبح بِخَیر؟ نَه! شَب اَست! عَلی: بِبَخشید! شَب بِخَیر! حالِ شُما چِطور اَست؟ سارا: مَن خوب هَستَم، مَمنون! او چِطور اَست؟ عَلی: او بَد اَست! سارا: خُداحافِظ! شَب بِخَیر!",
+        text: "عَلی: صُبح بِخَیر! سارا: صُبح بِخَیر؟ نَه! شَب بِخَیر! عَلی: بِبَخشید! شَب بِخَیر! شُما چِطور هَستید؟ سارا: مَن خوب هَستَم، مَمنون! او چِطور اَست؟ عَلی: او بَد اَست! سارا: خُداحافِظ! شَب بِخَیر!",
         textTransliteration:
-          "Ali: Sobh bekheyr! Sārā: Sobh bekheyr? Na! Shab ast! Ali: Bebakhshid! Shab bekheyr! Hāl-e shomā chetor ast? Sārā: Man khoob hastam, mamnoon! Ū chetor ast? Ali: Ū bad ast! Sārā: Khodāhāfez! Shab bekheyr!",
+          "Ali: Sobh bekheyr! Sārā: Sobh bekheyr? Na! Shab bekheyr! Ali: Bebakhshid! Shab bekheyr! Shomā chetor hastid? Sārā: Man khoob hastam, mamnoon! Ū chetor ast? Ali: Ū bad ast! Sārā: Khodāhāfez! Shab bekheyr!",
         textTranslation:
-          "Ali: Good morning! Sara: Good morning? No! It's nighttime! Ali: Sorry! Good night! How are you? Sara: I'm well, thank you! How is he? Ali: He's feeling bad! Sara: Goodbye! Good night!",
+          "Ali: Good morning! Sara: Good morning? No! Good night! Ali: Sorry! Good night! How are you? Sara: I'm well, thank you! How is he? Ali: He's feeling bad! Sara: Goodbye! Good night!",
         questions: [
           {
             question: "What mistake does Ali make?",
@@ -2091,11 +2091,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "Where Is My Friend?",
         persianTitle: "دوستِ مَن کُجاست؟",
-        text: "عَلی: دوستِ مَن اِمروز کُجاست؟ سارا: او خانِه اَست؟ عَلی: نَه! او خانِه نَه. او کُجاست؟ سارا: بِبَخشید، مَن هَم نَه! عَلی: لُطفاً... دوستِ مَن کُجاست؟ سارا: او خانِه اَست! عَلی: خانِه؟ بَله! مَن هَم خانِه هَستَم! اِمروز روزِ خوب اَست!",
+        text: "عَلی: دوستِ مَن اِمروز کُجاست؟ سارا: او خانِه اَست؟ عَلی: نَه! او خانِه نَه. او کُجاست؟ سارا: بِبَخشید، مَن هَم نَه! عَلی: لُطفاً... دوستِ مَن کُجاست؟ سارا: او خانِه اَست! عَلی: خانِه؟ بَله! مَن هَم خانِه هَستَم! اِمروز خوب اَست!",
         textTransliteration:
-          "Ali: Doost-e man emrooz kojāst? Sārā: Ū khāne ast? Ali: Na! Ū khāne na. Ū kojāst? Sārā: Bebakhshid, man ham na! Ali: Lotfan... doost-e man kojāst? Sārā: Ū khāne ast! Ali: Khāne? Bale! Man ham khāne hastam! Emrooz ruz-e khoob ast!",
+          "Ali: Doost-e man emrooz kojāst? Sārā: Ū khāne ast? Ali: Na! Ū khāne na. Ū kojāst? Sārā: Bebakhshid, man ham na! Ali: Lotfan... doost-e man kojāst? Sārā: Ū khāne ast! Ali: Khāne? Bale! Man ham khāne hastam! Emrooz khoob ast!",
         textTranslation:
-          "Ali: Where is my friend today? Sara: Is he at home? Ali: No! He's not at home. Where is he? Sara: Sorry, I don't know either! Ali: Please... where is my friend? Sara: He's at home! Ali: At home? Yes! I'm also at home! Today is a good day!",
+          "Ali: Where is my friend today? Sara: Is he at home? Ali: No! He's not at home. Where is he? Sara: Sorry, I don't know either! Ali: Please... where is my friend? Sara: He's at home! Ali: At home? Yes! I'm also at home! Today is good!",
         questions: [
           {
             question: "What is Ali searching for?",
@@ -2553,11 +2553,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "Three Cities",
         persianTitle: "سِه شَهر",
-        text: "عَلی: سَلام! مَن عَلی هَستَم و اَهلِ تِهران هَستَم. تو اَهلِ کُجا هَستی؟ رِضا: مَن رِضا هَستَم. مَن اَهلِ شیراز هَستَم. عَلی: او کیست؟ رِضا: او دوستِ مَن اَست. اِسمِ او مَریَم اَست. او اَهلِ اِصفَهان اَست! عَلی: ما اَهلِ ایران هَستیم. آن‌ها هَم اَهلِ ایران هَستَند!",
+        text: "عَلی: سَلام! مَن عَلی هَستَم و اَهلِ تِهران هَستَم. تو اَهلِ کُجا هَستی؟ رِضا: مَن رِضا هَستَم. مَن اَهلِ شیراز هَستَم. عَلی: او دوستِ تو اَست؟ رِضا: بَله! او دوستِ مَن اَست. اِسمِ او مَریَم اَست. او اَهلِ اِصفَهان اَست! عَلی: ما اَهلِ ایران هَستیم. آن‌ها هَم اَهلِ ایران هَستَند!",
         textTransliteration:
-          "Ali: Salām! Man Ali hastam va ahl-e Tehrān hastam. To ahl-e kojā hasti? Rezā: Man Rezā hastam. Man ahl-e Shirāz hastam. Ali: Ū kist? Rezā: Ū doost-e man ast. Esm-e ū Maryam ast. Ū ahl-e Esfahān ast! Ali: Mā ahl-e Irān hastim. Ānhā ham ahl-e Irān hastand!",
+          "Ali: Salām! Man Ali hastam va ahl-e Tehrān hastam. To ahl-e kojā hasti? Rezā: Man Rezā hastam. Man ahl-e Shirāz hastam. Ali: Ū doost-e to ast? Rezā: Bale! Ū doost-e man ast. Esm-e ū Maryam ast. Ū ahl-e Esfahān ast! Ali: Mā ahl-e Irān hastim. Ānhā ham ahl-e Irān hastand!",
         textTranslation:
-          "Ali: Hello! I am Ali and I am from Tehran. Where are you from? Reza: I am Reza. I am from Shiraz. Ali: Who is she? Reza: She is my friend. Her name is Maryam. She is from Isfahan! Ali: We are from Iran. They are also from Iran!",
+          "Ali: Hello! I am Ali and I am from Tehran. Where are you from? Reza: I am Reza. I am from Shiraz. Ali: Is she your friend? Reza: Yes! She is my friend. Her name is Maryam. She is from Isfahan! Ali: We are from Iran. They are also from Iran!",
         questions: [
           {
             question: "How many different cities are the friends from?",
@@ -2573,13 +2573,13 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
       {
         id: 4,
-        title: "Everyone Is a Student!",
-        persianTitle: "هَمِه دانِشجو هَستَند!",
-        text: "سارا: مَن دانِشجو هَستَم. تو هَم دانِشجو هَستی؟ عَلی: بَله! سارا: او هَم دانِشجو اَست؟ عَلی: بَله! ما هَمِه دانِشجو هَستیم! سارا: شُما هَم دانِشجو هَستید؟ عَلی: بَله! آن‌ها هَم دانِشجو هَستَند! هَمِه دانِشجو هَستَند! سارا: مَمنون!",
+        title: "We Are Students!",
+        persianTitle: "ما دانِشجو هَستیم!",
+        text: "سارا: مَن دانِشجو هَستَم. تو هَم دانِشجو هَستی؟ عَلی: بَله! سارا: او هَم دانِشجو اَست؟ عَلی: بَله! ما دانِشجو هَستیم! سارا: شُما هَم دانِشجو هَستید؟ عَلی: بَله! آن‌ها هَم دانِشجو هَستَند! سارا: ما و آن‌ها دانِشجو هَستیم! مَمنون!",
         textTransliteration:
-          "Sārā: Man dāneshju hastam. To ham dāneshju hasti? Ali: Bale! Sārā: Ū ham dāneshju ast? Ali: Bale! Mā hame dāneshju hastim! Sārā: Shomā ham dāneshju hastid? Ali: Bale! Ānhā ham dāneshju hastand! Hame dāneshju hastand! Sārā: Mamnoon!",
+          "Sārā: Man dāneshju hastam. To ham dāneshju hasti? Ali: Bale! Sārā: Ū ham dāneshju ast? Ali: Bale! Mā dāneshju hastim! Sārā: Shomā ham dāneshju hastid? Ali: Bale! Ānhā ham dāneshju hastand! Sārā: Mā va ānhā dāneshju hastim! Mamnoon!",
         textTranslation:
-          "Sara: I am a student. Are you also a student? Ali: Yes! Sara: Is he also a student? Ali: Yes! We are all students! Sara: Are you also students? Ali: Yes! They are also students! Everyone is a student! Sara: Thank you!",
+          "Sara: I am a student. Are you also a student? Ali: Yes! Sara: Is he also a student? Ali: Yes! We are students! Sara: Are you also students? Ali: Yes! They are also students! Sara: We and they are students! Thank you!",
         questions: [
           {
             question: "What do ALL the people have in common?",
@@ -2598,11 +2598,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 5,
         title: "The Same Job!",
         persianTitle: "شُغلِ ما!",
-        text: "سارا: مَن مُهَندِس هَستَم. مَن دَر تِهران کار می‌کُنَم. رِضا: مَن هَم مُهَندِس هَستَم! مَن هَم دَر تِهران کار می‌کُنَم. سارا: دوستِ مَن مَریَم مُعَلِّم اَست. او فارسی صُحبَت می‌کُنَد و اِنگلیسی یاد می‌گیرَد. رِضا: ما هَمِه دَر تِهران زِندگی می‌کُنیم!",
+        text: "سارا: مَن مُهَندِس هَستَم. مَن دَر تِهران کار می‌کُنَم. رِضا: مَن هَم مُهَندِس هَستَم! مَن هَم دَر تِهران کار می‌کُنَم. سارا: دوستِ مَن مَریَم مُعَلِّم اَست. او فارسی صُحبَت می‌کُنَد و اِنگلیسی یاد می‌گیرَد. رِضا: ما دَر تِهران زِندگی می‌کُنیم!",
         textTransliteration:
-          "Sārā: Man mohandes hastam. Man dar Tehrān kār mikonam. Rezā: Man ham mohandes hastam! Man ham dar Tehrān kār mikonam. Sārā: Doost-e man Maryam mo'allem ast. Ū Fārsi sohbat mikonad va Engelisi yād migirad. Rezā: Mā hame dar Tehrān zendegi mikonim!",
+          "Sārā: Man mohandes hastam. Man dar Tehrān kār mikonam. Rezā: Man ham mohandes hastam! Man ham dar Tehrān kār mikonam. Sārā: Doost-e man Maryam mo'allem ast. Ū Fārsi sohbat mikonad va Engelisi yād migirad. Rezā: Mā dar Tehrān zendegi mikonim!",
         textTranslation:
-          "Sara: I am an engineer. I work in Tehran. Reza: I am also an engineer! I also work in Tehran. Sara: My friend Maryam is a teacher. She speaks Persian and is learning English. Reza: We all live in Tehran!",
+          "Sara: I am an engineer. I work in Tehran. Reza: I am also an engineer! I also work in Tehran. Sara: My friend Maryam is a teacher. She speaks Persian and is learning English. Reza: We live in Tehran!",
         questions: [
           {
             question: "What do Sara and Reza have in common?",
@@ -3103,13 +3103,13 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
       {
         id: 6,
-        title: "Everyone Comes Home",
-        persianTitle: "هَمِه خانِه هَستَند!",
-        text: "سارا: خانوادِهٔ مَن بُزرگ اَست! پِدَرِ مَن مَردِ مِهربان اَست. مادَرِ مَن عَزیز اَست. عَلی: پِدَربُزرگ و مادَربُزرگ کُجا هَستَند؟ سارا: آن‌ها با ما زِندگی می‌کُنَند. اِمروز عَمو و خالِه و دایْی هَم اینجا هَستَند! عَلی: بَچِّه‌ها هَم هَستَند؟ سارا: بَله! بَچِّه‌ها کوچَک و جَوان هَستَند. ما هَمِه با هَم دَر خانِه هَستیم. مَحَبَّت خوب اَست!",
+        title: "The Family at Home",
+        persianTitle: "خانوادِه دَر خانِه",
+        text: "سارا: خانوادِهٔ مَن بُزرگ اَست! پِدَرِ مَن مَردِ مِهربان اَست. مادَرِ مَن عَزیز اَست. عَلی: پِدَربُزرگ و مادَربُزرگ کُجا هَستَند؟ سارا: آن‌ها با ما زِندگی می‌کُنَند. اِمروز عَمو و خالِه و دایْی هَم اینجا هَستَند! عَلی: بَچِّه‌ها هَم هَستَند؟ سارا: بَله! بَچِّه‌ها کوچَک و جَوان هَستَند. ما با هَم دَر خانِه هَستیم. مَحَبَّت خوب اَست!",
         textTransliteration:
-          "Sārā: Khānevāde-ye man bozorg ast! Pedar-e man mard-e mehrabān ast. Mādar-e man aziz ast. Ali: Pedarbozorg va mādarbozorg kojā hastand? Sārā: Ānhā bā mā zendegi mikonand. Emrooz amoo va khāle va dāyi ham injā hastand! Ali: Bache-hā ham hastand? Sārā: Bale! Bache-hā koochak va javān hastand. Mā hame bā ham dar khāne hastim. Mohabbat khoob ast!",
+          "Sārā: Khānevāde-ye man bozorg ast! Pedar-e man mard-e mehrabān ast. Mādar-e man aziz ast. Ali: Pedarbozorg va mādarbozorg kojā hastand? Sārā: Ānhā bā mā zendegi mikonand. Emrooz amoo va khāle va dāyi ham injā hastand! Ali: Bache-hā ham hastand? Sārā: Bale! Bache-hā koochak va javān hastand. Mā bā ham dar khāne hastim. Mohabbat khoob ast!",
         textTranslation:
-          "Sara: My family is big! My father is a kind man. My mother is dear. Ali: Where are the grandparents? Sara: They live with us. Today uncle and aunt are also here! Ali: Are the children here too? Sara: Yes! The children are small and young. We are all together at home. Love is wonderful!",
+          "Sara: My family is big! My father is a kind man. My mother is dear. Ali: Where are the grandparents? Sara: They live with us. Today uncle and aunt are also here! Ali: Are the children here too? Sara: Yes! The children are small and young. We are together at home. Love is wonderful!",
         questions: [
           {
             question: "Who lives with the family full-time?",
@@ -3486,13 +3486,13 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       // Lesson 1 readings (use M1+M2+M3 + M4 L1 vocab: numbers 0-9)
       {
         id: 1,
-        title: "The Number Game",
-        persianTitle: "بازیِ عَدَد",
-        text: "سارا: مَن یِک عَدَد دارَم. بُزرگ‌تَر اَز پَنج اَست و کوچَک‌تَر اَز هَفت اَست! عَلی: شِش! سارا: بَله! حالا تو! عَلی: مَن هَشت دوست دارَم. چَهار دوست مُعَلِّم هَستَند و دو دوست دُکتُر هَستَند. چَند دوست مُهَندِس هَستَند؟ سارا: دو! عَلی: بَله! تو خوب هَستی!",
+        title: "How Many Friends?",
+        persianTitle: "چَند دوست؟",
+        text: "سارا: مَن سِه بَرادَر و دو خواهَر دارَم. چَند هَستیم؟ عَلی: پَنج! سارا: نَه! پِدَر و مادَر هَم! عَلی: هَفت! سارا: بَله! عَلی: مَن هَشت دوست دارَم. چَهار دوست مُعَلِّم هَستَند و دو دوست دُکتُر هَستَند. چَند دوست مُهَندِس هَستَند؟ سارا: دو! عَلی: بَله! تو خوب هَستی!",
         textTransliteration:
-          "Sārā: Man yek adad dāram. Bozorgtar az panj ast va koochaktar az haft ast! Ali: Shesh! Sārā: Bale! Hālā to! Ali: Man hasht doost dāram. Chahār doost mo'allem hastand va do doost doktor hastand. Chand doost mohandes hastand? Sārā: Do! Ali: Bale! To khoob hasti!",
+          "Sārā: Man se barādar va do khāhar dāram. Chand hastim? Ali: Panj! Sārā: Na! Pedar va mādar ham! Ali: Haft! Sārā: Bale! Ali: Man hasht doost dāram. Chahār doost mo'allem hastand va do doost doktor hastand. Chand doost mohandes hastand? Sārā: Do! Ali: Bale! To khoob hasti!",
         textTranslation:
-          "Sara: I have a number. It's bigger than five and smaller than seven! Ali: Six! Sara: Yes! Now you! Ali: I have eight friends. Four friends are teachers and two friends are doctors. How many friends are engineers? Sara: Two! Ali: Yes! You're good!",
+          "Sara: I have three brothers and two sisters. How many are we? Ali: Five! Sara: No! Father and mother too! Ali: Seven! Sara: Yes! Ali: I have eight friends. Four friends are teachers and two friends are doctors. How many friends are engineers? Sara: Two! Ali: Yes! You're good!",
         questions: [
           {
             question: "How many friends does Ali have?",
@@ -3510,11 +3510,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "How Many Brothers?",
         persianTitle: "چَند بَرادَر؟",
-        text: "عَلی: مَن سِه بَرادَر دارَم و دو خواهَر دارَم. تو چَند بَرادَر داری؟ سارا: مَن صِفر بَرادَر دارَم! عَلی: صِفر؟! سارا: بَله! مَن پَنج خواهَر دارَم! عَلی: پَنج خواهَر! خانوادِهٔ تو بُزرگ اَست! سارا: بَله! هَفت نَفَر دَر خانِه هَستیم!",
+        text: "عَلی: مَن سِه بَرادَر دارَم و دو خواهَر دارَم. تو چَند بَرادَر داری؟ سارا: مَن صِفر بَرادَر دارَم! عَلی: صِفر؟! سارا: بَله! مَن پَنج خواهَر دارَم! عَلی: پَنج خواهَر! خانوادِهٔ تو بُزرگ اَست! سارا: بَله! خانوادِهٔ مَن بُزرگ اَست!",
         textTransliteration:
-          "Ali: Man se barādar dāram va do khāhar dāram. To chand barādar dāri? Sārā: Man sefr barādar dāram! Ali: Sefr?! Sārā: Bale! Man panj khāhar dāram! Ali: Panj khāhar! Khānevāde-ye to bozorg ast! Sārā: Bale! Haft nafar dar khāne hastim!",
+          "Ali: Man se barādar dāram va do khāhar dāram. To chand barādar dāri? Sārā: Man sefr barādar dāram! Ali: Sefr?! Sārā: Bale! Man panj khāhar dāram! Ali: Panj khāhar! Khānevāde-ye to bozorg ast! Sārā: Bale! Khānevāde-ye man bozorg ast!",
         textTranslation:
-          "Ali: I have three brothers and two sisters. How many brothers do you have? Sara: I have zero brothers! Ali: Zero?! Sara: Yes! I have five sisters! Ali: Five sisters! Your family is big! Sara: Yes! Seven people are in the house!",
+          "Ali: I have three brothers and two sisters. How many brothers do you have? Sara: I have zero brothers! Ali: Zero?! Sara: Yes! I have five sisters! Ali: Five sisters! Your family is big! Sara: Yes! My family is big!",
         questions: [
           {
             question: "How many brothers does Sara have?",
@@ -3522,9 +3522,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
             correctAnswer: 0,
           },
           {
-            question: "How many people are in Sara's house?",
-            options: ["Five", "Six", "Seven", "Eight"],
-            correctAnswer: 2,
+            question: "How many sisters does Sara have?",
+            options: ["Two", "Three", "Four", "Five"],
+            correctAnswer: 3,
           },
         ],
       },
@@ -3555,11 +3555,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 4,
         title: "The Big Family Dinner",
         persianTitle: "شامِ خانوادگی",
-        text: "سارا: اِمروز خانوادِهٔ مَن دَر خانِه اَست! عَلی: چَند نَفَر هَستید؟ سارا: پِدَربُزرگ، مادَربُزرگ، پِدَر، مادَر، سِه بَرادَر، دو خواهَر و مَن. دَوازدَه نَفَر! عَلی: دَوازدَه نَفَر! خانِهٔ شُما بُزرگ اَست؟ سارا: نَه! خانِهٔ ما کوچَک اَست! دَوازدَه نَفَر زیاد اَست!",
+        text: "سارا: اِمروز خانوادِهٔ مَن دَر خانِه اَست! عَلی: خانوادِهٔ تو بُزرگ اَست؟ سارا: پِدَربُزرگ، مادَربُزرگ، پِدَر، مادَر، سِه بَرادَر، دو خواهَر و مَن. دَوازدَه! عَلی: دَوازدَه! خانِهٔ شُما بُزرگ اَست؟ سارا: نَه! خانِهٔ ما کوچَک اَست! دَوازدَه دَر خانِهٔ کوچَک!",
         textTransliteration:
-          "Sārā: Emruz khānevāde-ye man dar khāne ast! Ali: Chand nafar hastid? Sārā: Pedarbozorg, mādarbozorg, pedar, mādar, se barādar, do khāhar va man. Davāzdah nafar! Ali: Davāzdah nafar! Khāne-ye shomā bozorg ast? Sārā: Na! Khāne-ye mā koochak ast! Davāzdah nafar ziyād ast!",
+          "Sārā: Emruz khānevāde-ye man dar khāne ast! Ali: Khānevāde-ye to bozorg ast? Sārā: Pedarbozorg, mādarbozorg, pedar, mādar, se barādar, do khāhar va man. Davāzdah! Ali: Davāzdah! Khāne-ye shomā bozorg ast? Sārā: Na! Khāne-ye mā koochak ast! Davāzdah dar khāne-ye koochak!",
         textTranslation:
-          "Sara: Today my family is at home! Ali: How many people are you? Sara: Grandfather, grandmother, father, mother, three brothers, two sisters, and me. Twelve people! Ali: Twelve people! Is your house big? Sara: No! Our house is small! Twelve people is a lot!",
+          "Sara: Today my family is at home! Ali: Is your family big? Sara: Grandfather, grandmother, father, mother, three brothers, two sisters, and me. Twelve! Ali: Twelve! Is your house big? Sara: No! Our house is small! Twelve in a small house!",
         questions: [
           {
             question: "How many people are at the dinner?",
@@ -3576,13 +3576,13 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       // Lesson 3 readings (use all M1+M2+M3+M4 vocab)
       {
         id: 5,
-        title: "Grandmother's Birthday",
-        persianTitle: "جَشنِ مادَربُزرگ",
-        text: "سارا: اِمروز جَشنِ مادَربُزرگ اَست! او هَفتاد ساله اَست! عَلی: هَفتاد ساله! پِدَربُزرگ چَند ساله اَست؟ سارا: او هَشتاد ساله اَست. او هَمیشه خوب اَست! بیست نَوِه دَر خانِه هَستَند! عَلی: بیست نَوِه! تو چَند ساله هَستی؟ سارا: مَن بیست و دو ساله هَستَم. بُزرگ‌ترین نَوِه هَستَم! کوچَک‌ترین نَوِه پَنج ساله اَست. خانوادِهٔ ما بُزرگ و مِهربان اَست!",
+        title: "Grandmother Is Seventy!",
+        persianTitle: "مادَربُزرگ هَفتاد ساله اَست!",
+        text: "سارا: اِمروز مادَربُزرگ هَفتاد ساله اَست! عَلی: هَفتاد ساله! پِدَربُزرگ چَند ساله اَست؟ سارا: او هَشتاد ساله اَست. او خوب اَست! بیست نَوِه دَر خانِه هَستَند! عَلی: بیست نَوِه! تو چَند ساله هَستی؟ سارا: مَن بیست و دو ساله هَستَم. نَوِهٔ بُزرگ هَستَم! نَوِهٔ کوچَک پَنج ساله اَست. خانوادِهٔ ما بُزرگ و مِهربان اَست!",
         textTransliteration:
-          "Sārā: Emruz jashn-e mādarbozorg ast! Ū haftād sāle ast! Ali: Haftād sāle! Pedarbozorg chand sāle ast? Sārā: Ū hashtād sāle ast. Ū hamisheh khoob ast! Bist nave dar khāne hastand! Ali: Bist nave! To chand sāle hasti? Sārā: Man bist-o do sāle hastam. Bozorgtarin nave hastam! Koochaktarin nave panj sāle ast. Khānevāde-ye mā bozorg va mehrabān ast!",
+          "Sārā: Emruz mādarbozorg haftād sāle ast! Ali: Haftād sāle! Pedarbozorg chand sāle ast? Sārā: Ū hashtād sāle ast. Ū khoob ast! Bist nave dar khāne hastand! Ali: Bist nave! To chand sāle hasti? Sārā: Man bist-o do sāle hastam. Nave-ye bozorg hastam! Nave-ye koochak panj sāle ast. Khānevāde-ye mā bozorg va mehrabān ast!",
         textTranslation:
-          "Sara: Today is grandmother's celebration! She is seventy! Ali: Seventy! How old is grandfather? Sara: He is eighty. He is always well! Twenty grandchildren are in the house! Ali: Twenty grandchildren! How old are you? Sara: I am twenty-two. I am the oldest grandchild! The youngest grandchild is five. Our family is big and kind!",
+          "Sara: Today grandmother is seventy! Ali: Seventy! How old is grandfather? Sara: He is eighty. He is well! Twenty grandchildren are in the house! Ali: Twenty grandchildren! How old are you? Sara: I am twenty-two. I am the big grandchild! The little grandchild is five. Our family is big and kind!",
         questions: [
           {
             question: "How old is the grandmother?",
@@ -3600,11 +3600,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 6,
         title: "The One Hundred Friends",
         persianTitle: "صَد دوست",
-        text: "عَلی: بَرادَرِ مَن سی ساله اَست و مُعَلِّم اَست. او صَد دوست دارَد! سارا: صَد؟! نَه! عَلی: بَله! چِهِل دوست دَر شَهر، سی دوست دَر کِشوَر، و سی دوست دَر خانِه! سارا: سی دوست دَر خانِه؟ آن‌ها خانواده هَستَند! عَلی: بَله! بَرادَرِ مَن خانواده را دوست دارَد. خانواده بِهتَرین دوست اَست!",
+        text: "عَلی: بَرادَرِ مَن سی ساله اَست و مُعَلِّم اَست. او صَد دوست دارَد! سارا: صَد؟! نَه! عَلی: بَله! چِهِل دوست دَر شَهر، سی دوست دَر کِشوَر، و سی دوست دَر خانِه! سارا: سی دوست دَر خانِه؟ آن‌ها خانواده هَستَند! عَلی: بَله! بَرادَرِ مَن خانواده دوست دارَد. خانواده دوستِ خوب اَست!",
         textTransliteration:
-          "Ali: Barādar-e man si sāle ast va mo'allem ast. Ū sad doost dārad! Sārā: Sad?! Na! Ali: Bale! Chehel doost dar shahr, si doost dar keshvar, va si doost dar khāne! Sārā: Si doost dar khāne? Ānhā khānevāde hastand! Ali: Bale! Barādar-e man khānevāde rā doost dārad. Khānevāde behtarin doost ast!",
+          "Ali: Barādar-e man si sāle ast va mo'allem ast. Ū sad doost dārad! Sārā: Sad?! Na! Ali: Bale! Chehel doost dar shahr, si doost dar keshvar, va si doost dar khāne! Sārā: Si doost dar khāne? Ānhā khānevāde hastand! Ali: Bale! Barādar-e man khānevāde doost dārad. Khānevāde doost-e khoob ast!",
         textTranslation:
-          "Ali: My brother is thirty and a teacher. He has a hundred friends! Sara: A hundred?! No! Ali: Yes! Forty friends in the city, thirty friends in the country, and thirty friends at home! Sara: Thirty friends at home? Those are family! Ali: Yes! My brother loves family. Family is the best friend!",
+          "Ali: My brother is thirty and a teacher. He has a hundred friends! Sara: A hundred?! No! Ali: Yes! Forty friends in the city, thirty friends in the country, and thirty friends at home! Sara: Thirty friends at home? Those are family! Ali: Yes! My brother loves family. Family is a good friend!",
         questions: [
           {
             question: "How many friends does the brother claim to have?",
@@ -3914,17 +3914,17 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       // Lesson 1 readings (use M1+M2+M3+M4 + M5 L1 vocab: days + today/tomorrow/yesterday)
       {
         id: 1,
-        title: "The Worst Day",
-        persianTitle: "بَدتَرین روز",
-        text: "عَلی: مَن شَنبه و یَکشَنبه و دوشَنبه کار می‌کُنَم. سِه‌شَنبه بَد اَست! سارا: چَرا سِه‌شَنبه بَد اَست؟ عَلی: سِه‌شَنبه خواهَرِ مَن خانِهٔ ما هَست و او هَشت گُربِه دارَد! سارا: هَشت گُربِه! اِمروز سِه‌شَنبه اَست؟ عَلی: بَله! فَردا چَهارشَنبه اَست. فَردا خوب اَست! سارا: گُربِه‌ها مِهربان هَستَند! عَلی: نَه!",
+        title: "Bad Tuesday",
+        persianTitle: "سِه‌شَنبِهٔ بَد",
+        text: "عَلی: مَن شَنبه و یَکشَنبه و دوشَنبه کار می‌کُنَم. سِه‌شَنبه بَد اَست! سارا: سِه‌شَنبه بَد اَست؟ عَلی: سِه‌شَنبه خواهَرِ مَن خانِهٔ ما هَست و او هَشت بَچِّه دارَد! سارا: هَشت بَچِّه! اِمروز سِه‌شَنبه اَست؟ عَلی: بَله! فَردا چَهارشَنبه اَست. فَردا خوب اَست! سارا: بَچِّه‌ها مِهربان هَستَند! عَلی: نَه!",
         textTransliteration:
-          "Ali: Man shanbe va yekshanbe va doshanbe kār mikonam. Seshanbe bad ast! Sārā: Cherā seshanbe bad ast? Ali: Seshanbe khāhar-e man khāne-ye mā hast va ū hasht gorbe dārad! Sārā: Hasht gorbe! Emruz seshanbe ast? Ali: Bale! Fardā chahārshanbe ast. Fardā khoob ast! Sārā: Gorbe-hā mehrabān hastand! Ali: Na!",
+          "Ali: Man shanbe va yekshanbe va doshanbe kār mikonam. Seshanbe bad ast! Sārā: Seshanbe bad ast? Ali: Seshanbe khāhar-e man khāne-ye mā hast va ū hasht bache dārad! Sārā: Hasht bache! Emruz seshanbe ast? Ali: Bale! Fardā chahārshanbe ast. Fardā khoob ast! Sārā: Bache-hā mehrabān hastand! Ali: Na!",
         textTranslation:
-          "Ali: I work Saturday, Sunday, and Monday. Tuesday is bad! Sara: Why is Tuesday bad? Ali: On Tuesday my sister is at our house and she has eight cats! Sara: Eight cats! Is today Tuesday? Ali: Yes! Tomorrow is Wednesday. Tomorrow is good! Sara: Cats are kind! Ali: No!",
+          "Ali: I work Saturday, Sunday, and Monday. Tuesday is bad! Sara: Tuesday is bad? Ali: On Tuesday my sister is at our house and she has eight kids! Sara: Eight kids! Is today Tuesday? Ali: Yes! Tomorrow is Wednesday. Tomorrow is good! Sara: Kids are kind! Ali: No!",
         questions: [
           {
             question: "Why does Ali hate Tuesdays?",
-            options: ["Too much work", "Sister brings eight cats", "Bad weather", "No food"],
+            options: ["Too much work", "Sister brings eight kids", "Bad weather", "No food"],
             correctAnswer: 1,
           },
           {
@@ -3938,11 +3938,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 2,
         title: "Yesterday, Today, Tomorrow",
         persianTitle: "دیروز، اِمروز، فَردا",
-        text: "سارا: دیروز پَنج‌شَنبه بود. پِدَرِ مَن دیروز دَر خانِه بود. عَلی: اِمروز جُمعه اَست؟ سارا: بَله! خانواده با هَم دَر خانِه هَستیم. مادَرِ مَن خوب اَست و پِدَرِ مَن مِهربان اَست. عَلی: فَردا چِه روزی اَست؟ سارا: فَردا شَنبه اَست. فَردا مَن کار می‌کُنَم و بَرادَرِ مَن یاد می‌گیرَد. جُمعه بِهتَرین روز اَست!",
+        text: "سارا: دیروز پَنج‌شَنبه. اِمروز جُمعه اَست! پِدَرِ مَن اِمروز دَر خانِه اَست. عَلی: اِمروز جُمعه اَست؟ سارا: بَله! خانواده با هَم دَر خانِه هَستیم. مادَرِ مَن خوب اَست و پِدَرِ مَن مِهربان اَست. عَلی: فَردا چِه روزی اَست؟ سارا: فَردا شَنبه اَست. فَردا مَن کار می‌کُنَم و بَرادَرِ مَن یاد می‌گیرَد. جُمعه خوب اَست!",
         textTransliteration:
-          "Sārā: Diruz panjshanbe bud. Pedar-e man diruz dar khāne bud. Ali: Emruz jom'e ast? Sārā: Bale! Khānevāde bā ham dar khāne hastim. Mādar-e man khoob ast va pedar-e man mehrabān ast. Ali: Fardā che ruzi ast? Sārā: Fardā shanbe ast. Fardā man kār mikonam va barādar-e man yād migīrad. Jom'e behtarin ruz ast!",
+          "Sārā: Diruz panjshanbe. Emruz jom'e ast! Pedar-e man emruz dar khāne ast. Ali: Emruz jom'e ast? Sārā: Bale! Khānevāde bā ham dar khāne hastim. Mādar-e man khoob ast va pedar-e man mehrabān ast. Ali: Fardā che ruzi ast? Sārā: Fardā shanbe ast. Fardā man kār mikonam va barādar-e man yād migīrad. Jom'e khoob ast!",
         textTranslation:
-          "Sara: Yesterday was Thursday. My father was at home yesterday. Ali: Is today Friday? Sara: Yes! The family is at home together. My mother is great and my father is kind. Ali: What day is tomorrow? Sara: Tomorrow is Saturday. Tomorrow I work and my brother studies. Friday is the best day!",
+          "Sara: Yesterday was Thursday. Today is Friday! My father is at home today. Ali: Today is Friday? Sara: Yes! The family is at home together. My mother is great and my father is kind. Ali: What day is tomorrow? Sara: Tomorrow is Saturday. Tomorrow I work and my brother studies. Friday is great!",
         questions: [
           {
             question: "What day is it today?",
@@ -3950,7 +3950,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
             correctAnswer: 1,
           },
           {
-            question: "What does Sara think is the best day?",
+            question: "Which day does Sara say is great?",
             options: ["Thursday", "Friday", "Saturday", "Sunday"],
             correctAnswer: 1,
           },
@@ -3959,13 +3959,13 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       // Lesson 2 readings (use M1+M2+M3+M4 + all M5 vocab)
       {
         id: 3,
-        title: "The Lazy Uncle",
-        persianTitle: "عَمویِ تَنبَل",
-        text: "سارا: عَمویِ مَن مُهَندِس اَست. او هَر روز خانِه اَست! عَلی: هَر روز؟ اوّلِ هَفته هَم؟ سارا: بَله! اوّلِ هَفته خانِه اَست. آخِرِ هَفته خانِه اَست! هَفته‌یِ پیش خانِه بود. هَفته‌یِ بَعد هَم خانِه اَست! عَلی: اِمشَب کُجاست؟ سارا: اِمشَب عَمو خانِهٔ ما هَست! مادَرِ مَن خوب نَه!",
+        title: "Uncle at Home",
+        persianTitle: "عَمو دَر خانِه",
+        text: "سارا: عَمویِ مَن مُهَندِس اَست. او هَر روز خانِه اَست! عَلی: هَر روز؟ اوّلِ هَفته هَم؟ سارا: بَله! اوّلِ هَفته خانِه اَست. آخِرِ هَفته خانِه اَست! هَفته‌یِ پیش هَم خانِه اَست. هَفته‌یِ بَعد هَم خانِه اَست! عَلی: اِمشَب کُجاست؟ سارا: اِمشَب عَمو خانِهٔ ما هَست! مادَرِ مَن خوب نَه!",
         textTransliteration:
-          "Sārā: Amoo-ye man mohandes ast. Ū har ruz khāne ast! Ali: Har ruz? Avval-e hafte ham? Sārā: Bale! Avval-e hafte khāne ast. Ākhare hafte khāne ast! Hafte-ye pish khāne bud. Hafte-ye ba'd ham khāne ast! Ali: Emshab kojāst? Sārā: Emshab amoo khāne-ye mā hast! Mādar-e man khoob na!",
+          "Sārā: Amoo-ye man mohandes ast. Ū har ruz khāne ast! Ali: Har ruz? Avval-e hafte ham? Sārā: Bale! Avval-e hafte khāne ast. Ākhare hafte khāne ast! Hafte-ye pish ham khāne ast. Hafte-ye ba'd ham khāne ast! Ali: Emshab kojāst? Sārā: Emshab amoo khāne-ye mā hast! Mādar-e man khoob na!",
         textTranslation:
-          "Sara: My uncle is an engineer. He is at home every day! Ali: Every day? Even at the beginning of the week? Sara: Yes! Beginning of the week he is at home. End of the week he is at home! Last week he was at home. Next week he is at home too! Ali: Where is he tonight? Sara: Tonight uncle is at our house! My mother is not happy!",
+          "Sara: My uncle is an engineer. He is at home every day! Ali: Every day? Even at the beginning of the week? Sara: Yes! Beginning of the week he is at home. End of the week he is at home! Last week, at home. Next week, at home too! Ali: Where is he tonight? Sara: Tonight uncle is at our house! My mother is not happy!",
         questions: [
           {
             question: "What is the uncle's job?",
@@ -4243,16 +4243,16 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       // Lesson 1 readings (use M1+M2+M3+M4+M5 + M6 L1 vocab: 12 month names)
       {
         id: 1,
-        title: "The Best Month",
-        persianTitle: "بِهتَرین ماه",
-        text: "سارا: بِهتَرین ماه اُردیبِهِشت اَست! مَن دَر اُردیبِهِشت بیست ساله هَستَم! عَلی: نَه! مِهر بِهتَرین ماه اَست! سارا: پِدَرِ مَن آذَر دوست دارَد. مادَرِ مَن فَروَردین دوست دارَد. فَروَردین اوّلِ ماهِ سال اَست! عَلی: تو چِطور؟ سارا: مَن اِسفَند دوست دارَم! عَلی: اِسفَند آخِرِ ماهِ سال اَست! هَر ماه خوب اَست!",
+        title: "Farvardin or Esfand?",
+        persianTitle: "فَروَردین یا اِسفَند؟",
+        text: "سارا: اُردیبِهِشت خوب اَست! مَن دَر اُردیبِهِشت بیست ساله هَستَم! عَلی: نَه! مِهر خوب اَست! سارا: پِدَرِ مَن آذَر دوست دارَد. مادَرِ مَن فَروَردین دوست دارَد. فَروَردین اوّل اَست! عَلی: تو چِطور؟ سارا: مَن اِسفَند دوست دارَم! عَلی: اِسفَند آخِر اَست!",
         textTransliteration:
-          "Sārā: Behtarin māh ordibehesht ast! Man dar ordibehesht bist sāle hastam! Ali: Na! Mehr behtarin māh ast! Sārā: Pedar-e man āzar doost dārad. Mādar-e man farvardin doost dārad. Farvardin avval-e māh-e sāl ast! Ali: To chetor? Sārā: Man esfand doost dāram! Ali: Esfand ākhare māh-e sāl ast! Har māh khoob ast!",
+          "Sārā: Ordibehesht khoob ast! Man dar ordibehesht bist sāle hastam! Ali: Na! Mehr khoob ast! Sārā: Pedar-e man āzar doost dārad. Mādar-e man farvardin doost dārad. Farvardin avval ast! Ali: To chetor? Sārā: Man esfand doost dāram! Ali: Esfand ākhare ast!",
         textTranslation:
-          "Sara: The best month is Ordibehesht! I turn twenty in Ordibehesht! Ali: No! Mehr is the best month! Sara: My father likes Azar. My mother likes Farvardin. Farvardin is the first month of the year! Ali: What about you? Sara: I like Esfand! Ali: Esfand is the last month of the year! Every month is good!",
+          "Sara: Ordibehesht is great! I turn twenty in Ordibehesht! Ali: No! Mehr is great! Sara: My father likes Azar. My mother likes Farvardin. Farvardin is first! Ali: What about you? Sara: I like Esfand! Ali: Esfand is last!",
         questions: [
           {
-            question: "Which month does Sara think is best?",
+            question: "Which month does Sara like?",
             options: ["Farvardin", "Ordibehesht", "Mehr", "Esfand"],
             correctAnswer: 3,
           },
@@ -4265,13 +4265,13 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
       {
         id: 2,
-        title: "Twelve Months, Twelve Friends",
-        persianTitle: "دَوازدَه ماه، دَوازدَه دوست",
-        text: "سارا: مَن دَوازدَه دوست دارَم! دوستِ مَن مَریَم دَر فَروَردین اَست. دوستِ مَن رِضا دَر تیر اَست و دوستِ مَن لیلا دَر شَهریوَر اَست. عَلی: تو دَر هَر ماه جَشن داری! سارا: بَله! دَوازدَه ماه، دَوازدَه جَشن! عَلی: و دَوازدَه هَدیِه! سارا: بَله! زِندگی خوب اَست!",
+        title: "Twelve Friends",
+        persianTitle: "دَوازدَه دوست",
+        text: "سارا: مَن دَوازدَه دوست دارَم! دوستِ مَن مَریَم دَر فَروَردین اَست. دوستِ مَن رِضا دَر تیر اَست و دوستِ مَن لیلا دَر شَهریوَر اَست. عَلی: دوست دَر فَروَردین و دوست دَر تیر و دوست دَر شَهریوَر! سارا: بَله! دَوازدَه دوست خوب اَست! عَلی: تو دوستِ خوب هَستی! سارا: بَله! زِندگی خوب اَست!",
         textTransliteration:
-          "Sārā: Man davāzdah doost dāram! Doost-e man Maryam dar farvardin ast. Doost-e man Rezā dar tir ast va doost-e man Leylā dar shahrivar ast. Ali: To dar har māh jashn dāri! Sārā: Bale! Davāzdah māh, davāzdah jashn! Ali: Va davāzdah hediye! Sārā: Bale! Zendegi khoob ast!",
+          "Sārā: Man davāzdah doost dāram! Doost-e man Maryam dar farvardin ast. Doost-e man Rezā dar tir ast va doost-e man Leylā dar shahrivar ast. Ali: Doost dar farvardin va doost dar tir va doost dar shahrivar! Sārā: Bale! Davāzdah doost khoob ast! Ali: To doost-e khoob hasti! Sārā: Bale! Zendegi khoob ast!",
         textTranslation:
-          "Sara: I have twelve friends! My friend Maryam's birthday is in Farvardin. My friend Reza is in Tir and my friend Leyla is in Shahrivar. Ali: You have a party every month! Sara: Yes! Twelve months, twelve parties! Ali: And twelve gifts! Sara: Yes! Life is good!",
+          "Sara: I have twelve friends! My friend Maryam's birthday is in Farvardin. My friend Reza is in Tir and my friend Leyla is in Shahrivar. Ali: A friend in Farvardin, a friend in Tir, and a friend in Shahrivar! Sara: Yes! Twelve friends is great! Ali: You are a good friend! Sara: Yes! Life is good!",
         questions: [
           {
             question: "How many friends does Sara have?",
@@ -4290,11 +4290,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "The Season Debate",
         persianTitle: "بَحثِ فَصل‌ها",
-        text: "عَلی: سال چَهار فَصل دارَد. مَن بَهار دوست دارَم. فَروَردین و اُردیبِهِشت خوب اَست! سارا: مَن پاییز دوست دارَم. مِهر بِهتَرین ماه اَست! عَلی: بَرادَرِ مَن زِمِستان دوست دارَد. دِی و بَهمَن خوب اَست! سارا: مادَرِ مَن تابِستان دوست دارَد. عَلی: هَر فَصل خوب اَست! زِندگی خوب اَست!",
+        text: "عَلی: سال چَهار فَصل دارَد. مَن بَهار دوست دارَم. فَروَردین و اُردیبِهِشت خوب اَست! سارا: مَن پاییز دوست دارَم. مِهر ماهِ خوب اَست! عَلی: بَرادَرِ مَن زِمِستان دوست دارَد. دِی و بَهمَن خوب اَست! سارا: مادَرِ مَن تابِستان دوست دارَد. عَلی: هَر فَصل خوب اَست! زِندگی خوب اَست!",
         textTransliteration:
-          "Ali: Sāl chahār fasl dārad. Man bahār doost dāram. Farvardin va ordibehesht khoob ast! Sārā: Man pāyiz doost dāram. Mehr behtarin māh ast! Ali: Barādar-e man zemestān doost dārad. Dey va bahman khoob ast! Sārā: Mādar-e man tābestān doost dārad. Ali: Har fasl khoob ast! Zendegi khoob ast!",
+          "Ali: Sāl chahār fasl dārad. Man bahār doost dāram. Farvardin va ordibehesht khoob ast! Sārā: Man pāyiz doost dāram. Mehr māh-e khoob ast! Ali: Barādar-e man zemestān doost dārad. Dey va bahman khoob ast! Sārā: Mādar-e man tābestān doost dārad. Ali: Har fasl khoob ast! Zendegi khoob ast!",
         textTranslation:
-          "Ali: A year has four seasons. I like spring. Farvardin and Ordibehesht are great! Sara: I like autumn. Mehr is the best month! Ali: My brother likes winter. Dey and Bahman are nice! Sara: My mother likes summer. Ali: Every season is good! Life is good!",
+          "Ali: A year has four seasons. I like spring. Farvardin and Ordibehesht are great! Sara: I like autumn. Mehr is a good month! Ali: My brother likes winter. Dey and Bahman are nice! Sara: My mother likes summer. Ali: Every season is good! Life is good!",
         questions: [
           {
             question: "Which season does Ali like?",
@@ -4312,11 +4312,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 4,
         title: "The Year in Review",
         persianTitle: "سالِ مَن",
-        text: "سارا: تو هَر فَصل چِه کار می‌کُنی؟ عَلی: بَهار کار می‌کُنَم. تابِستان دَر خانِه هَستَم. تیر و مُرداد فَصلِ تابِستان اَست و خوب اَست! سارا: پاییز چِطور؟ عَلی: پاییز یاد می‌گیرَم. زِمِستان دَر خانِه هَستَم. سارا: تو هَر فَصل دَر خانِه هَستی! عَلی: خانِه بِهتَرین جا اَست!",
+        text: "سارا: تو هَر فَصل چِه کار می‌کُنی؟ عَلی: بَهار کار می‌کُنَم. تابِستان دَر خانِه هَستَم. تیر و مُرداد فَصلِ تابِستان اَست و خوب اَست! سارا: پاییز چِطور؟ عَلی: پاییز یاد می‌گیرَم. زِمِستان دَر خانِه هَستَم. سارا: تو هَر فَصل دَر خانِه هَستی! عَلی: خانِه خوب اَست!",
         textTransliteration:
-          "Sārā: To har fasl che kār mikoni? Ali: Bahār kār mikonam. Tābestān dar khāne hastam. Tir va mordād fasl-e tābestān ast va khoob ast! Sārā: Pāyiz chetor? Ali: Pāyiz yād migīram. Zemestān dar khāne hastam. Sārā: To har fasl dar khāne hasti! Ali: Khāne behtarin jā ast!",
+          "Sārā: To har fasl che kār mikoni? Ali: Bahār kār mikonam. Tābestān dar khāne hastam. Tir va mordād fasl-e tābestān ast va khoob ast! Sārā: Pāyiz chetor? Ali: Pāyiz yād migīram. Zemestān dar khāne hastam. Sārā: To har fasl dar khāne hasti! Ali: Khāne khoob ast!",
         textTranslation:
-          "Sara: What do you do each season? Ali: In spring I work. In summer I am at home. Tir and Mordad are the summer season and it's great! Sara: What about autumn? Ali: In autumn I study. In winter I am at home. Sara: You are at home every season! Ali: Home is the best place!",
+          "Sara: What do you do each season? Ali: In spring I work. In summer I am at home. Tir and Mordad are the summer season and it's great! Sara: What about autumn? Ali: In autumn I study. In winter I am at home. Sara: You are at home every season! Ali: Home is great!",
         questions: [
           {
             question: "What does Ali do in autumn?",
@@ -4325,7 +4325,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
           },
           {
             question: "What does Ali say about home?",
-            options: ["It's small", "It's cold", "It's the best place", "It's boring"],
+            options: ["It's small", "It's cold", "It's great", "It's boring"],
             correctAnswer: 2,
           },
         ],
