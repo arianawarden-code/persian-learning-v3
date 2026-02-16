@@ -12,6 +12,7 @@ export interface VocabularyWord {
   english: string
   example: string
   exampleTranslation: string
+  spoken?: string
 }
 
 export interface ReadingExercise {
@@ -2031,6 +2032,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         persian: "خانه",
         transliteration: "khāne",
+        spoken: "khuneh",
         english: "house / home",
         example: "من به خانه می‌روم",
         exampleTranslation: "I am going home",
@@ -2395,6 +2397,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         persian: "آن‌ها",
         transliteration: "ānhā",
+        spoken: "unhā",
         english: "they",
         example: "آن‌ها دوست هَستَند",
         exampleTranslation: "They are friends",
@@ -2438,6 +2441,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         persian: "زَبان",
         transliteration: "zabān",
+        spoken: "zabun",
         english: "language",
         example: "زَبانِ مَن فارسی اَست",
         exampleTranslation: "My language is Persian",
@@ -2918,6 +2922,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         persian: "جَوان",
         transliteration: "javān",
+        spoken: "javun",
         english: "young",
         example: "او جَوان اَست",
         exampleTranslation: "He/she is young",
@@ -2967,6 +2972,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         persian: "مِهربان",
         transliteration: "mehrabān",
+        spoken: "mehrabun",
         english: "kind",
         example: "مادَربُزرگِ مَن مِهربان اَست",
         exampleTranslation: "My grandmother is kind",
@@ -2988,6 +2994,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         persian: "خانِه",
         transliteration: "khāne",
+        spoken: "khuneh",
         english: "house / home",
         example: "خانِهٔ ما بُزرگ اَست",
         exampleTranslation: "Our house is big",
@@ -9386,6 +9393,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         persian: "خانه",
         transliteration: "khāne",
+        spoken: "khuneh",
         english: "house / home",
         example: "این خانه بُزُرگ است.",
         exampleTranslation: "This house is big.",

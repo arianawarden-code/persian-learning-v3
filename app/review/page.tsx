@@ -66,6 +66,9 @@ function FlashcardExercise({
               <p className="text-2xl text-charcoal/70">
                 {word.transliteration}
               </p>
+              {word.spoken && (
+                <p className="text-base text-charcoal/50">(Spoken: {word.spoken})</p>
+              )}
               <p className="mt-8 text-sm text-charcoal/50">
                 Click to reveal meaning
               </p>

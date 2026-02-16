@@ -385,6 +385,9 @@ export function VocabularyFlashcards({ vocabulary, moduleId, showWordList = fals
                   <p className="text-sm uppercase tracking-wide text-charcoal/60">Persian Word</p>
                   <p className="font-serif text-6xl font-bold text-terracotta">{currentWord.persian}</p>
                   <p className="text-2xl text-charcoal/70">{currentWord.transliteration}</p>
+                  {currentWord.spoken && (
+                    <p className="text-base text-charcoal/50">(Spoken: {currentWord.spoken})</p>
+                  )}
                   <p className="mt-8 text-sm text-charcoal/50">Click to reveal meaning</p>
                 </div>
               ) : (
