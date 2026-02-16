@@ -71,6 +71,20 @@ export function ReadingStory({ story, moduleId, nextStoryId = null, nextStoryTit
 
   const linePairs = getLinePairs()
 
+  // Group sentences by speaker turn — only break to a new line when speaker changes
+  const speakerGroups: { pairs: typeof linePairs }[] = []
+  for (const pair of linePairs) {
+    // A sentence starts a new speaker turn if it contains "Name:" pattern
+    const hasSpeaker = /^.+?\s*:/.test(pair.text)
+    if (hasSpeaker) {
+      speakerGroups.push({ pairs: [pair] })
+    } else if (speakerGroups.length > 0) {
+      speakerGroups[speakerGroups.length - 1].pairs.push(pair)
+    } else {
+      speakerGroups.push({ pairs: [pair] })
+    }
+  }
+
   const handleAnswerSelect = (questionIndex: number, answerIndex: number) => {
     setSelectedAnswers((prev) => ({
       ...prev,
@@ -160,14 +174,14 @@ export function ReadingStory({ story, moduleId, nextStoryId = null, nextStoryTit
           </div>
 
           <div className="space-y-4">
-            {/* All Persian lines together */}
+            {/* All Persian lines together — grouped by speaker */}
             <div className="relative rounded-lg bg-sand-50 p-4">
               <div className="space-y-2">
-                {linePairs.map((pair, index) => (
-                  <div key={`${story.id}-persian-${index}`} className="flex items-start gap-2">
+                {speakerGroups.map((group, gIndex) => (
+                  <div key={`${story.id}-persian-g${gIndex}`} className="flex items-start gap-2">
                     {isSupported && (
                       <button
-                        onClick={() => speak(pair.text)}
+                        onClick={() => speak(group.pairs.map(p => p.text).join(" "))}
                         className="shrink-0 rounded-full bg-terracotta/10 p-3 transition-colors hover:bg-terracotta/20 mt-2"
                       >
                         <Volume2
@@ -178,39 +192,41 @@ export function ReadingStory({ story, moduleId, nextStoryId = null, nextStoryTit
                       </button>
                     )}
                     <p className="text-2xl leading-loose text-charcoal flex-1" dir="rtl" style={{ fontFamily: "var(--font-persian)" }}>
-                      {pair.text}
+                      {group.pairs.map(p => p.text).join(" ")}
                     </p>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* All transliteration lines together */}
+            {/* All transliteration lines together — grouped by speaker */}
             {linePairs.some((pair) => pair.transliteration) && (
               <div className="rounded-lg bg-blue-50/50 px-4 py-3">
                 <div className="space-y-1">
-                  {linePairs.map((pair, index) =>
-                    pair.transliteration ? (
-                      <p key={`${story.id}-translit-${index}`} className="text-sm leading-relaxed text-charcoal/70 italic">
-                        {pair.transliteration}
+                  {speakerGroups.map((group, gIndex) => {
+                    const translit = group.pairs.map(p => p.transliteration).filter(Boolean).join(" ")
+                    return translit ? (
+                      <p key={`${story.id}-translit-g${gIndex}`} className="text-sm leading-relaxed text-charcoal/70 italic">
+                        {translit}
                       </p>
-                    ) : null,
-                  )}
+                    ) : null
+                  })}
                 </div>
               </div>
             )}
 
-            {/* All translation lines together (when shown) */}
+            {/* All translation lines together — grouped by speaker */}
             {showTranslation && linePairs.some((pair) => pair.translation) && (
               <div className="rounded-lg bg-terracotta/5 border-2 border-terracotta/20 p-4">
                 <div className="space-y-1">
-                  {linePairs.map((pair, index) =>
-                    pair.translation ? (
-                      <p key={`${story.id}-translation-${index}`} className="leading-relaxed text-charcoal/80">
-                        {pair.translation}
+                  {speakerGroups.map((group, gIndex) => {
+                    const translation = group.pairs.map(p => p.translation).filter(Boolean).join(" ")
+                    return translation ? (
+                      <p key={`${story.id}-translation-g${gIndex}`} className="leading-relaxed text-charcoal/80">
+                        {translation}
                       </p>
-                    ) : null,
-                  )}
+                    ) : null
+                  })}
                 </div>
               </div>
             )}

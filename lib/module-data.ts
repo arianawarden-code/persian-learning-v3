@@ -48,6 +48,7 @@ export interface GrammarExercise {
   explanation?: string
   // Pattern-intro fields (used in lesson-based grammar)
   pattern?: string
+  patternTransliteration?: string
   patternParts?: string[]
   patternExamples?: { persian: string; transliteration: string; english: string }[]
   note?: string
@@ -2236,6 +2237,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         type: "pattern-intro",
         instruction: "Saying 'I am...'",
         pattern: "من + [name] + هستم",
+        patternTransliteration: "man + [name] + hastam",
         patternParts: ["من", "[name]", "هستم"],
         patternExamples: [
           { persian: "من علی هستم", transliteration: "man Ali hastam", english: "I am Ali" },
@@ -2253,6 +2255,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         type: "pattern-intro",
         instruction: "Asking 'How are you?'",
         pattern: "حال + شما + چطور + است؟",
+        patternTransliteration: "hāl + shomā + chetor + ast?",
         patternParts: ["حال", "شما", "چطور", "است؟"],
         patternExamples: [
           { persian: "حال شما چطور است؟", transliteration: "hāl-e shomā chetor ast?", english: "How are you? (formal)" },
@@ -2270,6 +2273,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         type: "pattern-intro",
         instruction: "Using 'است' (is) and 'هست' (exists)",
         pattern: "[subject] + [adjective/noun] + است",
+        patternTransliteration: "[subject] + [adjective/noun] + ast",
         patternParts: ["[subject]", "[adjective/noun]", "است"],
         patternExamples: [
           { persian: "او دوست خوب است", transliteration: "oo doost-e khoob ast", english: "He/she is a good friend" },
@@ -2720,6 +2724,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         type: "pattern-intro",
         instruction: "Saying 'My name is...'",
         pattern: "اسم من + [name] + است",
+        patternTransliteration: "esm-e man + [name] + ast",
         patternParts: ["اسم من", "[name]", "است"],
         patternExamples: [
           { persian: "اسم من سارا است", transliteration: "esm-e man Sārā ast", english: "My name is Sara" },
@@ -2756,6 +2761,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         type: "pattern-intro",
         instruction: "Saying where you're from",
         pattern: "من اهل + [place] + هستم",
+        patternTransliteration: "man ahl-e + [place] + hastam",
         patternParts: ["من اهل", "[place]", "هستم"],
         patternExamples: [
           { persian: "من اهل ایران هستم", transliteration: "man ahl-e Irān hastam", english: "I am from Iran" },
@@ -3210,6 +3216,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
           examples: [],
         },
         pattern: "[noun] + ِ + من = my [noun]",
+        patternTransliteration: "[noun]-e man = my [noun]",
         patternParts: ["[noun]", "ِ (ezafe)", "من"],
         patternExamples: [
           { persian: "پدرِ من", transliteration: "pedar-e man", english: "my father" },
@@ -3228,6 +3235,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         type: "pattern-intro",
         instruction: "Saying 'I have...'",
         pattern: "من + [number] + [noun] + دارم",
+        patternTransliteration: "man + [number] + [noun] + dāram",
         patternParts: ["من", "[number]", "[noun]", "دارم"],
         patternExamples: [
           { persian: "من دو بچه دارم", transliteration: "man do bache dāram", english: "I have two children" },
@@ -3246,6 +3254,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         type: "pattern-intro",
         instruction: "Describing family members",
         pattern: "[noun] + ِ + [adjective] = [adjective] [noun]",
+        patternTransliteration: "[noun]-e [adjective] = [adjective] [noun]",
         patternParts: ["[noun]", "ِ (ezafe)", "[adjective]"],
         patternExamples: [
           { persian: "برادرِ بزرگ", transliteration: "barādar-e bozorg", english: "big brother" },
@@ -3728,6 +3737,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
           examples: [],
         },
         pattern: "من + [number] + ساله + هستم",
+        patternTransliteration: "man + [number] + sāle + hastam",
         patternParts: ["من", "[number]", "ساله", "هستم"],
         patternExamples: [
           { persian: "من پانزده ساله هستم", transliteration: "man pānzdah sāle hastam", english: "I am fifteen years old" },
@@ -3751,6 +3761,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
           examples: [],
         },
         pattern: "[tens] + و + [ones]",
+        patternTransliteration: "[tens] + va + [ones]",
         patternParts: ["[tens]", "و (and)", "[ones]"],
         patternExamples: [
           { persian: "بیست و یک", transliteration: "bist-o yek", english: "twenty-one" },
@@ -4393,6 +4404,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
           examples: [],
         },
         pattern: "در + [month name]",
+        patternTransliteration: "dar + [month name]",
         patternParts: ["در (in)", "[month name]"],
         patternExamples: [
           { persian: "در فروردین", transliteration: "dar farvardin", english: "in Farvardin" },
@@ -4416,6 +4428,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
           examples: [],
         },
         pattern: "فصلِ + [season name]",
+        patternTransliteration: "fasl-e + [season name]",
         patternParts: ["فصلِ (season of)", "[season name]"],
         patternExamples: [
           { persian: "فصلِ بهار خوب است", transliteration: "fasl-e bahār khoob ast", english: "The spring season is nice" },
@@ -4863,6 +4876,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         type: "pattern-intro",
         instruction: "Telling the time",
         pattern: "ساعت + [number] + است",
+        patternTransliteration: "sā'at + [number] + ast",
         patternParts: ["ساعت", "[number]", "است"],
         patternExamples: [
           { persian: "ساعت یک است", transliteration: "sā'at yek ast", english: "It's one o'clock" },
@@ -4881,6 +4895,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         type: "pattern-intro",
         instruction: "Using always, never, and sometimes",
         pattern: "[subject] + [time adverb] + [rest of sentence]",
+        patternTransliteration: "[subject] + [time adverb] + [rest of sentence]",
         patternParts: ["[subject]", "[time adverb]", "[rest of sentence]"],
         patternExamples: [
           { persian: "من همیشه صبح کار می‌کنم", transliteration: "man hamishe sobh kār mikonam", english: "I always work in the morning" },
@@ -4899,6 +4914,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         type: "pattern-intro",
         instruction: "Saying before and after",
         pattern: "قبل از / بعد از + [noun]",
+        patternTransliteration: "ghabl az / ba'd az + [noun]",
         patternParts: ["قبل از / بعد از", "[noun]"],
         patternExamples: [
           { persian: "قبل از ظهر", transliteration: "ghabl az zohr", english: "before noon" },

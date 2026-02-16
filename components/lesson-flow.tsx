@@ -86,14 +86,7 @@ export function LessonFlow({ lesson, vocabWords, grammarExercise, readingStories
       {/* Progress bar */}
       {phase !== "intro" && phase !== "completion" && (
         <div className="mb-6">
-          <div className="flex items-center justify-between mb-2">
-            <button
-              onClick={goBack}
-              className="flex items-center gap-1 text-sm text-charcoal/60 hover:text-charcoal transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back
-            </button>
+          <div className="flex items-center justify-end mb-2">
             <span className="text-xs text-charcoal/50 capitalize">{phase}</span>
           </div>
           <div className="h-2 w-full rounded-full bg-sand-200">
@@ -457,7 +450,7 @@ function GrammarPhase({
                 ))}
               </div>
             )}
-            <p className="mt-3 text-sm text-charcoal/50">{grammar.pattern}</p>
+            <p className="mt-3 text-sm text-charcoal/50">{grammar.patternTransliteration || grammar.pattern}</p>
           </div>
         )}
 
