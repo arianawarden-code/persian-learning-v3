@@ -24,9 +24,9 @@ import { usePersianSpeech } from "@/hooks/use-persian-speech"
 
 // ─── Phase types ─────────────────────────────────────────────────
 
-type Phase = "intro" | "vocabulary" | "grammar" | "reading" | "writing" | "completion"
+type Phase = "intro" | "vocabulary" | "quiz" | "grammar" | "reading" | "writing" | "completion"
 
-const PHASE_ORDER: Phase[] = ["intro", "vocabulary", "grammar", "reading", "writing", "completion"]
+const PHASE_ORDER: Phase[] = ["intro", "vocabulary", "quiz", "grammar", "reading", "writing", "completion"]
 
 interface LessonFlowProps {
   lesson: Lesson
@@ -110,6 +110,9 @@ export function LessonFlow({ lesson, vocabWords, grammarExercise, readingStories
       )}
       {phase === "vocabulary" && (
         <VocabularyPhase words={vocabWords} moduleId={moduleId} onComplete={goNext} />
+      )}
+      {phase === "quiz" && (
+        <VocabQuizPhase words={vocabWords} onComplete={goNext} />
       )}
       {phase === "grammar" && (
         <GrammarPhase grammar={grammarExercise} onComplete={goNext} />
@@ -387,6 +390,129 @@ function VocabularyPhase({
           </Button>
         </div>
       )}
+    </div>
+  )
+}
+
+// ─── Vocab Quiz Phase ────────────────────────────────────────────
+
+type QuizOption = { text: string; isCorrect: boolean }
+
+function VocabQuizPhase({
+  words,
+  onComplete,
+}: {
+  words: VocabularyWord[]
+  onComplete: () => void
+}) {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [selectedOption, setSelectedOption] = useState<number | null>(null)
+  const [score, setScore] = useState(0)
+  const [options, setOptions] = useState<QuizOption[]>([])
+  const { speak, isSpeaking, isSupported } = usePersianSpeech()
+
+  const generateOptions = useCallback((idx: number) => {
+    const correct: QuizOption = { text: words[idx].english, isCorrect: true }
+    const others = words.filter((_, i) => i !== idx)
+    const shuffled = [...others].sort(() => Math.random() - 0.5)
+    const wrong = shuffled.slice(0, 3).map((w) => ({ text: w.english, isCorrect: false }))
+    return [correct, ...wrong].sort(() => Math.random() - 0.5)
+  }, [words])
+
+  useState(() => {
+    setOptions(generateOptions(0))
+  })
+
+  const handleSelect = (idx: number) => {
+    if (selectedOption !== null) return
+    setSelectedOption(idx)
+    if (options[idx].isCorrect) {
+      setScore((s) => s + 1)
+    }
+  }
+
+  const handleNext = () => {
+    if (currentIndex < words.length - 1) {
+      const next = currentIndex + 1
+      setCurrentIndex(next)
+      setSelectedOption(null)
+      setOptions(generateOptions(next))
+    } else {
+      onComplete()
+    }
+  }
+
+  const word = words[currentIndex]
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg font-semibold text-charcoal">Vocabulary Quiz</h2>
+        <span className="text-sm text-charcoal/50">
+          {currentIndex + 1} / {words.length} · Score: {score}
+        </span>
+      </div>
+
+      <Card className="border-sand-200 bg-white p-8">
+        <div className="flex flex-col items-center text-center mb-8">
+          <p className="text-sm uppercase tracking-wide text-charcoal/60 mb-2">What does this word mean?</p>
+          <div className="flex items-center gap-3">
+            {isSupported && (
+              <button
+                onClick={() => speak(word.persian)}
+                className="rounded-full p-2 transition-colors hover:bg-sand-100"
+              >
+                <Volume2
+                  className={`h-5 w-5 ${isSpeaking ? "text-terracotta" : "text-sand-300 hover:text-terracotta"}`}
+                />
+              </button>
+            )}
+            <p className="font-serif text-5xl font-bold text-terracotta">{word.persian}</p>
+          </div>
+          <p className="text-xl text-charcoal/70 mt-2">{word.transliteration}</p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {options.map((option, idx) => {
+            const isSelected = selectedOption === idx
+            const showResult = selectedOption !== null
+
+            let className = "w-full p-4 rounded-lg border-2 text-left font-medium transition-colors "
+            if (showResult && option.isCorrect) {
+              className += "border-green-400 bg-green-50 text-green-800"
+            } else if (showResult && isSelected && !option.isCorrect) {
+              className += "border-red-400 bg-red-50 text-red-800"
+            } else if (!showResult) {
+              className += "border-sand-200 bg-white hover:border-terracotta/40 hover:bg-terracotta/5 text-charcoal cursor-pointer"
+            } else {
+              className += "border-sand-200 bg-white text-charcoal/50"
+            }
+
+            return (
+              <button
+                key={idx}
+                onClick={() => handleSelect(idx)}
+                disabled={selectedOption !== null}
+                className={className}
+              >
+                {option.text}
+              </button>
+            )
+          })}
+        </div>
+
+        {selectedOption !== null && (
+          <div className="mt-6 flex justify-end">
+            <Button
+              onClick={handleNext}
+              className="bg-terracotta hover:bg-terracotta/90 gap-2"
+            >
+              {currentIndex < words.length - 1 ? "Next" : "Continue"}
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
+        )}
+      </Card>
     </div>
   )
 }
