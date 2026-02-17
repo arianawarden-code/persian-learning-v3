@@ -2516,11 +2516,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "Two Saras!",
         persianTitle: "دو سارا!",
-        text: "سارا ر: سَلام! اِسمِ مَن سارا اَست. مَن دانِشجو هَستَم. شَهرِ مَن تِهران اَست. سارا ا: اِسمِ مَن هَم سارا اَست! سارا ر: سارا؟ بَله! نامِ خانوادگیِ مَن رَحیمی اَست. سارا ا: نامِ خانوادگیِ مَن احمَدی اَست! سارا ر: سارا احمَدی و سارا رَحیمی! مَمنون!",
+        text: "سارا ر: سَلام! اِسمِ مَن سارا اَست. مَن دانِشجو هَستَم. شَهرِ مَن تِهران اَست. سارا ا: اِسمِ مَن هَم سارا اَست! سارا ر: سارا؟ بَله! نامِ خانوادگیِ مَن رَحیمی اَست. سارا ا: نامِ خانوادگیِ مَن احمَدی اَست!",
         textTransliteration:
-          "Sārā R: Salām! Esm-e man Sārā ast. Man dāneshju hastam. Shahr-e man Tehrān ast. Sārā A: Esm-e man ham Sārā ast! Sārā R: Sārā? Bale! Nām-e khānevādegi-ye man Rahimi ast. Sārā A: Nām-e khānevādegi-ye man Ahmadi ast! Sārā R: Sārā Ahmadi va Sārā Rahimi! Mamnoon!",
+          "Sārā R: Salām! Esm-e man Sārā ast. Man dāneshju hastam. Shahr-e man Tehrān ast. Sārā A: Esm-e man ham Sārā ast! Sārā R: Sārā? Bale! Nām-e khānevādegi-ye man Rahimi ast. Sārā A: Nām-e khānevādegi-ye man Ahmadi ast!",
         textTranslation:
-          "Sara R: Hello! My name is Sara. I am a student. My city is Tehran. Sara A: My name is also Sara! Sara R: Sara? Yes! My last name is Rahimi. Sara A: My last name is Ahmadi! Sara R: Sara Ahmadi and Sara Rahimi! Thank you!",
+          "Sara R: Hello! My name is Sara. I am a student. My city is Tehran. Sara A: My name is also Sara! Sara R: Sara? Yes! My last name is Rahimi. Sara A: My last name is Ahmadi!",
         questions: [
           {
             question: "What surprising thing do both speakers share?",
