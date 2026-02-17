@@ -78,11 +78,14 @@ export default function ModuleContentClient({ id }: { id: string }) {
                 {lessonsForModule.map((lesson, index) => {
                   const complete = isLessonComplete(id, lesson.id)
                   const previousComplete = index === 0 || isLessonComplete(id, lessonsForModule[index - 1].id)
+                  const savedPhase = typeof window !== "undefined" ? sessionStorage.getItem(`lesson-phase-m${id}-l${lesson.id}`) : null
+                  const inProgress = !complete && !!savedPhase && savedPhase !== "intro"
                   return (
                     <LessonCard
                       key={lesson.id}
                       lesson={lesson}
                       isComplete={complete}
+                      isInProgress={inProgress}
                       isLocked={!previousComplete}
                       moduleId={id}
                     />

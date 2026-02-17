@@ -2,17 +2,18 @@
 
 import Link from "next/link"
 import { Card } from "@/components/ui/card"
-import { BookOpen, Check, Clock } from "lucide-react"
+import { BookOpen, Check, Clock, Loader } from "lucide-react"
 import type { Lesson } from "@/lib/lesson-data"
 
 interface LessonCardProps {
   lesson: Lesson
   isComplete: boolean
+  isInProgress: boolean
   isLocked: boolean
   moduleId?: string
 }
 
-export function LessonCard({ lesson, isComplete, isLocked, moduleId = "1" }: LessonCardProps) {
+export function LessonCard({ lesson, isComplete, isInProgress, isLocked, moduleId = "1" }: LessonCardProps) {
   const content = (
     <Card
       className={`group flex h-full cursor-pointer flex-col border-sand-200 bg-white px-8 pt-8 pb-8 transition-all ${
@@ -20,9 +21,11 @@ export function LessonCard({ lesson, isComplete, isLocked, moduleId = "1" }: Les
       }`}
     >
       <div className="flex items-start justify-between gap-3 mb-3">
-        <div className={`rounded-2xl p-4 ${isComplete ? "bg-green-100" : "bg-terracotta/10"}`}>
+        <div className={`rounded-2xl p-4 ${isComplete ? "bg-green-100" : isInProgress ? "bg-amber-100" : "bg-terracotta/10"}`}>
           {isComplete ? (
             <Check className="h-8 w-8 text-green-700" />
+          ) : isInProgress ? (
+            <Loader className="h-8 w-8 text-amber-600" />
           ) : (
             <BookOpen className="h-8 w-8 text-terracotta" />
           )}
