@@ -6694,10 +6694,10 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
       {
         type: "word-order",
-        instruction: "Put the words in the correct order: 'The box is light'",
-        tiles: ["سَبُک", "جعبه", "است"],
-        correctOrder: ["جعبه", "سَبُک", "است"],
-        description: "The box is light",
+        instruction: "Put the words in the correct order: 'The bag is light'",
+        tiles: ["سَبُک", "کیف", "است"],
+        correctOrder: ["کیف", "سَبُک", "است"],
+        description: "The bag is light",
       },
       {
         type: "fill-blank",

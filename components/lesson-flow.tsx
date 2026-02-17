@@ -1008,8 +1008,9 @@ function BuildWordExerciseCard({
   const [answerSlots, setAnswerSlots] = useState<{ letter: string; id: number }[]>([])
   const [submitted, setSubmitted] = useState(false)
 
+  const stripDiacritics = (s: string) => s.replace(/[\u064B-\u065F\u0670]/g, "")
   const userWord = answerSlots.map((s) => s.letter).join("")
-  const isCorrect = userWord === targetWord
+  const isCorrect = stripDiacritics(userWord) === stripDiacritics(targetWord)
 
   const handleLetterClick = (item: { letter: string; id: number }, fromAnswer: boolean) => {
     if (submitted) return
