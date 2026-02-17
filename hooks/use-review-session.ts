@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react"
 import type { SRSCard } from "@/lib/srs-storage"
-import { updateCardAfterReview, getAllCards } from "@/lib/srs-storage"
+import { updateCardAfterReview, getAllCards, removeQuizMissedWord } from "@/lib/srs-storage"
 
 export type ExerciseMode = "flashcard" | "multiple-choice" | "typing"
 export type SessionState = "idle" | "active" | "complete"
@@ -76,6 +76,9 @@ export function useReviewSession() {
       updateCardAfterReview(current.word.persian, quality)
 
       const isCorrect = quality >= 3
+      if (isCorrect) {
+        removeQuizMissedWord(current.word.persian)
+      }
       setStats((prev) => ({
         correct: prev.correct + (isCorrect ? 1 : 0),
         total: prev.total + 1,

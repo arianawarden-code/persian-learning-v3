@@ -408,7 +408,55 @@ export const module9Lessons: Lesson[] = [
   },
 ]
 
+export const module10Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Big, Small & Heavy",
+    goal: "Learn basic adjectives for size and weight like big, small, long, short, full, empty, heavy, and light, and describe things using noun + adjective + است",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],
+      grammarIndex: 0,
+      readingStoryIds: [1, 2],
+      writingIndices: [0, 6],
+    },
+    nextLesson: { id: "2", title: "Comparing Things" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Comparing Things",
+    goal: "Learn comparative adjectives with -تر (taller, shorter, heavier, lighter) and words like more, less, half, and completely",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],
+      grammarIndex: 1,
+      readingStoryIds: [3, 4],
+      writingIndices: [6, 12],
+    },
+    nextLesson: { id: "3", title: "Almost, Very & Little by Little" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "Almost, Very & Little by Little",
+    goal: "Learn intensifiers and adverbs like very, almost, completely, little by little, and mostly, and use them to make descriptions stronger or weaker",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],
+      grammarIndex: 2,
+      readingStoryIds: [5, 6],
+      writingIndices: [12, 18],
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "10") {
+    return module10Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "9") {
     return module9Lessons.find((l) => l.id === lessonId)
   }

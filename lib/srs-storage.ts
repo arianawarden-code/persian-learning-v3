@@ -94,19 +94,58 @@ export function syncStarredWords() {
   }
 }
 
-export function getDueWords(limit = 20): SRSCard[] {
+// --- Quiz-miss tracking ---
+
+const QUIZ_MISSED_KEY = "quiz-missed-words"
+
+export function addQuizMissedWord(persian: string) {
+  if (typeof window === "undefined") return
+  const missed = getQuizMissedWords()
+  if (!missed.includes(persian)) {
+    missed.push(persian)
+    localStorage.setItem(QUIZ_MISSED_KEY, JSON.stringify(missed))
+  }
+}
+
+export function getQuizMissedWords(): string[] {
+  if (typeof window === "undefined") return []
+  const stored = localStorage.getItem(QUIZ_MISSED_KEY)
+  return stored ? JSON.parse(stored) : []
+}
+
+export function removeQuizMissedWord(persian: string) {
+  if (typeof window === "undefined") return
+  const missed = getQuizMissedWords().filter((w) => w !== persian)
+  localStorage.setItem(QUIZ_MISSED_KEY, JSON.stringify(missed))
+}
+
+export function getDueWords(limit = 25): SRSCard[] {
   const cards = getCards()
   const now = Date.now()
+  const missedSet = new Set(getQuizMissedWords())
 
   const due = Object.values(cards).filter((card) => card.nextReview <= now)
 
-  // Sort: starred first, then by nextReview (oldest first)
-  due.sort((a, b) => {
-    if (a.isStarred !== b.isStarred) return a.isStarred ? -1 : 1
-    return a.nextReview - b.nextReview
-  })
+  const missed: SRSCard[] = []
+  const rest: SRSCard[] = []
+  for (const card of due) {
+    if (missedSet.has(card.persian)) {
+      missed.push(card)
+    } else {
+      rest.push(card)
+    }
+  }
 
-  return due.slice(0, limit)
+  // Sort each group: starred first, then lowest easeFactor (hardest words first)
+  const sortGroup = (a: SRSCard, b: SRSCard) => {
+    if (a.isStarred !== b.isStarred) return a.isStarred ? -1 : 1
+    return a.easeFactor - b.easeFactor
+  }
+
+  missed.sort(sortGroup)
+  rest.sort(sortGroup)
+
+  return [...missed, ...rest].slice(0, limit)
 }
 
 export function getAllCards(): SRSCard[] {

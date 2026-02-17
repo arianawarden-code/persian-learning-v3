@@ -19,7 +19,7 @@ import type { Lesson } from "@/lib/lesson-data"
 import type { VocabularyWord, ReadingExercise, GrammarExercise, WritingExercise } from "@/lib/module-data"
 import { ReadingStory } from "@/components/reading-story"
 import { markLessonComplete } from "@/lib/progress-storage"
-import { seedWordsFromModule, updateCardAfterReview } from "@/lib/srs-storage"
+import { seedWordsFromModule, updateCardAfterReview, addQuizMissedWord } from "@/lib/srs-storage"
 import { usePersianSpeech } from "@/hooks/use-persian-speech"
 
 // ─── Phase types ─────────────────────────────────────────────────
@@ -431,6 +431,8 @@ function VocabQuizPhase({
     setSelectedOption(idx)
     if (options[idx].isCorrect) {
       setScore((s) => s + 1)
+    } else {
+      addQuizMissedWord(words[currentIndex].persian)
     }
   }
 

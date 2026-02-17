@@ -11,6 +11,7 @@ import {
   getReviewStats,
   getNextReviewTime,
   recordReviewCompletion,
+  removeQuizMissedWord,
 } from "@/lib/srs-storage"
 import type { SRSCard } from "@/lib/srs-storage"
 import { useReviewSession } from "@/hooks/use-review-session"
@@ -365,7 +366,7 @@ export default function ReviewPage() {
 
   const loadDueWords = () => {
     syncStarredWords()
-    const words = getDueWords(20)
+    const words = getDueWords(25)
     setDueWords(words)
     setNextReview(getNextReviewTime())
     setLoading(false)
