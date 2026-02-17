@@ -6702,10 +6702,10 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         type: "fill-blank",
         instruction: "Fill in the blank",
-        sentence: "بطری ___ است",
+        sentence: "لیوان ___ است",
         choices: ["خالی", "بُلَند", "کوتاه", "زیاد"],
         correctChoice: "خالی",
-        description: "The bottle is ___",
+        description: "The glass is ___",
       },
       {
         type: "build-word",
