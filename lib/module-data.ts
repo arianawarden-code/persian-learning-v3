@@ -7132,7 +7132,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         title: "At the Market",
         persianTitle: "در بازار",
         text: "مادَر: غَذا چِه اَست؟ مُرغ یا گوشت داریم؟\nپِدَر: مُرغ و بِرِنج خوب اَست. سَبزی؟\nمادَر: بَله، سَبزی و نان.\nپِدَر: میوه؟ سیب و پُرتِقال لُطفاً!",
-        textTransliteration: "mādar: ghazā che ast? morgh yā goosht dārim?\npedar: morgh o berenj khoob ast. sabzi?\nmādar: bale, sabzi o noon.\npedar: miveh? sib o porteghāl lotfan!",
+        textTransliteration: "mādar: ghazā che ast? morgh yā goosht dārim?\npedar: morgh o berenj khoob ast. sabzi?\nmādar: bale, sabzi o nān.\npedar: miveh? sib o porteghāl lotfan!",
         textTranslation: "Mother: What is the food? Do we have chicken or meat?\nFather: Chicken and rice is good. Vegetables?\nMother: Yes, vegetables and bread.\nFather: Fruit? Apples and oranges please!",
         questions: [
           {
