@@ -2683,7 +2683,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 5,
         type: "fill-blank",
         instruction: "Fill in the blank",
-        sentence: "من ___ ساله هستم",
+        sentence: "من ___ سال دارم",
         choices: ["بیست", "سلام", "خوب"],
         correctChoice: "بیست",
       },
@@ -3687,9 +3687,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "The Age Guessing Game",
         persianTitle: "بازیِ سِن",
-        text: "عَلی: سِنِّ بَرادَرِ مَن چَند اَست؟ سارا: شانزدَه! عَلی: نَه! بُزرگ‌تَر! سارا: نوزدَه؟ عَلی: بَله! بَرادَرِ مَن نوزدَه ساله اَست و دانِشجو اَست. مَن هِفدَه ساله هَستَم.",
+        text: "عَلی: سِنِّ بَرادَرِ مَن چَند اَست؟ سارا: شانزدَه! عَلی: نَه! بُزرگ‌تَر! سارا: نوزدَه؟ عَلی: بَله! بَرادَرِ مَن نوزدَه سال دارَد و دانِشجو اَست. مَن هِفدَه سال دارَم.",
         textTransliteration:
-          "Ali: Senn-e barādar-e man chand ast? Sārā: Shānzdah! Ali: Na! Bozorgtar! Sārā: Noozdah? Ali: Bale! Barādar-e man noozdah sāle ast va dāneshju ast. Man hefdah sāle hastam.",
+          "Ali: Senn-e barādar-e man chand ast? Sārā: Shānzdah! Ali: Na! Bozorgtar! Sārā: Noozdah? Ali: Bale! Barādar-e man noozdah sāl dārad va dāneshju ast. Man hefdah sāl dāram.",
         textTranslation:
           "Ali: How old is my brother? Sara: Sixteen! Ali: No! Older! Sara: Nineteen? Ali: Yes! My brother is nineteen and a student. I am seventeen.",
         questions: [
@@ -3731,10 +3731,10 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 5,
         title: "Grandmother Is Seventy!",
-        persianTitle: "مادَربُزرگ هَفتاد ساله اَست!",
-        text: "سارا: اِمروز مادَربُزرگ هَفتاد ساله اَست! پِدَربُزرگ هَشتاد ساله اَست. عَلی: هَفتاد و هَشتاد! تو چَند ساله هَستی؟ سارا: مَن بیست و دو ساله هَستَم. بیست نَوِه دَر خانِه هَستَند! عَلی: بیست نَوِه! خانوادِهٔ شُما بُزرگ اَست!",
+        persianTitle: "مادَربُزرگ هَفتاد سال دارَد!",
+        text: "سارا: اِمروز مادَربُزرگ هَفتاد سال دارَد! پِدَربُزرگ هَشتاد سال دارَد. عَلی: هَفتاد و هَشتاد! تو چَند سال داری؟ سارا: مَن بیست و دو سال دارَم. بیست نَوِه دَر خانِه هَستَند! عَلی: بیست نَوِه! خانوادِهٔ شُما بُزرگ اَست!",
         textTransliteration:
-          "Sārā: Emruz mādarbozorg haftād sāle ast! Pedarbozorg hashtād sāle ast. Ali: Haftād va hashtād! To chand sāle hasti? Sārā: Man bist-o do sāle hastam. Bist nave dar khāne hastand! Ali: Bist nave! Khānevāde-ye shomā bozorg ast!",
+          "Sārā: Emruz mādarbozorg haftād sāl dārad! Pedarbozorg hashtād sāl dārad. Ali: Haftād va hashtād! To chand sāl dāri? Sārā: Man bist-o do sāl dāram. Bist nave dar khāne hastand! Ali: Bist nave! Khānevāde-ye shomā bozorg ast!",
         textTranslation:
           "Sara: Today grandmother is seventy! Grandfather is eighty. Ali: Seventy and eighty! How old are you? Sara: I am twenty-two. Twenty grandchildren are in the house! Ali: Twenty grandchildren! Your family is big!",
         questions: [
@@ -3754,9 +3754,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 6,
         title: "The One Hundred Friends",
         persianTitle: "صَد دوست",
-        text: "عَلی: بَرادَرِ مَن سی ساله اَست و مُعَلِّم اَست. او صَد دوست دارَد! سارا: صَد؟! نَه! عَلی: بَله! چِهِل دَر شَهر و سی دَر خانِه! سارا: سی دوست دَر خانِه؟ آن‌ها خانواده هَستَند! عَلی: بَله! خانواده دوستِ خوب اَست!",
+        text: "عَلی: بَرادَرِ مَن سی سال دارَد و مُعَلِّم اَست. او صَد دوست دارَد! سارا: صَد؟! نَه! عَلی: بَله! چِهِل دَر شَهر و سی دَر خانِه! سارا: سی دوست دَر خانِه؟ آن‌ها خانواده هَستَند! عَلی: بَله! خانواده دوستِ خوب اَست!",
         textTransliteration:
-          "Ali: Barādar-e man si sāle ast va mo'allem ast. Ū sad doost dārad! Sārā: Sad?! Na! Ali: Bale! Chehel dar shahr va si dar khāne! Sārā: Si doost dar khāne? Ānhā khānevāde hastand! Ali: Bale! Khānevāde doost-e khoob ast!",
+          "Ali: Barādar-e man si sāl dārad va mo'allem ast. Ū sad doost dārad! Sārā: Sad?! Na! Ali: Bale! Chehel dar shahr va si dar khāne! Sārā: Si doost dar khāne? Ānhā khānevāde hastand! Ali: Bale! Khānevāde doost-e khoob ast!",
         textTranslation:
           "Ali: My brother is thirty and a teacher. He has a hundred friends! Sara: A hundred?! No! Ali: Yes! Forty in the city and thirty at home! Sara: Thirty friends at home? Those are family! Ali: Yes! Family is a good friend!",
         questions: [
@@ -3826,14 +3826,14 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 7,
         type: "word-order",
         instruction: "Arrange the words to say 'I am fifteen years old'",
-        tiles: ["من", "پانزده", "ساله", "هستم"],
-        correctOrder: ["من", "پانزده", "ساله", "هستم"],
+        tiles: ["من", "پانزده", "سال", "دارم"],
+        correctOrder: ["من", "پانزده", "سال", "دارم"],
       },
       {
         id: 8,
         type: "fill-blank",
         instruction: "Fill in the blank",
-        sentence: "مادرِ من ___ ساله است",
+        sentence: "مادرِ من ___ سال دارد",
         choices: ["چهارده", "خوب", "بله"],
         correctChoice: "چهارده",
       },
@@ -3849,8 +3849,8 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 10,
         type: "word-order",
         instruction: "Arrange the words to say 'My brother is seventeen years old'",
-        tiles: ["برادرِ", "من", "هفده", "ساله", "است"],
-        correctOrder: ["برادرِ", "من", "هفده", "ساله", "است"],
+        tiles: ["برادرِ", "من", "هفده", "سال", "دارد"],
+        correctOrder: ["برادرِ", "من", "هفده", "سال", "دارد"],
       },
       {
         id: 11,
@@ -3873,8 +3873,8 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 13,
         type: "word-order",
         instruction: "Arrange the words to say 'My grandfather is seventy years old'",
-        tiles: ["پدربزرگِ", "من", "هفتاد", "ساله", "است"],
-        correctOrder: ["پدربزرگِ", "من", "هفتاد", "ساله", "است"],
+        tiles: ["پدربزرگِ", "من", "هفتاد", "سال", "دارد"],
+        correctOrder: ["پدربزرگِ", "من", "هفتاد", "سال", "دارد"],
       },
       {
         id: 14,
@@ -3903,7 +3903,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 17,
         type: "fill-blank",
         instruction: "Fill in the blank",
-        sentence: "پدرِ من ___ ساله است",
+        sentence: "پدرِ من ___ سال دارد",
         choices: ["شصت", "سلام", "بله"],
         correctChoice: "شصت",
       },
@@ -3947,22 +3947,22 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         instruction: "Saying your age",
         teachingContent: {
           title: "How Old Are You?",
-          explanation: "To say your age in Persian, use the pattern: من + [number] + ساله + هستم. The word 'ساله' (sāle) means 'years old' — it combines سال (year) with the suffix ه. For other people, change the verb: او ... ساله است (he/she is ... years old).",
+          explanation: "To say your age in Persian, use the pattern: من + [number] + سال + دارم (literally 'I have [number] years'). For other people, change the verb: او ... سال دارد (he/she has ... years).",
           examples: [],
         },
-        pattern: "من + [number] + ساله + هستم",
-        patternTransliteration: "man + [number] + sāle + hastam",
-        patternParts: ["من", "[number]", "ساله", "هستم"],
+        pattern: "من + [number] + سال + دارم",
+        patternTransliteration: "man + [number] + sāl + dāram",
+        patternParts: ["من", "[number]", "سال", "دارم"],
         patternExamples: [
-          { persian: "من پانزده ساله هستم", transliteration: "man pānzdah sāle hastam", english: "I am fifteen years old" },
-          { persian: "او شانزده ساله است", transliteration: "u shānzdah sāle ast", english: "He/She is sixteen years old" },
-          { persian: "برادرِ من هجده ساله است", transliteration: "barādar-e man hejdah sāle ast", english: "My brother is eighteen years old" },
+          { persian: "من پانزده سال دارم", transliteration: "man pānzdah sāl dāram", english: "I am fifteen years old" },
+          { persian: "او شانزده سال دارد", transliteration: "u shānzdah sāl dārad", english: "He/She is sixteen years old" },
+          { persian: "برادرِ من هجده سال دارد", transliteration: "barādar-e man hejdah sāl dārad", english: "My brother is eighteen years old" },
         ],
-        note: "'ساله' (sāle) means 'years old'. The verb changes with the subject: هستم (I am), هستی (you are), است (he/she is). The number goes right before ساله.",
+        note: "To say your age, use سال (sāl, year) + دارم (dāram, I have). The verb changes with the subject: دارم (I have), داری (you have), دارد (he/she has).",
         question: "How do you say 'I am seventeen years old'?",
-        options: ["من هفده هستم ساله", "من ساله هفده هستم", "من هفده ساله هستم", "هفده ساله من هستم"],
+        options: ["من هفده دارم سال", "من سال هفده دارم", "من هفده سال دارم", "هفده سال من دارم"],
         correctAnswer: 2,
-        explanation: "The pattern is: من (I) + هفده (seventeen) + ساله (years old) + هستم (am).",
+        explanation: "The pattern is: من (I) + هفده (seventeen) + سال (years) + دارم (have).",
       },
       // Lesson 3: Combining numbers
       {
@@ -4208,9 +4208,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 4,
         title: "The Perfect Schedule",
         persianTitle: "بَرنامِهٔ کامِل",
-        text: "عَلی: مَن بیست و پَنج ساله هَستَم و دُکتُر هَستَم. اِمروز صُبح کار می‌کُنَم. دوشَنبه و سِه‌شَنبه یاد می‌گیرَم. سارا: جُمعه چِطور؟ عَلی: جُمعه هَر هَفته دَر خانِه هَستَم! سارا: تو هَر روز کار می‌کُنی! عَلی: نَه! جُمعه کار نِمی‌کُنَم!",
+        text: "عَلی: مَن بیست و پَنج سال دارَم و دُکتُر هَستَم. اِمروز صُبح کار می‌کُنَم. دوشَنبه و سِه‌شَنبه یاد می‌گیرَم. سارا: جُمعه چِطور؟ عَلی: جُمعه هَر هَفته دَر خانِه هَستَم! سارا: تو هَر روز کار می‌کُنی! عَلی: نَه! جُمعه کار نِمی‌کُنَم!",
         textTransliteration:
-          "Ali: Man bist-o panj sāle hastam va doktor hastam. Emruz sobh kār mikonam. Doshanbe va seshanbe yād migīram. Sārā: Jom'e chetor? Ali: Jom'e har hafte dar khāne hastam! Sārā: To har ruz kār mikoni! Ali: Na! Jom'e kār nemikonam!",
+          "Ali: Man bist-o panj sāl dāram va doktor hastam. Emruz sobh kār mikonam. Doshanbe va seshanbe yād migīram. Sārā: Jom'e chetor? Ali: Jom'e har hafte dar khāne hastam! Sārā: To har ruz kār mikoni! Ali: Na! Jom'e kār nemikonam!",
         textTranslation:
           "Ali: I am twenty-five and a doctor. This morning I work. Monday and Tuesday I study. Sara: What about Friday? Ali: Friday every week I am at home! Sara: You work every day! Ali: No! I don't work on Friday!",
         questions: [
@@ -4516,9 +4516,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "Farvardin or Esfand?",
         persianTitle: "فَروَردین یا اِسفَند؟",
-        text: "سارا: اُردیبِهِشت خوب اَست! مَن دَر اُردیبِهِشت بیست ساله هَستَم! عَلی: نَه! مِهر خوب اَست! سارا: پِدَرِ مَن آذَر دوست دارَد. مادَرِ مَن فَروَردین دوست دارَد. مَن اِسفَند دوست دارَم! عَلی: اِسفَند آخِر اَست!",
+        text: "سارا: اُردیبِهِشت خوب اَست! مَن دَر اُردیبِهِشت بیست سال دارَم! عَلی: نَه! مِهر خوب اَست! سارا: پِدَرِ مَن آذَر دوست دارَد. مادَرِ مَن فَروَردین دوست دارَد. مَن اِسفَند دوست دارَم! عَلی: اِسفَند آخِر اَست!",
         textTransliteration:
-          "Sārā: Ordibehesht khoob ast! Man dar ordibehesht bist sāle hastam! Ali: Na! Mehr khoob ast! Sārā: Pedar-e man āzar doost dārad. Mādar-e man farvardin doost dārad. Man esfand doost dāram! Ali: Esfand ākhare ast!",
+          "Sārā: Ordibehesht khoob ast! Man dar ordibehesht bist sāl dāram! Ali: Na! Mehr khoob ast! Sārā: Pedar-e man āzar doost dārad. Mādar-e man farvardin doost dārad. Man esfand doost dāram! Ali: Esfand ākhare ast!",
         textTranslation:
           "Sara: Ordibehesht is great! I turn twenty in Ordibehesht! Ali: No! Mehr is great! Sara: My father likes Azar. My mother likes Farvardin. I like Esfand! Ali: Esfand is last!",
         questions: [
