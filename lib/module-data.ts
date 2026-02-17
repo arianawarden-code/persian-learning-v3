@@ -6597,9 +6597,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "At the Market",
         persianTitle: "دَر بازار",
-        text: "سارا: مَن یک کیف بُزُرگ می‌خواهم. فُروشَنده: این کیف بُزُرگ است. خیلی خوب است. سارا: سَنگین است؟ فُروشَنده: نَه، سَبُک است. سارا: خوب است! لیوان هَم دارید؟ فُروشَنده: بَله، این لیوان پُر از آب است. سارا: مَمنون!",
-        textTransliteration: "sārā: man yek kif bozorg mikhāham. forushande: in kif bozorg ast. kheili khub ast. sārā: sangin ast? forushande: na, sabok ast. sārā: khub ast! livān ham dārid? forushande: bale, in livān por az āb ast. sārā: mamnun!",
-        textTranslation: "Sara: I want a big bag. Seller: This bag is big. It is very good. Sara: Is it heavy? Seller: No, it is light. Sara: Good! Do you have glasses too? Seller: Yes, this glass is full of water. Sara: Thank you!",
+        text: "سارا: مَن یک کیف بُزُرگ می‌خواهم. فُروشَنده: این کیف بُزُرگ است. خیلی خوب است. سارا: سَنگین است؟ فُروشَنده: نَه، سَبُک است.",
+        textTransliteration: "sārā: man yek kif bozorg mikhāham. forushande: in kif bozorg ast. kheili khub ast. sārā: sangin ast? forushande: na, sabok ast.",
+        textTranslation: "Sara: I want a big bag. Seller: This bag is big. It is very good. Sara: Is it heavy? Seller: No, it is light.",
         questions: [
           { question: "What does Sara want?", options: ["A small bag", "A big bag", "A glass", "Water"], correctAnswer: 1 },
           { question: "Is the bag heavy?", options: ["Yes", "No, it is light", "It is full", "It is empty"], correctAnswer: 1 },
