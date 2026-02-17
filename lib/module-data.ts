@@ -6809,6 +6809,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
   11: {
     moduleId: 11,
     vocabulary: [
+      // ── Lesson 1: Basic foods (indices 0-9) ──
       {
         persian: "غذا",
         transliteration: "ghazā",
@@ -6879,6 +6880,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         example: "پرتقال خوشمزه است",
         exampleTranslation: "The orange is delicious",
       },
+      // ── Lesson 2: Drinks & flavors (indices 10-19) ──
       {
         persian: "آب",
         transliteration: "āb",
@@ -6949,6 +6951,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         example: "آب سرد است",
         exampleTranslation: "The water is cold",
       },
+      // ── Lesson 3: Eating & dining (indices 20-29) ──
       {
         persian: "دوست داشتن",
         transliteration: "doost dāshtan",
@@ -6981,8 +6984,415 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         persian: "منو",
         transliteration: "menoo",
         english: "menu",
-        example: "منو لطفا",
+        example: "منو لطفاً",
         exampleTranslation: "Menu please",
+      },
+      {
+        persian: "صبحانه",
+        transliteration: "sobhāne",
+        english: "breakfast",
+        example: "صبحانه نان و چای است",
+        exampleTranslation: "Breakfast is bread and tea",
+      },
+      {
+        persian: "ناهار",
+        transliteration: "nāhār",
+        english: "lunch",
+        example: "ناهار برنج و گوشت است",
+        exampleTranslation: "Lunch is rice and meat",
+      },
+      {
+        persian: "شام",
+        transliteration: "shām",
+        english: "dinner",
+        example: "شام ساعت هشت است",
+        exampleTranslation: "Dinner is at eight o'clock",
+      },
+      {
+        persian: "گُرسنه",
+        transliteration: "gorosne",
+        english: "hungry",
+        example: "من گُرسنه هستم",
+        exampleTranslation: "I am hungry",
+      },
+      {
+        persian: "تشنه",
+        transliteration: "teshne",
+        english: "thirsty",
+        example: "من تشنه هستم",
+        exampleTranslation: "I am thirsty",
+      },
+    ],
+    grammar: [
+      // ── Lesson 1 grammar: Saying what you eat ──
+      {
+        id: 0,
+        type: "pattern-intro" as const,
+        instruction: "Learn how to say what you eat in Persian",
+        teachingContent: {
+          title: "Saying What You Eat",
+          explanation: "To say 'I eat [food]' in Persian, use: من + [food] + می‌خورم (mikhoram). The verb خوردن (khordan) means 'to eat'. In present tense for 'I', it becomes می‌خورم.",
+          examples: [
+            { label: "I eat bread", persian: "من نان می‌خورم", description: "man nān mikhoram" },
+            { label: "I eat rice", persian: "من برنج می‌خورم", description: "man berenj mikhoram" },
+            { label: "I eat fruit", persian: "من میوه می‌خورم", description: "man miveh mikhoram" },
+          ],
+        },
+        question: "How do you say 'I eat chicken'?",
+        options: ["من مرغ می‌خورم", "من مرغ است", "مرغ من می‌خورم", "می‌خورم من مرغ"],
+        correctAnswer: 0,
+        explanation: "The pattern is: من + [food] + می‌خورم. So 'I eat chicken' is من مرغ می‌خورم.",
+        pattern: "من + [food] + می‌خورم",
+        patternTransliteration: "man + [food] + mikhoram",
+        patternParts: ["من", "[food]", "می‌خورم"],
+        patternExamples: [
+          { persian: "من نان می‌خورم", transliteration: "man nān mikhoram", english: "I eat bread" },
+          { persian: "من ماهی می‌خورم", transliteration: "man māhi mikhoram", english: "I eat fish" },
+          { persian: "من سیب می‌خورم", transliteration: "man sib mikhoram", english: "I eat an apple" },
+        ],
+        note: "می‌خورم (mikhoram) is the first-person present form of خوردن (to eat).",
+      },
+      // ── Lesson 2 grammar: Describing taste ──
+      {
+        id: 1,
+        type: "pattern-intro" as const,
+        instruction: "Learn how to describe the taste of food in Persian",
+        teachingContent: {
+          title: "Describing Taste",
+          explanation: "To describe food, use: [food] + [adjective] + است (ast). You can use adjectives like خوشمزه (delicious), تازه (fresh), گرم (hot), or سرد (cold).",
+          examples: [
+            { label: "The tea is hot", persian: "چای گرم است", description: "chāy garm ast" },
+            { label: "The water is cold", persian: "آب سرد است", description: "āb sard ast" },
+            { label: "The food is delicious", persian: "غذا خوشمزه است", description: "ghazā khoshmaze ast" },
+          ],
+        },
+        question: "How do you say 'The bread is fresh'?",
+        options: ["نان تازه است", "تازه نان است", "نان است تازه", "است نان تازه"],
+        correctAnswer: 0,
+        explanation: "The pattern is: [food] + [adjective] + است. So 'The bread is fresh' is نان تازه است.",
+        pattern: "[food] + [adjective] + است",
+        patternTransliteration: "[food] + [adjective] + ast",
+        patternParts: ["[food]", "[adjective]", "است"],
+        patternExamples: [
+          { persian: "قهوه گرم است", transliteration: "ghahve garm ast", english: "The coffee is hot" },
+          { persian: "شیر سرد است", transliteration: "shir sard ast", english: "The milk is cold" },
+          { persian: "میوه تازه است", transliteration: "miveh tāze ast", english: "The fruit is fresh" },
+        ],
+        note: "است (ast) is the third-person singular form of 'to be'. In spoken Persian it is often shortened to ـه (-e).",
+      },
+      // ── Lesson 3 grammar: Ordering food politely ──
+      {
+        id: 2,
+        type: "pattern-intro" as const,
+        instruction: "Learn how to order food politely in Persian",
+        teachingContent: {
+          title: "Ordering Food Politely",
+          explanation: "To order food politely, you can say: [food] + لطفاً (lotfan = please), or: من + [food] + می‌خواهم (mikhāham = I want). Using لطفاً makes it polite.",
+          examples: [
+            { label: "Tea, please", persian: "چای لطفاً", description: "chāy lotfan" },
+            { label: "I want rice", persian: "من برنج می‌خواهم", description: "man berenj mikhāham" },
+            { label: "Water, please", persian: "آب لطفاً", description: "āb lotfan" },
+          ],
+        },
+        question: "How do you politely order coffee?",
+        options: ["قهوه لطفاً", "من قهوه است", "قهوه می‌خورم", "لطفاً است قهوه"],
+        correctAnswer: 0,
+        explanation: "To politely order something, say [item] + لطفاً. So 'Coffee, please' is قهوه لطفاً.",
+        pattern: "[food] + لطفاً",
+        patternTransliteration: "[food] + lotfan",
+        patternParts: ["[food]", "لطفاً"],
+        patternExamples: [
+          { persian: "نان لطفاً", transliteration: "nān lotfan", english: "Bread, please" },
+          { persian: "من ماهی می‌خواهم", transliteration: "man māhi mikhāham", english: "I want fish" },
+          { persian: "منو لطفاً", transliteration: "menoo lotfan", english: "Menu, please" },
+        ],
+        note: "می‌خواهم (mikhāham) means 'I want'. Adding لطفاً (please) makes any request polite.",
+      },
+    ],
+    reading: [
+      // ── Lesson 1 stories (ids 1, 2) ──
+      {
+        id: 1,
+        title: "At the Market",
+        persianTitle: "در بازار",
+        text: "من به بازار می‌روم. نان تازه می‌خرم. سیب قرمز می‌خرم. برنج هم می‌خرم. غذای امشب مرغ و برنج است. سبزی هم لازم است.",
+        textTransliteration: "man be bāzār miravam. nān-e tāze mikharam. sib-e ghermez mikharam. berenj ham mikharam. ghazā-ye emshab morgh o berenj ast. sabzi ham lāzem ast.",
+        textTranslation: "I go to the market. I buy fresh bread. I buy red apples. I also buy rice. Tonight's food is chicken and rice. Vegetables are also needed.",
+        questions: [
+          {
+            question: "What does this person buy at the market?",
+            options: ["Only bread", "Bread, apples, and rice", "Fish and meat", "Tea and coffee"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What is tonight's food?",
+            options: ["Fish and rice", "Chicken and rice", "Bread and vegetables", "Apple and fruit"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      {
+        id: 2,
+        title: "My Favorite Food",
+        persianTitle: "غذای من",
+        text: "من غذا دوست دارم. سیب و پرتقال دوست دارم. ماهی خوشمزه است. گوشت هم خوب است. میوه تازه خیلی خوب است.",
+        textTransliteration: "man ghazā doost dāram. sib o porteghāl doost dāram. māhi khoshmaze ast. goosht ham khoob ast. miveh-ye tāze kheyli khoob ast.",
+        textTranslation: "I like food. I like apples and oranges. Fish is delicious. Meat is also good. Fresh fruit is very good.",
+        questions: [
+          {
+            question: "What fruits does this person like?",
+            options: ["Only apples", "Apples and oranges", "Only oranges", "Vegetables"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What does this person say about fish?",
+            options: ["It is fresh", "It is cold", "It is delicious", "It is bad"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      // ── Lesson 2 stories (ids 3, 4) ──
+      {
+        id: 3,
+        title: "Tea Time",
+        persianTitle: "وقت چای",
+        text: "من چای دوست دارم. چای گرم خوشمزه است. مادرم قهوه دوست دارد. قهوه با شیر خوب است. آب سرد هم خوب است.",
+        textTransliteration: "man chāy doost dāram. chāy-e garm khoshmaze ast. mādaram ghahve doost dārad. ghahve bā shir khoob ast. āb-e sard ham khoob ast.",
+        textTranslation: "I like tea. Hot tea is delicious. My mother likes coffee. Coffee with milk is good. Cold water is also good.",
+        questions: [
+          {
+            question: "What does this person like?",
+            options: ["Coffee", "Tea", "Milk", "Water"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What does the mother like?",
+            options: ["Tea", "Water", "Coffee", "Milk"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      {
+        id: 4,
+        title: "Hot or Cold?",
+        persianTitle: "گرم یا سرد؟",
+        text: "امروز هوا گرم است. من آب سرد می‌خواهم. چای گرم نمی‌خواهم. نان تازه و پنیر خوشمزه است. شکر در چای نمی‌خواهم. نمک کم است.",
+        textTransliteration: "emrooz havā garm ast. man āb-e sard mikhāham. chāy-e garm nemikhāham. nān-e tāze o panir khoshmaze ast. shekar dar chāy nemikhāham. namak kam ast.",
+        textTranslation: "Today the weather is hot. I want cold water. I don't want hot tea. Fresh bread and cheese is delicious. I don't want sugar in tea. There's not enough salt.",
+        questions: [
+          {
+            question: "Why does this person want cold water?",
+            options: ["The weather is cold", "The weather is hot", "The water is fresh", "They are thirsty"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What does this person NOT want?",
+            options: ["Cold water", "Fresh bread", "Hot tea", "Cheese"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      // ── Lesson 3 stories (ids 5, 6) ──
+      {
+        id: 5,
+        title: "At the Restaurant",
+        persianTitle: "در رستوران",
+        text: "من و دوستم به رستوران می‌رویم. منو لطفاً! من گُرسنه هستم. من مرغ و برنج می‌خواهم. دوستم ماهی می‌خواهد. آب لطفاً. غذا خوشمزه است!",
+        textTransliteration: "man o doostam be resturān miravim. menoo lotfan! man gorosne hastam. man morgh o berenj mikhāham. doostam māhi mikhāhad. āb lotfan. ghazā khoshmaze ast!",
+        textTranslation: "My friend and I go to a restaurant. Menu please! I am hungry. I want chicken and rice. My friend wants fish. Water please. The food is delicious!",
+        questions: [
+          {
+            question: "What does this person order?",
+            options: ["Fish", "Chicken and rice", "Bread", "Tea"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What does the friend order?",
+            options: ["Chicken", "Rice", "Fish", "Meat"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      {
+        id: 6,
+        title: "Three Meals",
+        persianTitle: "سه وعده غذا",
+        text: "صبحانه نان و چای است. من صبح گُرسنه هستم. ناهار برنج و گوشت می‌خورم. بعد از ناهار تشنه هستم و آب می‌نوشم. شام ماهی و سبزی می‌خورم. غذای خانه خوشمزه است!",
+        textTransliteration: "sobhāne nān o chāy ast. man sobh gorosne hastam. nāhār berenj o goosht mikhoram. ba'd az nāhār teshne hastam o āb minoosham. shām māhi o sabzi mikhoram. ghazā-ye khāne khoshmaze ast!",
+        textTranslation: "Breakfast is bread and tea. I am hungry in the morning. For lunch I eat rice and meat. After lunch I am thirsty and I drink water. For dinner I eat fish and vegetables. Home food is delicious!",
+        questions: [
+          {
+            question: "What is breakfast?",
+            options: ["Rice and meat", "Fish and vegetables", "Bread and tea", "Fruit and milk"],
+            correctAnswer: 2,
+          },
+          {
+            question: "When is this person thirsty?",
+            options: ["In the morning", "After lunch", "At dinner", "At breakfast"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+    ],
+    writing: [
+      // ── Lesson 1 writing (indices 0-5) ──
+      // word-order 1
+      {
+        id: 0,
+        type: "word-order",
+        instruction: "Put the words in order to say 'The bread is fresh'",
+        tiles: ["تازه", "نان", "است"],
+        correctOrder: ["نان", "تازه", "است"],
+      },
+      // word-order 2
+      {
+        id: 1,
+        type: "word-order",
+        instruction: "Put the words in order to say 'I eat rice'",
+        tiles: ["می‌خورم", "من", "برنج"],
+        correctOrder: ["من", "برنج", "می‌خورم"],
+      },
+      // fill-blank 1
+      {
+        id: 2,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "سیب ___ است (The apple is red)",
+        choices: ["سرد", "قرمز", "تازه", "گرم"],
+        correctChoice: "قرمز",
+      },
+      // fill-blank 2
+      {
+        id: 3,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "___ خوشمزه است (The chicken is delicious)",
+        choices: ["نان", "مرغ", "آب", "سیب"],
+        correctChoice: "مرغ",
+      },
+      // build-word 1
+      {
+        id: 4,
+        type: "build-word",
+        targetWord: "میوه",
+        targetWordTransliteration: "miveh",
+        availableLetters: ["م", "ی", "و", "ه", "ن"],
+        description: "Build the word for 'fruit'",
+      },
+      // build-word 2
+      {
+        id: 5,
+        type: "build-word",
+        targetWord: "گوشت",
+        targetWordTransliteration: "goosht",
+        availableLetters: ["گ", "و", "ش", "ت", "ر"],
+        description: "Build the word for 'meat'",
+      },
+      // ── Lesson 2 writing (indices 6-11) ──
+      // word-order 1
+      {
+        id: 6,
+        type: "word-order",
+        instruction: "Put the words in order to say 'The tea is hot'",
+        tiles: ["است", "گرم", "چای"],
+        correctOrder: ["چای", "گرم", "است"],
+      },
+      // word-order 2
+      {
+        id: 7,
+        type: "word-order",
+        instruction: "Put the words in order to say 'The food is delicious'",
+        tiles: ["خوشمزه", "غذا", "است"],
+        correctOrder: ["غذا", "خوشمزه", "است"],
+      },
+      // fill-blank 1
+      {
+        id: 8,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "آب ___ است (The water is cold)",
+        choices: ["گرم", "سرد", "تازه", "خوشمزه"],
+        correctChoice: "سرد",
+      },
+      // fill-blank 2
+      {
+        id: 9,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "قهوه با ___ خوب است (Coffee with milk is good)",
+        choices: ["نمک", "شکر", "شیر", "آب"],
+        correctChoice: "شیر",
+      },
+      // build-word 1
+      {
+        id: 10,
+        type: "build-word",
+        targetWord: "خوشمزه",
+        targetWordTransliteration: "khoshmaze",
+        availableLetters: ["خ", "و", "ش", "م", "ز", "ه", "ن"],
+        description: "Build the word for 'delicious'",
+      },
+      // build-word 2
+      {
+        id: 11,
+        type: "build-word",
+        targetWord: "نمک",
+        targetWordTransliteration: "namak",
+        availableLetters: ["ن", "م", "ک", "ل"],
+        description: "Build the word for 'salt'",
+      },
+      // ── Lesson 3 writing (indices 12-17) ──
+      // word-order 1
+      {
+        id: 12,
+        type: "word-order",
+        instruction: "Put the words in order to say 'I am hungry'",
+        tiles: ["هستم", "گُرسنه", "من"],
+        correctOrder: ["من", "گُرسنه", "هستم"],
+      },
+      // word-order 2
+      {
+        id: 13,
+        type: "word-order",
+        instruction: "Put the words in order to say 'Menu, please'",
+        tiles: ["لطفاً", "منو"],
+        correctOrder: ["منو", "لطفاً"],
+      },
+      // fill-blank 1
+      {
+        id: 14,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "من ___ هستم (I am thirsty)",
+        choices: ["گُرسنه", "تشنه", "سرد", "گرم"],
+        correctChoice: "تشنه",
+      },
+      // fill-blank 2
+      {
+        id: 15,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "___ نان و چای است (Breakfast is bread and tea)",
+        choices: ["ناهار", "شام", "صبحانه", "منو"],
+        correctChoice: "صبحانه",
+      },
+      // build-word 1
+      {
+        id: 16,
+        type: "build-word",
+        targetWord: "ناهار",
+        targetWordTransliteration: "nāhār",
+        availableLetters: ["ن", "ا", "ه", "ا", "ر", "و"],
+        description: "Build the word for 'lunch'",
+      },
+      // build-word 2
+      {
+        id: 17,
+        type: "build-word",
+        targetWord: "رستوران",
+        targetWordTransliteration: "resturān",
+        availableLetters: ["ر", "س", "ت", "و", "ر", "ا", "ن", "م"],
+        description: "Build the word for 'restaurant'",
       },
     ],
   },

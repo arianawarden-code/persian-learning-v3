@@ -15,6 +15,10 @@ export interface Lesson {
   timeEstimate: string
   phases: LessonPhases
   nextLesson: { id: string; title: string } | null
+  culturalNote?: {
+    title: string
+    content: string
+  }
 }
 
 // ─── Lesson Definitions for Module 1 ───────────────────────────────
@@ -254,6 +258,10 @@ export const module6Lessons: Lesson[] = [
       writingIndices: [0, 6],   // 6 exercises per lesson
     },
     nextLesson: { id: "2", title: "Seasons" },
+    culturalNote: {
+      title: "The Solar Hijri Calendar",
+      content: "Iran uses the Solar Hijri calendar (گاه‌شماری هجری خورشیدی), not the Western Gregorian calendar. It is a solar calendar, meaning it follows the Earth's orbit around the sun, so the seasons always fall in the same months.\n\nThe calendar begins with Nowruz (نوروز), the Persian New Year, which falls on the spring equinox — around March 20 or 21 in the Gregorian calendar. This makes فروردین (Farvardin), the first month, a spring month.\n\nThe first six months have 31 days, the next five have 30 days, and the last month (اسفند) has 29 days (30 in a leap year).\n\nThe calendar counts years from the Hijra, the Prophet Muhammad's migration from Mecca to Medina in 622 CE. So the current year in Iran is roughly 621 or 622 years behind the Gregorian year.\n\nIranians use this calendar in daily life — for birthdays, school schedules, holidays, and official documents. In this lesson, you will learn all twelve month names.",
+    },
   },
   {
     id: "2",
@@ -453,7 +461,57 @@ export const module10Lessons: Lesson[] = [
   },
 ]
 
+// ─── Lesson Definitions for Module 11 ──────────────────────────────
+
+export const module11Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Bread, Rice & Fruit",
+    goal: "Learn basic food words like bread, rice, meat, chicken, fish, vegetables, and fruit, and say what you eat using من + [food] + می‌خورم",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],
+      grammarIndex: 0,
+      readingStoryIds: [1, 2],
+      writingIndices: [0, 6],
+    },
+    nextLesson: { id: "2", title: "Tea, Coffee & Flavors" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Tea, Coffee & Flavors",
+    goal: "Learn drinks like tea, coffee, and milk, plus taste words like delicious, fresh, hot, and cold, and describe food using [food] + [adjective] + است",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],
+      grammarIndex: 1,
+      readingStoryIds: [3, 4],
+      writingIndices: [6, 12],
+    },
+    nextLesson: { id: "3", title: "At the Restaurant" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "At the Restaurant",
+    goal: "Learn to talk about eating, drinking, meals, and ordering food politely at a restaurant using لطفاً and می‌خواهم",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],
+      grammarIndex: 2,
+      readingStoryIds: [5, 6],
+      writingIndices: [12, 18],
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "11") {
+    return module11Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "10") {
     return module10Lessons.find((l) => l.id === lessonId)
   }

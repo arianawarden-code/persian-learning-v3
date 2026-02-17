@@ -133,6 +133,39 @@ export function LessonFlow({ lesson, vocabWords, grammarExercise, readingStories
 // ─── Intro Phase ─────────────────────────────────────────────────
 
 function IntroPhase({ lesson, onStart }: { lesson: Lesson; onStart: () => void }) {
+  const [showingCulturalNote, setShowingCulturalNote] = useState(!!lesson.culturalNote)
+
+  if (showingCulturalNote && lesson.culturalNote) {
+    return (
+      <Card className="border-sand-200 bg-white p-10">
+        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100">
+          <span className="text-3xl">📅</span>
+        </div>
+
+        <h2 className="mb-6 text-center font-serif text-2xl font-bold text-charcoal">
+          {lesson.culturalNote.title}
+        </h2>
+
+        <div className="mb-8 space-y-4 text-charcoal/80 leading-relaxed">
+          {lesson.culturalNote.content.split("\n\n").map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Button
+            onClick={() => setShowingCulturalNote(false)}
+            size="lg"
+            className="bg-terracotta hover:bg-terracotta/90 gap-2 text-base px-8"
+          >
+            Continue
+            <ArrowRight className="h-5 w-5" />
+          </Button>
+        </div>
+      </Card>
+    )
+  }
+
   return (
     <Card className="border-sand-200 bg-white p-10 text-center">
       <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-terracotta/10">
