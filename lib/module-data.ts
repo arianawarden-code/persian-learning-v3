@@ -2044,6 +2044,21 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         example: "امروز هوا خوب است",
         exampleTranslation: "The weather is good today",
       },
+      {
+        persian: "و",
+        transliteration: "va",
+        spoken: "o",
+        english: "and",
+        example: "من و تو دوست هستیم",
+        exampleTranslation: "You and I are friends",
+      },
+      {
+        persian: "یا",
+        transliteration: "yā",
+        english: "or",
+        example: "چای یا قهوه؟",
+        exampleTranslation: "Tea or coffee?",
+      },
     ],
     reading: [
       {
@@ -7116,9 +7131,9 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "At the Market",
         persianTitle: "در بازار",
-        text: "مادَر: غَذا چِه اَست؟ گوشت یا مُرغ؟\nپِدَر: مُرغ و بِرِنج خوب اَست.\nمادَر: سَبزی و نان؟\nپِدَر: بَله. سیب و پُرتِقال لُطفاً.",
-        textTransliteration: "mādar: ghazā che ast? goosht yā morgh?\npedar: morgh o berenj khoob ast.\nmādar: sabzi o noon?\npedar: bale. sib o porteghāl lotfan.",
-        textTranslation: "Mother: What is the food? Meat or chicken?\nFather: Chicken and rice is good.\nMother: Vegetables and bread?\nFather: Yes. Apples and oranges please.",
+        text: "مادَر: غَذا چِه اَست؟ مُرغ یا گوشت داریم؟\nپِدَر: مُرغ و بِرِنج خوب اَست. سَبزی؟\nمادَر: بَله، سَبزی و نان.\nپِدَر: میوه؟ سیب و پُرتِقال لُطفاً!",
+        textTransliteration: "mādar: ghazā che ast? morgh yā goosht dārim?\npedar: morgh o berenj khoob ast. sabzi?\nmādar: bale, sabzi o noon.\npedar: miveh? sib o porteghāl lotfan!",
+        textTranslation: "Mother: What is the food? Do we have chicken or meat?\nFather: Chicken and rice is good. Vegetables?\nMother: Yes, vegetables and bread.\nFather: Fruit? Apples and oranges please!",
         questions: [
           {
             question: "What food does the father want?",

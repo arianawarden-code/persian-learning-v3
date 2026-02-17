@@ -59,7 +59,7 @@ export const module1Lessons: Lesson[] = [
     goal: "You’ll be able to say goodbye politely and use basic courtesy phrases in Persian",
     timeEstimate: "6 min",
     phases: {
-      vocabIndices: [20, 25],   // چه through امروز
+      vocabIndices: [20, 27],   // چه through یا
       grammarIndex: 2,          // "Using است and هست"
       readingStoryIds: [3],      // "At Home"
       writingIndices: [6, 9],   // word-order + fill-blank + build-word
