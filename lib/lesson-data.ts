@@ -508,7 +508,71 @@ export const module11Lessons: Lesson[] = [
   },
 ]
 
+// ─── Lesson Definitions for Module 12 ──────────────────────────────
+
+export const module12Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Water, Tea & Coffee",
+    goal: "Learn basic everyday drinks like water, tea, coffee, milk, and juice, and ask for a drink politely using یِک + [container] + [drink] + لُطفاً",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],
+      grammarIndex: 0,
+      readingStoryIds: [1, 2],
+      writingIndices: [0, 6],
+    },
+    nextLesson: { id: "2", title: "Juice, Tea Types & More" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Juice, Tea Types & More",
+    goal: "Learn drink varieties like orange juice, green tea, and herbal tea, and build compound drink names using the Ezafe construction",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],
+      grammarIndex: 1,
+      readingStoryIds: [3, 4],
+      writingIndices: [6, 12],
+    },
+    nextLesson: { id: "3", title: "Doogh, Shakes & Flavors" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "Doogh, Shakes & Flavors",
+    goal: "Learn Iranian drinks like doogh and delster, plus flavor words like sour, bitter, and fresh, and say you don't like something",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],
+      grammarIndex: 2,
+      readingStoryIds: [5, 6],
+      writingIndices: [12, 18],
+    },
+    nextLesson: { id: "4", title: "Ice, Sugar & Preferences" },
+  },
+  {
+    id: "4",
+    number: 4,
+    title: "Ice, Sugar & Preferences",
+    goal: "Learn to say how you like your drink — with or without ice, with or without sugar, plain, strong, or weak",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [30, 40],
+      grammarIndex: 3,
+      readingStoryIds: [7, 8],
+      writingIndices: [18, 24],
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "12") {
+    return module12Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "11") {
     return module11Lessons.find((l) => l.id === lessonId)
   }

@@ -7415,6 +7415,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
   12: {
     moduleId: 12,
     vocabulary: [
+      // ── Lesson 1: Basic everyday drinks (indices 0-9) ──
       {
         persian: "آب",
         transliteration: "āb",
@@ -7437,25 +7438,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I drink coffee in the morning",
       },
       {
-        persian: "قَهوه‌ی سَرد",
-        transliteration: "qahve-ye sard",
-        english: "iced coffee",
-        example: "تابِستان قَهوه‌ی سَرد می‌خورَم",
-        exampleTranslation: "I drink iced coffee in the summer",
-      },
-      {
         persian: "شیر",
         transliteration: "shir",
         english: "milk",
         example: "شیرِ سَرد می‌نوشَم",
         exampleTranslation: "I drink cold milk",
-      },
-      {
-        persian: "شیرِ داغ",
-        transliteration: "shir-e dāgh",
-        english: "hot milk",
-        example: "شَب شیرِ داغ می‌خورَم",
-        exampleTranslation: "I drink hot milk at night",
       },
       {
         persian: "آب‌میوه",
@@ -7465,102 +7452,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I drink fresh juice",
       },
       {
-        persian: "آبِ پُرتِقال",
-        transliteration: "āb-e porteghāl",
-        english: "orange juice",
-        example: "آبِ پُرتِقال برایِ صُبح خوب اَست",
-        exampleTranslation: "Orange juice is good for the morning",
-      },
-      {
-        persian: "آبِ سیب",
-        transliteration: "āb-e sib",
-        english: "apple juice",
-        example: "آبِ سیب شیرین اَست",
-        exampleTranslation: "Apple juice is sweet",
-      },
-      {
         persian: "نوشابِه",
         transliteration: "nooshābe",
         english: "soda",
         example: "نوشابِه خیلی شیرین اَست",
         exampleTranslation: "Soda is very sweet",
-      },
-      {
-        persian: "آبِ گازدار",
-        transliteration: "āb-e gāzdār",
-        english: "sparkling water",
-        example: "آبِ گازدار دوست دارَم",
-        exampleTranslation: "I like sparkling water",
-      },
-      {
-        persian: "دِلستِر",
-        transliteration: "delster",
-        english: "non-alcoholic malt drink",
-        example: "دِلستِرِ سَرد می‌خورَم",
-        exampleTranslation: "I drink cold malt drink",
-      },
-      {
-        persian: "دوغ",
-        transliteration: "doogh",
-        english: "yogurt drink",
-        example: "دوغ با غذا خوب اَست",
-        exampleTranslation: "Doogh is good with food",
-      },
-      {
-        persian: "دوغِ نَعناع",
-        transliteration: "doogh-e na‘nā",
-        english: "mint yogurt drink",
-        example: "دوغِ نَعناع خُنَک اَست",
-        exampleTranslation: "Mint doogh is refreshing",
-      },
-      {
-        persian: "شِیک",
-        transliteration: "sheyk",
-        english: "shake",
-        example: "شِیکِ موز می‌خورَم",
-        exampleTranslation: "I drink a banana shake",
-      },
-      {
-        persian: "شِیکِ شُکلات",
-        transliteration: "sheyk-e shokolāt",
-        english: "chocolate shake",
-        example: "شِیکِ شُکلات خیلی خوشمَزِه اَست",
-        exampleTranslation: "Chocolate shake is very delicious",
-      },
-      {
-        persian: "چایِ سَبز",
-        transliteration: "chāy-e sabz",
-        english: "green tea",
-        example: "چایِ سَبز برایِ سَلامَتی خوب اَست",
-        exampleTranslation: "Green tea is good for health",
-      },
-      {
-        persian: "چایِ سیاه",
-        transliteration: "chāy-e siyāh",
-        english: "black tea",
-        example: "چایِ سیاه هَر روز می‌خورَم",
-        exampleTranslation: "I drink black tea every day",
-      },
-      {
-        persian: "دَم‌نوش",
-        transliteration: "dam-noosh",
-        english: "herbal tea",
-        example: "دَم‌نوشِ بابونه می‌خورَم",
-        exampleTranslation: "I drink chamomile tea",
-      },
-      {
-        persian: "آبِ لیمو",
-        transliteration: "āb-e limu",
-        english: "lemon juice",
-        example: "آبِ لیمو تُرش اَست",
-        exampleTranslation: "Lemon juice is sour",
-      },
-      {
-        persian: "نوشیدَنی",
-        transliteration: "nooshidani",
-        english: "beverage",
-        example: "این نوشیدَنی سَرد اَست",
-        exampleTranslation: "This beverage is cold",
       },
       {
         persian: "نوشیدَن",
@@ -7584,11 +7480,132 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I drink hot tea",
       },
       {
+        persian: "لِیوان",
+        transliteration: "leyvān",
+        english: "glass",
+        example: "یِک لِیوان آب می‌خورَم",
+        exampleTranslation: "I drink a glass of water",
+      },
+      // ── Lesson 2: Drink varieties (indices 10-19) ──
+      {
+        persian: "آبِ پُرتِقال",
+        transliteration: "āb-e porteghāl",
+        english: "orange juice",
+        example: "آبِ پُرتِقال برایِ صُبح خوب اَست",
+        exampleTranslation: "Orange juice is good for the morning",
+      },
+      {
+        persian: "آبِ سیب",
+        transliteration: "āb-e sib",
+        english: "apple juice",
+        example: "آبِ سیب شیرین اَست",
+        exampleTranslation: "Apple juice is sweet",
+      },
+      {
+        persian: "آبِ لیمو",
+        transliteration: "āb-e limu",
+        english: "lemon juice",
+        example: "آبِ لیمو تُرش اَست",
+        exampleTranslation: "Lemon juice is sour",
+      },
+      {
+        persian: "قَهوه‌ی سَرد",
+        transliteration: "qahve-ye sard",
+        english: "iced coffee",
+        example: "تابِستان قَهوه‌ی سَرد می‌خورَم",
+        exampleTranslation: "I drink iced coffee in the summer",
+      },
+      {
+        persian: "شیرِ داغ",
+        transliteration: "shir-e dāgh",
+        english: "hot milk",
+        example: "شَب شیرِ داغ می‌خورَم",
+        exampleTranslation: "I drink hot milk at night",
+      },
+      {
+        persian: "چایِ سَبز",
+        transliteration: "chāy-e sabz",
+        english: "green tea",
+        example: "چایِ سَبز برایِ سَلامَتی خوب اَست",
+        exampleTranslation: "Green tea is good for health",
+      },
+      {
+        persian: "چایِ سیاه",
+        transliteration: "chāy-e siyāh",
+        english: "black tea",
+        example: "چایِ سیاه هَر روز می‌خورَم",
+        exampleTranslation: "I drink black tea every day",
+      },
+      {
+        persian: "دَم‌نوش",
+        transliteration: "dam-noosh",
+        english: "herbal tea",
+        example: "دَم‌نوشِ بابونه می‌خورَم",
+        exampleTranslation: "I drink chamomile tea",
+      },
+      {
+        persian: "فِنجان",
+        transliteration: "fenjān",
+        english: "cup",
+        example: "یِک فِنجان چای می‌خورَم",
+        exampleTranslation: "I drink a cup of tea",
+      },
+      {
         persian: "شیرین",
         transliteration: "shirin",
         english: "sweet",
         example: "این آب‌میوه شیرین اَست",
         exampleTranslation: "This juice is sweet",
+      },
+      // ── Lesson 3: Iranian drinks & flavors (indices 20-29) ──
+      {
+        persian: "دوغ",
+        transliteration: "doogh",
+        english: "yogurt drink",
+        example: "دوغ با غذا خوب اَست",
+        exampleTranslation: "Doogh is good with food",
+      },
+      {
+        persian: "دوغِ نَعناع",
+        transliteration: "doogh-e na'nā",
+        english: "mint yogurt drink",
+        example: "دوغِ نَعناع خُنَک اَست",
+        exampleTranslation: "Mint doogh is refreshing",
+      },
+      {
+        persian: "دِلستِر",
+        transliteration: "delster",
+        english: "non-alcoholic malt drink",
+        example: "دِلستِرِ سَرد می‌خورَم",
+        exampleTranslation: "I drink cold malt drink",
+      },
+      {
+        persian: "آبِ گازدار",
+        transliteration: "āb-e gāzdār",
+        english: "sparkling water",
+        example: "آبِ گازدار دوست دارَم",
+        exampleTranslation: "I like sparkling water",
+      },
+      {
+        persian: "شِیک",
+        transliteration: "sheyk",
+        english: "shake",
+        example: "شِیکِ موز می‌خورَم",
+        exampleTranslation: "I drink a banana shake",
+      },
+      {
+        persian: "شِیکِ شُکلات",
+        transliteration: "sheyk-e shokolāt",
+        english: "chocolate shake",
+        example: "شِیکِ شُکلات خیلی خوشمَزِه اَست",
+        exampleTranslation: "Chocolate shake is very delicious",
+      },
+      {
+        persian: "نوشیدَنی",
+        transliteration: "nooshidani",
+        english: "beverage",
+        example: "این نوشیدَنی سَرد اَست",
+        exampleTranslation: "This beverage is cold",
       },
       {
         persian: "تُرش",
@@ -7605,19 +7622,13 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Coffee is bitter",
       },
       {
-        persian: "لِیوان",
-        transliteration: "leyvān",
-        english: "glass",
-        example: "یِک لِیوان آب می‌خورَم",
-        exampleTranslation: "I drink a glass of water",
+        persian: "تازِه",
+        transliteration: "tāze",
+        english: "fresh",
+        example: "آب‌میوه تازِه اَست",
+        exampleTranslation: "The juice is fresh",
       },
-      {
-        persian: "فِنجان",
-        transliteration: "fenjān",
-        english: "cup",
-        example: "یِک فِنجان چای می‌خورَم",
-        exampleTranslation: "I drink a cup of tea",
-      },
+      // ── Lesson 4: How you like your drink (indices 30-39) ──
       {
         persian: "یَخ",
         transliteration: "yakh",
@@ -7626,18 +7637,18 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "There is ice in the drink",
       },
       {
-        persian: "بی‌یَخ",
-        transliteration: "bi-yakh",
-        english: "without ice",
-        example: "قَهوه بی‌یَخ می‌خورَم",
-        exampleTranslation: "I drink coffee without ice",
-      },
-      {
         persian: "با یَخ",
         transliteration: "bā yakh",
         english: "with ice",
         example: "نوشیدَنی با یَخ دوست دارَم",
         exampleTranslation: "I like drinks with ice",
+      },
+      {
+        persian: "بی‌یَخ",
+        transliteration: "bi-yakh",
+        english: "without ice",
+        example: "قَهوه بی‌یَخ می‌خورَم",
+        exampleTranslation: "I drink coffee without ice",
       },
       {
         persian: "ساده",
@@ -7661,132 +7672,528 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I drink weak tea",
       },
       {
-        persian: "تازِه",
-        transliteration: "tāze",
-        english: "fresh",
-        example: "آب‌میوه تازِه اَست",
-        exampleTranslation: "The juice is fresh",
-      },
-      {
         persian: "خُنَک",
         transliteration: "khonak",
         english: "cool / refreshing",
         example: "این نوشیدَنی خُنَک اَست",
         exampleTranslation: "This drink is refreshing",
       },
+      {
+        persian: "بُطری",
+        transliteration: "botri",
+        english: "bottle",
+        example: "یِک بُطری آب لُطفاً",
+        exampleTranslation: "A bottle of water please",
+      },
+      {
+        persian: "با شِکَر",
+        transliteration: "bā shekar",
+        english: "with sugar",
+        example: "چای با شِکَر می‌خورَم",
+        exampleTranslation: "I drink tea with sugar",
+      },
+      {
+        persian: "بِدونِ شِکَر",
+        transliteration: "bedun-e shekar",
+        english: "without sugar",
+        example: "قَهوه بِدونِ شِکَر می‌خورَم",
+        exampleTranslation: "I drink coffee without sugar",
+      },
     ],
-    reading: [
+    grammar: [
+      // ── Lesson 1 grammar: Asking for a drink ──
+      {
+        id: 0,
+        type: "pattern-intro" as const,
+        instruction: "Learn how to ask for a drink politely in Persian",
+        teachingContent: {
+          title: "Asking for a Drink",
+          explanation: "To politely ask for a drink, use: یِک + [container] + [drink] + لُطفاً (lotfan = please). The container can be لِیوان (glass) or فِنجان (cup). You can also simply say the drink name + لُطفاً.",
+          examples: [
+            { label: "A glass of water please", persian: "یِک لِیوان آب لُطفاً", description: "yek leyvān āb lotfan" },
+            { label: "A cup of tea please", persian: "یِک فِنجان چای لُطفاً", description: "yek fenjān chāy lotfan" },
+            { label: "Coffee please", persian: "قَهوه لُطفاً", description: "qahve lotfan" },
+          ],
+        },
+        question: "How do you politely ask for a glass of milk?",
+        options: ["یِک لِیوان شیر لُطفاً", "شیر است لِیوان", "من شیر لِیوان", "لُطفاً است شیر"],
+        correctAnswer: 0,
+        explanation: "The pattern is: یِک + [container] + [drink] + لُطفاً. So 'A glass of milk please' is یِک لِیوان شیر لُطفاً.",
+        pattern: "یِک + [container] + [drink] + لُطفاً",
+        patternTransliteration: "yek + [container] + [drink] + lotfan",
+        patternParts: ["یِک", "[container]", "[drink]", "لُطفاً"],
+        patternExamples: [
+          { persian: "یِک لِیوان آب لُطفاً", transliteration: "yek leyvān āb lotfan", english: "A glass of water please" },
+          { persian: "یِک فِنجان قَهوه لُطفاً", transliteration: "yek fenjān qahve lotfan", english: "A cup of coffee please" },
+          { persian: "چای لُطفاً", transliteration: "chāy lotfan", english: "Tea please" },
+        ],
+        note: "لُطفاً (lotfan) means 'please' and makes any request polite. You can skip the container for a simpler request.",
+      },
+      // ── Lesson 2 grammar: Building drink names ──
       {
         id: 1,
-        title: "Morning Drinks",
-        persianTitle: "نوشیدَنی‌هایِ صُبح",
-        text: "مَن صُبح آب و چای می‌نوشَم. چایِ داغ دوست دارَم. بَعد قَهوه می‌خورَم. قَهوه اِنِرژی می‌دَهَد.",
-        textTransliteration:
-          "man sobh āb va chāy mi-noosham. chāy-e dāgh doost dāram. ba‘d qahve mi-khoram. qahve enerzhi mi-dahad.",
-        textTranslation:
-          "I drink water and tea in the morning. I like hot tea. Then I drink coffee. Coffee gives energy.",
+        type: "pattern-intro" as const,
+        instruction: "Learn how to build compound drink names using the Ezafe",
+        teachingContent: {
+          title: "Building Drink Names",
+          explanation: "Many drink names in Persian use the Ezafe construction: [base]-ِ [type]. The Ezafe (-e) connects the base word to the type or flavor. For example: آب (water) + -ِ + پُرتِقال (orange) = آبِ پُرتِقال (orange juice).",
+          examples: [
+            { label: "Orange juice", persian: "آبِ پُرتِقال", description: "āb-e porteghāl (water of orange)" },
+            { label: "Green tea", persian: "چایِ سَبز", description: "chāy-e sabz (tea of green)" },
+            { label: "Hot milk", persian: "شیرِ داغ", description: "shir-e dāgh (milk of hot)" },
+          ],
+        },
+        question: "How do you say 'apple juice' in Persian?",
+        options: ["آبِ سیب", "سیبِ آب", "آب و سیب", "سیب با آب"],
+        correctAnswer: 0,
+        explanation: "The pattern is: [base]-ِ [type]. So 'apple juice' is آبِ سیب (āb-e sib), literally 'water of apple'.",
+        pattern: "[base]-ِ [type]",
+        patternTransliteration: "[base]-e [type]",
+        patternParts: ["[base]", "-ِ", "[type]"],
+        patternExamples: [
+          { persian: "آبِ لیمو", transliteration: "āb-e limu", english: "Lemon juice" },
+          { persian: "چایِ سیاه", transliteration: "chāy-e siyāh", english: "Black tea" },
+          { persian: "قَهوه‌ی سَرد", transliteration: "qahve-ye sard", english: "Iced coffee" },
+        ],
+        note: "After words ending in a vowel (like قَهوه), the Ezafe becomes ‌ی (-ye) instead of ِ (-e).",
+      },
+      // ── Lesson 3 grammar: Saying you don't like something ──
+      {
+        id: 2,
+        type: "pattern-intro" as const,
+        instruction: "Learn how to say you don't like a drink in Persian",
+        teachingContent: {
+          title: "Saying You Don't Like Something",
+          explanation: "To say 'I don't like [drink]', use: من + [drink] + دوست ندارم (doost nadāram). The word ندارم is the negative of دارم (I have/like). To say someone else doesn't like something, change ندارم to ندارد (nadārad).",
+          examples: [
+            { label: "I don't like soda", persian: "مَن نوشابِه دوست نَدارَم", description: "man nooshābe doost nadāram" },
+            { label: "I don't like bitter coffee", persian: "مَن قَهوه‌ی تَلخ دوست نَدارَم", description: "man qahve-ye talkh doost nadāram" },
+            { label: "He doesn't like doogh", persian: "او دوغ دوست نَدارَد", description: "oo doogh doost nadārad" },
+          ],
+        },
+        question: "How do you say 'I don't like sparkling water'?",
+        options: ["مَن آبِ گازدار دوست نَدارَم", "آبِ گازدار دوست دارَم", "مَن آبِ گازدار نیست", "آبِ گازدار من نَدارَم"],
+        correctAnswer: 0,
+        explanation: "The pattern is: من + [drink] + دوست ندارم. So 'I don't like sparkling water' is مَن آبِ گازدار دوست نَدارَم.",
+        pattern: "من + [drink] + دوست ندارم",
+        patternTransliteration: "man + [drink] + doost nadāram",
+        patternParts: ["من", "[drink]", "دوست ندارم"],
+        patternExamples: [
+          { persian: "مَن دِلستِر دوست نَدارَم", transliteration: "man delster doost nadāram", english: "I don't like malt drink" },
+          { persian: "مَن نوشیدَنیِ تُرش دوست نَدارَم", transliteration: "man nooshidani-ye torsh doost nadāram", english: "I don't like sour drinks" },
+          { persian: "او شِیک دوست نَدارَد", transliteration: "oo sheyk doost nadārad", english: "He/she doesn't like shakes" },
+        ],
+        note: "دوست ندارم (doost nadāram) literally means 'I don't have as friend' — it's the standard way to say 'I don't like' in Persian.",
+      },
+      // ── Lesson 4 grammar: Saying with or without ──
+      {
+        id: 3,
+        type: "pattern-intro" as const,
+        instruction: "Learn how to say 'with' or 'without' when ordering drinks",
+        teachingContent: {
+          title: "Saying With or Without",
+          explanation: "To customize your drink, use با (bā = with) or بِدون (bedun = without) followed by the modifier. For example: چای با شِکَر (tea with sugar) or قَهوه بِدونِ شِکَر (coffee without sugar). You can also use بی (bi = without) as a prefix: بی‌یَخ (without ice).",
+          examples: [
+            { label: "Tea with sugar", persian: "چای با شِکَر", description: "chāy bā shekar" },
+            { label: "Coffee without sugar", persian: "قَهوه بِدونِ شِکَر", description: "qahve bedun-e shekar" },
+            { label: "With ice", persian: "با یَخ", description: "bā yakh" },
+          ],
+        },
+        question: "How do you say 'coffee with ice please'?",
+        options: ["قَهوه با یَخ لُطفاً", "قَهوه یَخ با لُطفاً", "با یَخ قَهوه", "لُطفاً قَهوه یَخ"],
+        correctAnswer: 0,
+        explanation: "The pattern is: [drink] + با/بِدون + [modifier]. So 'coffee with ice please' is قَهوه با یَخ لُطفاً.",
+        pattern: "[drink] + با/بِدون + [modifier]",
+        patternTransliteration: "[drink] + bā/bedun + [modifier]",
+        patternParts: ["[drink]", "با/بِدون", "[modifier]"],
+        patternExamples: [
+          { persian: "چای با شِکَر", transliteration: "chāy bā shekar", english: "Tea with sugar" },
+          { persian: "قَهوه بِدونِ شِکَر", transliteration: "qahve bedun-e shekar", english: "Coffee without sugar" },
+          { persian: "آب بی‌یَخ", transliteration: "āb bi-yakh", english: "Water without ice" },
+        ],
+        note: "با (bā) means 'with'. بِدون (bedun) and the prefix بی (bi) both mean 'without'. بی is used as a prefix attached to the next word: بی‌یَخ (without ice).",
+      },
+    ],
+    reading: [
+      // ── Lesson 1 stories (ids 1, 2) ──
+      {
+        id: 1,
+        title: "Morning Tea",
+        persianTitle: "چایِ صُبح",
+        text: "مادَر: صُبح بِخِیر! چای می‌خوری؟\nسارا: بَله، مَن چایِ داغ دوست دارَم.\nمادَر: شیر هَم می‌خواهی؟\nسارا: نَه مَرسی. یِک لِیوان آب لُطفاً.",
+        textTransliteration: "mādar: sobh bekheyr! chāy mikhori?\nsārā: bale, man chāy-e dāgh doost dāram.\nmādar: shir ham mikhāhi?\nsārā: na mersi. yek leyvān āb lotfan.",
+        textTranslation: "Mother: Good morning! Do you want tea?\nSara: Yes, I like hot tea.\nMother: Do you want milk too?\nSara: No thanks. A glass of water please.",
         questions: [
           {
-            question: "What does the person drink in the morning?",
-            options: ["Juice", "Water and tea", "Milk", "Soda"],
+            question: "What does Sara like?",
+            options: ["Cold milk", "Hot tea", "Coffee", "Juice"],
             correctAnswer: 1,
           },
           {
-            question: "Does the person like hot or cold tea?",
-            options: ["Cold", "Hot", "Sweet", "Bitter"],
+            question: "What does Sara ask for at the end?",
+            options: ["A cup of tea", "A glass of water", "Milk", "Coffee"],
             correctAnswer: 1,
           },
         ],
       },
       {
         id: 2,
-        title: "Cold Drinks",
-        persianTitle: "نوشیدَنی‌هایِ سَرد",
-        text: "هَوا داغ اَست. مَن نوشیدَنیِ سَرد دوست دارَم. آبِ گازدار و دوغ می‌خورَم. این نوشیدَنی‌ها خُنَک هَستَند.",
-        textTransliteration:
-          "havā dāgh ast. man nooshidani-ye sard doost dāram. āb-e gāzdār va doogh mi-khoram. in nooshidani-hā khonak hastand.",
-        textTranslation:
-          "The weather is hot. I like cold drinks. I drink sparkling water and doogh. These drinks are refreshing.",
+        title: "At the Coffee Shop",
+        persianTitle: "دَر قَهوه‌خانِه",
+        text: "علی: سَلام! قَهوه داری؟\nفروشَنده: بَله! قَهوه‌ی داغ یا سَرد؟\nعلی: قَهوه‌ی داغ لُطفاً. آب‌میوه هَم داری؟\nفروشَنده: بَله. نوشابِه هَم داریم.\nعلی: نَه مَرسی، فَقَط قَهوه.",
+        textTransliteration: "ali: salām! qahve dāri?\nforushande: bale! qahve-ye dāgh yā sard?\nali: qahve-ye dāgh lotfan. āb-mive ham dāri?\nforushande: bale. nooshābe ham dārim.\nali: na mersi, faghat qahve.",
+        textTranslation: "Ali: Hello! Do you have coffee?\nSeller: Yes! Hot or cold coffee?\nAli: Hot coffee please. Do you also have juice?\nSeller: Yes. We also have soda.\nAli: No thanks, just coffee.",
         questions: [
           {
-            question: "What is the weather like?",
-            options: ["Cold", "Rainy", "Hot", "Windy"],
-            correctAnswer: 2,
+            question: "What does Ali order?",
+            options: ["Cold coffee", "Hot coffee", "Juice", "Soda"],
+            correctAnswer: 1,
           },
           {
-            question: "Which drinks does the person drink?",
-            options: ["Tea and coffee", "Milk and juice", "Sparkling water and doogh", "Soda and juice"],
-            correctAnswer: 2,
+            question: "Does Ali want juice?",
+            options: ["Yes", "No, just coffee", "Yes, and soda", "He wants soda"],
+            correctAnswer: 1,
           },
         ],
       },
+      // ── Lesson 2 stories (ids 3, 4) ──
       {
         id: 3,
-        title: "At the Café",
-        persianTitle: "دَر کافِه",
-        text: "مَن دَر کافه چای و شِیک می‌خورَم. یِک فِنجان چایِ سیاه می‌گیرَم. شِیکِ موز هَم خوشمَزِه اَست.",
-        textTransliteration:
-          "man dar kāfe chāy va sheyk mi-khoram. yek fenjān chāy-e siyāh mi-giram. sheyk-e moz ham khoshmazze ast.",
-        textTranslation:
-          "I drink tea and a shake at the café. I get a cup of black tea. The banana shake is also delicious.",
+        title: "Choosing Tea",
+        persianTitle: "اِنتِخابِ چای",
+        text: "مریم: چای می‌خوری؟ چایِ سَبز یا چایِ سیاه؟\nرضا: چایِ سیاه لُطفاً. شیرین دوست دارَم.\nمریم: مَن چایِ سَبز می‌خورَم. آبِ پُرتِقال هَم داریم.\nرضا: نَه مَرسی، فَقَط یِک فِنجان چایِ سیاه.",
+        textTransliteration: "maryam: chāy mikhori? chāy-e sabz yā chāy-e siyāh?\nrezā: chāy-e siyāh lotfan. shirin doost dāram.\nmaryam: man chāy-e sabz mikhoram. āb-e porteghāl ham dārim.\nrezā: na mersi, faghat yek fenjān chāy-e siyāh.",
+        textTranslation: "Maryam: Do you want tea? Green tea or black tea?\nReza: Black tea please. I like it sweet.\nMaryam: I drink green tea. We also have orange juice.\nReza: No thanks, just a cup of black tea.",
         questions: [
           {
-            question: "Where is the person?",
-            options: ["At home", "At work", "At a café", "At school"],
-            correctAnswer: 2,
+            question: "What kind of tea does Reza want?",
+            options: ["Green tea", "Black tea", "Herbal tea", "Iced tea"],
+            correctAnswer: 1,
           },
           {
-            question: "What kind of shake does the person drink?",
-            options: ["Chocolate", "Strawberry", "Banana", "Vanilla"],
+            question: "What does Maryam drink?",
+            options: ["Black tea", "Orange juice", "Green tea", "Coffee"],
             correctAnswer: 2,
           },
         ],
       },
       {
         id: 4,
-        title: "Drinks with Food",
-        persianTitle: "نوشیدَنی با غَذا",
-        text: "مَن با غذا دوغ می‌خورَم. دوغ تُرش اَست. بَعضی وَقت‌ها آب می‌نوشَم. نوشیدَنی با غذا مهم اَست.",
-        textTransliteration:
-          "man bā ghazā doogh mi-khoram. doogh torsh ast. ba‘zi vaght-hā āb mi-noosham. nooshidani bā ghazā mohem ast.",
-        textTranslation:
-          "I drink doogh with food. Doogh is sour. Sometimes I drink water. Drinks are important with food.",
+        title: "Juice or Milk?",
+        persianTitle: "آب‌میوه یا شیر؟",
+        text: "مادَر: آبِ سیب می‌خواهی یا آبِ لیمو؟\nکودَک: آبِ لیمو تُرش اَست! آبِ سیب شیرین اَست.\nمادَر: شیرِ داغ چِطور؟\nکودَک: بَله! شیرِ داغ دوست دارَم.\nمادَر: یِک لِیوان شیرِ داغ لُطفاً.",
+        textTransliteration: "mādar: āb-e sib mikhāhi yā āb-e limu?\nkoodak: āb-e limu torsh ast! āb-e sib shirin ast.\nmādar: shir-e dāgh chetor?\nkoodak: bale! shir-e dāgh doost dāram.\nmādar: yek leyvān shir-e dāgh lotfan.",
+        textTranslation: "Mother: Do you want apple juice or lemon juice?\nChild: Lemon juice is sour! Apple juice is sweet.\nMother: How about hot milk?\nChild: Yes! I like hot milk.\nMother: A glass of hot milk please.",
         questions: [
           {
-            question: "What drink does the person have with food?",
-            options: ["Tea", "Coffee", "Doogh", "Juice"],
+            question: "Why doesn't the child want lemon juice?",
+            options: ["It is bitter", "It is sour", "It is hot", "It is cold"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What does the child choose?",
+            options: ["Apple juice", "Lemon juice", "Hot milk", "Cold water"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      // ── Lesson 3 stories (ids 5, 6) ──
+      {
+        id: 5,
+        title: "Doogh with Lunch",
+        persianTitle: "دوغ با ناهار",
+        text: "رضا: ناهار چِه نوشیدَنی می‌خوری؟\nعلی: مَن دوغ دوست دارَم. دوغِ نَعناع تازِه اَست.\nرضا: مَن دوغ دوست نَدارَم. تُرش اَست.\nعلی: دِلستِر چِطور؟ سَرد و خُنَک اَست.\nرضا: بَله! دِلستِر خوب اَست.",
+        textTransliteration: "rezā: nāhār che nooshidani mikhori?\nali: man doogh doost dāram. doogh-e na'nā tāze ast.\nrezā: man doogh doost nadāram. torsh ast.\nali: delster chetor? sard o khonak ast.\nrezā: bale! delster khoob ast.",
+        textTranslation: "Reza: What drink do you have with lunch?\nAli: I like doogh. Mint doogh is fresh.\nReza: I don't like doogh. It's sour.\nAli: How about delster? It's cold and refreshing.\nReza: Yes! Delster is good.",
+        questions: [
+          {
+            question: "Why doesn't Reza like doogh?",
+            options: ["It is bitter", "It is hot", "It is sour", "It is sweet"],
             correctAnswer: 2,
           },
           {
-            question: "How does doogh taste?",
-            options: ["Sweet", "Bitter", "Sour", "Hot"],
+            question: "What does Reza choose instead?",
+            options: ["Sparkling water", "Delster", "A shake", "Juice"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      {
+        id: 6,
+        title: "The Shake Shop",
+        persianTitle: "مَغازِه‌ی شِیک",
+        text: "سارا: شِیک دوست داری؟\nمریم: بَله! شِیکِ شُکلات خیلی خوشمَزِه اَست.\nسارا: مَن نوشیدَنیِ تَلخ دوست نَدارَم. شِیک شیرین اَست.\nمریم: آبِ گازدار هَم داری؟\nسارا: بَله، اَمّا مَن شِیک می‌خورَم. تازِه اَست!",
+        textTransliteration: "sārā: sheyk doost dāri?\nmaryam: bale! sheyk-e shokolāt kheili khoshmaze ast.\nsārā: man nooshidani-ye talkh doost nadāram. sheyk shirin ast.\nmaryam: āb-e gāzdār ham dāri?\nsārā: bale, ammā man sheyk mikhoram. tāze ast!",
+        textTranslation: "Sara: Do you like shakes?\nMaryam: Yes! Chocolate shake is very delicious.\nSara: I don't like bitter drinks. Shakes are sweet.\nMaryam: Do you also have sparkling water?\nSara: Yes, but I'll have a shake. It's fresh!",
+        questions: [
+          {
+            question: "What kind of shake does Maryam like?",
+            options: ["Banana", "Strawberry", "Chocolate", "Vanilla"],
+            correctAnswer: 2,
+          },
+          {
+            question: "Why does Sara like shakes?",
+            options: ["They are cold", "They are sweet", "They are sour", "They are hot"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      // ── Lesson 4 stories (ids 7, 8) ──
+      {
+        id: 7,
+        title: "How Do You Like It?",
+        persianTitle: "چِطور دوست داری؟",
+        text: "فروشَنده: چای با شِکَر یا بِدونِ شِکَر؟\nعلی: بِدونِ شِکَر لُطفاً. ساده دوست دارَم.\nفروشَنده: قَهوه چِطور؟ غَلیظ یا رَقیق؟\nعلی: قَهوه‌ی غَلیظ لُطفاً. با یَخ.\nفروشَنده: یِک چایِ ساده و یِک قَهوه‌ی غَلیظ با یَخ.",
+        textTransliteration: "forushande: chāy bā shekar yā bedun-e shekar?\nali: bedun-e shekar lotfan. sāde doost dāram.\nforushande: qahve chetor? ghaliz yā raghigh?\nali: qahve-ye ghaliz lotfan. bā yakh.\nforushande: yek chāy-e sāde o yek qahve-ye ghaliz bā yakh.",
+        textTranslation: "Seller: Tea with sugar or without sugar?\nAli: Without sugar please. I like it plain.\nSeller: How about coffee? Strong or weak?\nAli: Strong coffee please. With ice.\nSeller: One plain tea and one strong coffee with ice.",
+        questions: [
+          {
+            question: "How does Ali like his tea?",
+            options: ["With sugar", "Without sugar, plain", "Strong", "With milk"],
+            correctAnswer: 1,
+          },
+          {
+            question: "How does Ali like his coffee?",
+            options: ["Weak and hot", "Plain and cold", "Strong with ice", "Sweet and hot"],
             correctAnswer: 2,
           },
         ],
       },
       {
-        id: 5,
-        title: "Sweet Drinks",
-        persianTitle: "نوشیدَنی‌هایِ شیرین",
-        text: "مَن نوشیدَنیِ شیرین دوست دارَم. آب‌میوه و شِیک می‌خورَم. شِیکِ شُکلات خیلی شیرین اَست. اَمّا نوشابِه کَم می‌خورَم.",
-        textTransliteration:
-          "man nooshidani-ye shirin doost dāram. āb-mive va sheyk mi-khoram. sheyk-e shokolāt kheili shirin ast. ammā nooshābe kam mi-khoram.",
-        textTranslation:
-          "I like sweet drinks. I drink juice and shakes. Chocolate shake is very sweet. But I drink soda only a little.",
+        id: 8,
+        title: "A Bottle of Water",
+        persianTitle: "یِک بُطری آب",
+        text: "سارا: خُنَک نیست. یِک بُطری آب سَرد لُطفاً.\nفروشَنده: با یَخ یا بی‌یَخ؟\nسارا: بی‌یَخ لُطفاً. مریم، تو چِه می‌خواهی؟\nمریم: یِک فِنجان چای با شِکَر لُطفاً.\nسارا: چایِ رَقیق یا غَلیظ؟\nمریم: رَقیق لُطفاً.",
+        textTransliteration: "sārā: khonak nist. yek botri āb-e sard lotfan.\nforushande: bā yakh yā bi-yakh?\nsārā: bi-yakh lotfan. maryam, to che mikhāhi?\nmaryam: yek fenjān chāy bā shekar lotfan.\nsārā: chāy-e raghigh yā ghaliz?\nmaryam: raghigh lotfan.",
+        textTranslation: "Sara: It's not cool. A bottle of cold water please.\nSeller: With ice or without ice?\nSara: Without ice please. Maryam, what do you want?\nMaryam: A cup of tea with sugar please.\nSara: Weak or strong tea?\nMaryam: Weak please.",
         questions: [
           {
-            question: "What kind of drinks does the person like?",
-            options: ["Bitter", "Hot", "Sweet", "Cold"],
-            correctAnswer: 2,
+            question: "How does Sara want her water?",
+            options: ["With ice", "Without ice", "Hot", "With sugar"],
+            correctAnswer: 1,
           },
           {
-            question: "Does the person drink a lot of soda?",
-            options: ["Yes, a lot", "Only at night", "No, only a little", "Never"],
-            correctAnswer: 2,
+            question: "How does Maryam want her tea?",
+            options: ["Strong without sugar", "Weak with sugar", "Plain and hot", "Strong with ice"],
+            correctAnswer: 1,
           },
         ],
       },
-    ], 
+    ],
+    writing: [
+      // ── Lesson 1 writing (indices 0-5) ──
+      // word-order 1
+      {
+        id: 0,
+        type: "word-order",
+        instruction: "Put the words in order to say 'A glass of water please'",
+        tiles: ["لُطفاً", "آب", "لِیوان", "یِک"],
+        correctOrder: ["یِک", "لِیوان", "آب", "لُطفاً"],
+      },
+      // word-order 2
+      {
+        id: 1,
+        type: "word-order",
+        instruction: "Put the words in order to say 'I drink hot tea'",
+        tiles: ["می‌نوشَم", "داغ", "چایِ", "مَن"],
+        correctOrder: ["مَن", "چایِ", "داغ", "می‌نوشَم"],
+      },
+      // fill-blank 1
+      {
+        id: 2,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "مَن ___ می‌نوشَم (I drink water)",
+        choices: ["چای", "آب", "شیر", "قَهوه"],
+        correctChoice: "آب",
+      },
+      // fill-blank 2
+      {
+        id: 3,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "چای ___ اَست (The tea is hot)",
+        choices: ["سَرد", "شیرین", "داغ", "تازِه"],
+        correctChoice: "داغ",
+      },
+      // build-word 1
+      {
+        id: 4,
+        type: "build-word",
+        targetWord: "لِیوان",
+        targetWordTransliteration: "leyvān",
+        availableLetters: ["ل", "ی", "و", "ا", "ن", "م"],
+        description: "Build the word for 'glass'",
+      },
+      // build-word 2
+      {
+        id: 5,
+        type: "build-word",
+        targetWord: "قَهوه",
+        targetWordTransliteration: "qahve",
+        availableLetters: ["ق", "ه", "و", "ه", "ن"],
+        description: "Build the word for 'coffee'",
+      },
+      // ── Lesson 2 writing (indices 6-11) ──
+      // word-order 1
+      {
+        id: 6,
+        type: "word-order",
+        instruction: "Put the words in order to say 'A cup of black tea please'",
+        tiles: ["لُطفاً", "سیاه", "فِنجان", "چایِ", "یِک"],
+        correctOrder: ["یِک", "فِنجان", "چایِ", "سیاه", "لُطفاً"],
+      },
+      // word-order 2
+      {
+        id: 7,
+        type: "word-order",
+        instruction: "Put the words in order to say 'Apple juice is sweet'",
+        tiles: ["اَست", "شیرین", "سیب", "آبِ"],
+        correctOrder: ["آبِ", "سیب", "شیرین", "اَست"],
+      },
+      // fill-blank 1
+      {
+        id: 8,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "آبِ ___ تُرش اَست (Lemon juice is sour)",
+        choices: ["سیب", "پُرتِقال", "لیمو", "شیر"],
+        correctChoice: "لیمو",
+      },
+      // fill-blank 2
+      {
+        id: 9,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "چایِ ___ برایِ سَلامَتی خوب اَست (Green tea is good for health)",
+        choices: ["سیاه", "سَبز", "داغ", "سَرد"],
+        correctChoice: "سَبز",
+      },
+      // build-word 1
+      {
+        id: 10,
+        type: "build-word",
+        targetWord: "فِنجان",
+        targetWordTransliteration: "fenjān",
+        availableLetters: ["ف", "ن", "ج", "ا", "ن", "م"],
+        description: "Build the word for 'cup'",
+      },
+      // build-word 2
+      {
+        id: 11,
+        type: "build-word",
+        targetWord: "شیرین",
+        targetWordTransliteration: "shirin",
+        availableLetters: ["ش", "ی", "ر", "ی", "ن", "و"],
+        description: "Build the word for 'sweet'",
+      },
+      // ── Lesson 3 writing (indices 12-17) ──
+      // word-order 1
+      {
+        id: 12,
+        type: "word-order",
+        instruction: "Put the words in order to say 'I don't like doogh'",
+        tiles: ["نَدارَم", "دوست", "دوغ", "مَن"],
+        correctOrder: ["مَن", "دوغ", "دوست", "نَدارَم"],
+      },
+      // word-order 2
+      {
+        id: 13,
+        type: "word-order",
+        instruction: "Put the words in order to say 'This drink is sour'",
+        tiles: ["اَست", "تُرش", "نوشیدَنی", "این"],
+        correctOrder: ["این", "نوشیدَنی", "تُرش", "اَست"],
+      },
+      // fill-blank 1
+      {
+        id: 14,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "شِیکِ شُکلات خیلی ___ اَست (Chocolate shake is very delicious)",
+        choices: ["تُرش", "تَلخ", "خوشمَزِه", "سَرد"],
+        correctChoice: "خوشمَزِه",
+      },
+      // fill-blank 2
+      {
+        id: 15,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "دوغِ نَعناع ___ اَست (Mint doogh is refreshing)",
+        choices: ["داغ", "خُنَک", "تَلخ", "غَلیظ"],
+        correctChoice: "خُنَک",
+      },
+      // build-word 1
+      {
+        id: 16,
+        type: "build-word",
+        targetWord: "تازِه",
+        targetWordTransliteration: "tāze",
+        availableLetters: ["ت", "ا", "ز", "ه", "ن"],
+        description: "Build the word for 'fresh'",
+      },
+      // build-word 2
+      {
+        id: 17,
+        type: "build-word",
+        targetWord: "تَلخ",
+        targetWordTransliteration: "talkh",
+        availableLetters: ["ت", "ل", "خ", "ش"],
+        description: "Build the word for 'bitter'",
+      },
+      // ── Lesson 4 writing (indices 18-23) ──
+      // word-order 1
+      {
+        id: 18,
+        type: "word-order",
+        instruction: "Put the words in order to say 'Coffee without sugar please'",
+        tiles: ["لُطفاً", "شِکَر", "بِدونِ", "قَهوه"],
+        correctOrder: ["قَهوه", "بِدونِ", "شِکَر", "لُطفاً"],
+      },
+      // word-order 2
+      {
+        id: 19,
+        type: "word-order",
+        instruction: "Put the words in order to say 'A bottle of cold water'",
+        tiles: ["سَرد", "آبِ", "بُطری", "یِک"],
+        correctOrder: ["یِک", "بُطری", "آبِ", "سَرد"],
+      },
+      // fill-blank 1
+      {
+        id: 20,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "قَهوه ___ یَخ لُطفاً (Coffee with ice please)",
+        choices: ["بِدون", "با", "بی", "از"],
+        correctChoice: "با",
+      },
+      // fill-blank 2
+      {
+        id: 21,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "چایِ ___ دوست دارَم (I like plain tea)",
+        choices: ["غَلیظ", "رَقیق", "ساده", "سَرد"],
+        correctChoice: "ساده",
+      },
+      // build-word 1
+      {
+        id: 22,
+        type: "build-word",
+        targetWord: "بُطری",
+        targetWordTransliteration: "botri",
+        availableLetters: ["ب", "ط", "ر", "ی", "ن"],
+        description: "Build the word for 'bottle'",
+      },
+      // build-word 2
+      {
+        id: 23,
+        type: "build-word",
+        targetWord: "ساده",
+        targetWordTransliteration: "sāde",
+        availableLetters: ["س", "ا", "د", "ه", "ر"],
+        description: "Build the word for 'plain'",
+      },
+    ],
   },
   13: {
     moduleId: 13,
