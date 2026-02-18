@@ -7480,10 +7480,10 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I drink hot tea",
       },
       {
-        persian: "لِیوان",
-        transliteration: "leyvān",
+        persian: "لیوان",
+        transliteration: "livān",
         english: "glass",
-        example: "یِک لِیوان آب می‌خورَم",
+        example: "یِک لیوانِ آب می‌خورَم",
         exampleTranslation: "I drink a glass of water",
       },
       // ── Lesson 2: Drink varieties (indices 10-19) ──
@@ -7547,7 +7547,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         persian: "فِنجان",
         transliteration: "fenjān",
         english: "cup",
-        example: "یِک فِنجان چای می‌خورَم",
+        example: "یِک فِنجانِ چای می‌خورَم",
         exampleTranslation: "I drink a cup of tea",
       },
       {
@@ -7708,23 +7708,23 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         instruction: "Learn how to ask for a drink politely in Persian",
         teachingContent: {
           title: "Asking for a Drink",
-          explanation: "To politely ask for a drink, use: یِک + [container] + [drink] + لُطفاً (lotfan = please). The container can be لِیوان (glass) or فِنجان (cup). You can also simply say the drink name + لُطفاً.",
+          explanation: "To politely ask for a drink, use: یِک + [container]-ِ + [drink] + لُطفاً (lotfan = please). The container can be لیوان (glass) or فِنجان (cup), connected to the drink with the Ezafe (-e). You can also simply say the drink name + لُطفاً.",
           examples: [
-            { label: "A glass of water please", persian: "یِک لِیوان آب لُطفاً", description: "yek leyvān āb lotfan" },
-            { label: "A cup of tea please", persian: "یِک فِنجان چای لُطفاً", description: "yek fenjān chāy lotfan" },
+            { label: "A glass of water please", persian: "یِک لیوانِ آب لُطفاً", description: "yek livān-e āb lotfan" },
+            { label: "A cup of tea please", persian: "یِک فِنجانِ چای لُطفاً", description: "yek fenjān-e chāy lotfan" },
             { label: "Coffee please", persian: "قَهوه لُطفاً", description: "qahve lotfan" },
           ],
         },
         question: "How do you politely ask for a glass of milk?",
-        options: ["یِک لِیوان شیر لُطفاً", "شیر است لِیوان", "من شیر لِیوان", "لُطفاً است شیر"],
+        options: ["یِک لیوانِ شیر لُطفاً", "شیر است لیوان", "من شیر لیوان", "لُطفاً است شیر"],
         correctAnswer: 0,
-        explanation: "The pattern is: یِک + [container] + [drink] + لُطفاً. So 'A glass of milk please' is یِک لِیوان شیر لُطفاً.",
-        pattern: "یِک + [container] + [drink] + لُطفاً",
-        patternTransliteration: "yek + [container] + [drink] + lotfan",
-        patternParts: ["یِک", "[container]", "[drink]", "لُطفاً"],
+        explanation: "The pattern is: یِک + [container]-ِ + [drink] + لُطفاً. So 'A glass of milk please' is یِک لیوانِ شیر لُطفاً.",
+        pattern: "یِک + [container]-ِ + [drink] + لُطفاً",
+        patternTransliteration: "yek + [container]-e + [drink] + lotfan",
+        patternParts: ["یِک", "[container]-ِ", "[drink]", "لُطفاً"],
         patternExamples: [
-          { persian: "یِک لِیوان آب لُطفاً", transliteration: "yek leyvān āb lotfan", english: "A glass of water please" },
-          { persian: "یِک فِنجان قَهوه لُطفاً", transliteration: "yek fenjān qahve lotfan", english: "A cup of coffee please" },
+          { persian: "یِک لیوانِ آب لُطفاً", transliteration: "yek livān-e āb lotfan", english: "A glass of water please" },
+          { persian: "یِک فِنجانِ قَهوه لُطفاً", transliteration: "yek fenjān-e qahve lotfan", english: "A cup of coffee please" },
           { persian: "چای لُطفاً", transliteration: "chāy lotfan", english: "Tea please" },
         ],
         note: "لُطفاً (lotfan) means 'please' and makes any request polite. You can skip the container for a simpler request.",
@@ -7820,8 +7820,8 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 1,
         title: "Morning Tea",
         persianTitle: "چایِ صُبح",
-        text: "مادَر: صُبح بِخِیر! چای می‌خوری؟\nسارا: بَله، مَن چایِ داغ دوست دارَم.\nمادَر: شیر هَم می‌خواهی؟\nسارا: نَه مَرسی. یِک لِیوان آب لُطفاً.",
-        textTransliteration: "mādar: sobh bekheyr! chāy mikhori?\nsārā: bale, man chāy-e dāgh doost dāram.\nmādar: shir ham mikhāhi?\nsārā: na mersi. yek leyvān āb lotfan.",
+        text: "مادَر: صُبح بِخِیر! چای می‌خوری؟\nسارا: بَله، مَن چایِ داغ دوست دارَم.\nمادَر: شیر هَم می‌خواهی؟\nسارا: نَه مَرسی. یِک لیوانِ آب لُطفاً.",
+        textTransliteration: "mādar: sobh bekheyr! chāy mikhori?\nsārā: bale, man chāy-e dāgh doost dāram.\nmādar: shir ham mikhāhi?\nsārā: na mersi. yek livān-e āb lotfan.",
         textTranslation: "Mother: Good morning! Do you want tea?\nSara: Yes, I like hot tea.\nMother: Do you want milk too?\nSara: No thanks. A glass of water please.",
         questions: [
           {
@@ -7861,8 +7861,8 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 3,
         title: "Choosing Tea",
         persianTitle: "اِنتِخابِ چای",
-        text: "مریم: چای می‌خوری؟ چایِ سَبز یا چایِ سیاه؟\nرضا: چایِ سیاه لُطفاً. شیرین دوست دارَم.\nمریم: مَن چایِ سَبز می‌خورَم. آبِ پُرتِقال هَم داریم.\nرضا: نَه مَرسی، فَقَط یِک فِنجان چایِ سیاه.",
-        textTransliteration: "maryam: chāy mikhori? chāy-e sabz yā chāy-e siyāh?\nrezā: chāy-e siyāh lotfan. shirin doost dāram.\nmaryam: man chāy-e sabz mikhoram. āb-e porteghāl ham dārim.\nrezā: na mersi, faghat yek fenjān chāy-e siyāh.",
+        text: "مریم: چای می‌خوری؟ چایِ سَبز یا چایِ سیاه؟\nرضا: چایِ سیاه لُطفاً. شیرین دوست دارَم.\nمریم: مَن چایِ سَبز می‌خورَم. آبِ پُرتِقال هَم داریم.\nرضا: نَه مَرسی، فَقَط یِک فِنجانِ چایِ سیاه.",
+        textTransliteration: "maryam: chāy mikhori? chāy-e sabz yā chāy-e siyāh?\nrezā: chāy-e siyāh lotfan. shirin doost dāram.\nmaryam: man chāy-e sabz mikhoram. āb-e porteghāl ham dārim.\nrezā: na mersi, faghat yek fenjān-e chāy-e siyāh.",
         textTranslation: "Maryam: Do you want tea? Green tea or black tea?\nReza: Black tea please. I like it sweet.\nMaryam: I drink green tea. We also have orange juice.\nReza: No thanks, just a cup of black tea.",
         questions: [
           {
@@ -7881,8 +7881,8 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 4,
         title: "Juice or Milk?",
         persianTitle: "آب‌میوه یا شیر؟",
-        text: "مادَر: آبِ سیب می‌خواهی یا آبِ لیمو؟\nکودَک: آبِ لیمو تُرش اَست! آبِ سیب شیرین اَست.\nمادَر: شیرِ داغ چِطور؟\nکودَک: بَله! شیرِ داغ دوست دارَم.\nمادَر: یِک لِیوان شیرِ داغ لُطفاً.",
-        textTransliteration: "mādar: āb-e sib mikhāhi yā āb-e limu?\nkoodak: āb-e limu torsh ast! āb-e sib shirin ast.\nmādar: shir-e dāgh chetor?\nkoodak: bale! shir-e dāgh doost dāram.\nmādar: yek leyvān shir-e dāgh lotfan.",
+        text: "مادَر: آبِ سیب می‌خواهی یا آبِ لیمو؟\nکودَک: آبِ لیمو تُرش اَست! آبِ سیب شیرین اَست.\nمادَر: شیرِ داغ چِطور؟\nکودَک: بَله! شیرِ داغ دوست دارَم.\nمادَر: یِک لیوانِ شیرِ داغ لُطفاً.",
+        textTransliteration: "mādar: āb-e sib mikhāhi yā āb-e limu?\nkoodak: āb-e limu torsh ast! āb-e sib shirin ast.\nmādar: shir-e dāgh chetor?\nkoodak: bale! shir-e dāgh doost dāram.\nmādar: yek livān-e shir-e dāgh lotfan.",
         textTranslation: "Mother: Do you want apple juice or lemon juice?\nChild: Lemon juice is sour! Apple juice is sweet.\nMother: How about hot milk?\nChild: Yes! I like hot milk.\nMother: A glass of hot milk please.",
         questions: [
           {
@@ -7963,8 +7963,8 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 8,
         title: "A Bottle of Water",
         persianTitle: "یِک بُطری آب",
-        text: "سارا: خُنَک نیست. یِک بُطری آب سَرد لُطفاً.\nفروشَنده: با یَخ یا بی‌یَخ؟\nسارا: بی‌یَخ لُطفاً. مریم، تو چِه می‌خواهی؟\nمریم: یِک فِنجان چای با شِکَر لُطفاً.\nسارا: چایِ رَقیق یا غَلیظ؟\nمریم: رَقیق لُطفاً.",
-        textTransliteration: "sārā: khonak nist. yek botri āb-e sard lotfan.\nforushande: bā yakh yā bi-yakh?\nsārā: bi-yakh lotfan. maryam, to che mikhāhi?\nmaryam: yek fenjān chāy bā shekar lotfan.\nsārā: chāy-e raghigh yā ghaliz?\nmaryam: raghigh lotfan.",
+        text: "سارا: خُنَک نیست. یِک بُطری آبِ سَرد لُطفاً.\nفروشَنده: با یَخ یا بی‌یَخ؟\nسارا: بی‌یَخ لُطفاً. مریم، تو چِه می‌خواهی؟\nمریم: یِک فِنجانِ چای با شِکَر لُطفاً.\nسارا: چایِ رَقیق یا غَلیظ؟\nمریم: رَقیق لُطفاً.",
+        textTransliteration: "sārā: khonak nist. yek botri āb-e sard lotfan.\nforushande: bā yakh yā bi-yakh?\nsārā: bi-yakh lotfan. maryam, to che mikhāhi?\nmaryam: yek fenjān-e chāy bā shekar lotfan.\nsārā: chāy-e raghigh yā ghaliz?\nmaryam: raghigh lotfan.",
         textTranslation: "Sara: It's not cool. A bottle of cold water please.\nSeller: With ice or without ice?\nSara: Without ice please. Maryam, what do you want?\nMaryam: A cup of tea with sugar please.\nSara: Weak or strong tea?\nMaryam: Weak please.",
         questions: [
           {
@@ -7987,8 +7987,8 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 0,
         type: "word-order",
         instruction: "Put the words in order to say 'A glass of water please'",
-        tiles: ["لُطفاً", "آب", "لِیوان", "یِک"],
-        correctOrder: ["یِک", "لِیوان", "آب", "لُطفاً"],
+        tiles: ["لُطفاً", "آب", "لیوانِ", "یِک"],
+        correctOrder: ["یِک", "لیوانِ", "آب", "لُطفاً"],
       },
       // word-order 2
       {
@@ -8020,8 +8020,8 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       {
         id: 4,
         type: "build-word",
-        targetWord: "لِیوان",
-        targetWordTransliteration: "leyvān",
+        targetWord: "لیوان",
+        targetWordTransliteration: "livān",
         availableLetters: ["ل", "ی", "و", "ا", "ن", "م"],
         description: "Build the word for 'glass'",
       },
@@ -8040,8 +8040,8 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         id: 6,
         type: "word-order",
         instruction: "Put the words in order to say 'A cup of black tea please'",
-        tiles: ["لُطفاً", "سیاه", "فِنجان", "چایِ", "یِک"],
-        correctOrder: ["یِک", "فِنجان", "چایِ", "سیاه", "لُطفاً"],
+        tiles: ["لُطفاً", "سیاه", "فِنجانِ", "چایِ", "یِک"],
+        correctOrder: ["یِک", "فِنجانِ", "چایِ", "سیاه", "لُطفاً"],
       },
       // word-order 2
       {
