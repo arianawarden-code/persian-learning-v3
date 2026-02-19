@@ -1918,6 +1918,13 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Thank you for your help",
       },
       {
+        persian: "مَرسی",
+        transliteration: "mersi",
+        english: "thanks (informal)",
+        example: "مَرسی، خیلی خوب بود",
+        exampleTranslation: "Thanks, it was very good",
+      },
+      {
         persian: "خواهش می‌کنم",
         transliteration: "khāhesh mikonam",
         english: "you're welcome",

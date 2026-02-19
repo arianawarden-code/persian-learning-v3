@@ -810,11 +810,11 @@ function WritingPhase({
 
   let exerciseCard: React.ReactNode
   if (exercise.type === "word-order") {
-    exerciseCard = <WordOrderExerciseCard exercise={exercise} onComplete={handleExerciseComplete} isLast={isLast} />
+    exerciseCard = <WordOrderExerciseCard key={exercise.id} exercise={exercise} onComplete={handleExerciseComplete} isLast={isLast} />
   } else if (exercise.type === "build-word") {
-    exerciseCard = <BuildWordExerciseCard exercise={exercise} onComplete={handleExerciseComplete} isLast={isLast} />
+    exerciseCard = <BuildWordExerciseCard key={exercise.id} exercise={exercise} onComplete={handleExerciseComplete} isLast={isLast} />
   } else {
-    exerciseCard = <FillBlankExerciseCard exercise={exercise} onComplete={handleExerciseComplete} isLast={isLast} />
+    exerciseCard = <FillBlankExerciseCard key={exercise.id} exercise={exercise} onComplete={handleExerciseComplete} isLast={isLast} />
   }
 
   return (

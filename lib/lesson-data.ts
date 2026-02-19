@@ -45,7 +45,7 @@ export const module1Lessons: Lesson[] = [
     goal: "Master common greetings and polite expressions",
     timeEstimate: "7 min",
     phases: {
-      vocabIndices: [10, 20],   // اسم through هست
+      vocabIndices: [10, 21],   // نه through هست
       grammarIndex: 1,          // "Asking 'How are you?'"
       readingStoryIds: [2],      // "Greetings"
       writingIndices: [3, 6],   // word-order + fill-blank + build-word
@@ -59,7 +59,7 @@ export const module1Lessons: Lesson[] = [
     goal: "You’ll be able to say goodbye politely and use basic courtesy phrases in Persian",
     timeEstimate: "6 min",
     phases: {
-      vocabIndices: [20, 27],   // چه through یا
+      vocabIndices: [21, 28],   // چه through یا
       grammarIndex: 2,          // "Using است and هست"
       readingStoryIds: [3],      // "At Home"
       writingIndices: [6, 9],   // word-order + fill-blank + build-word
