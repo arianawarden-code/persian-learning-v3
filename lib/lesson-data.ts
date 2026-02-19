@@ -738,7 +738,57 @@ export const module15Lessons: Lesson[] = [
   },
 ]
 
+// ─── Lesson Definitions for Module 16 ───────────────────────────────
+
+export const module16Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Money & Payment Basics",
+    goal: "Learn basic money words like money, price, cheap, and expensive, plus payment words like cash, card, and account, and say how you pay using مَن + با + [method] + می‌پَردازَم",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],
+      grammarIndex: 0,
+      readingStoryIds: [1, 2],
+      writingIndices: [0, 6],
+    },
+    nextLesson: { id: "2", title: "Comparing Prices" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Comparing Prices",
+    goal: "Learn comparison words like more expensive, cheaper, and affordable, and say if the price is right using این + قِیمت + [adjective] + اَست",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],
+      grammarIndex: 1,
+      readingStoryIds: [3, 4],
+      writingIndices: [6, 12],
+    },
+    nextLesson: { id: "3", title: "Earning & Spending" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "Earning & Spending",
+    goal: "Learn earning and spending words like coin, banknote, income, and loan, and ask to borrow money using می‌تَوانَم + قَرض + بِگیرَم؟",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],
+      grammarIndex: 2,
+      readingStoryIds: [5, 6],
+      writingIndices: [12, 18],
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "16") {
+    return module16Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "15") {
     return module15Lessons.find((l) => l.id === lessonId)
   }
