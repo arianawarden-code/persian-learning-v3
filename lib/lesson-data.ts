@@ -785,7 +785,57 @@ export const module16Lessons: Lesson[] = [
   },
 ]
 
+// ─── Lesson Definitions for Module 17 ───────────────────────────────
+
+export const module17Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Basic Clothing Items",
+    goal: "Learn basic clothing words like shirt, pants, coat, shoe, and hat, and say what you are wearing using مَن + [clothing] + می‌پوشَم",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],
+      grammarIndex: 0,
+      readingStoryIds: [1, 2],
+      writingIndices: [0, 6],
+    },
+    nextLesson: { id: "2", title: "Accessories & Description" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Accessories & Description",
+    goal: "Learn accessories like glasses, watch, bag, scarf, and belt, plus color and size, and ask what color something is using رَنگِ + [item] + چیست؟",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],
+      grammarIndex: 1,
+      readingStoryIds: [3, 4],
+      writingIndices: [6, 12],
+    },
+    nextLesson: { id: "3", title: "Clothing Details & Shopping" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "Clothing Details & Shopping",
+    goal: "Learn clothing details like pocket, sleeve, button, zipper, and fabric, and say if clothes fit using این + [item] + اَندازه‌ام + هَست/نیست",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],
+      grammarIndex: 2,
+      readingStoryIds: [5, 6],
+      writingIndices: [12, 18],
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "17") {
+    return module17Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "16") {
     return module16Lessons.find((l) => l.id === lessonId)
   }
