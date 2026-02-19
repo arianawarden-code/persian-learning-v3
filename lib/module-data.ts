@@ -8205,6 +8205,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
   13: {
     moduleId: 13,
     vocabulary: [
+      // ── Lesson 1: Common Fruits (0-9) ──
       {
         persian: "سیب",
         transliteration: "sib",
@@ -8234,13 +8235,6 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Grapes are small",
       },
       {
-        persian: "اَناناس",
-        transliteration: "anānās",
-        english: "pineapple",
-        example: "اَناناس تُرش اَست",
-        exampleTranslation: "Pineapple is sour",
-      },
-      {
         persian: "توت‌فَرَنگی",
         transliteration: "toot-farangi",
         english: "strawberry",
@@ -8262,12 +8256,98 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Watermelon is refreshing",
       },
       {
-        persian: "خِیار",
-        transliteration: "khiyār",
-        english: "cucumber",
-        example: "خِیار با سالاد خوب اَست",
-        exampleTranslation: "Cucumber is good with salad",
+        persian: "مِلون",
+        transliteration: "melon",
+        english: "melon",
+        example: "مِلون شیرین اَست",
+        exampleTranslation: "Melon is sweet",
       },
+      {
+        persian: "لیمو",
+        transliteration: "limu",
+        english: "lemon",
+        example: "لیمو تُرش اَست",
+        exampleTranslation: "Lemon is sour",
+      },
+      {
+        persian: "انار",
+        transliteration: "anār",
+        english: "pomegranate",
+        example: "اَنار قِرمِز اَست",
+        exampleTranslation: "Pomegranate is red",
+      },
+      // ── Lesson 2: More Fruits (10-19) ──
+      {
+        persian: "اَناناس",
+        transliteration: "anānās",
+        english: "pineapple",
+        example: "اَناناس تُرش اَست",
+        exampleTranslation: "Pineapple is sour",
+      },
+      {
+        persian: "اَنبه",
+        transliteration: "anbe",
+        english: "mango",
+        example: "اَنبه خیلی شیرین اَست",
+        exampleTranslation: "Mango is very sweet",
+      },
+      {
+        persian: "هُلو",
+        transliteration: "holu",
+        english: "peach",
+        example: "هُلو نَرم اَست",
+        exampleTranslation: "Peach is soft",
+      },
+      {
+        persian: "آلو",
+        transliteration: "ālu",
+        english: "plum",
+        example: "آلو تُرش اَست",
+        exampleTranslation: "Plum is sour",
+      },
+      {
+        persian: "زِردآلو",
+        transliteration: "zerdālu",
+        english: "apricot",
+        example: "زِردآلو کُوچَک اَست",
+        exampleTranslation: "Apricot is small",
+      },
+      {
+        persian: "گِلابی",
+        transliteration: "golābi",
+        english: "pear",
+        example: "گِلابی آبدار اَست",
+        exampleTranslation: "Pear is juicy",
+      },
+      {
+        persian: "نارگیل",
+        transliteration: "nārgel",
+        english: "coconut",
+        example: "نارگیل شیرین اَست",
+        exampleTranslation: "Coconut is sweet",
+      },
+      {
+        persian: "زیتون",
+        transliteration: "zeytun",
+        english: "olive",
+        example: "زیتون با سالاد خوب اَست",
+        exampleTranslation: "Olives are good with salad",
+      },
+      {
+        persian: "خُرما",
+        transliteration: "khormā",
+        english: "date (fruit)",
+        example: "خُرما شیرین و خوشمَزِه اَست",
+        exampleTranslation: "Dates are sweet and delicious",
+      },
+      {
+        persian: "سالاد",
+        transliteration: "sālād",
+        english: "salad",
+        example: "سالاد با میوه خوب اَست",
+        exampleTranslation: "Salad with fruit is good",
+      },
+      // ── Lesson 3: Common Vegetables (20-29) ──
       {
         persian: "گُوجِه",
         transliteration: "goje",
@@ -8290,13 +8370,6 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Onion is strong",
       },
       {
-        persian: "سیر",
-        transliteration: "sir",
-        english: "garlic",
-        example: "سیر بویِ قَوی دارد",
-        exampleTranslation: "Garlic has a strong smell",
-      },
-      {
         persian: "هَویج",
         transliteration: "havij",
         english: "carrot",
@@ -8304,18 +8377,11 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Carrot is orange",
       },
       {
-        persian: "بِروکُلی",
-        transliteration: "berokoli",
-        english: "broccoli",
-        example: "بِروکُلی سَبز اَست",
-        exampleTranslation: "Broccoli is green",
-      },
-      {
-        persian: "اِسفِناج",
-        transliteration: "esfenāj",
-        english: "spinach",
-        example: "اِسفِناج سالم اَست",
-        exampleTranslation: "Spinach is healthy",
+        persian: "خِیار",
+        transliteration: "khiyār",
+        english: "cucumber",
+        example: "خِیار با سالاد خوب اَست",
+        exampleTranslation: "Cucumber is good with salad",
       },
       {
         persian: "کاهو",
@@ -8325,13 +8391,6 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Lettuce is in the salad",
       },
       {
-        persian: "بادِمجون",
-        transliteration: "bādemjoon",
-        english: "eggplant",
-        example: "بادِمجون بَنَفش اَست",
-        exampleTranslation: "Eggplant is purple",
-      },
-      {
         persian: "فِلِفل",
         transliteration: "felfel",
         english: "pepper",
@@ -8339,11 +8398,18 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Pepper is spicy",
       },
       {
-        persian: "فِلِفلِ دُلمِه‌ای",
-        transliteration: "felfel-e dolme-i",
-        english: "bell pepper",
-        example: "فِلِفلِ دُلمِه‌ای شیرین اَست",
-        exampleTranslation: "Bell pepper is sweet",
+        persian: "بادِمجون",
+        transliteration: "bādemjoon",
+        english: "eggplant",
+        example: "بادِمجون بَنَفش اَست",
+        exampleTranslation: "Eggplant is purple",
+      },
+      {
+        persian: "اِسفِناج",
+        transliteration: "esfenāj",
+        english: "spinach",
+        example: "اِسفِناج سالم اَست",
+        exampleTranslation: "Spinach is healthy",
       },
       {
         persian: "ذُرَت",
@@ -8352,82 +8418,13 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         example: "ذُرَت زَرد اَست",
         exampleTranslation: "Corn is yellow",
       },
+      // ── Lesson 4: More Vegetables & Legumes (30-39) ──
       {
-        persian: "نَخود",
-        transliteration: "nokhod",
-        english: "chickpea",
-        example: "نَخود با غذا خوب اَست",
-        exampleTranslation: "Chickpeas are good with food",
-      },
-      {
-        persian: "لُوبیا",
-        transliteration: "lubiyā",
-        english: "beans",
-        example: "لُوبیا پُختِه اَست",
-        exampleTranslation: "The beans are cooked",
-      },
-      {
-        persian: "نارگیل",
-        transliteration: "nārgel",
-        english: "coconut",
-        example: "نارگیل شیرین اَست",
-        exampleTranslation: "Coconut is sweet",
-      },
-      {
-        persian: "اَنبه",
-        transliteration: "anbe",
-        english: "mango",
-        example: "اَنبه خیلی شیرین اَست",
-        exampleTranslation: "Mango is very sweet",
-      },
-      {
-        persian: "آلو",
-        transliteration: "ālu",
-        english: "plum",
-        example: "آلو تُرش اَست",
-        exampleTranslation: "Plum is sour",
-      },
-      {
-        persian: "هُلو",
-        transliteration: "holu",
-        english: "peach",
-        example: "هُلو نَرم اَست",
-        exampleTranslation: "Peach is soft",
-      },
-      {
-        persian: "زِردآلو",
-        transliteration: "zerdālu",
-        english: "apricot",
-        example: "زِردآلو کُوچَک اَست",
-        exampleTranslation: "Apricot is small",
-      },
-      {
-        persian: "گِلابی",
-        transliteration: "golābi",
-        english: "pear",
-        example: "گِلابی آبدار اَست",
-        exampleTranslation: "Pear is juicy",
-      },
-      {
-        persian: "کَرفَس",
-        transliteration: "karafs",
-        english: "celery",
-        example: "کَرفَس تِرد اَست",
-        exampleTranslation: "Celery is crunchy",
-      },
-      {
-        persian: "کَدُو",
-        transliteration: "kadu",
-        english: "zucchini",
-        example: "کَدُو سَبز اَست",
-        exampleTranslation: "Zucchini is green",
-      },
-      {
-        persian: "چُغَندَر",
-        transliteration: "choghondar",
-        english: "beet",
-        example: "چُغَندَر بُنفِش اَست",
-        exampleTranslation: "Beet is purple",
+        persian: "سیر",
+        transliteration: "sir",
+        english: "garlic",
+        example: "سیر بویِ قَوی دارد",
+        exampleTranslation: "Garlic has a strong smell",
       },
       {
         persian: "قارچ",
@@ -8444,45 +8441,554 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Cabbage is white",
       },
       {
-        persian: "کَلَم‌بروکُلی",
-        transliteration: "kalam-berokoli",
+        persian: "کَدُو",
+        transliteration: "kadu",
+        english: "zucchini",
+        example: "کَدُو سَبز اَست",
+        exampleTranslation: "Zucchini is green",
+      },
+      {
+        persian: "چُغَندَر",
+        transliteration: "choghondar",
+        english: "beet",
+        example: "چُغَندَر بُنفِش اَست",
+        exampleTranslation: "Beet is purple",
+      },
+      {
+        persian: "بِروکُلی",
+        transliteration: "berokoli",
         english: "broccoli",
-        example: "کَلَم‌بروکُلی سالم اَست",
-        exampleTranslation: "Broccoli is healthy",
+        example: "بِروکُلی سَبز اَست",
+        exampleTranslation: "Broccoli is green",
       },
       {
-        persian: "لیمو",
-        transliteration: "limu",
-        english: "lemon",
-        example: "لیمو تُرش اَست",
-        exampleTranslation: "Lemon is sour",
+        persian: "لُوبیا",
+        transliteration: "lubiyā",
+        english: "beans",
+        example: "لُوبیا پُختِه اَست",
+        exampleTranslation: "The beans are cooked",
       },
       {
-        persian: "انار",
-        transliteration: "anār",
-        english: "pomegranate",
-        example: "اَنار قِرمِز اَست",
-        exampleTranslation: "Pomegranate is red",
+        persian: "نَخود",
+        transliteration: "nokhod",
+        english: "chickpea",
+        example: "نَخود با غذا خوب اَست",
+        exampleTranslation: "Chickpeas are good with food",
       },
       {
-        persian: "مِلون",
-        transliteration: "melon",
-        english: "melon",
-        example: "مِلون شیرین اَست",
-        exampleTranslation: "Melon is sweet",
+        persian: "فِلِفلِ دُلمِه‌ای",
+        transliteration: "felfel-e dolme-i",
+        english: "bell pepper",
+        example: "فِلِفلِ دُلمِه‌ای شیرین اَست",
+        exampleTranslation: "Bell pepper is sweet",
       },
       {
-        persian: "زیتون",
-        transliteration: "zeytun",
-        english: "olive",
-        example: "زیتون با سالاد خوب اَست",
-        exampleTranslation: "Olives are good with salad",
+        persian: "کَرفَس",
+        transliteration: "karafs",
+        english: "celery",
+        example: "کَرفَس تِرد اَست",
+        exampleTranslation: "Celery is crunchy",
+      },
+    ],
+    grammar: [
+      // ── Lesson 1 grammar: Saying what you want to eat ──
+      {
+        id: 0,
+        type: "pattern-intro" as const,
+        instruction: "Learn how to say what fruit you want to eat",
+        teachingContent: {
+          title: "Saying What You Want to Eat",
+          explanation: "To say 'I want [fruit]', use: من + [fruit] + می‌خواهم (mikhāham = I want). This pattern works for any food. می‌خواهم is the present tense of 'to want'. You can also add لُطفاً (please) at the end to be polite.",
+          examples: [
+            { label: "I want an apple", persian: "مَن سیب می‌خواهَم", description: "man sib mikhāham" },
+            { label: "I want watermelon", persian: "مَن هَندوانه می‌خواهَم", description: "man handevāne mikhāham" },
+            { label: "I want grapes please", persian: "مَن اِنگور می‌خواهَم لُطفاً", description: "man angur mikhāham lotfan" },
+          ],
+        },
+        question: "How do you say 'I want a banana'?",
+        options: ["مَن موز می‌خواهَم", "موز می‌خورَم مَن", "مَن موز اَست", "موز دارَم مَن"],
+        correctAnswer: 0,
+        explanation: "The pattern is: من + [fruit] + می‌خواهم. So 'I want a banana' is مَن موز می‌خواهَم.",
+        pattern: "من + [fruit] + می‌خواهم",
+        patternTransliteration: "man + [fruit] + mikhāham",
+        patternParts: ["من", "[fruit]", "می‌خواهم"],
+        patternExamples: [
+          { persian: "مَن سیب می‌خواهَم", transliteration: "man sib mikhāham", english: "I want an apple" },
+          { persian: "مَن پُرتِقال می‌خواهَم", transliteration: "man porteghāl mikhāham", english: "I want an orange" },
+          { persian: "مَن لیمو می‌خواهَم", transliteration: "man limu mikhāham", english: "I want a lemon" },
+        ],
+        note: "می‌خواهم (mikhāham) means 'I want'. Change to می‌خواهد (mikhāhad) for he/she wants.",
+      },
+      // ── Lesson 2 grammar: Saying you like something a lot ──
+      {
+        id: 1,
+        type: "pattern-intro" as const,
+        instruction: "Learn how to say you like a fruit a lot",
+        teachingContent: {
+          title: "Saying You Like Something a Lot",
+          explanation: "To say 'I like [fruit] a lot', use: من + [fruit] + خیلی دوست دارم (kheili doost dāram). The word خیلی (kheili = very/a lot) makes the liking stronger. You already know دوست دارم from earlier modules — now add خیلی before it for emphasis.",
+          examples: [
+            { label: "I like mango a lot", persian: "مَن اَنبه خیلی دوست دارَم", description: "man anbe kheili doost dāram" },
+            { label: "I like peach a lot", persian: "مَن هُلو خیلی دوست دارَم", description: "man holu kheili doost dāram" },
+            { label: "I like dates a lot", persian: "مَن خُرما خیلی دوست دارَم", description: "man khormā kheili doost dāram" },
+          ],
+        },
+        question: "How do you say 'I like pineapple a lot'?",
+        options: ["مَن اَناناس خیلی دوست دارَم", "اَناناس مَن دوست دارَم", "مَن اَناناس اَست خیلی", "خیلی اَناناس مَن دارَم"],
+        correctAnswer: 0,
+        explanation: "The pattern is: من + [fruit] + خیلی دوست دارم. So 'I like pineapple a lot' is مَن اَناناس خیلی دوست دارَم.",
+        pattern: "من + [fruit] + خیلی دوست دارم",
+        patternTransliteration: "man + [fruit] + kheili doost dāram",
+        patternParts: ["من", "[fruit]", "خیلی دوست دارم"],
+        patternExamples: [
+          { persian: "مَن اَنبه خیلی دوست دارَم", transliteration: "man anbe kheili doost dāram", english: "I like mango a lot" },
+          { persian: "مَن گِلابی خیلی دوست دارَم", transliteration: "man golābi kheili doost dāram", english: "I like pear a lot" },
+          { persian: "مَن زیتون خیلی دوست دارَم", transliteration: "man zeytun kheili doost dāram", english: "I like olives a lot" },
+        ],
+        note: "خیلی (kheili) means 'very' or 'a lot'. It comes right before دوست دارم to intensify the meaning.",
+      },
+      // ── Lesson 3 grammar: Asking what someone wants ──
+      {
+        id: 2,
+        type: "pattern-intro" as const,
+        instruction: "Learn how to ask what food someone wants",
+        teachingContent: {
+          title: "Asking What Someone Wants",
+          explanation: "To ask 'What [food] do you want?', use: چِه + [food type] + می‌خواهید؟ (che ... mikhāhid?). می‌خواهید is the polite/plural form of 'you want'. Use this when speaking to someone politely or to a group.",
+          examples: [
+            { label: "What vegetable do you want?", persian: "چِه سَبزی می‌خواهید؟", description: "che sabzi mikhāhid?" },
+            { label: "What fruit do you want?", persian: "چِه میوه‌ای می‌خواهید؟", description: "che mive-i mikhāhid?" },
+            { label: "What food do you want?", persian: "چِه غَذایی می‌خواهید؟", description: "che ghazāyi mikhāhid?" },
+          ],
+        },
+        question: "How do you politely ask 'What vegetable do you want?'?",
+        options: ["چِه سَبزی می‌خواهید؟", "سَبزی می‌خواهَم چِه", "مَن سَبزی می‌خواهَم", "سَبزی چِه اَست؟"],
+        correctAnswer: 0,
+        explanation: "The pattern is: چه + [food type] + می‌خواهید؟ So 'What vegetable do you want?' is چِه سَبزی می‌خواهید؟",
+        pattern: "چه + [food type] + می‌خواهید؟",
+        patternTransliteration: "che + [food type] + mikhāhid?",
+        patternParts: ["چه", "[food type]", "می‌خواهید؟"],
+        patternExamples: [
+          { persian: "چِه سَبزی می‌خواهید؟", transliteration: "che sabzi mikhāhid?", english: "What vegetable do you want?" },
+          { persian: "چِه میوه‌ای می‌خواهید؟", transliteration: "che mive-i mikhāhid?", english: "What fruit do you want?" },
+          { persian: "چِه غَذایی می‌خواهید؟", transliteration: "che ghazāyi mikhāhid?", english: "What food do you want?" },
+        ],
+        note: "می‌خواهید (mikhāhid) is the polite 'you want'. Use می‌خواهی (mikhāhi) for informal speech with friends.",
+      },
+      // ── Lesson 4 grammar: Listing ingredients ──
+      {
+        id: 3,
+        type: "pattern-intro" as const,
+        instruction: "Learn how to list ingredients in a dish",
+        teachingContent: {
+          title: "Listing Ingredients",
+          explanation: "To describe a dish with its ingredients, use: [food] + با + [item] + و + [item] (bā = with, va = and). This pattern lets you list what something is made with. You can chain multiple items with و.",
+          examples: [
+            { label: "Salad with lettuce and tomato", persian: "سالاد با کاهو و گُوجِه", description: "sālād bā kāhu va goje" },
+            { label: "Soup with potato and carrot", persian: "سوپ با سیب‌زَمینی و هَویج", description: "sup bā sib-zamini va havij" },
+            { label: "Rice with beans and mushroom", persian: "بِرِنج با لُوبیا و قارچ", description: "berenj bā lubiyā va ghārch" },
+          ],
+        },
+        question: "How do you say 'Salad with cucumber and pepper'?",
+        options: ["سالاد با خِیار و فِلِفل", "خِیار و فِلِفل سالاد", "سالاد خِیار فِلِفل با", "با سالاد خِیار و فِلِفل"],
+        correctAnswer: 0,
+        explanation: "The pattern is: [food] + با + [item] + و + [item]. So 'Salad with cucumber and pepper' is سالاد با خِیار و فِلِفل.",
+        pattern: "[food] + با + [item] + و + [item]",
+        patternTransliteration: "[food] + bā + [item] + va + [item]",
+        patternParts: ["[food]", "با", "[item]", "و", "[item]"],
+        patternExamples: [
+          { persian: "سالاد با کاهو و گُوجِه", transliteration: "sālād bā kāhu va goje", english: "Salad with lettuce and tomato" },
+          { persian: "غَذا با سیر و پِیاز", transliteration: "ghazā bā sir va piyāz", english: "Food with garlic and onion" },
+          { persian: "سوپ با کَلَم و هَویج", transliteration: "sup bā kalam va havij", english: "Soup with cabbage and carrot" },
+        ],
+        note: "با (bā) means 'with' and و (va) means 'and'. You can list more than two items: با A و B و C.",
+      },
+    ],
+    reading: [
+      // ── Lesson 1 stories (ids 1, 2) ──
+      {
+        id: 1,
+        title: "At the Fruit Shop",
+        persianTitle: "دَر میوه‌فُروشی",
+        text: "سارا: سَلام! سیب داری؟\nفروشَنده: بَله! سیب تازِه اَست. موز هَم داریم.\nسارا: مَن سیب می‌خواهَم. پُرتِقال هَم داری؟\nفروشَنده: بَله. پُرتِقال خیلی شیرین اَست.\nسارا: دو تا سیب و سِه تا پُرتِقال لُطفاً.",
+        textTransliteration: "sārā: salām! sib dāri?\nforushande: bale! sib tāze ast. moz ham dārim.\nsārā: man sib mikhāham. porteghāl ham dāri?\nforushande: bale. porteghāl kheili shirin ast.\nsārā: do tā sib va se tā porteghāl lotfan.",
+        textTranslation: "Sara: Hello! Do you have apples?\nSeller: Yes! The apples are fresh. We also have bananas.\nSara: I want apples. Do you also have oranges?\nSeller: Yes. The oranges are very sweet.\nSara: Two apples and three oranges please.",
+        questions: [
+          {
+            question: "What does Sara want first?",
+            options: ["Bananas", "Apples", "Oranges", "Lemons"],
+            correctAnswer: 1,
+          },
+          {
+            question: "How are the oranges described?",
+            options: ["Sour", "Small", "Very sweet", "Fresh"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      {
+        id: 2,
+        title: "Summer Fruits",
+        persianTitle: "میوه‌هایِ تابِستان",
+        text: "علی: تابِستان چِه میوه‌ای دوست داری؟\nرضا: مَن هَندوانه دوست دارَم. خُنَک اَست.\nعلی: مَن اِنگور و توت‌فَرَنگی دوست دارَم.\nرضا: توت‌فَرَنگی خوشمَزِه اَست! گیلاس هَم خوب اَست.\nعلی: بَله، گیلاس قِرمِز و شیرین اَست.",
+        textTransliteration: "ali: tābestān che mive-i doost dāri?\nrezā: man handevāne doost dāram. khonak ast.\nali: man angur va toot-farangi doost dāram.\nrezā: toot-farangi khoshmaze ast! gilās ham khoob ast.\nali: bale, gilās ghermez va shirin ast.",
+        textTranslation: "Ali: What fruit do you like in summer?\nReza: I like watermelon. It's refreshing.\nAli: I like grapes and strawberries.\nReza: Strawberries are delicious! Cherries are also good.\nAli: Yes, cherries are red and sweet.",
+        questions: [
+          {
+            question: "Why does Reza like watermelon?",
+            options: ["It is sweet", "It is refreshing", "It is red", "It is big"],
+            correctAnswer: 1,
+          },
+          {
+            question: "How does Ali describe cherries?",
+            options: ["Sour and small", "Red and sweet", "Green and fresh", "Big and cold"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      // ── Lesson 2 stories (ids 3, 4) ──
+      {
+        id: 3,
+        title: "Tropical Fruits",
+        persianTitle: "میوه‌هایِ گَرمسیری",
+        text: "مریم: اَنبه دوست داری؟\nسارا: بَله! مَن اَنبه خیلی دوست دارَم. شیرین اَست.\nمریم: مَن اَناناس دوست دارَم. تُرش و خوشمَزِه اَست.\nسارا: هُلو هَم خوب اَست. نَرم و شیرین اَست.\nمریم: بَله! مَن هُلو و زِردآلو هَم دوست دارَم.",
+        textTransliteration: "maryam: anbe doost dāri?\nsārā: bale! man anbe kheili doost dāram. shirin ast.\nmaryam: man anānās doost dāram. torsh va khoshmaze ast.\nsārā: holu ham khoob ast. narm va shirin ast.\nmaryam: bale! man holu va zerdālu ham doost dāram.",
+        textTranslation: "Maryam: Do you like mango?\nSara: Yes! I like mango a lot. It's sweet.\nMaryam: I like pineapple. It's sour and delicious.\nSara: Peach is also good. It's soft and sweet.\nMaryam: Yes! I also like peach and apricot.",
+        questions: [
+          {
+            question: "How does Sara feel about mango?",
+            options: ["She doesn't like it", "She likes it a lot", "It is sour", "It is too soft"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What does Maryam think about pineapple?",
+            options: ["It is sweet", "It is bitter", "It is sour and delicious", "It is soft"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      {
+        id: 4,
+        title: "Fruit Salad",
+        persianTitle: "سالادِ میوه",
+        text: "رضا: سالاد می‌خواهی؟ سالادِ میوه دارَم.\nعلی: چِه میوه‌ای تویِ سالاد اَست؟\nرضا: گِلابی و خُرما و نارگیل.\nعلی: خُرما شیرین اَست! مَن خُرما خیلی دوست دارَم.\nرضا: زیتون هَم می‌خواهی؟\nعلی: نَه مَرسی، فَقَط سالادِ میوه.",
+        textTransliteration: "rezā: sālād mikhāhi? sālād-e mive dāram.\nali: che mive-i tuye sālād ast?\nrezā: golābi va khormā va nārgel.\nali: khormā shirin ast! man khormā kheili doost dāram.\nrezā: zeytun ham mikhāhi?\nali: na mersi, faghat sālād-e mive.",
+        textTranslation: "Reza: Do you want salad? I have fruit salad.\nAli: What fruit is in the salad?\nReza: Pear and dates and coconut.\nAli: Dates are sweet! I like dates a lot.\nReza: Do you also want olives?\nAli: No thanks, just the fruit salad.",
+        questions: [
+          {
+            question: "What fruits are in the salad?",
+            options: ["Apple and banana", "Pear, dates, and coconut", "Mango and peach", "Grapes and cherry"],
+            correctAnswer: 1,
+          },
+          {
+            question: "Does Ali want olives?",
+            options: ["Yes", "No, just fruit salad", "Yes, with salad", "He wants both"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      // ── Lesson 3 stories (ids 5, 6) ──
+      {
+        id: 5,
+        title: "Buying Vegetables",
+        persianTitle: "خَریدِ سَبزی",
+        text: "مادَر: سیب‌زَمینی و پِیاز می‌خواهَم.\nفروشَنده: چِه سَبزی دیگَری می‌خواهید؟\nمادَر: هَویج و خِیار هَم لُطفاً.\nفروشَنده: کاهو تازِه داریم. می‌خواهید؟\nمادَر: بَله! کاهو برایِ سالاد خوب اَست.",
+        textTransliteration: "mādar: sib-zamini va piyāz mikhāham.\nforushande: che sabzi digari mikhāhid?\nmādar: havij va khiyār ham lotfan.\nforushande: kāhu tāze dārim. mikhāhid?\nmādar: bale! kāhu barāye sālād khoob ast.",
+        textTranslation: "Mother: I want potatoes and onions.\nSeller: What other vegetables do you want?\nMother: Carrots and cucumbers too please.\nSeller: We have fresh lettuce. Do you want some?\nMother: Yes! Lettuce is good for salad.",
+        questions: [
+          {
+            question: "What does the mother want first?",
+            options: ["Carrots and cucumbers", "Potatoes and onions", "Lettuce and tomato", "Pepper and eggplant"],
+            correctAnswer: 1,
+          },
+          {
+            question: "Why does the mother want lettuce?",
+            options: ["It is cheap", "It is fresh and good for salad", "She likes it a lot", "The seller says so"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      {
+        id: 6,
+        title: "What's for Dinner?",
+        persianTitle: "شام چِه داریم؟",
+        text: "بابا: شام چِه غَذایی داریم؟\nمادَر: غَذا با بادِمجون و گُوجِه و فِلِفل.\nبابا: اِسفِناج هَم می‌خواهَم.\nمادَر: بَله، اِسفِناج سالم اَست. ذُرَت هَم داریم.\nبابا: خوب اَست! مَن اِسفِناج و ذُرَت دوست دارَم.",
+        textTransliteration: "bābā: shām che ghazāyi dārim?\nmādar: ghazā bā bādemjoon va goje va felfel.\nbābā: esfenāj ham mikhāham.\nmādar: bale, esfenāj sālem ast. zorrat ham dārim.\nbābā: khoob ast! man esfenāj va zorrat doost dāram.",
+        textTranslation: "Dad: What food do we have for dinner?\nMom: Food with eggplant, tomato, and pepper.\nDad: I also want spinach.\nMom: Yes, spinach is healthy. We also have corn.\nDad: Good! I like spinach and corn.",
+        questions: [
+          {
+            question: "What vegetables are in the dinner?",
+            options: ["Potato and carrot", "Eggplant, tomato, and pepper", "Lettuce and cucumber", "Corn and spinach"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What does Dad also want?",
+            options: ["Cucumber", "Lettuce", "Spinach", "Carrot"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      // ── Lesson 4 stories (ids 7, 8) ──
+      {
+        id: 7,
+        title: "Making Soup",
+        persianTitle: "دُرُستِ کَردَنِ سوپ",
+        text: "سارا: سوپ با چِه سَبزی دُرُست می‌کُنی؟\nمادَر: با سیر و قارچ و کَلَم.\nسارا: کَدُو هَم می‌خواهی؟\nمادَر: بَله! سوپ با کَدُو و چُغَندَر خوشمَزِه اَست.\nسارا: بِروکُلی هَم اِضافِه کُن!\nمادَر: خوب اَست. بِروکُلی سالم اَست.",
+        textTransliteration: "sārā: sup bā che sabzi dorost mikoni?\nmādar: bā sir va ghārch va kalam.\nsārā: kadu ham mikhāhi?\nmādar: bale! sup bā kadu va choghondar khoshmaze ast.\nsārā: berokoli ham ezāfe kon!\nmādar: khoob ast. berokoli sālem ast.",
+        textTranslation: "Sara: What vegetables are you making soup with?\nMom: With garlic, mushrooms, and cabbage.\nSara: Do you also want zucchini?\nMom: Yes! Soup with zucchini and beets is delicious.\nSara: Add broccoli too!\nMom: Okay. Broccoli is healthy.",
+        questions: [
+          {
+            question: "What is Mom making soup with?",
+            options: ["Beans and chickpeas", "Garlic, mushrooms, and cabbage", "Potato and carrot", "Celery and pepper"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What does Sara want to add?",
+            options: ["Beans", "Celery", "Broccoli", "Onion"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      {
+        id: 8,
+        title: "Rice with Vegetables",
+        persianTitle: "بِرِنج با سَبزی",
+        text: "علی: ناهار چِه می‌خوری؟\nرضا: بِرِنج با لُوبیا و نَخود.\nعلی: فِلِفلِ دُلمِه‌ای هَم داری؟\nرضا: بَله! فِلِفلِ دُلمِه‌ای شیرین اَست. کَرفَس هَم دارَم.\nعلی: مَن بِرِنج با لُوبیا و نَخود می‌خواهَم لُطفاً.\nرضا: بِفَرما!",
+        textTransliteration: "ali: nāhār che mikhori?\nrezā: berenj bā lubiyā va nokhod.\nali: felfel-e dolme-i ham dāri?\nrezā: bale! felfel-e dolme-i shirin ast. karafs ham dāram.\nali: man berenj bā lubiyā va nokhod mikhāham lotfan.\nrezā: befarmā!",
+        textTranslation: "Ali: What are you eating for lunch?\nReza: Rice with beans and chickpeas.\nAli: Do you also have bell pepper?\nReza: Yes! Bell pepper is sweet. I also have celery.\nAli: I want rice with beans and chickpeas please.\nReza: Here you go!",
+        questions: [
+          {
+            question: "What is Reza eating?",
+            options: ["Soup with vegetables", "Rice with beans and chickpeas", "Salad with lettuce", "Bread with cheese"],
+            correctAnswer: 1,
+          },
+          {
+            question: "How is bell pepper described?",
+            options: ["Spicy", "Sour", "Sweet", "Bitter"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+    ],
+    writing: [
+      // ── Lesson 1 writing (indices 0-5) ──
+      // word-order 1
+      {
+        id: 0,
+        type: "word-order",
+        instruction: "Put the words in order to say 'I want an apple'",
+        tiles: ["می‌خواهَم", "سیب", "مَن"],
+        correctOrder: ["مَن", "سیب", "می‌خواهَم"],
+      },
+      // word-order 2
+      {
+        id: 1,
+        type: "word-order",
+        instruction: "Put the words in order to say 'Watermelon is refreshing'",
+        tiles: ["اَست", "خُنَک", "هَندوانه"],
+        correctOrder: ["هَندوانه", "خُنَک", "اَست"],
+      },
+      // fill-blank 1
+      {
+        id: 2,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "مَن ___ می‌خواهَم (I want a banana)",
+        choices: ["سیب", "موز", "لیمو", "انار"],
+        correctChoice: "موز",
+      },
+      // fill-blank 2
+      {
+        id: 3,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "___ تُرش اَست (Lemon is sour)",
+        choices: ["موز", "سیب", "لیمو", "مِلون"],
+        correctChoice: "لیمو",
+      },
+      // build-word 1
+      {
+        id: 4,
+        type: "build-word",
+        targetWord: "سیب",
+        targetWordTransliteration: "sib",
+        availableLetters: ["س", "ی", "ب", "ن"],
+        description: "Build the word for 'apple'",
+      },
+      // build-word 2
+      {
+        id: 5,
+        type: "build-word",
+        targetWord: "انار",
+        targetWordTransliteration: "anār",
+        availableLetters: ["ا", "ن", "ا", "ر", "م"],
+        description: "Build the word for 'pomegranate'",
+      },
+      // ── Lesson 2 writing (indices 6-11) ──
+      // word-order 1
+      {
+        id: 6,
+        type: "word-order",
+        instruction: "Put the words in order to say 'I like mango a lot'",
+        tiles: ["دارَم", "دوست", "خیلی", "اَنبه", "مَن"],
+        correctOrder: ["مَن", "اَنبه", "خیلی", "دوست", "دارَم"],
+      },
+      // word-order 2
+      {
+        id: 7,
+        type: "word-order",
+        instruction: "Put the words in order to say 'Pear is juicy'",
+        tiles: ["اَست", "آبدار", "گِلابی"],
+        correctOrder: ["گِلابی", "آبدار", "اَست"],
+      },
+      // fill-blank 1
+      {
+        id: 8,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "مَن ___ خیلی دوست دارَم (I like peach a lot)",
+        choices: ["اَنبه", "هُلو", "آلو", "نارگیل"],
+        correctChoice: "هُلو",
+      },
+      // fill-blank 2
+      {
+        id: 9,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "___ شیرین اَست (Coconut is sweet)",
+        choices: ["زیتون", "آلو", "نارگیل", "لیمو"],
+        correctChoice: "نارگیل",
+      },
+      // build-word 1
+      {
+        id: 10,
+        type: "build-word",
+        targetWord: "خُرما",
+        targetWordTransliteration: "khormā",
+        availableLetters: ["خ", "ر", "م", "ا", "ن"],
+        description: "Build the word for 'date (fruit)'",
+      },
+      // build-word 2
+      {
+        id: 11,
+        type: "build-word",
+        targetWord: "سالاد",
+        targetWordTransliteration: "sālād",
+        availableLetters: ["س", "ا", "ل", "ا", "د", "ر"],
+        description: "Build the word for 'salad'",
+      },
+      // ── Lesson 3 writing (indices 12-17) ──
+      // word-order 1
+      {
+        id: 12,
+        type: "word-order",
+        instruction: "Put the words in order to say 'What vegetable do you want?'",
+        tiles: ["می‌خواهید؟", "سَبزی", "چِه"],
+        correctOrder: ["چِه", "سَبزی", "می‌خواهید؟"],
+      },
+      // word-order 2
+      {
+        id: 13,
+        type: "word-order",
+        instruction: "Put the words in order to say 'Eggplant is purple'",
+        tiles: ["اَست", "بَنَفش", "بادِمجون"],
+        correctOrder: ["بادِمجون", "بَنَفش", "اَست"],
+      },
+      // fill-blank 1
+      {
+        id: 14,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "___ نارَنجی اَست (Carrot is orange)",
+        choices: ["پِیاز", "هَویج", "خِیار", "ذُرَت"],
+        correctChoice: "هَویج",
+      },
+      // fill-blank 2
+      {
+        id: 15,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "کاهو تویِ ___ اَست (Lettuce is in the salad)",
+        choices: ["غَذا", "سوپ", "سالاد", "بِرِنج"],
+        correctChoice: "سالاد",
+      },
+      // build-word 1
+      {
+        id: 16,
+        type: "build-word",
+        targetWord: "پِیاز",
+        targetWordTransliteration: "piyāz",
+        availableLetters: ["پ", "ی", "ا", "ز", "م"],
+        description: "Build the word for 'onion'",
+      },
+      // build-word 2
+      {
+        id: 17,
+        type: "build-word",
+        targetWord: "هَویج",
+        targetWordTransliteration: "havij",
+        availableLetters: ["ه", "و", "ی", "ج", "ن"],
+        description: "Build the word for 'carrot'",
+      },
+      // ── Lesson 4 writing (indices 18-23) ──
+      // word-order 1
+      {
+        id: 18,
+        type: "word-order",
+        instruction: "Put the words in order to say 'Salad with lettuce and tomato'",
+        tiles: ["گُوجِه", "و", "کاهو", "با", "سالاد"],
+        correctOrder: ["سالاد", "با", "کاهو", "و", "گُوجِه"],
+      },
+      // word-order 2
+      {
+        id: 19,
+        type: "word-order",
+        instruction: "Put the words in order to say 'Broccoli is green'",
+        tiles: ["اَست", "سَبز", "بِروکُلی"],
+        correctOrder: ["بِروکُلی", "سَبز", "اَست"],
+      },
+      // fill-blank 1
+      {
+        id: 20,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "سوپ ___ قارچ و کَلَم (Soup with mushrooms and cabbage)",
+        choices: ["و", "از", "با", "بِدون"],
+        correctChoice: "با",
+      },
+      // fill-blank 2
+      {
+        id: 21,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "لُوبیا ___ اَست (Beans are cooked)",
+        choices: ["تازِه", "سَبز", "پُختِه", "سَرد"],
+        correctChoice: "پُختِه",
+      },
+      // build-word 1
+      {
+        id: 22,
+        type: "build-word",
+        targetWord: "قارچ",
+        targetWordTransliteration: "ghārch",
+        availableLetters: ["ق", "ا", "ر", "چ", "م"],
+        description: "Build the word for 'mushroom'",
+      },
+      // build-word 2
+      {
+        id: 23,
+        type: "build-word",
+        targetWord: "نَخود",
+        targetWordTransliteration: "nokhod",
+        availableLetters: ["ن", "خ", "و", "د", "ا"],
+        description: "Build the word for 'chickpea'",
       },
     ],
   },
   14: {
     moduleId: 14,
     vocabulary: [
+      // ── Lesson 1: Meals & Eating (0-9) ──
       {
         persian: "غَذا",
         transliteration: "ghazā",
@@ -8492,7 +8998,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
       {
         persian: "وَعدِه",
-        transliteration: "va‘de",
+        transliteration: "va'de",
         english: "meal",
         example: "این وَعدِه بزرگ اَست",
         exampleTranslation: "This meal is big",
@@ -8506,7 +9012,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
       {
         persian: "ناهار",
-        transliteration: "nâhār",
+        transliteration: "nāhār",
         english: "lunch",
         example: "ناهار با دوستَم می‌خورَم",
         exampleTranslation: "I eat lunch with my friend",
@@ -8520,7 +9026,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
       },
       {
         persian: "میان‌وَعدِه",
-        transliteration: "miyān-va‘de",
+        transliteration: "miyān-va'de",
         english: "snack",
         example: "میان‌وَعدِه کُوچَک می‌خورَم",
         exampleTranslation: "I eat a small snack",
@@ -8553,6 +9059,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         example: "چای می‌نوشَم",
         exampleTranslation: "I drink tea",
       },
+      // ── Lesson 2: Cooking & Table Setting (10-19) ──
       {
         persian: "پُختَن",
         transliteration: "pokhtan",
@@ -8575,13 +9082,6 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I eat raw vegetables",
       },
       {
-        persian: "سِفارش دادَن",
-        transliteration: "sefāresh dādan",
-        english: "to order (food)",
-        example: "غَذا سِفارش می‌دَهَم",
-        exampleTranslation: "I order food",
-      },
-      {
         persian: "آمادِه",
         transliteration: "āmāde",
         english: "ready",
@@ -8589,15 +9089,58 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Dinner is ready",
       },
       {
+        persian: "سِرو کردَن",
+        transliteration: "serv kardan",
+        english: "to serve",
+        example: "غَذا را سِرو می‌کُنَم",
+        exampleTranslation: "I serve the food",
+      },
+      {
+        persian: "بُشقاب",
+        transliteration: "boshghāb",
+        english: "plate",
+        example: "غَذا تویِ بُشقاب اَست",
+        exampleTranslation: "The food is on the plate",
+      },
+      {
+        persian: "قاشُق",
+        transliteration: "ghāshogh",
+        english: "spoon",
+        example: "با قاشُق سوپ می‌خورَم",
+        exampleTranslation: "I eat soup with a spoon",
+      },
+      {
+        persian: "چِنگال",
+        transliteration: "chengāl",
+        english: "fork",
+        example: "با چِنگال غَذا می‌خورَم",
+        exampleTranslation: "I eat food with a fork",
+      },
+      {
+        persian: "کارِد",
+        transliteration: "kārd",
+        english: "knife",
+        example: "با کارِد غَذا می‌بُرَم",
+        exampleTranslation: "I cut food with a knife",
+      },
+      {
+        persian: "سِفارش دادَن",
+        transliteration: "sefāresh dādan",
+        english: "to order (food)",
+        example: "غَذا سِفارش می‌دَهَم",
+        exampleTranslation: "I order food",
+      },
+      // ── Lesson 3: Tastes & Hunger (20-29) ──
+      {
         persian: "خوشمَزِه",
-        transliteration: "khoshmazze",
+        transliteration: "khoshmaze",
         english: "delicious",
         example: "این غَذا خوشمَزِه اَست",
         exampleTranslation: "This food is delicious",
       },
       {
         persian: "بَد‌مَزِه",
-        transliteration: "badmazze",
+        transliteration: "badmaze",
         english: "tastes bad",
         example: "این غَذا بَد‌مَزِه اَست",
         exampleTranslation: "This food tastes bad",
@@ -8645,46 +9188,26 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I am hungry",
       },
       {
+        persian: "تِشنِه",
+        transliteration: "teshne",
+        english: "thirsty",
+        example: "مَن تِشنِه هَستَم",
+        exampleTranslation: "I am thirsty",
+      },
+      {
         persian: "اِشتِها",
         transliteration: "eshtehā",
         english: "appetite",
         example: "اِشتِها دارَم",
         exampleTranslation: "I have an appetite",
       },
+      // ── Lesson 4: Dishes & Eating Habits (30-39) ──
       {
         persian: "اِشتِها نَدارَم",
         transliteration: "eshtehā nadāram",
         english: "I have no appetite",
-        example: "اِشتِها نَدارَم",
-        exampleTranslation: "I have no appetite",
-      },
-      {
-        persian: "بُشقاب",
-        transliteration: "boshghāb",
-        english: "plate",
-        example: "غَذا تویِ بُشقاب اَست",
-        exampleTranslation: "The food is on the plate",
-      },
-      {
-        persian: "قاشُق",
-        transliteration: "ghāshogh",
-        english: "spoon",
-        example: "با قاشُق سوپ می‌خورَم",
-        exampleTranslation: "I eat soup with a spoon",
-      },
-      {
-        persian: "چِنگال",
-        transliteration: "chengāl",
-        english: "fork",
-        example: "با چِنگال غَذا می‌خورَم",
-        exampleTranslation: "I eat food with a fork",
-      },
-      {
-        persian: "کارِد",
-        transliteration: "kārd",
-        english: "knife",
-        example: "با کارِد غَذا می‌بُرَم",
-        exampleTranslation: "I cut food with a knife",
+        example: "اِمروز اِشتِها نَدارَم",
+        exampleTranslation: "Today I have no appetite",
       },
       {
         persian: "دِسِر",
@@ -8715,13 +9238,6 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I eat one portion of food",
       },
       {
-        persian: "سِرو کردَن",
-        transliteration: "serv kardan",
-        english: "to serve",
-        example: "غَذا را سِرو می‌کُنَم",
-        exampleTranslation: "I serve the food",
-      },
-      {
         persian: "تَمام شُدَن",
         transliteration: "tamām shodan",
         english: "to finish (food)",
@@ -8739,7 +9255,7 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         persian: "زیاد خوردَن",
         transliteration: "ziyād khordan",
         english: "to eat a lot",
-        example: "دیشَب زیاد خورْدَم",
+        example: "دیشَب زیاد خوردَم",
         exampleTranslation: "Last night I ate a lot",
       },
       {
@@ -8757,280 +9273,654 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "I eat takeout food",
       },
     ],
-    reading: [
+    grammar: [
+      // ── Lesson 1 grammar: Talking about daily meals ──
+      {
+        id: 0,
+        type: "pattern-intro" as const,
+        instruction: "Learn how to say what you eat for each meal",
+        teachingContent: {
+          title: "Talking About Daily Meals",
+          explanation: "To say what you eat for a specific meal, use: من + برایِ + [meal] + [food] + می‌خورم. The word برایِ (barāye) means 'for'. You can use this pattern with صُبحانه (breakfast), ناهار (lunch), or شام (dinner).",
+          examples: [
+            { label: "I eat bread for breakfast", persian: "مَن برایِ صُبحانه نان می‌خورَم", description: "man barāye sobhāne nān mikhoram" },
+            { label: "I eat rice for lunch", persian: "مَن برایِ ناهار بِرِنج می‌خورَم", description: "man barāye nāhār berenj mikhoram" },
+            { label: "I eat chicken for dinner", persian: "مَن برایِ شام مُرغ می‌خورَم", description: "man barāye shām morgh mikhoram" },
+          ],
+        },
+        question: "How do you say 'I eat fruit for a snack'?",
+        options: ["مَن برایِ میان‌وَعدِه میوه می‌خورَم", "میوه برایِ مَن می‌خورَم", "مَن میوه اَست برایِ", "برایِ مَن میوه می‌خورَم"],
+        correctAnswer: 0,
+        explanation: "The pattern is: من + برایِ + [meal] + [food] + می‌خورم. So 'I eat fruit for a snack' is مَن برایِ میان‌وَعدِه میوه می‌خورَم.",
+        pattern: "من + برایِ + [meal] + [food] + می‌خورم",
+        patternTransliteration: "man + barāye + [meal] + [food] + mikhoram",
+        patternParts: ["من", "برایِ", "[meal]", "[food]", "می‌خورم"],
+        patternExamples: [
+          { persian: "مَن برایِ صُبحانه نان می‌خورَم", transliteration: "man barāye sobhāne nān mikhoram", english: "I eat bread for breakfast" },
+          { persian: "مَن برایِ ناهار بِرِنج می‌خورَم", transliteration: "man barāye nāhār berenj mikhoram", english: "I eat rice for lunch" },
+          { persian: "مَن برایِ شام مُرغ می‌خورَم", transliteration: "man barāye shām morgh mikhoram", english: "I eat chicken for dinner" },
+        ],
+        note: "برایِ (barāye) means 'for'. You can also say what you drink: مَن برایِ صُبحانه چای می‌نوشَم (I drink tea for breakfast).",
+      },
+      // ── Lesson 2 grammar: Saying food is ready or not ready ──
       {
         id: 1,
-        title: "Breakfast at Home",
-        persianTitle: "صُبحانِه دَر خانِه",
-        text: "مَن صُبحانِه می‌خورَم. نان و پَنیر می‌خورَم. چای داغ می‌نوشَم. صُبحانِه اَوَّلین وَعدِه‌ی روز اَست.",
-        textTransliteration:
-          "man sobhāne mi-khoram. nân va panir mi-khoram. chāy-e dâgh mi-noosham. sobhāne avvalin va‘de-ye rooz ast.",
-        textTranslation:
-          "I eat breakfast. I eat bread and cheese. I drink hot tea. Breakfast is the first meal of the day.",
-        questions: [
-          {
-            question: "What meal does the person eat?",
-            options: ["Lunch", "Dinner", "Breakfast", "Snack"],
-            correctAnswer: 2,
-          },
-          {
-            question: "What does the person drink?",
-            options: ["Water", "Juice", "Milk", "Tea"],
-            correctAnswer: 3,
-          },
+        type: "pattern-intro" as const,
+        instruction: "Learn how to say food is ready or not ready",
+        teachingContent: {
+          title: "Saying Food Is Ready",
+          explanation: "To say food is ready, use: [food] + آمادِه + اَست (āmāde ast). To say food is not ready, use: [food] + آمادِه + نیست (āmāde nist). You can also say food is cooked (پُختِه) or raw (خام) the same way.",
+          examples: [
+            { label: "Dinner is ready", persian: "شام آمادِه اَست", description: "shām āmāde ast" },
+            { label: "Lunch is not ready", persian: "ناهار آمادِه نیست", description: "nāhār āmāde nist" },
+            { label: "The food is cooked", persian: "غَذا پُختِه اَست", description: "ghazā pokhte ast" },
+          ],
+        },
+        question: "How do you say 'Breakfast is not ready'?",
+        options: ["صُبحانه آمادِه نیست", "صُبحانه آمادِه اَست", "آمادِه صُبحانه نیست", "مَن صُبحانه آمادِه"],
+        correctAnswer: 0,
+        explanation: "The pattern is: [food] + آمادِه + نیست. So 'Breakfast is not ready' is صُبحانه آمادِه نیست.",
+        pattern: "[food] + آمادِه + اَست / نیست",
+        patternTransliteration: "[food] + āmāde + ast / nist",
+        patternParts: ["[food]", "آمادِه", "اَست / نیست"],
+        patternExamples: [
+          { persian: "شام آمادِه اَست", transliteration: "shām āmāde ast", english: "Dinner is ready" },
+          { persian: "ناهار آمادِه نیست", transliteration: "nāhār āmāde nist", english: "Lunch is not ready" },
+          { persian: "غَذا پُختِه اَست", transliteration: "ghazā pokhte ast", english: "The food is cooked" },
         ],
+        note: "اَست (ast) means 'is' and نیست (nist) means 'is not'. Use خام (khām) for 'raw' and پُختِه (pokhte) for 'cooked'.",
       },
-      
+      // ── Lesson 3 grammar: Saying you are hungry, full, or thirsty ──
       {
         id: 2,
-        title: "Lunch at Work",
-        persianTitle: "ناهار دَر مَحَلِّ کار",
-        text: "مَن دَر کار ناهار می‌خورَم. بَرِنج و مُرغ می‌خورَم. آب می‌نوشَم. ناهار وَقتِ اِستِراحت اَست.",
-        textTransliteration:
-          "man dar kâr nāhâr mi-khoram. berenj va morgh mi-khoram. āb mi-noosham. nāhâr vaght-e esterāhat ast.",
-        textTranslation:
-          "I eat lunch at work. I eat rice and chicken. I drink water. Lunch is a time to rest.",
-        questions: [
-          {
-            question: "Where does the person eat lunch?",
-            options: ["At home", "At work", "At school", "At a restaurant"],
-            correctAnswer: 1,
-          },
-          {
-            question: "What food does the person eat?",
-            options: ["Bread and cheese", "Soup", "Rice and chicken", "Pizza"],
-            correctAnswer: 2,
-          },
+        type: "pattern-intro" as const,
+        instruction: "Learn how to say you are hungry, full, or thirsty",
+        teachingContent: {
+          title: "Saying You Are Hungry or Full",
+          explanation: "To express hunger, fullness, or thirst, use: من + [state] + هَستَم (hastam = I am). The states are: گُشنِه (goshne = hungry), سیر (sir = full), تِشنِه (teshne = thirsty). To say you became full, use: من + سیر + شُدَم (shodam = I became).",
+          examples: [
+            { label: "I am hungry", persian: "مَن گُشنِه هَستَم", description: "man goshne hastam" },
+            { label: "I am full", persian: "مَن سیر هَستَم", description: "man sir hastam" },
+            { label: "I am thirsty", persian: "مَن تِشنِه هَستَم", description: "man teshne hastam" },
+          ],
+        },
+        question: "How do you say 'I got full'?",
+        options: ["مَن سیر شُدَم", "مَن گُشنِه هَستَم", "مَن سیر اَست", "سیر مَن شُدَم"],
+        correctAnswer: 0,
+        explanation: "To say 'I got full' (meaning I became full), use: من + سیر + شُدَم. So it is مَن سیر شُدَم.",
+        pattern: "من + [state] + هَستَم / شُدَم",
+        patternTransliteration: "man + [state] + hastam / shodam",
+        patternParts: ["من", "[state]", "هَستَم / شُدَم"],
+        patternExamples: [
+          { persian: "مَن گُشنِه هَستَم", transliteration: "man goshne hastam", english: "I am hungry" },
+          { persian: "مَن تِشنِه هَستَم", transliteration: "man teshne hastam", english: "I am thirsty" },
+          { persian: "مَن سیر شُدَم", transliteration: "man sir shodam", english: "I got full" },
         ],
+        note: "هَستَم (hastam) means 'I am' (right now). شُدَم (shodam) means 'I became' (a change). Use هَستَم for current state and شُدَم for a change in state.",
       },
-      
+      // ── Lesson 4 grammar: Saying how much you eat ──
       {
         id: 3,
-        title: "Dinner with Family",
-        persianTitle: "شام با خانِوادِه",
-        text: "ما با هَمسَر و خانوادِه شام می‌خوریم. قورمِه‌سَبزی می‌خوریم. با شام دوغ می‌نوشیم. شام با هَم لَذَّت‌بَخش اَست.",
-        textTransliteration:
-          "mā bā hamsar va khānevāde shām mi-khorim. ghorme-sabzi mi-khorim. bā shām doogh mi-nooshim. shām bā ham lazzat-bakhsh ast.",
-        textTranslation:
-          "We eat dinner with our spouse and family. We eat ghormeh sabzi. We drink doogh with dinner. Dinner together is enjoyable.",
+        type: "pattern-intro" as const,
+        instruction: "Learn how to say how much you eat",
+        teachingContent: {
+          title: "Saying How Much You Eat",
+          explanation: "To say how much you eat, put the amount word before the verb: من + [amount] + می‌خورَم. Use کَم (kam = little) or زیاد (ziyād = a lot). You can also use this with specific foods: من + [food] + [amount] + می‌خورَم.",
+          examples: [
+            { label: "I eat little", persian: "مَن کَم می‌خورَم", description: "man kam mikhoram" },
+            { label: "I eat a lot", persian: "مَن زیاد می‌خورَم", description: "man ziyād mikhoram" },
+            { label: "I eat a lot of rice", persian: "مَن بِرِنج زیاد می‌خورَم", description: "man berenj ziyād mikhoram" },
+          ],
+        },
+        question: "How do you say 'Today I eat little'?",
+        options: ["اِمروز مَن کَم می‌خورَم", "مَن زیاد می‌خورَم اِمروز", "کَم مَن اِمروز می‌خورَم", "می‌خورَم کَم مَن اِمروز"],
+        correctAnswer: 0,
+        explanation: "The pattern is: [time] + من + کَم/زیاد + می‌خورم. So 'Today I eat little' is اِمروز مَن کَم می‌خورَم.",
+        pattern: "من + کَم/زیاد + می‌خورم",
+        patternTransliteration: "man + kam/ziyād + mikhoram",
+        patternParts: ["من", "کَم/زیاد", "می‌خورم"],
+        patternExamples: [
+          { persian: "مَن کَم می‌خورَم", transliteration: "man kam mikhoram", english: "I eat little" },
+          { persian: "مَن زیاد می‌خورَم", transliteration: "man ziyād mikhoram", english: "I eat a lot" },
+          { persian: "اِمروز مَن کَم می‌خورَم", transliteration: "emruz man kam mikhoram", english: "Today I eat little" },
+        ],
+        note: "کَم (kam) means 'little/few' and زیاد (ziyād) means 'a lot/much'. You can add time words like اِمروز (today) or دیشَب (last night) at the start.",
+      },
+    ],
+    reading: [
+      // ── Lesson 1 stories (ids 1, 2) ──
+      {
+        id: 1,
+        title: "What's for Breakfast?",
+        persianTitle: "صُبحانه چِه داریم؟",
+        text: "سارا: صُبح بِخِیر! صُبحانه چِه می‌خوری؟\nمریم: مَن نان و پَنیر می‌خورَم. تو چِه می‌خوری؟\nسارا: مَن برایِ صُبحانه سیب و موز می‌خورَم.\nمریم: چای می‌نوشی؟\nسارا: بَله! مَن چایِ داغ می‌نوشَم.",
+        textTransliteration: "sārā: sobh bekheyr! sobhāne che mikhori?\nmaryam: man nān va panir mikhoram. to che mikhori?\nsārā: man barāye sobhāne sib va moz mikhoram.\nmaryam: chāy minushi?\nsārā: bale! man chāy-e dāgh minosham.",
+        textTranslation: "Sara: Good morning! What are you eating for breakfast?\nMaryam: I eat bread and cheese. What are you eating?\nSara: I eat apple and banana for breakfast.\nMaryam: Are you drinking tea?\nSara: Yes! I drink hot tea.",
         questions: [
           {
-            question: "Who eats dinner together?",
-            options: ["Friends", "Coworkers", "Family", "Neighbors"],
-            correctAnswer: 2,
+            question: "What does Maryam eat for breakfast?",
+            options: ["Apple and banana", "Bread and cheese", "Rice and chicken", "Eggs"],
+            correctAnswer: 1,
           },
           {
-            question: "What do they drink with dinner?",
-            options: ["Tea", "Water", "Doogh", "Juice"],
+            question: "What does Sara drink?",
+            options: ["Cold water", "Coffee", "Hot tea", "Juice"],
             correctAnswer: 2,
           },
         ],
       },
-      
+      {
+        id: 2,
+        title: "Lunch or Dinner?",
+        persianTitle: "ناهار یا شام؟",
+        text: "علی: ناهار می‌خوری یا شام؟\nرضا: مَن ناهار می‌خورَم. شام دِیر اَست.\nعلی: مَن هَم ناهار می‌خورَم. بِرِنج و مُرغ دوست دارَم.\nرضا: مَن هَم! میان‌وَعدِه هَم می‌خوری؟\nعلی: بَله، گاهی میان‌وَعدِه می‌خورَم. سیب یا موز.",
+        textTransliteration: "ali: nāhār mikhori yā shām?\nrezā: man nāhār mikhoram. shām dir ast.\nali: man ham nāhār mikhoram. berenj va morgh doost dāram.\nrezā: man ham! miyān-va'de ham mikhori?\nali: bale, gāhi miyān-va'de mikhoram. sib yā moz.",
+        textTranslation: "Ali: Are you eating lunch or dinner?\nReza: I eat lunch. Dinner is late.\nAli: I also eat lunch. I like rice and chicken.\nReza: Me too! Do you also eat snacks?\nAli: Yes, sometimes I eat snacks. Apple or banana.",
+        questions: [
+          {
+            question: "Why does Reza choose lunch?",
+            options: ["He is hungry now", "Dinner is late", "He doesn't like dinner", "Lunch is free"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What does Ali eat as a snack?",
+            options: ["Bread and cheese", "Apple or banana", "Rice", "Chocolate"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      // ── Lesson 2 stories (ids 3, 4) ──
+      {
+        id: 3,
+        title: "Mom's Cooking",
+        persianTitle: "غَذایِ مادَر",
+        text: "سارا: مادَر، غَذا آمادِه اَست؟\nمادَر: بَله! غَذا پُختِه اَست. بُشقاب بِیار لُطفاً.\nسارا: قاشُق و چِنگال هَم می‌خواهَم.\nمادَر: بَله، قاشُق و چِنگال رویِ میز اَست.\nسارا: مَرسی مادَر! غَذا خیلی خوب اَست.",
+        textTransliteration: "sārā: mādar, ghazā āmāde ast?\nmādar: bale! ghazā pokhte ast. boshghāb biyār lotfan.\nsārā: ghāshogh va chengāl ham mikhāham.\nmādar: bale, ghāshogh va chengāl ruye miz ast.\nsārā: mersi mādar! ghazā kheili khoob ast.",
+        textTranslation: "Sara: Mom, is the food ready?\nMom: Yes! The food is cooked. Bring a plate please.\nSara: I also want a spoon and fork.\nMom: Yes, the spoon and fork are on the table.\nSara: Thanks Mom! The food is very good.",
+        questions: [
+          {
+            question: "Is the food ready?",
+            options: ["No, it is raw", "Yes, it is cooked", "It is not ready yet", "Mom is still cooking"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What does Sara ask for?",
+            options: ["A knife", "A plate, spoon, and fork", "A glass of water", "More food"],
+            correctAnswer: 1,
+          },
+        ],
+      },
       {
         id: 4,
-        title: "Eating at a Restaurant",
-        persianTitle: "غَذا خوردَن دَر رِستوران",
-        text: "مَن دَر رِستوران غَذا می‌خورَم. کِباب می‌خورَم. نان و سَبزی هَم می‌خورَم. غَذای رِستوران خوش‌مَزِه اَست.",
-        textTransliteration:
-          "man dar resturân ghazâ mi-khoram. kebâb mi-khoram. nân va sabzi ham mi-khoram. ghazâ-ye resturân khosh-maze ast.",
-        textTranslation:
-          "I eat food at a restaurant. I eat kebab. I also eat bread and herbs. Restaurant food is tasty.",
+        title: "Ordering at a Restaurant",
+        persianTitle: "سِفارش دَر رِستوران",
+        text: "رضا: سَلام! مَن غَذا سِفارش می‌دَهَم.\nفروشَنده: بَله! چِه غَذایی می‌خواهید؟\nرضا: بِرِنج و مُرغ لُطفاً.\nفروشَنده: غَذا آمادِه نیست. ده دَقیقه صَبر کُنید.\nرضا: خوب اَست. کارِد و چِنگال هَم لُطفاً.",
+        textTransliteration: "rezā: salām! man ghazā sefāresh midaham.\nforushande: bale! che ghazāyi mikhāhid?\nrezā: berenj va morgh lotfan.\nforushande: ghazā āmāde nist. dah daghighe sabr konid.\nrezā: khoob ast. kārd va chengāl ham lotfan.",
+        textTranslation: "Reza: Hello! I want to order food.\nSeller: Yes! What food do you want?\nReza: Rice and chicken please.\nSeller: The food is not ready. Wait ten minutes.\nReza: Okay. A knife and fork too please.",
         questions: [
           {
-            question: "Where does the person eat?",
-            options: ["At home", "At work", "At a restaurant", "At school"],
-            correctAnswer: 2,
+            question: "What does Reza order?",
+            options: ["Soup and salad", "Rice and chicken", "Bread and cheese", "Fish and vegetables"],
+            correctAnswer: 1,
           },
           {
-            question: "What main food does the person eat?",
-            options: ["Pizza", "Soup", "Kebab", "Fish"],
-            correctAnswer: 2,
+            question: "Why does Reza need to wait?",
+            options: ["The restaurant is closed", "The food is not ready", "He has no money", "It is too late"],
+            correctAnswer: 1,
           },
         ],
       },
-      
+      // ── Lesson 3 stories (ids 5, 6) ──
       {
         id: 5,
-        title: "Snacking During the Day",
-        persianTitle: "میان‌وَعدِه دَر طولِ روز",
-        text: "مَن بَینِ وَعدِه‌ها مِیانوَعدِه می‌خورَم. سیب یا موز می‌خورَم. گاهی چای می‌نوشَم. مِیانوَعدِه سَبُک اَست.",
-        textTransliteration:
-          "man beyn-e va‘de-hā miyân-va‘de mi-khoram. sib yā moz mi-khoram. gāhi chāy mi-noosham. miyân-va‘de sabok ast.",
-        textTranslation:
-          "I eat snacks between meals. I eat an apple or a banana. Sometimes I drink tea. Snacks are light.",
+        title: "After Lunch",
+        persianTitle: "بَعد از ناهار",
+        text: "علی: غَذا خوشمَزِه بود! مَن سیر شُدَم.\nسارا: مَن هَم سیر هَستَم. غَذا شور نَبود؟\nعلی: نَه، شور نَبود. کَمی تُند بود.\nسارا: مَن غَذایِ تُند دوست دارَم.\nعلی: مَن تِشنِه هَستَم. آب می‌خواهَم.",
+        textTransliteration: "ali: ghazā khoshmaze bud! man sir shodam.\nsārā: man ham sir hastam. ghazā shur nabud?\nali: na, shur nabud. kami tond bud.\nsārā: man ghazā-ye tond doost dāram.\nali: man teshne hastam. āb mikhāham.",
+        textTranslation: "Ali: The food was delicious! I got full.\nSara: I'm also full. Wasn't the food salty?\nAli: No, it wasn't salty. It was a little spicy.\nSara: I like spicy food.\nAli: I'm thirsty. I want water.",
         questions: [
           {
-            question: "When does the person eat snacks?",
-            options: ["At night", "Between meals", "Only in the morning", "With dinner"],
+            question: "How does Ali feel after eating?",
+            options: ["Hungry", "Full", "Thirsty only", "Sick"],
             correctAnswer: 1,
           },
           {
-            question: "What fruit does the person eat?",
-            options: ["Orange", "Apple or banana", "Grapes", "Strawberries"],
+            question: "Was the food salty?",
+            options: ["Yes, very salty", "No, it was a little spicy", "Yes, and sour", "No, it was sweet"],
             correctAnswer: 1,
           },
         ],
       },
-    ], 
+      {
+        id: 6,
+        title: "Sweet or Sour?",
+        persianTitle: "شیرین یا تُرش؟",
+        text: "مریم: چِه غَذایی دوست داری؟ شیرین یا تُرش؟\nرضا: مَن غَذایِ شیرین دوست دارَم. تو چِه؟\nمریم: مَن غَذایِ تُرش دوست دارَم. لیمو خوشمَزِه اَست!\nرضا: مَن گُشنِه هَستَم. اِشتِها دارَم.\nمریم: مَن هَم! بیا غَذا بِخوریم.",
+        textTransliteration: "maryam: che ghazāyi doost dāri? shirin yā torsh?\nrezā: man ghazā-ye shirin doost dāram. to che?\nmaryam: man ghazā-ye torsh doost dāram. limu khoshmaze ast!\nrezā: man goshne hastam. eshtehā dāram.\nmaryam: man ham! biyā ghazā bekhorim.",
+        textTranslation: "Maryam: What food do you like? Sweet or sour?\nReza: I like sweet food. How about you?\nMaryam: I like sour food. Lemon is delicious!\nReza: I am hungry. I have an appetite.\nMaryam: Me too! Let's eat!",
+        questions: [
+          {
+            question: "What kind of food does Reza like?",
+            options: ["Spicy", "Salty", "Sweet", "Sour"],
+            correctAnswer: 2,
+          },
+          {
+            question: "Is Reza hungry?",
+            options: ["No, he is full", "Yes, he has an appetite", "He is thirsty", "He has no appetite"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      // ── Lesson 4 stories (ids 7, 8) ──
+      {
+        id: 7,
+        title: "Homemade or Takeout?",
+        persianTitle: "خانِگی یا بیرون‌بر؟",
+        text: "سارا: اِمشَب غَذایِ خانِگی می‌خوری یا بیرون‌بر؟\nعلی: غَذایِ خانِگی! مادَر سوپ دُرُست کَرد.\nسارا: مَن دِسِر هَم می‌خواهَم.\nعلی: بَله! یِک پُرس سوپ و دِسِر.\nسارا: مَن کَم می‌خورَم. اِشتِها نَدارَم.",
+        textTransliteration: "sārā: emshab ghazā-ye khānegi mikhori yā birun-bar?\nali: ghazā-ye khānegi! mādar sup dorost kard.\nsārā: man deser ham mikhāham.\nali: bale! yek pors sup va deser.\nsārā: man kam mikhoram. eshtehā nadāram.",
+        textTranslation: "Sara: Tonight are you eating homemade food or takeout?\nAli: Homemade! Mom made soup.\nSara: I also want dessert.\nAli: Yes! One portion of soup and dessert.\nSara: I eat little. I have no appetite.",
+        questions: [
+          {
+            question: "What did Ali's mom make?",
+            options: ["Salad", "Rice", "Soup", "Takeout"],
+            correctAnswer: 2,
+          },
+          {
+            question: "Why does Sara eat little?",
+            options: ["She is full", "She has no appetite", "The food is bad", "She is thirsty"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      {
+        id: 8,
+        title: "Too Much Food!",
+        persianTitle: "غَذایِ زیاد!",
+        text: "رضا: دیشَب زیاد خوردَم. سالاد و سوپ و بِرِنج.\nمریم: زیاد خوردی! غَذا تَمام شُد؟\nرضا: بَله، غَذا تَمام شُد. اِمروز کَم می‌خورَم.\nمریم: مَن غَذایِ بیرون‌بر سِفارش دادَم.\nرضا: غَذایِ خانِگی بِهتَر اَست!",
+        textTransliteration: "rezā: dishab ziyād khordam. sālād va sup va berenj.\nmaryam: ziyād khordi! ghazā tamām shod?\nrezā: bale, ghazā tamām shod. emruz kam mikhoram.\nmaryam: man ghazā-ye birun-bar sefāresh dādam.\nrezā: ghazā-ye khānegi behtar ast!",
+        textTranslation: "Reza: Last night I ate a lot. Salad, soup, and rice.\nMaryam: You ate a lot! Is the food finished?\nReza: Yes, the food is finished. Today I eat little.\nMaryam: I ordered takeout food.\nReza: Homemade food is better!",
+        questions: [
+          {
+            question: "What did Reza eat last night?",
+            options: ["Only soup", "Salad, soup, and rice", "Dessert", "Bread and cheese"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What does Reza think is better?",
+            options: ["Takeout food", "Restaurant food", "Homemade food", "Fast food"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+    ],
+    writing: [
+      // ── Lesson 1 writing (indices 0-5) ──
+      // word-order 1
+      {
+        id: 0,
+        type: "word-order",
+        instruction: "Put the words in order to say 'I eat breakfast'",
+        tiles: ["می‌خورَم", "صُبحانه", "مَن"],
+        correctOrder: ["مَن", "صُبحانه", "می‌خورَم"],
+      },
+      // word-order 2
+      {
+        id: 1,
+        type: "word-order",
+        instruction: "Put the words in order to say 'I drink tea for dinner'",
+        tiles: ["می‌نوشَم", "چای", "شام", "برایِ", "مَن"],
+        correctOrder: ["مَن", "برایِ", "شام", "چای", "می‌نوشَم"],
+      },
+      // fill-blank 1
+      {
+        id: 2,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "مَن ___ می‌خورَم (I eat lunch)",
+        choices: ["صُبحانه", "ناهار", "شام", "میان‌وَعدِه"],
+        correctChoice: "ناهار",
+      },
+      // fill-blank 2
+      {
+        id: 3,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "مَن آب ___ (I drink water)",
+        choices: ["می‌خورَم", "می‌نوشَم", "دارَم", "هَستَم"],
+        correctChoice: "می‌نوشَم",
+      },
+      // build-word 1
+      {
+        id: 4,
+        type: "build-word",
+        targetWord: "غَذا",
+        targetWordTransliteration: "ghazā",
+        availableLetters: ["غ", "ذ", "ا", "ن"],
+        description: "Build the word for 'food'",
+      },
+      // build-word 2
+      {
+        id: 5,
+        type: "build-word",
+        targetWord: "شام",
+        targetWordTransliteration: "shām",
+        availableLetters: ["ش", "ا", "م", "ن"],
+        description: "Build the word for 'dinner'",
+      },
+      // ── Lesson 2 writing (indices 6-11) ──
+      // word-order 1
+      {
+        id: 6,
+        type: "word-order",
+        instruction: "Put the words in order to say 'The food is cooked'",
+        tiles: ["اَست", "پُختِه", "غَذا"],
+        correctOrder: ["غَذا", "پُختِه", "اَست"],
+      },
+      // word-order 2
+      {
+        id: 7,
+        type: "word-order",
+        instruction: "Put the words in order to say 'I eat soup with a spoon'",
+        tiles: ["می‌خورَم", "سوپ", "قاشُق", "با", "مَن"],
+        correctOrder: ["مَن", "با", "قاشُق", "سوپ", "می‌خورَم"],
+      },
+      // fill-blank 1
+      {
+        id: 8,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "غَذا ___ اَست (The food is ready)",
+        choices: ["پُختِه", "آمادِه", "خام", "تازِه"],
+        correctChoice: "آمادِه",
+      },
+      // fill-blank 2
+      {
+        id: 9,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "مَن با ___ غَذا می‌خورَم (I eat food with a fork)",
+        choices: ["قاشُق", "کارِد", "چِنگال", "بُشقاب"],
+        correctChoice: "چِنگال",
+      },
+      // build-word 1
+      {
+        id: 10,
+        type: "build-word",
+        targetWord: "بُشقاب",
+        targetWordTransliteration: "boshghāb",
+        availableLetters: ["ب", "ش", "ق", "ا", "ب", "ن"],
+        description: "Build the word for 'plate'",
+      },
+      // build-word 2
+      {
+        id: 11,
+        type: "build-word",
+        targetWord: "کارِد",
+        targetWordTransliteration: "kārd",
+        availableLetters: ["ک", "ا", "ر", "د", "م"],
+        description: "Build the word for 'knife'",
+      },
+      // ── Lesson 3 writing (indices 12-17) ──
+      // word-order 1
+      {
+        id: 12,
+        type: "word-order",
+        instruction: "Put the words in order to say 'I am hungry'",
+        tiles: ["هَستَم", "گُشنِه", "مَن"],
+        correctOrder: ["مَن", "گُشنِه", "هَستَم"],
+      },
+      // word-order 2
+      {
+        id: 13,
+        type: "word-order",
+        instruction: "Put the words in order to say 'This food is delicious'",
+        tiles: ["اَست", "خوشمَزِه", "غَذا", "این"],
+        correctOrder: ["این", "غَذا", "خوشمَزِه", "اَست"],
+      },
+      // fill-blank 1
+      {
+        id: 14,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "مَن ___ هَستَم (I am thirsty)",
+        choices: ["سیر", "گُشنِه", "تِشنِه", "خوب"],
+        correctChoice: "تِشنِه",
+      },
+      // fill-blank 2
+      {
+        id: 15,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "غَذا خیلی ___ اَست (The food is very spicy)",
+        choices: ["شیرین", "شور", "تُند", "تُرش"],
+        correctChoice: "تُند",
+      },
+      // build-word 1
+      {
+        id: 16,
+        type: "build-word",
+        targetWord: "شیرین",
+        targetWordTransliteration: "shirin",
+        availableLetters: ["ش", "ی", "ر", "ی", "ن", "و"],
+        description: "Build the word for 'sweet'",
+      },
+      // build-word 2
+      {
+        id: 17,
+        type: "build-word",
+        targetWord: "گُشنِه",
+        targetWordTransliteration: "goshne",
+        availableLetters: ["گ", "ش", "ن", "ه", "ا"],
+        description: "Build the word for 'hungry'",
+      },
+      // ── Lesson 4 writing (indices 18-23) ──
+      // word-order 1
+      {
+        id: 18,
+        type: "word-order",
+        instruction: "Put the words in order to say 'Today I eat little'",
+        tiles: ["می‌خورَم", "کَم", "مَن", "اِمروز"],
+        correctOrder: ["اِمروز", "مَن", "کَم", "می‌خورَم"],
+      },
+      // word-order 2
+      {
+        id: 19,
+        type: "word-order",
+        instruction: "Put the words in order to say 'Homemade food is delicious'",
+        tiles: ["اَست", "خوشمَزِه", "خانِگی", "غَذایِ"],
+        correctOrder: ["غَذایِ", "خانِگی", "خوشمَزِه", "اَست"],
+      },
+      // fill-blank 1
+      {
+        id: 20,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "مَن ___ نَدارَم (I have no appetite)",
+        choices: ["غَذا", "اِشتِها", "وَعدِه", "سوپ"],
+        correctChoice: "اِشتِها",
+      },
+      // fill-blank 2
+      {
+        id: 21,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "یِک ___ سوپ لُطفاً (One portion of soup please)",
+        choices: ["بُشقاب", "پُرس", "لیوان", "کارِد"],
+        correctChoice: "پُرس",
+      },
+      // build-word 1
+      {
+        id: 22,
+        type: "build-word",
+        targetWord: "سوپ",
+        targetWordTransliteration: "sup",
+        availableLetters: ["س", "و", "پ", "ن"],
+        description: "Build the word for 'soup'",
+      },
+      // build-word 2
+      {
+        id: 23,
+        type: "build-word",
+        targetWord: "دِسِر",
+        targetWordTransliteration: "deser",
+        availableLetters: ["د", "س", "ر", "ا"],
+        description: "Build the word for 'dessert'",
+      },
+    ],
   },
-  //module 15: shopping basics
+  // ── Module 15: Shopping Basics ──
   15: {
     moduleId: 15,
     vocabulary: [
+      // ── Lesson 1: Shops & Shopping (0-9) ──
       {
         persian: "خَرید",
         transliteration: "kharid",
         english: "shopping / purchase",
-        example: "من خَرید می‌کنم.",
-        exampleTranslation: "I am shopping.",
+        example: "مَن خَرید می‌کُنَم",
+        exampleTranslation: "I am shopping",
       },
       {
         persian: "خَریدن",
         transliteration: "kharidan",
         english: "to buy",
-        example: "می‌خواهم نان بِخَرم.",
-        exampleTranslation: "I want to buy bread.",
-      },
-      {
-        persian: "فُروختن",
-        transliteration: "forukhtan",
-        english: "to sell",
-        example: "او ماشین را فُروخت.",
-        exampleTranslation: "He sold the car.",
+        example: "مَن نان می‌خَرَم",
+        exampleTranslation: "I buy bread",
       },
       {
         persian: "مَغازه",
         transliteration: "maghāze",
         english: "shop / store",
-        example: "این مَغازه باز است.",
-        exampleTranslation: "This shop is open.",
+        example: "این مَغازه بُزُرگ اَست",
+        exampleTranslation: "This shop is big",
       },
       {
         persian: "بازار",
         transliteration: "bāzār",
         english: "market",
-        example: "بازار شلوغ است.",
-        exampleTranslation: "The market is crowded.",
+        example: "بازار شُلوغ اَست",
+        exampleTranslation: "The market is crowded",
       },
       {
         persian: "سوپِرمارکِت",
         transliteration: "supermārket",
         english: "supermarket",
-        example: "به سوپِرمارکِت می‌روم.",
-        exampleTranslation: "I’m going to the supermarket.",
+        example: "مَن به سوپِرمارکِت می‌رَوَم",
+        exampleTranslation: "I go to the supermarket",
       },
+      {
+        persian: "فُروشَنده",
+        transliteration: "forushande",
+        english: "seller",
+        example: "فُروشَنده مِهربان اَست",
+        exampleTranslation: "The seller is kind",
+      },
+      {
+        persian: "مُشتَری",
+        transliteration: "moshtari",
+        english: "customer",
+        example: "مُشتَری اینجاست",
+        exampleTranslation: "The customer is here",
+      },
+      {
+        persian: "فُروختَن",
+        transliteration: "forookhtan",
+        english: "to sell",
+        example: "او میوه می‌فُروشَد",
+        exampleTranslation: "He sells fruit",
+      },
+      {
+        persian: "باز",
+        transliteration: "bāz",
+        english: "open",
+        example: "مَغازه باز اَست",
+        exampleTranslation: "The shop is open",
+      },
+      {
+        persian: "بَسته",
+        transliteration: "baste",
+        english: "closed",
+        example: "مَغازه بَسته اَست",
+        exampleTranslation: "The shop is closed",
+      },
+      // ── Lesson 2: Prices & Payment (10-19) ──
       {
         persian: "قِیمت",
         transliteration: "gheymat",
         english: "price",
-        example: "قِیمت این چقدر است؟",
+        example: "قِیمتِ این چَند اَست؟",
         exampleTranslation: "How much is this?",
       },
       {
         persian: "اَرزان",
         transliteration: "arzān",
         english: "cheap",
-        example: "این اَرزان است.",
-        exampleTranslation: "This is cheap.",
+        example: "این اَرزان اَست",
+        exampleTranslation: "This is cheap",
       },
       {
         persian: "گِران",
         transliteration: "gerān",
         english: "expensive",
-        example: "آن گِران است.",
-        exampleTranslation: "That is expensive.",
+        example: "آن گِران اَست",
+        exampleTranslation: "That is expensive",
       },
       {
         persian: "پول",
         transliteration: "pul",
         english: "money",
-        example: "پول دارم.",
-        exampleTranslation: "I have money.",
-      },
-      {
-        persian: "صُندوق",
-        transliteration: "sanduq",
-        english: "checkout / register",
-        example: "لُطفاً به صُندوق بروید.",
-        exampleTranslation: "Please go to the checkout.",
-      },
-      {
-        persian: "فاکتور",
-        transliteration: "fāktor",
-        english: "receipt / invoice",
-        example: "فاکتور را می‌خواهم.",
-        exampleTranslation: "I want the receipt.",
-      },
-      {
-        persian: "کالا",
-        transliteration: "kalā",
-        english: "product / goods",
-        example: "این کالا خوب است.",
-        exampleTranslation: "This product is good.",
-      },
-      {
-        persian: "مُشتَری",
-        transliteration: "moshtari",
-        english: "customer",
-        example: "مُشتَری اینجا است.",
-        exampleTranslation: "The customer is here.",
-      },
-      {
-        persian: "فُروشَنده",
-        transliteration: "forushande",
-        english: "seller",
-        example: "فُروشَنده مهربان است.",
-        exampleTranslation: "The seller is kind.",
-      },
-      {
-        persian: "بُرداشتن",
-        transliteration: "bardāshtan",
-        english: "to take / pick up",
-        example: "این را بُردار.",
-        exampleTranslation: "Take this.",
-      },
-      {
-        persian: "دَرب",
-        transliteration: "darb",
-        english: "door",
-        example: "دَرب مَغازه بسته است.",
-        exampleTranslation: "The shop door is closed.",
-      },
-      {
-        persian: "باز",
-        transliteration: "bāz",
-        english: "open",
-        example: "مَغازه باز است.",
-        exampleTranslation: "The shop is open.",
-      },
-      {
-        persian: "بَسته",
-        transliteration: "baste",
-        english: "closed",
-        example: "مَغازه بَسته است.",
-        exampleTranslation: "The shop is closed.",
+        example: "پول دارَم",
+        exampleTranslation: "I have money",
       },
       {
         persian: "پَرداخت",
         transliteration: "pardākht",
         english: "payment",
-        example: "پَرداخت آماده است.",
-        exampleTranslation: "The payment is ready.",
+        example: "پَرداخت آمادِه اَست",
+        exampleTranslation: "The payment is ready",
       },
       {
         persian: "نَقد",
         transliteration: "naqd",
         english: "cash",
-        example: "نَقد پَرداخت می‌کنم.",
-        exampleTranslation: "I’ll pay in cash.",
+        example: "مَن نَقد پَرداخت می‌کُنَم",
+        exampleTranslation: "I pay in cash",
       },
       {
         persian: "کارْت",
         transliteration: "kārt",
         english: "card",
-        example: "با کارْت پَرداخت می‌کنم.",
-        exampleTranslation: "I’ll pay by card.",
+        example: "با کارْت پَرداخت می‌کُنَم",
+        exampleTranslation: "I pay by card",
+      },
+      {
+        persian: "تِخفیف",
+        transliteration: "takhfif",
+        english: "discount",
+        example: "تِخفیف دارَد",
+        exampleTranslation: "It has a discount",
+      },
+      {
+        persian: "فاکتور",
+        transliteration: "fāktor",
+        english: "receipt / invoice",
+        example: "فاکتور می‌خواهَم",
+        exampleTranslation: "I want the receipt",
+      },
+      {
+        persian: "صُندوق",
+        transliteration: "sanduq",
+        english: "checkout / register",
+        example: "صُندوق آنجاست",
+        exampleTranslation: "The checkout is over there",
+      },
+      // ── Lesson 3: Items & Actions (20-29) ──
+      {
+        persian: "کالا",
+        transliteration: "kalā",
+        english: "product / goods",
+        example: "این کالا خوب اَست",
+        exampleTranslation: "This product is good",
       },
       {
         persian: "کیسه",
@@ -9040,56 +9930,435 @@ export const moduleContent: Record<string | number, ModuleContent> = {
         exampleTranslation: "Do you want a bag?",
       },
       {
-        persian: "تِخفیف",
-        transliteration: "takhfif",
-        english: "discount",
-        example: "تِخفیف دارد.",
-        exampleTranslation: "It has a discount.",
-      },
-      {
         persian: "اَندازه",
         transliteration: "andāze",
         english: "size",
-        example: "اَندازه بزرگ می‌خواهم.",
-        exampleTranslation: "I want a large size.",
-      },
-      {
-        persian: "عَوض کردن",
-        transliteration: "avaz kardan",
-        english: "to exchange",
-        example: "می‌توانم عَوض کنم؟",
-        exampleTranslation: "Can I exchange it?",
-      },
-      {
-        persian: "بَرگَرداندن",
-        transliteration: "bargardāndan",
-        english: "to return",
-        example: "می‌خواهم بَرگَردانم.",
-        exampleTranslation: "I want to return it.",
+        example: "اَندازه بُزُرگ می‌خواهَم",
+        exampleTranslation: "I want a large size",
       },
       {
         persian: "لازِم",
         transliteration: "lāzem",
-        english: "necessary",
-        example: "این برای من لازِم است.",
-        exampleTranslation: "This is necessary for me.",
+        english: "necessary / needed",
+        example: "این برایِ مَن لازِم اَست",
+        exampleTranslation: "This is necessary for me",
       },
       {
-        persian: "می‌خواهم",
+        persian: "می‌خواهَم",
         transliteration: "mikhāham",
         english: "I want",
-        example: "این را می‌خواهم.",
-        exampleTranslation: "I want this.",
+        example: "این را می‌خواهَم",
+        exampleTranslation: "I want this",
       },
       {
         persian: "هَمه",
         transliteration: "hame",
-        english: "everything",
-        example: "هَمه چیز آماده است.",
-        exampleTranslation: "Everything is ready.",
+        english: "everything / all",
+        example: "هَمه چیز آمادِه اَست",
+        exampleTranslation: "Everything is ready",
+      },
+      {
+        persian: "بُرداشتَن",
+        transliteration: "bardāshtan",
+        english: "to take / pick up",
+        example: "این را بُردار",
+        exampleTranslation: "Take this",
+      },
+      {
+        persian: "دَرب",
+        transliteration: "darb",
+        english: "door",
+        example: "دَربِ مَغازه بَسته اَست",
+        exampleTranslation: "The shop door is closed",
+      },
+      {
+        persian: "عَوض کَردَن",
+        transliteration: "avaz kardan",
+        english: "to exchange",
+        example: "می‌خواهَم عَوض کُنَم",
+        exampleTranslation: "I want to exchange it",
+      },
+      {
+        persian: "بَرگَرداندَن",
+        transliteration: "bargardāndan",
+        english: "to return (an item)",
+        example: "می‌خواهَم بَرگَردانَم",
+        exampleTranslation: "I want to return it",
       },
     ],
-  }, 
+    grammar: [
+      // ── Lesson 1 grammar: Saying where you go shopping ──
+      {
+        id: 0,
+        type: "pattern-intro" as const,
+        instruction: "Learn how to say where you go shopping",
+        teachingContent: {
+          title: "Saying Where You Go Shopping",
+          explanation: "To say where you go shopping, use: من + به + [place] + می‌رَوَم (miravam = I go). The word به (be) means 'to'. You can use this with مَغازه (shop), بازار (market), or سوپِرمارکِت (supermarket).",
+          examples: [
+            { label: "I go to the market", persian: "مَن به بازار می‌رَوَم", description: "man be bāzār miravam" },
+            { label: "I go to the supermarket", persian: "مَن به سوپِرمارکِت می‌رَوَم", description: "man be supermārket miravam" },
+            { label: "I go to the shop", persian: "مَن به مَغازه می‌رَوَم", description: "man be maghāze miravam" },
+          ],
+        },
+        question: "How do you say 'I go to the market'?",
+        options: ["مَن به بازار می‌رَوَم", "بازار مَن می‌رَوَم", "مَن بازار به می‌رَوَم", "به مَن بازار می‌رَوَم"],
+        correctAnswer: 0,
+        explanation: "The pattern is: من + به + [place] + می‌رَوَم. So 'I go to the market' is مَن به بازار می‌رَوَم.",
+        pattern: "من + به + [place] + می‌رَوَم",
+        patternTransliteration: "man + be + [place] + miravam",
+        patternParts: ["من", "به", "[place]", "می‌رَوَم"],
+        patternExamples: [
+          { persian: "مَن به بازار می‌رَوَم", transliteration: "man be bāzār miravam", english: "I go to the market" },
+          { persian: "مَن به سوپِرمارکِت می‌رَوَم", transliteration: "man be supermārket miravam", english: "I go to the supermarket" },
+          { persian: "مَن به مَغازه می‌رَوَم", transliteration: "man be maghāze miravam", english: "I go to the shop" },
+        ],
+        note: "به (be) means 'to' when talking about going somewhere. می‌رَوَم (miravam) means 'I go'. For 'he/she goes', use می‌رَوَد (miravad).",
+      },
+      // ── Lesson 2 grammar: Asking the price ──
+      {
+        id: 1,
+        type: "pattern-intro" as const,
+        instruction: "Learn how to ask the price of something",
+        teachingContent: {
+          title: "Asking the Price",
+          explanation: "To ask 'How much is [item]?', use: قِیمتِ + [item] + چَند اَست؟ (gheymat-e [item] chand ast?). The Ezafe (-e) connects قِیمت to the item. You can also simply point and say: این چَند اَست؟ (How much is this?).",
+          examples: [
+            { label: "How much is the apple?", persian: "قِیمتِ سیب چَند اَست؟", description: "gheymat-e sib chand ast?" },
+            { label: "How much is this?", persian: "این چَند اَست؟", description: "in chand ast?" },
+            { label: "How much is the bread?", persian: "قِیمتِ نان چَند اَست؟", description: "gheymat-e nān chand ast?" },
+          ],
+        },
+        question: "How do you ask 'How much is the rice?'?",
+        options: ["قِیمتِ بِرِنج چَند اَست؟", "بِرِنج قِیمت چَند؟", "چَند قِیمتِ بِرِنج؟", "بِرِنج اَست چَند قِیمت؟"],
+        correctAnswer: 0,
+        explanation: "The pattern is: قِیمتِ + [item] + چَند اَست؟ So 'How much is the rice?' is قِیمتِ بِرِنج چَند اَست؟",
+        pattern: "قِیمتِ + [item] + چَند اَست؟",
+        patternTransliteration: "gheymat-e + [item] + chand ast?",
+        patternParts: ["قِیمتِ", "[item]", "چَند اَست؟"],
+        patternExamples: [
+          { persian: "قِیمتِ سیب چَند اَست؟", transliteration: "gheymat-e sib chand ast?", english: "How much is the apple?" },
+          { persian: "قِیمتِ نان چَند اَست؟", transliteration: "gheymat-e nān chand ast?", english: "How much is the bread?" },
+          { persian: "این چَند اَست؟", transliteration: "in chand ast?", english: "How much is this?" },
+        ],
+        note: "چَند (chand) means 'how much' or 'how many'. قِیمت (gheymat) means 'price'. The Ezafe (-e) connects them: قِیمتِ سیب = 'price of apple'.",
+      },
+      // ── Lesson 3 grammar: Saying you want to buy something ──
+      {
+        id: 2,
+        type: "pattern-intro" as const,
+        instruction: "Learn how to say you want to buy something",
+        teachingContent: {
+          title: "Saying You Want to Buy Something",
+          explanation: "To say 'I want to buy [item]', use: مَن + می‌خواهَم + [item] + بِخَرَم (bekharam = I buy, subjunctive). You can also simply say: مَن + [item] + می‌خواهَم (I want [item]) for a shorter version.",
+          examples: [
+            { label: "I want to buy bread", persian: "مَن می‌خواهَم نان بِخَرَم", description: "man mikhāham nān bekharam" },
+            { label: "I want to buy a bag", persian: "مَن می‌خواهَم کیسه بِخَرَم", description: "man mikhāham kise bekharam" },
+            { label: "I want this product", persian: "مَن این کالا را می‌خواهَم", description: "man in kalā rā mikhāham" },
+          ],
+        },
+        question: "How do you say 'I want to buy fruit'?",
+        options: ["مَن می‌خواهَم میوه بِخَرَم", "میوه مَن می‌خواهَم بِخَرَم", "بِخَرَم مَن میوه می‌خواهَم", "می‌خواهَم بِخَرَم مَن میوه"],
+        correctAnswer: 0,
+        explanation: "The pattern is: مَن + می‌خواهَم + [item] + بِخَرَم. So 'I want to buy fruit' is مَن می‌خواهَم میوه بِخَرَم.",
+        pattern: "مَن + می‌خواهَم + [item] + بِخَرَم",
+        patternTransliteration: "man + mikhāham + [item] + bekharam",
+        patternParts: ["مَن", "می‌خواهَم", "[item]", "بِخَرَم"],
+        patternExamples: [
+          { persian: "مَن می‌خواهَم نان بِخَرَم", transliteration: "man mikhāham nān bekharam", english: "I want to buy bread" },
+          { persian: "مَن می‌خواهَم کیسه بِخَرَم", transliteration: "man mikhāham kise bekharam", english: "I want to buy a bag" },
+          { persian: "مَن می‌خواهَم سیب بِخَرَم", transliteration: "man mikhāham sib bekharam", english: "I want to buy apples" },
+        ],
+        note: "بِخَرَم (bekharam) is the subjunctive form of خَریدن (to buy). After می‌خواهَم (I want), always use the subjunctive: بِخَرَم (I buy), بِخوری (you buy), بِخَرَد (he/she buys).",
+      },
+    ],
+    reading: [
+      // ── Lesson 1 stories (ids 1, 2) ──
+      {
+        id: 1,
+        title: "Going to the Market",
+        persianTitle: "رَفتَن به بازار",
+        text: "سارا: سَلام! به بازار می‌رَوی؟\nمریم: بَله! مَن به بازار می‌رَوَم. خَرید دارَم.\nسارا: بازار باز اَست؟\nمریم: بَله، بازار باز اَست. مَغازه‌ها هَم باز هَستَند.\nسارا: مَن هَم می‌آیَم! چِه می‌خَری؟\nمریم: سیب و موز و نان.",
+        textTransliteration: "sārā: salām! be bāzār miravi?\nmaryam: bale! man be bāzār miravam. kharid dāram.\nsārā: bāzār bāz ast?\nmaryam: bale, bāzār bāz ast. maghāze-hā ham bāz hastand.\nsārā: man ham miyāyam! che mikhari?\nmaryam: sib va moz va nān.",
+        textTranslation: "Sara: Hello! Are you going to the market?\nMaryam: Yes! I'm going to the market. I have shopping to do.\nSara: Is the market open?\nMaryam: Yes, the market is open. The shops are also open.\nSara: I'll come too! What are you buying?\nMaryam: Apples, bananas, and bread.",
+        questions: [
+          {
+            question: "Where is Maryam going?",
+            options: ["To the supermarket", "To the market", "To school", "Home"],
+            correctAnswer: 1,
+          },
+          {
+            question: "Is the market open?",
+            options: ["No, it is closed", "Yes, it is open", "Only some shops", "It opens later"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      {
+        id: 2,
+        title: "At the Supermarket",
+        persianTitle: "دَر سوپِرمارکِت",
+        text: "علی: سوپِرمارکِت باز اَست یا بَسته؟\nرضا: باز اَست! بیا، مَن سیب و پُرتِقال می‌خَرَم.\nعلی: مَن هَم نان و پَنیر می‌خَرَم.\nرضا: فُروشَنده مِهربان اَست. مُشتَری‌ها زیاد هَستَند.\nعلی: بَله، سوپِرمارکِت شُلوغ اَست!",
+        textTransliteration: "ali: supermārket bāz ast yā baste?\nrezā: bāz ast! biyā, man sib va porteghāl mikharam.\nali: man ham nān va panir mikharam.\nrezā: forushande mehrbān ast. moshtari-hā ziyād hastand.\nali: bale, supermārket sholuq ast!",
+        textTranslation: "Ali: Is the supermarket open or closed?\nReza: It's open! Come, I'm buying apples and oranges.\nAli: I'm also buying bread and cheese.\nReza: The seller is kind. There are many customers.\nAli: Yes, the supermarket is crowded!",
+        questions: [
+          {
+            question: "What is Reza buying?",
+            options: ["Bread and cheese", "Apples and oranges", "Rice and chicken", "Milk and tea"],
+            correctAnswer: 1,
+          },
+          {
+            question: "How is the supermarket?",
+            options: ["Empty", "Closed", "Crowded", "Small"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      // ── Lesson 2 stories (ids 3, 4) ──
+      {
+        id: 3,
+        title: "How Much Is This?",
+        persianTitle: "این چَند اَست؟",
+        text: "سارا: سَلام! قِیمتِ این سیب چَند اَست؟\nفُروشَنده: سیب اَرزان اَست. ده هِزار تومان.\nسارا: پُرتِقال چَند اَست؟\nفُروشَنده: پُرتِقال کَمی گِران اَست. بیست هِزار تومان.\nسارا: خوب اَست. مَن با نَقد پَرداخت می‌کُنَم.\nفُروشَنده: فاکتور هَم می‌خواهید؟",
+        textTransliteration: "sārā: salām! gheymat-e in sib chand ast?\nforushande: sib arzān ast. dah hezār tumān.\nsārā: porteghāl chand ast?\nforushande: porteghāl kami gerān ast. bist hezār tumān.\nsārā: khoob ast. man bā naqd pardākht mikonam.\nforushande: fāktor ham mikhāhid?",
+        textTranslation: "Sara: Hello! How much is this apple?\nSeller: Apples are cheap. Ten thousand tomans.\nSara: How much are oranges?\nSeller: Oranges are a bit expensive. Twenty thousand tomans.\nSara: Okay. I'll pay with cash.\nSeller: Do you also want a receipt?",
+        questions: [
+          {
+            question: "Are apples cheap or expensive?",
+            options: ["Expensive", "Cheap", "Free", "On sale"],
+            correctAnswer: 1,
+          },
+          {
+            question: "How does Sara pay?",
+            options: ["With a card", "With cash", "With a check", "She doesn't pay"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      {
+        id: 4,
+        title: "A Good Discount",
+        persianTitle: "تِخفیفِ خوب",
+        text: "علی: قِیمتِ این کالا چَند اَست؟\nفُروشَنده: این تِخفیف دارَد! قِیمت اَرزان اَست.\nعلی: خوب اَست! پول دارَم.\nفُروشَنده: با نَقد یا کارْت پَرداخت می‌کُنید؟\nعلی: با کارْت لُطفاً. صُندوق کُجاست؟\nفُروشَنده: صُندوق آنجاست.",
+        textTransliteration: "ali: gheymat-e in kalā chand ast?\nforushande: in takhfif dārad! gheymat arzān ast.\nali: khoob ast! pul dāram.\nforushande: bā naqd yā kārt pardākht mikonid?\nali: bā kārt lotfan. sanduq kojāst?\nforushande: sanduq ānjāst.",
+        textTranslation: "Ali: How much is this product?\nSeller: This has a discount! The price is cheap.\nAli: Great! I have money.\nSeller: Will you pay with cash or card?\nAli: By card please. Where is the checkout?\nSeller: The checkout is over there.",
+        questions: [
+          {
+            question: "Does the product have a discount?",
+            options: ["No", "Yes", "Only on weekends", "Only with cash"],
+            correctAnswer: 1,
+          },
+          {
+            question: "How does Ali pay?",
+            options: ["With cash", "By card", "He doesn't buy it", "With a check"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      // ── Lesson 3 stories (ids 5, 6) ──
+      {
+        id: 5,
+        title: "I Need a Bag",
+        persianTitle: "کیسه لازِم دارَم",
+        text: "مریم: سَلام! مَن کیسه می‌خواهَم لُطفاً.\nفُروشَنده: بَله! اَندازه بُزُرگ یا کُوچَک؟\nمریم: اَندازه بُزُرگ لُطفاً. هَمه چیز تویِ کیسه اَست.\nفُروشَنده: کالا را بُردارید.\nمریم: مَرسی! دَرب کُجاست؟\nفُروشَنده: دَرب آنجاست. خُداحافِظ!",
+        textTransliteration: "maryam: salām! man kise mikhāham lotfan.\nforushande: bale! andāze bozorg yā kuchak?\nmaryam: andāze bozorg lotfan. hame chiz tuye kise ast.\nforushande: kalā rā bardārid.\nmaryam: mersi! darb kojāst?\nforushande: darb ānjāst. khodāhāfez!",
+        textTranslation: "Maryam: Hello! I want a bag please.\nSeller: Sure! Large or small size?\nMaryam: Large size please. Everything is in the bag.\nSeller: Take your products.\nMaryam: Thanks! Where is the door?\nSeller: The door is over there. Goodbye!",
+        questions: [
+          {
+            question: "What size bag does Maryam want?",
+            options: ["Small", "Medium", "Large", "She doesn't want a bag"],
+            correctAnswer: 2,
+          },
+          {
+            question: "What does the seller tell Maryam to do?",
+            options: ["Pay more", "Take her products", "Come back tomorrow", "Wait"],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      {
+        id: 6,
+        title: "Returning Something",
+        persianTitle: "بَرگَرداندَنِ کالا",
+        text: "رضا: سَلام! مَن می‌خواهَم این کالا را بَرگَردانَم.\nفُروشَنده: چِرا؟ خوب نیست؟\nرضا: اَندازه کُوچَک اَست. عَوض کُنَم؟\nفُروشَنده: بَله! اَندازه بُزُرگ لازِم دارید؟\nرضا: بَله، بُزُرگ لازِم اَست. مَرسی!\nفُروشَنده: خواهِش می‌کُنَم.",
+        textTransliteration: "rezā: salām! man mikhāham in kalā rā bargardānam.\nforushande: cherā? khoob nist?\nrezā: andāze kuchak ast. avaz konam?\nforushande: bale! andāze bozorg lāzem dārid?\nrezā: bale, bozorg lāzem ast. mersi!\nforushande: khāhesh mikonam.",
+        textTranslation: "Reza: Hello! I want to return this product.\nSeller: Why? Is it not good?\nReza: The size is small. Can I exchange it?\nSeller: Yes! Do you need a large size?\nReza: Yes, I need large. Thanks!\nSeller: You're welcome.",
+        questions: [
+          {
+            question: "Why does Reza want to return the product?",
+            options: ["It is broken", "The size is small", "It is expensive", "He doesn't like it"],
+            correctAnswer: 1,
+          },
+          {
+            question: "What size does Reza need?",
+            options: ["Small", "Medium", "Large", "Extra large"],
+            correctAnswer: 2,
+          },
+        ],
+      },
+    ],
+    writing: [
+      // ── Lesson 1 writing (indices 0-5) ──
+      // word-order 1
+      {
+        id: 0,
+        type: "word-order",
+        instruction: "Put the words in order to say 'The shop is open'",
+        tiles: ["اَست", "باز", "مَغازه"],
+        correctOrder: ["مَغازه", "باز", "اَست"],
+      },
+      // word-order 2
+      {
+        id: 1,
+        type: "word-order",
+        instruction: "Put the words in order to say 'I go to the market'",
+        tiles: ["می‌رَوَم", "بازار", "به", "مَن"],
+        correctOrder: ["مَن", "به", "بازار", "می‌رَوَم"],
+      },
+      // fill-blank 1
+      {
+        id: 2,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "___ باز اَست (The supermarket is open)",
+        choices: ["بازار", "سوپِرمارکِت", "مَغازه", "خانه"],
+        correctChoice: "سوپِرمارکِت",
+      },
+      // fill-blank 2
+      {
+        id: 3,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "مَن ___ می‌کُنَم (I am shopping)",
+        choices: ["خَرید", "فُروش", "پَرداخت", "غَذا"],
+        correctChoice: "خَرید",
+      },
+      // build-word 1
+      {
+        id: 4,
+        type: "build-word",
+        targetWord: "بازار",
+        targetWordTransliteration: "bāzār",
+        availableLetters: ["ب", "ا", "ز", "ا", "ر", "م"],
+        description: "Build the word for 'market'",
+      },
+      // build-word 2
+      {
+        id: 5,
+        type: "build-word",
+        targetWord: "مَغازه",
+        targetWordTransliteration: "maghāze",
+        availableLetters: ["م", "غ", "ا", "ز", "ه", "ن"],
+        description: "Build the word for 'shop'",
+      },
+      // ── Lesson 2 writing (indices 6-11) ──
+      // word-order 1
+      {
+        id: 6,
+        type: "word-order",
+        instruction: "Put the words in order to say 'This is expensive'",
+        tiles: ["اَست", "گِران", "این"],
+        correctOrder: ["این", "گِران", "اَست"],
+      },
+      // word-order 2
+      {
+        id: 7,
+        type: "word-order",
+        instruction: "Put the words in order to say 'I pay with a card'",
+        tiles: ["می‌کُنَم", "پَرداخت", "کارْت", "با", "مَن"],
+        correctOrder: ["مَن", "با", "کارْت", "پَرداخت", "می‌کُنَم"],
+      },
+      // fill-blank 1
+      {
+        id: 8,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "قِیمتِ این سیب ___ اَست (The price of this apple is cheap)",
+        choices: ["گِران", "اَرزان", "بُزُرگ", "خوب"],
+        correctChoice: "اَرزان",
+      },
+      // fill-blank 2
+      {
+        id: 9,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "مَن با ___ پَرداخت می‌کُنَم (I pay with cash)",
+        choices: ["کارْت", "نَقد", "کیسه", "پول"],
+        correctChoice: "نَقد",
+      },
+      // build-word 1
+      {
+        id: 10,
+        type: "build-word",
+        targetWord: "قِیمت",
+        targetWordTransliteration: "gheymat",
+        availableLetters: ["ق", "ی", "م", "ت", "ن"],
+        description: "Build the word for 'price'",
+      },
+      // build-word 2
+      {
+        id: 11,
+        type: "build-word",
+        targetWord: "پول",
+        targetWordTransliteration: "pul",
+        availableLetters: ["پ", "و", "ل", "ن"],
+        description: "Build the word for 'money'",
+      },
+      // ── Lesson 3 writing (indices 12-17) ──
+      // word-order 1
+      {
+        id: 12,
+        type: "word-order",
+        instruction: "Put the words in order to say 'I want a big bag'",
+        tiles: ["می‌خواهَم", "بُزُرگ", "کیسه", "مَن"],
+        correctOrder: ["مَن", "کیسه", "بُزُرگ", "می‌خواهَم"],
+      },
+      // word-order 2
+      {
+        id: 13,
+        type: "word-order",
+        instruction: "Put the words in order to say 'This product is good'",
+        tiles: ["اَست", "خوب", "کالا", "این"],
+        correctOrder: ["این", "کالا", "خوب", "اَست"],
+      },
+      // fill-blank 1
+      {
+        id: 14,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "اَندازه بُزُرگ ___ اَست (Large size is necessary)",
+        choices: ["لازِم", "خوب", "گِران", "باز"],
+        correctChoice: "لازِم",
+      },
+      // fill-blank 2
+      {
+        id: 15,
+        type: "fill-blank",
+        instruction: "Fill in the blank",
+        sentence: "___ چیز آمادِه اَست (Everything is ready)",
+        choices: ["این", "آن", "هَمه", "کَم"],
+        correctChoice: "هَمه",
+      },
+      // build-word 1
+      {
+        id: 16,
+        type: "build-word",
+        targetWord: "کیسه",
+        targetWordTransliteration: "kise",
+        availableLetters: ["ک", "ی", "س", "ه", "ن"],
+        description: "Build the word for 'bag'",
+      },
+      // build-word 2
+      {
+        id: 17,
+        type: "build-word",
+        targetWord: "کالا",
+        targetWordTransliteration: "kalā",
+        availableLetters: ["ک", "ا", "ل", "ا", "م"],
+        description: "Build the word for 'product'",
+      },
+    ],
+  },
 
   //module 16: money & prices
   16: {

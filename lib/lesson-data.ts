@@ -569,7 +569,185 @@ export const module12Lessons: Lesson[] = [
   },
 ]
 
+// ─── Lesson Definitions for Module 13 ──────────────────────────────
+
+export const module13Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Common Fruits",
+    goal: "Learn common fruits like apple, banana, orange, grape, and watermelon, and say what you want to eat using من + [fruit] + می‌خواهم",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],
+      grammarIndex: 0,
+      readingStoryIds: [1, 2],
+      writingIndices: [0, 6],
+    },
+    nextLesson: { id: "2", title: "More Fruits" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "More Fruits",
+    goal: "Learn tropical and dried fruits like mango, peach, coconut, dates, and olives, and say you like something a lot using من + [fruit] + خیلی دوست دارم",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],
+      grammarIndex: 1,
+      readingStoryIds: [3, 4],
+      writingIndices: [6, 12],
+    },
+    nextLesson: { id: "3", title: "Common Vegetables" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "Common Vegetables",
+    goal: "Learn common vegetables like tomato, potato, onion, carrot, and cucumber, and ask what someone wants using چه + [food] + می‌خواهید؟",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],
+      grammarIndex: 2,
+      readingStoryIds: [5, 6],
+      writingIndices: [12, 18],
+    },
+    nextLesson: { id: "4", title: "More Vegetables & Legumes" },
+  },
+  {
+    id: "4",
+    number: 4,
+    title: "More Vegetables & Legumes",
+    goal: "Learn vegetables like garlic, mushroom, cabbage, and legumes like beans and chickpeas, and list ingredients using [food] + با + [item] + و + [item]",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [30, 40],
+      grammarIndex: 3,
+      readingStoryIds: [7, 8],
+      writingIndices: [18, 24],
+    },
+    nextLesson: null,
+  },
+]
+
+// ─── Lesson Definitions for Module 14 ──────────────────────────────
+
+export const module14Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Meals & Eating",
+    goal: "Learn meal names like breakfast, lunch, dinner, and snack, plus the verbs 'to eat' and 'to drink', and say what you eat for each meal using من + برایِ + [meal] + [food] + می‌خورم",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],
+      grammarIndex: 0,
+      readingStoryIds: [1, 2],
+      writingIndices: [0, 6],
+    },
+    nextLesson: { id: "2", title: "Cooking & Table Setting" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Cooking & Table Setting",
+    goal: "Learn cooking words like cooked, raw, and ready, plus table items like plate, spoon, fork, and knife, and say if food is ready using [food] + آمادِه + اَست/نیست",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],
+      grammarIndex: 1,
+      readingStoryIds: [3, 4],
+      writingIndices: [6, 12],
+    },
+    nextLesson: { id: "3", title: "Tastes & Hunger" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "Tastes & Hunger",
+    goal: "Learn taste words like delicious, sweet, salty, spicy, and sour, plus feelings like hungry, full, and thirsty, and express how you feel using من + [state] + هَستَم",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],
+      grammarIndex: 2,
+      readingStoryIds: [5, 6],
+      writingIndices: [12, 18],
+    },
+    nextLesson: { id: "4", title: "Dishes & Eating Habits" },
+  },
+  {
+    id: "4",
+    number: 4,
+    title: "Dishes & Eating Habits",
+    goal: "Learn dish words like dessert, salad, soup, and portion, plus eating habits like homemade, takeout, eating little, and eating a lot, and say how much you eat using من + کَم/زیاد + می‌خورم",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [30, 40],
+      grammarIndex: 3,
+      readingStoryIds: [7, 8],
+      writingIndices: [18, 24],
+    },
+    nextLesson: null,
+  },
+]
+
+// ─── Lesson Definitions for Module 15 ──────────────────────────────
+
+export const module15Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Shops & Shopping",
+    goal: "Learn shopping places like shop, market, and supermarket, plus people like seller and customer, and say where you go shopping using من + به + [place] + می‌رَوَم",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],
+      grammarIndex: 0,
+      readingStoryIds: [1, 2],
+      writingIndices: [0, 6],
+    },
+    nextLesson: { id: "2", title: "Prices & Payment" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Prices & Payment",
+    goal: "Learn price words like cheap, expensive, and discount, plus payment words like cash, card, and receipt, and ask the price using قِیمتِ + [item] + چَند اَست؟",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],
+      grammarIndex: 1,
+      readingStoryIds: [3, 4],
+      writingIndices: [6, 12],
+    },
+    nextLesson: { id: "3", title: "Items & Actions" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "Items & Actions",
+    goal: "Learn shopping action words like bag, size, exchange, and return, and say what you want to buy using مَن + می‌خواهَم + [item] + بِخَرَم",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],
+      grammarIndex: 2,
+      readingStoryIds: [5, 6],
+      writingIndices: [12, 18],
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "15") {
+    return module15Lessons.find((l) => l.id === lessonId)
+  }
+  if (moduleId === "14") {
+    return module14Lessons.find((l) => l.id === lessonId)
+  }
+  if (moduleId === "13") {
+    return module13Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "12") {
     return module12Lessons.find((l) => l.id === lessonId)
   }
