@@ -832,7 +832,57 @@ export const module17Lessons: Lesson[] = [
   },
 ]
 
+// ─── Lesson Definitions for Module 18 ───────────────────────────────
+
+export const module18Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Head & Face",
+    goal: "Learn head and face body parts like head, face, eye, ear, mouth, nose, tooth, hair, eyebrow, and lip, and say what hurts using [body part]َم + دَرد می‌کُنَد",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],
+      grammarIndex: 0,
+      readingStoryIds: [1, 2],
+      writingIndices: [0, 6],
+    },
+    nextLesson: { id: "2", title: "Upper Body & Arms" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Upper Body & Arms",
+    goal: "Learn upper body parts like body, neck, shoulder, chest, hand, finger, nail, back, elbow, and wrist, and give simple body commands using [body part]َت + را + [imperative verb]",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],
+      grammarIndex: 1,
+      readingStoryIds: [3, 4],
+      writingIndices: [6, 12],
+    },
+    nextLesson: { id: "3", title: "Lower Body & Internal Organs" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "Lower Body & Internal Organs",
+    goal: "Learn lower body and internal parts like stomach, waist, leg, knee, ankle, heart, lung, skin, brain, and blood, and say what is good or bad for you using [noun] + بَرایِ + [body part] + خوب/بَد + اَست",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],
+      grammarIndex: 2,
+      readingStoryIds: [5, 6],
+      writingIndices: [12, 18],
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "18") {
+    return module18Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "17") {
     return module17Lessons.find((l) => l.id === lessonId)
   }
