@@ -879,7 +879,57 @@ export const module18Lessons: Lesson[] = [
   },
 ]
 
+// ─── Lesson Definitions for Module 19 ───────────────────────────────
+
+export const module19Lessons: Lesson[] = [
+  {
+    id: "1",
+    number: 1,
+    title: "Basic Feelings & States",
+    goal: "Learn to express basic physical states like pain, sick, tired, hungry, full, thirsty, cold, and hot, and describe bodily feelings using [adjective]َم + اَست",
+    timeEstimate: "15 min",
+    phases: {
+      vocabIndices: [0, 10],
+      grammarIndex: 0,
+      readingStoryIds: [1, 2],
+      writingIndices: [0, 6],
+    },
+    nextLesson: { id: "2", title: "Symptoms & Conditions" },
+  },
+  {
+    id: "2",
+    number: 2,
+    title: "Symptoms & Conditions",
+    goal: "Learn symptoms like headache, stomachache, fever, and shivering, plus condition words like better and worse, and give health advice using باید + [verb]",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [10, 20],
+      grammarIndex: 1,
+      readingStoryIds: [3, 4],
+      writingIndices: [6, 12],
+    },
+    nextLesson: { id: "3", title: "Health & Recovery" },
+  },
+  {
+    id: "3",
+    number: 3,
+    title: "Health & Recovery",
+    goal: "Learn health words like weak, strong, ill, breath, rest, sleep, and a little, and say what you cannot do using نِمی‌تَوانَم + [verb]",
+    timeEstimate: "12 min",
+    phases: {
+      vocabIndices: [20, 30],
+      grammarIndex: 2,
+      readingStoryIds: [5, 6],
+      writingIndices: [12, 18],
+    },
+    nextLesson: null,
+  },
+]
+
 export function getLessonById(lessonId: string, moduleId?: string): Lesson | undefined {
+  if (moduleId === "19") {
+    return module19Lessons.find((l) => l.id === lessonId)
+  }
   if (moduleId === "18") {
     return module18Lessons.find((l) => l.id === lessonId)
   }
